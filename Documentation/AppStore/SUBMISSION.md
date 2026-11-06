@@ -1,6 +1,6 @@
 # App Store Connect entry guide
 
-Updated November 5, 2026 for build 38 source and Apple's current references. Answers below are a local preparation, not a declaration already entered in Apple's account. The metadata text files are authoritative for customer-facing wording.
+Updated November 6, 2026 for build 38 source and Apple's current references. Answers below are a local preparation, not a declaration already entered in Apple's account. The metadata text files are authoritative for customer-facing wording.
 
 ## App and version
 
@@ -54,8 +54,12 @@ No App Store accessibility support label is proposed yet. Simulator audits, Dyna
 1. Confirm or create the visionOS app record and identifier; preserve any existing SKU.
 2. Enter App Review contact name, phone and email privately in App Store Connect; no sign-in account is needed.
 3. Owner completes trader status, agreements and territory availability in the account. No choice is inferred from other apps.
-4. Publish and verify the marketing/support/privacy pages; their current HTTP 404 is a confirmed submission blocker.
+4. **Completed November 6:** public marketing/support/privacy pages and source return HTTP 200. Recheck the existing URLs before submission; see [publication evidence](../Validation/mac-public-release.json).
 5. Archive the `GlassImageTools` scheme with a supported released Xcode; the experimental Capture Probe is a separate research app. Validate the distribution archive, review its compiled layered AppIcon and privacy report, then upload and confirm Apple's processed version/build. Current distribution signing/upload remains unverified; development installation does not establish distribution approval.
 6. Enter the prepared metadata, age/privacy answers and ordered screenshots. Select a release setting and submit only under the owner's explicit upload/submission instruction.
 
 For TestFlight, use the separate beta description, feedback email and What to Test files. Apple requires beta information and a first external build review ([test information](https://developer.apple.com/help/app-store-connect/test-a-beta-version/provide-test-information/), [external testing](https://developer.apple.com/help/app-store-connect/test-a-beta-version/invite-external-testers/)).
+
+November 6 distribution checkpoint: public source and canonical website/help/privacy URLs are live (HTTP 200);
+[Mac 1.0 (45)](../MAC_RELEASE.md) is separately Developer ID notarized and distributed. This resolves the
+prior website-publication gap, without changing the account-only visionOS archive/upload/review steps.

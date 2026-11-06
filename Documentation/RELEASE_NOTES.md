@@ -1,10 +1,10 @@
-# Glass Image Tools — development release notes
+# Glass Image Tools — release notes
 
-Updated November 6, 2026 for compact centered Mac Markup. Nothing was published or uploaded.
+Updated November 6, 2026. [Mac 1.0 downloads](https://github.com/msitarzewski/GlassImageTools/releases/tag/mac-v1.0) and the [website](https://msitarzewski.github.io/GlassImageTools/) are public; Vision Pro remains source-build only.
 
-## Current builds: macOS 1.0 (44), visionOS 1.0 (38)
+## Current builds: macOS 1.0 (45), visionOS 1.0 (38)
 
-Native visionOS 26.0 or later and macOS 26.0 or later; Swift 6 and Apple frameworks. Mac build 44 is a development-signed Release, not a notarized/distribution archive. VisionOS build 38 was simulator-compiled; its previous signed build-37 product is retained. Installed identity 1.0 (36), normally launched without test arguments and independently verified one running app process. Earlier build 35 was installed and normally launched October 31 after its unreachable-device attempt October 30. Earlier build 31 was built and installed on October 26 (identity 1.0 (31));
+Native visionOS 26.0 or later and macOS 26.0 or later; Swift 6 and Apple frameworks. Mac build 45 is a universal Developer ID distribution, notarized and stapled, installed locally and published with DMG/ZIP/checksums. VisionOS build 38 was simulator-compiled; its previous signed build-37 product is retained. Installed identity 1.0 (36), normally launched without test arguments and independently verified one running app process. Earlier build 35 was installed and normally launched October 31 after its unreachable-device attempt October 30. Earlier build 31 was built and installed on October 26 (identity 1.0 (31));
 it was normally launched and independently verified running on October 29 after unlock, without rebuild/reinstall. Build 30 was installed and normally launched on October 25.
 Build 27 was never installed (the headset
 was unreachable on October 23); its changes are in build 28.

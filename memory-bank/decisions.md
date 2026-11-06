@@ -468,3 +468,12 @@ layout is superseded. Match the complete existing mode/context/zoom/settings ord
 Shapes/Draw/Text/Pixelate controls. Native placement remains platform-specific; VM-only GUI testing
 remains approved. Mac 40, visionOS unchanged at 38. [Task](261105_mac-toolbar-parity.md).
 
+
+## 2026-11-06 — Public Mac Developer ID release
+
+**Approved, implemented and observed**, provenance: owner accepted compact Markup and instructed
+“Ship it” with Mac website download/build support, then clarified use of sibling notarization tools.
+Resolve Quit blocker first; publish sandboxed universal Mac through Developer ID notarization/stapled
+DMG/ZIP and GitHub Releases. Preserve existing static GitHub Pages hosting; official pinned pandoc
+replaces a stalled apt download. No updater, backend, external app dependency or expanded permission.
+Vision Pro store submission remains separate. [Verified release](261106_mac-release.md).

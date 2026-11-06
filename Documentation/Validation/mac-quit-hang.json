@@ -51,7 +51,7 @@
     "dmg_notary_status": "Accepted",
     "app_and_dmg_stapled_validated": true,
     "Gatekeeper_app_and_dmg_assessments": "passed",
-    "publication": "pending"
+    "publication": "Public Mac release and site live; see mac-public-release.json"
   },
   "installation": {
     "canonical_build": "45",

@@ -10,7 +10,7 @@ only monthly task indexes and summaries, which link to those root-level records.
 ## Start here
 
 - [Mac Quit hang](261106_mac-quit-hang.md): build 45, native save decision and actual guest Save/Discard exit.
-- [First Mac release](261106_mac-release.md): Developer ID/notarization and existing Pages download publication.
+- [First Mac release](261106_mac-release.md): verified Developer ID/notarized public Mac downloads, source and live existing Pages site.
 
 - [Smaller centered Mac Markup](261106_compact-centered-markup.md): build 44, compact native controls and centered row; guest layout/actions/PNG verified.
 

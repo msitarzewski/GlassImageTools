@@ -18,7 +18,7 @@ PNG Save/exit and two-window sequential save/exit pass; originals unchanged. Rel
 builds pass, not an XCTest run. Four sandbox permissions/core editor unchanged. Developer ID universal
 archive/export, app/DMG accepted notarization, validated staples and Gatekeeper pass. Existing Keychain
 profile reused. GitHub owner lookup confirms proposed repo absent; prepare sanitized first publication.
-Current state: reviewed source applied and notarized canonical 45 installed; public source/release live and all three download hashes verified. Existing Pages workflow is deploying; live URL checks and final docs remain.
+Current state: COMPLETE. Reviewed source applied and notarized canonical 45 installed; public source/release and Pages live. Three artifact downloads match hashes; canonical home/help/privacy and reference/assets return HTTP 200. Final release evidence and Apple publication gap reconciled. Public Git history is in the isolated publication checkout (ignored local pointer); original workspace remains non-Git. Next: owner closes/reopens the old process to load 45, then scoped Mac Photos/Share/assistive-technology/large-image acceptance. No automatic future publication.
 Existing running owner build 44 is frozen waiting for termination; leave it untouched. New installation
 cannot replace its loaded code. Last physical Vision Pro identity remains 36; source remains 38.
 

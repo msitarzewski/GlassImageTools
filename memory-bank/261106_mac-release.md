@@ -1,6 +1,6 @@
 # First Mac public release — November 6, 2026
 
-State: APPLY; Mac release published, Pages deployment in progress. Owner explicitly requested shipping the accepted compact Mac editor and updating the site
+State: COMPLETE. Mac 1.0 (45), public source, downloads and GitHub Pages are live and verified. Owner explicitly requested shipping the accepted compact Mac editor and updating the site
 for Mac download and source builds. This supersedes earlier no-publication scope for this release.
 Quit was reported as a blocker; [the focused fix](261106_mac-quit-hang.md) is verified in the dedicated VM.
 Use sibling Glass Power Tools as a notarization workflow reference; independently implement a minimal
@@ -48,3 +48,23 @@ pandoc 3.13 (matching local), pinned release URL/SHA-256, bounded download/insta
 Official release API digest, actual downloaded archive hash/bin layout and shell syntax pass.
 Cancel only this repository's stalled/queued deployment attempts; publish the correction and observe
 fresh Actions build/deploy. Existing hosting, builder, permissions and action commit pins stay unchanged.
+
+## Final verified publication
+
+Corrected workflow build and deploy both succeed; official pinned pandoc install passes. Canonical home,
+help and privacy return HTTP 200; reference, icon and editor image pass, with actual Mac download content
+on the home page. Public DMG/ZIP/checksums all return HTTP 200 and downloaded hashes match.
+[Public release evidence](../Documentation/Validation/mac-public-release.json),
+[release](https://github.com/msitarzewski/GlassImageTools/releases/tag/mac-v1.0),
+[site](https://msitarzewski.github.io/GlassImageTools/). The cancelled apt run's retrieved partial output
+shows the large pandoc package download did not finish before cancellation; exact network cause is not
+asserted. No other repository's jobs or VMs were touched.
+
+Release notes, README, Apple packet publication gap, status, architecture/build notes, current context,
+progress and monthly index are reconciled. VisionOS remains 38, last physical identity 36. Public Git
+history lives in the isolated publication checkout, recorded by an ignored local pointer; the original
+workspace remains non-Git and retains all owner/private files. No host app quit/launch or new capture.
+Next: owner closes/reopens the old app to load 45; Mac Photos, Share recipients, assistive technology and
+large-image acceptance remain. An already-hung older process may need owner-directed force termination,
+which risks unsaved edits; no such action was performed. Future feature/publication scope needs its own
+instruction. Temporary raw evidence remains ignored, never in the public tree.

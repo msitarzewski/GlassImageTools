@@ -4,7 +4,7 @@
 
 Mac 45 Quit fix passes native guest Save/Discard exit, cancellation/retry and sequential saves with
 unchanged originals. Developer ID universal app/DMG notarization, staples and Gatekeeper pass.
-Reviewed source applied, notarized Mac 45 installed and public source/release live; download hashes verified. Pages deployment and final live URL checks remain. Owner shipping instruction authorizes that
+Reviewed source applied, notarized Mac 45 installed and public source/release live; download hashes verified. Pages build/deploy and canonical home/help/privacy/reference/asset checks pass. Final release docs and Apple publication gap reconciled. Owner shipping instruction authorizes that
 publication; preserve the existing frozen host process. VisionOS stays 38.
 [Quit](../../261106_mac-quit-hang.md), [release](../../261106_mac-release.md).
 
@@ -82,3 +82,10 @@ Native decision before termination and deferred confirmed window closure. Actual
 exit and two-window save sequence pass. Release/Debug test-source compilation and Developer ID
 notarization/stapling/Gatekeeper pass; public application/deployment checkpoint follows.
 [Task](../../261106_mac-quit-hang.md), [release](../../261106_mac-release.md).
+
+### November 6 — First public Mac release and Pages publication
+
+Notarized/stapled universal Mac 1.0 (45), DMG/ZIP/checksums and source are public. Unauthenticated downloads
+match hashes. Pages build/deploy succeeds with pinned official pandoc; canonical home/help/privacy and
+reference/assets return HTTP 200. Prior owner app/process preserved, no new capture. Detailed
+[release](../../261106_mac-release.md), [evidence](../../../Documentation/Validation/mac-public-release.json).

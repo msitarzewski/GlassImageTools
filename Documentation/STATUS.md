@@ -1,5 +1,18 @@
 # Verified implementation status
 
+## Public Mac release and site — November 6, 2026
+
+[Mac 1.0 (45)](https://github.com/msitarzewski/GlassImageTools/releases/tag/mac-v1.0) and
+[source](https://github.com/msitarzewski/GlassImageTools) are public. DMG/ZIP/checksums return HTTP 200;
+unauthenticated downloads match prepared hashes. Existing GitHub Pages build/deploy succeeds after
+pinning official pandoc 3.13 with its verified SHA-256 instead of stalled apt download. Canonical home,
+help and privacy pages return HTTP 200; reference/icon/editor image and live Mac download content pass.
+Local six-page build, seven utility tests, public-snapshot store validation, private-value/file and
+Markdown-link scans pass. [Distribution evidence](Validation/mac-public-release.json).
+Historical 404/no-publication statements below describe earlier checkpoints; this supersedes the current
+publication gap. No TestFlight/App Store upload or new hardware/accessibility/Photos/Share/performance
+acceptance is claimed. The owner's old frozen process is preserved; installed 45 loads after reopening.
+
 ## Mac Quit correction — 1.0 (45), November 6, 2026
 
 Native Quit asks Save/Discard/Cancel before entering termination. Save leaves termination cancelled

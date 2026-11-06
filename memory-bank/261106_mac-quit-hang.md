@@ -1,6 +1,6 @@
 # Mac Quit hang — November 6, 2026
 
-State: APPLIED. Reviewed source applied with baseline guards; notarized canonical build 45 installed in Applications with signature, ticket, Gatekeeper and exact-tree readback. Prior bundle and running owner app preserved. Mac 1.0 (45), visionOS unchanged at 38.
+State: COMPLETE. Reviewed source applied with baseline guards; notarized canonical build 45 installed in Applications with signature, ticket, Gatekeeper and exact-tree readback. Prior bundle and running owner app preserved. Mac 1.0 (45), visionOS unchanged at 38.
 Owner approved shipping build 44 appearance, then reported Quit freezes. Local fix, VM checks,
 installation and docs are authorized; release resumes after this blocker. Host owner app/windows
 are preserved. No delegation. [Evidence](../Documentation/Validation/mac-quit-hang.json).
@@ -39,3 +39,6 @@ Developer ID archive/export, four production permissions, universal architecture
 privacy manifest, app and DMG notarization/stapling/Gatekeeper all pass. Packaging does not certify
 Photos, Share, VoiceOver, performance or hardware acceptance. [Release work](261106_mac-release.md).
 Installing the fix preserves the already-frozen owner's process; it cannot replace loaded code.
+
+Final publication: Mac 45 and existing Pages site are live; [release checkpoint](261106_mac-release.md#final-verified-publication).
+No additional owner-process or keyboard-gesture acceptance is inferred.

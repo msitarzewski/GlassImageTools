@@ -570,3 +570,7 @@ or profile name is committed. The minimal route archives universal Release, expo
 checks four production permissions/hardened runtime/manifest, notarizes and staples app and DMG,
 checks Gatekeeper and writes checksums. It prepares artifacts only; publish assets before site links.
 Build 45 packaging passes; external publication status belongs to the [release task](261106_mac-release.md).
+
+November 6: Mac 45 installation, public artifact hashes, source and live Pages are verified in the
+[release record](261106_mac-release.md). Existing Pages workflow uses official pandoc 3.13 with pinned
+SHA-256 and bounded install/build durations; hosting and deployment permissions are unchanged.

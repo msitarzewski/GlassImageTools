@@ -28,12 +28,27 @@
   },
   "site": {
     "url": "https://msitarzewski.github.io/GlassImageTools/",
-    "deployment": "in progress"
+    "deployment": "Actions build and deploy succeeded",
+    "workflow_run": "https://github.com/msitarzewski/GlassImageTools/actions/runs/42308874985",
+    "home_help_privacy_canonical_HTTP": 200,
+    "reference_icon_editor_image_HTTP": 200,
+    "mac_download_content_verified": true,
+    "local_layout": {
+      "viewport_width": 492,
+      "scroll_width": 492,
+      "broken_images": 0
+    },
+    "installer": "official pandoc 3.13, pinned SHA-256; verified archive and successful CI"
   },
   "local_install": "Canonical notarized build 45 installed; signature/ticket/Gatekeeper/exact tree pass; prior bundle and running owner process untouched",
   "limitations": [
     "No host GUI testing or owner-process termination.",
     "No new screenshot: automatic approval review rejected optional site capture under retained restriction; accessibility/layout/image-loading checks used instead.",
     "No new full-suite, headset, Photos, Share, VoiceOver or performance acceptance."
-  ]
+  ],
+  "artifact_sha256": {
+    "GlassImageTools-1.0-mac.dmg": "eb814d39b40478e37c4983bed0d131c80463b462635c162efa522c5e5181f90f",
+    "GlassImageTools-1.0-mac.zip": "02d9c3f65f433e3ab1316d28475bfb0b521385a8fdfc9a2741c29c1a40ef3afb",
+    "SHA256SUMS.txt": "77a6341a8ab52e4d3daf2b2312fdbde0287461921e016b61c6122dfc93739518"
+  }
 }
