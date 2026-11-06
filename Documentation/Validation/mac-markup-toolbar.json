@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-05",
+  "mac_build": "39",
+  "visionos_build": "38",
+  "change": "Native Mac accessory toolbar with Select and ten direct annotation tools",
+  "host_before_owner_vm_steering": {
+    "crop_copy_undo_passed": true,
+    "direct_text_edit_quit_cancel_passed": true,
+    "new_toolbar_case": "Failed test ID/value/absolute resize assumptions; native-minimum-aware test source corrected. No clean host pass claimed and no further host UI execution after steering."
+  },
+  "vm": {
+    "os": "macOS 26.6.2",
+    "isolated_clone": true,
+    "host_graphics": false,
+    "host_audio": false,
+    "host_clipboard_sharing": false,
+    "read_only_share": "VM helper tools only; no repository, signing keys, profiles or personal image transfer",
+    "binary": "Exact development-signed Release; strict signature passes in host and guest",
+    "gui_method": "Existing trusted guest AX/pointer helper through SSH/Aqua. Guest has Command Line Tools, not full Xcode; these are direct native interaction checks, not a guest XCTest run.",
+    "named_enabled_toolbar_controls": 11,
+    "single_row": true,
+    "all_controls_inside_native_constrained_window": true,
+    "requested_narrow_width": 1000,
+    "native_constrained_width": 1256,
+    "geometry_note": "macOS 26 clamps this window to its native toolbar/content minimum; no 1000-point layout is claimed.",
+    "visible_in_annotate_hidden_in_crop": true,
+    "retained_vector_objects": [
+      "rectangle",
+      "freehand",
+      "text",
+      "pixelation"
+    ],
+    "text_and_font_edit": "Native field readback confirms changed text and 64-pixel font",
+    "clipboard_png": {
+      "encodedBytes": 8906,
+      "height": 320,
+      "renderedAnnotationRedPixels": 2280,
+      "width": 480
+    },
+    "undo": "Full original 960 \u00d7 640 crop restored after two explicit field-operation undos",
+    "source_bytes_unchanged": true,
+    "visual_inspection": "Initial clean full VM capture inspected; later capture includes an OS screen-capture notice. No polished final annotated capture claimed.",
+    "permission": "Auto-review rejected accepting the screen-capture Allow notice. It was left unapproved; functional checks continued using already-available AX, pointer and guest clipboard access.",
+    "shutdown": "Task-owned VM stopped; original shared VM independently verified still running"
+  },
+  "release": {
+    "build_exit_code": 0,
+    "analyze_exit_code": 0,
+    "strict_signature": true,
+    "four_intended_sandbox_grants": true,
+    "no_debugger_or_test_exceptions": true,
+    "matching_privacy_manifest": true,
+    "warnings": "AppIntents metadata extraction skipped; no framework dependency."
+  },
+  "scope": {
+    "core_model_import_export_or_visionos_changes": false,
+    "core_and_full_suites_rerun": false,
+    "retained_prior_core_tests": 78,
+    "visionos_packet_validation_build_38": true,
+    "publication_or_upload": false
+  },
+  "limits": [
+    "Photos permissions/save, Share recipients, assistive technology and large-image profiling retain prior manual acceptance limits",
+    "Final full XCTest case not executed after VM steering; VM native checks replace the remaining interactive verification for this task"
+  ],
+  "test_source_compile": {
+    "build_for_testing_exit_code": 0,
+    "host_tests_executed_after_vm_steering": false
+  },
+  "delivery": {
+    "applied_files": 19,
+    "exact_hashes": true,
+    "baseline_conflicts": 0,
+    "private_data_findings": 0,
+    "local_app": "build/Glass Image Tools Toolbar Preview.app",
+    "version": "1.0",
+    "build": "39",
+    "strict_signature": true,
+    "host_launch_after_vm_steering": false
+  }
+}

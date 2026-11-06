@@ -1,0 +1,1 @@
+annotate,markup,pixelate,arrow,text,shapes,callout,rotate,editor,photo,clipboard,paste,share,chat

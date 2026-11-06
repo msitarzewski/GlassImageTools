@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-05",
+  "mac_build": "41",
+  "visionos_build": "38",
+  "change": "Existing SettingsLink moves to main native toolbar immediately before Inspector; entire editing accessory group omitted without an image",
+  "vm": {
+    "os": "macOS 26.6.2",
+    "headless": true,
+    "settings_in_main_toolbar": true,
+    "adjacent_to_inspector": true,
+    "enabled_without_image": true,
+    "editing_row_present_with_image_absent_when_empty": true,
+    "empty_layout_restored_after_image_close": true,
+    "welcome_content_vertical_offset_before_and_after_close": 456.5,
+    "native_settings_action_opens_general_window": true,
+    "method": "Guest AX/native actions, not XCTest",
+    "no_new_capture_or_permission_requests": true,
+    "shutdown": "confirmed"
+  },
+  "release": {
+    "build_exit_code": 0,
+    "strict_signature": true,
+    "four_unchanged_sandbox_grants": true,
+    "no_debugger_or_test_exceptions": true,
+    "test_source_compile_only_exit_code": 0,
+    "diagnostics": "AppIntents metadata extraction skips; no dependency"
+  },
+  "no_host_gui_tests_or_app_closure": true,
+  "no_core_model_render_or_visionos_changes": true,
+  "core_and_full_suites_rerun": false,
+  "installation": {
+    "version": "1.0",
+    "build": "41",
+    "destination": "/Applications/Glass Image Tools.app",
+    "signature": true,
+    "four_production_sandbox_grants": true,
+    "no_debugger_or_test_exceptions": true,
+    "installed_tree_matches_built_tree": true,
+    "prior_install_preserved": true,
+    "launch_performed": false,
+    "app_close_performed": false
+  },
+  "publication_or_upload": false
+}

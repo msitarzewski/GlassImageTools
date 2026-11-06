@@ -1,0 +1,160 @@
+{
+  "date": "2026-10-31",
+  "app_version": "1.0",
+  "app_build": "36",
+  "app_core_production_tests_project_unchanged": true,
+  "publication": "Local preparation only; no Git/account/upload/publication changes",
+  "normal_startup_capture": {
+    "exit_code": 0,
+    "seconds": 198.521,
+    "retained_annotations": 2,
+    "copy_dimensions": [
+      2060,
+      1390
+    ],
+    "fixture_ui": false
+  },
+  "clean_sidebar_capture": {
+    "exit_code": 0,
+    "seconds": 87.896
+  },
+  "store_media": {
+    "count": 8,
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "alpha": false,
+    "validation_report": "../AppStore/validation.json"
+  },
+  "utility_tests": {
+    "cases": 7,
+    "failures": 0,
+    "exit_code": 0
+  },
+  "site": {
+    "pages": 6,
+    "broken_local_links_or_anchors": 0,
+    "lighthouse": {
+      "lighthouse-mobile-light": {
+        "accessibility": 1,
+        "best-practices": 1,
+        "seo": 1
+      },
+      "lighthouse-desktop-dark": {
+        "accessibility": 1,
+        "best-practices": 1,
+        "seo": 1
+      }
+    },
+    "performance_audited": false,
+    "mobile_pages": [
+      {
+        "file": "index.html",
+        "title": "Glass Image Tools",
+        "width": 390,
+        "documentWidth": 390,
+        "h1": 1,
+        "main": 1,
+        "missingAlt": [],
+        "failedImages": [],
+        "scripts": 0
+      },
+      {
+        "file": "help.html",
+        "title": "Help \u2014 Glass Image Tools",
+        "width": 390,
+        "documentWidth": 390,
+        "h1": 1,
+        "main": 1,
+        "missingAlt": [],
+        "failedImages": [],
+        "scripts": 0
+      },
+      {
+        "file": "reference.html",
+        "title": "Reference \u2014 Glass Image Tools",
+        "width": 390,
+        "documentWidth": 390,
+        "h1": 1,
+        "main": 1,
+        "missingAlt": [],
+        "failedImages": [],
+        "scripts": 0
+      },
+      {
+        "file": "privacy.html",
+        "title": "Privacy \u2014 Glass Image Tools",
+        "width": 390,
+        "documentWidth": 390,
+        "h1": 1,
+        "main": 1,
+        "missingAlt": [],
+        "failedImages": [],
+        "scripts": 0
+      },
+      {
+        "file": "credits.html",
+        "title": "Credits \u2014 Glass Image Tools",
+        "width": 390,
+        "documentWidth": 390,
+        "h1": 1,
+        "main": 1,
+        "missingAlt": [],
+        "failedImages": [],
+        "scripts": 0
+      },
+      {
+        "file": "404.html",
+        "title": "Page not found \u2014 Glass Image Tools",
+        "width": 390,
+        "documentWidth": 390,
+        "h1": 1,
+        "main": 1,
+        "missingAlt": [],
+        "failedImages": [],
+        "scripts": 0
+      }
+    ]
+  },
+  "live_urls": {
+    "timestamp": "2026-11-01T00:06:38.565030+00:00",
+    "results": {
+      "marketing": {
+        "url": "https://msitarzewski.github.io/GlassImageTools/",
+        "status": 404
+      },
+      "support": {
+        "url": "https://msitarzewski.github.io/GlassImageTools/help.html",
+        "status": 404
+      },
+      "privacy": {
+        "url": "https://msitarzewski.github.io/GlassImageTools/privacy.html",
+        "status": 404
+      },
+      "source": {
+        "url": "https://github.com/msitarzewski/GlassImageTools",
+        "status": 404
+      }
+    }
+  },
+  "comparison": {
+    "actual_copied_dimensions": [
+      2060,
+      1390
+    ],
+    "comparison_dimensions": [
+      1070,
+      340
+    ],
+    "source": "Native Copy PNG, not preview reconstruction",
+    "absolute_error_metric": 24420.6
+  },
+  "limits": [
+    "Coordinate-based shape capture gestures not newly certified; rejected runs retained privately",
+    "No full app/core/service suite rerun",
+    "Public URLs HTTP 404; account-only declarations/distribution/archive/upload/review remain"
+  ],
+  "simulator_stopped": true,
+  "additional_browser_recheck": "Initial final pass stalled on a harness wait for lazy-loaded images. It was stopped; a bounded eager-image recheck then passed all six final pages at 390-point width. Final current mobile/light and desktop/dark Lighthouse snapshots each scored 100 in accessibility, best practices and SEO. Both final mobile and desktop visual renders were inspected."
+}

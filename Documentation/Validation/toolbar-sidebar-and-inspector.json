@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-21",
+  "build": "24",
+  "changes": [
+    "Toolbar Copy runs without the editor-wide processing overlay (EditorModel.copying, canvas status) and writes the same unrestricted public.png item as Share > Copy; the .localOnly option is removed",
+    "Images sidebar 360 points (380 at accessibility sizes); row previews measure the two single-line text rows, 1.4:1, aspect-filled",
+    "Inspector: one pane title (object name, New <kind> for a tool's style, or a No Selection state); Text has Content and Style sections; stroke width label and slider share a row; Pixelate has one Block Size section; Position and Size and Arrange only for a selection; unnamed first crop group",
+    "Text and Pixelate toolbar and Drawing Tools menu actions place a selected object at the crop center; canvas taps only select; inspector Add at Center removed",
+    "One + menu styled like Shapes: New Window, Choose from Photos..., Import from Files..., Paste",
+    "Scene EditorCommands own Cmd-N and Cmd-, through the focused window's actions",
+    "Debug check: never-mutated weak var is weak let (two compiler warnings removed)",
+    "UI tests: drawShape, openNewImageMenu and inspectorTitle helpers; bottom-up inspector reveal; empty-canvas hold and handle-drag destinations relative to the placed object"
+  ],
+  "owner_report_diagnosis": {
+    "copy_items": "Toolbar Copy and Share > Copy each wrote one public.png item",
+    "brief_modal": "Editor-wide processing overlay shown by toolbar Copy only",
+    "scope_difference": "Toolbar Copy alone set localOnly; Share > Copy did not"
+  },
+  "keyboard_observations": {
+    "cmd_n_new_window": "Opens a window from empty and document windows (simulator key events)",
+    "cmd_comma_settings": "Opens Settings (simulator key events)",
+    "cmd_v_image_paste": "Not observed working in empty or document windows; not claimed. + > Paste works"
+  },
+  "core_tests": {
+    "tests": 67,
+    "suites": 5,
+    "failures": 0,
+    "seconds": 0.816,
+    "exit_code": 0,
+    "note": "Core package unchanged in build 24"
+  },
+  "native_service_checks": {
+    "checks": 50,
+    "passed": 50,
+    "includes": "Text and Pixelate place objects; Copy does not block editing; 2 add-only Photos saves (permission pregranted on the dedicated simulator)"
+  },
+  "ui_phases": [
+    {
+      "scope": "First full suite, stopped after 10 cases to diagnose",
+      "tests_completed": 10,
+      "failed_cases": 2,
+      "finding": "Inspector reveal swipes did not scroll; largest-text sidebar row collapsed its name to zero width"
+    },
+    {
+      "scope": "Second full suite after the row and reveal-helper fixes",
+      "exit_code": 65,
+      "seconds": 1174,
+      "tests": 37,
+      "failed_cases": 2,
+      "assertion_failures": 6,
+      "finding": "Stale empty-canvas hold point inside the centered text object's hit margin; tiny-shape handle drag aimed at the drawn shape's own corner"
+    },
+    {
+      "scope": "Two corrected cases",
+      "tests": 2,
+      "failed_cases": 0
+    },
+    {
+      "scope": "Final full suite, final applied source",
+      "exit_code": 0,
+      "seconds": 1173,
+      "tests": 37,
+      "failed_cases": 0
+    }
+  ],
+  "baseline_comparisons": {
+    "form_swipe_after_drawn_shape": "Build 23 also leaves the annotation Form unscrolled for every tested swipe origin after a canvas-drawn shape; its suite created shapes with Add at Center",
+    "coordinate_handle_drag": "Builds 23 and 24 both move the object (no resize) for a coordinate press-drag from a handle; element-to-element drags resize"
+  },
+  "compositor": [
+    "Largest-text sidebar row keeps its preview beside a truncated name",
+    "No Selection pane keeps its title and Done at the top",
+    "+ menu shows New Window, Choose from Photos..., Import from Files... and Paste"
+  ],
+  "signed_release": {
+    "build_analyze_exit_code": 0,
+    "seconds": 25,
+    "strict_signature": true,
+    "identity": "Glass Image Tools 1.0 (24), device family 7",
+    "privacy_keys": ["NSPhotoLibraryAddUsageDescription"],
+    "debug_markers_in_release": 0,
+    "expected_skips": "Two AppIntents metadata extraction skips"
+  },
+  "capture_probe": {
+    "device_sdk_compile_exit_code": 0,
+    "scope": "Compilation only"
+  },
+  "application": {
+    "files_applied": 27,
+    "baseline_conflicts": 0,
+    "workspace_matches_stage_files": 123
+  },
+  "limits": "Simulator automation, compositor captures, installation and identity readback. Normal launch awaits headset unlock. Gaze/hand input, hardware keyboard, Universal Clipboard delivery to other devices and assistive technology remain owner observations."
+}

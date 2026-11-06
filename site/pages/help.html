@@ -1,0 +1,148 @@
+<!--
+title: Help
+description: Getting Glass Image Tools onto your Vision Pro, opening, cropping and marking up a screenshot, copying and saving it, and what to do when something doesn't work.
+-->
+<article class="doc">
+  <h1>Help</h1>
+  <p class="intro">Everything Glass Image Tools does, where to find it, and what to try when it doesn’t do what you expected. You don’t need to read it in order.</p>
+
+  <nav class="toc" aria-label="On this page">
+    <strong>On this page</strong>
+    <ol>
+      <li><a href="#getting-it">Getting it</a></li>
+      <li><a href="#screenshot">Taking the screenshot</a></li>
+      <li><a href="#opening">Opening an image</a></li>
+      <li><a href="#crop">Cropping</a></li>
+      <li><a href="#annotate">Marking it up</a></li>
+      <li><a href="#pixelate">Hiding things with Pixelate</a></li>
+      <li><a href="#sending">Copy, Share and Save</a></li>
+      <li><a href="#images">Several images, and Recents</a></li>
+      <li><a href="#description">The description under the image</a></li>
+      <li><a href="#appearance">Settings and About</a></li>
+      <li><a href="#keyboard">Keyboard</a></li>
+      <li><a href="#troubleshooting">When something doesn’t work</a></li>
+      <li><a href="#removing">Removing it</a></li>
+      <li><a href="#accessibility">VoiceOver and larger text</a></li>
+      <li><a href="#contact">Asking for help</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="getting-it">Getting it</h2>
+  <h3>Mac</h3>
+  <p><a href="https://github.com/msitarzewski/GlassImageTools/releases/download/mac-v1.0/GlassImageTools-1.0-mac.dmg">Download Glass Image Tools 1.0 for Mac</a> (macOS 26 or later; Apple silicon and Intel). Open the disk image and drag Glass Image Tools into Applications. The app is Developer ID signed, notarized by Apple and stapled for Gatekeeper. It runs in the App Sandbox.</p>
+  <p>Prefer an archive? <a href="https://github.com/msitarzewski/GlassImageTools/releases/download/mac-v1.0/GlassImageTools-1.0-mac.zip">Download the ZIP</a>. <a href="https://github.com/msitarzewski/GlassImageTools/releases/download/mac-v1.0/SHA256SUMS.txt">SHA-256 checksums</a> and <a href="https://github.com/msitarzewski/GlassImageTools/releases/tag/mac-v1.0">release notes</a> accompany both downloads. To build it yourself, select <strong>GlassImageToolsMac → My Mac</strong> in Xcode; the <a href="https://github.com/msitarzewski/GlassImageTools#build-and-run">README</a> includes commands.</p>
+  <h3>Apple Vision Pro</h3>
+  <p>The Vision Pro app isn’t on TestFlight or the App Store yet. Build it with Xcode and install it on your headset:</p>
+  <ol>
+    <li>On a Mac, install <strong>Xcode 27</strong> with the visionOS SDK. Glass Image Tools is developed with Xcode 27.2.</li>
+    <li>Get the source: <code>git clone https://github.com/msitarzewski/GlassImageTools</code>, or <strong>Code → Download ZIP</strong> on GitHub.</li>
+    <li>Create a file named <code>Config/Identity.local.xcconfig</code> with your own signing team and a bundle identifier nobody else uses:
+<pre><code>DEVELOPMENT_TEAM = YOURTEAMID
+VISIONSNIP_BUNDLE_ID = com.yourname.glassimagetools</code></pre>
+      Xcode shows your team ID under <strong>Settings → Accounts</strong>. This file is ignored by Git, so it stays yours.</li>
+    <li>Open <code>GlassImageTools.xcodeproj</code>, choose the <strong>GlassImageTools</strong> scheme and your paired Vision Pro (with Developer Mode on), and choose <strong>Product → Run</strong>.</li>
+  </ol>
+  <p>A free Apple Account can install your own builds, but Apple makes them expire after seven days; run it from Xcode again to renew. A paid Apple Developer Program membership makes them last a year. The <a href="https://github.com/msitarzewski/GlassImageTools#build-and-run">README</a> has the command-line version.</p>
+
+  <h2 id="screenshot">Taking the screenshot</h2>
+  <p>Glass Image Tools edits screenshots; it doesn’t take them. On Mac, use ⇧⌘3 or ⇧⌘4 and open or paste the result. On Vision Pro, press the <strong>top button</strong> and the <strong>Digital Crown</strong> at the same time, or ask Siri to take a screenshot. visionOS saves it to Photos.</p>
+
+  <h2 id="opening">Opening an image</h2>
+  <figure class="shot"><img src="shots/new-menu.jpg" width="1400" height="840" loading="lazy" alt="The + menu open at the top of the window, listing New Window, Choose from Photos, Import from Files and Paste."></figure>
+  <p>An empty window has large <strong>Photos</strong> and <strong>Files</strong> choices and a drop/Paste well. Drop an image into the well, tap it to paste, or press <strong>⌘V</strong> there. Apple may ask before pasting content from another app. Once an image is open, the <strong>+</strong> button at the top left has the same choices, plus <strong>New Window</strong>:</p>
+  <ul>
+    <li><strong>Choose from Photos…</strong> opens Apple’s photo picker. The app receives only the photo you pick, and needs no permission to read your library.</li>
+    <li><strong>Import from Files…</strong> opens Apple’s file browser, for any image file visionOS can read, such as PNG, JPEG and HEIC.</li>
+    <li><strong>Paste</strong> opens the image on the clipboard. It’s greyed out when the clipboard has no image.</li>
+    <li><strong>New Window</strong> opens a second, separate editor window.</li>
+  </ul>
+  <p><strong>Paste a direct image link.</strong> Copy one HTTPS URL to an image, then use the same Paste action, empty-window tap or ⌘V. The app downloads the image and opens a new document. A URL copied as plain text works too. Webpage links and login-protected images may fail; copy the image itself in your browser instead. HTTP, file and data links are not downloaded. The download can be cancelled and uses the normal image limits. The image host sees your IP address and requested URL; no cookies, saved credentials or existing image are sent. <a href="privacy.html#pasting-a-web-image-link">Privacy details</a>.</p>
+  <p>Opening another image adds it to the same window, beside the ones already open; nothing you were working on is replaced. Files up to 256 MiB and images up to 200 megapixels open; Vision Pro screenshots are far smaller.</p>
+
+  <h2 id="crop">Cropping</h2>
+  <figure class="shot"><img src="shots/crop.jpg" width="1200" height="962" loading="lazy" alt="Crop mode with the Crop inspector showing exact Left, Top, Width and Height fields in pixels."></figure>
+  <p>New images open in <strong>Crop</strong> (the switch in the bottom toolbar). Drag a corner handle to resize the crop, or drag inside it to move it. The width and height show along its edges, in the original image’s pixels, and everything outside is dimmed.</p>
+  <ul>
+    <li><strong>Crop Preset</strong> (in the bottom toolbar): Freeform, 1:1, 16:9 or 4:3, and <strong>Reset Crop</strong>.</li>
+    <li><strong>Crop Dimensions</strong> (the ruler) opens exact <strong>Left</strong>, <strong>Top</strong>, <strong>Width</strong> and <strong>Height</strong> fields. Typing a size switches to Freeform.</li>
+    <li><strong>Rotate Left</strong> turns the image 90° counterclockwise.</li>
+    <li>The magnifier shows the zoom, from 100% up to 800%. Pinch on the image to zoom where you pinch; the menu also has <strong>Pan</strong> and <strong>Fit to Window</strong>.</li>
+  </ul>
+  <p>The crop is always taken from the full-resolution original, however far you’re zoomed.</p>
+
+  <h2 id="annotate">Marking it up</h2>
+  <figure class="shot"><img src="shots/text.jpg" width="1200" height="962" loading="lazy" alt="Annotate mode with a text note selected and the Text inspector open beside it."></figure>
+  <p>Switch to <strong>Annotate</strong> in the bottom toolbar. The tools appear beside the switch:</p>
+  <ul>
+    <li><strong>Shapes</strong>: rectangle, rounded rectangle, ellipse, triangle, speech bubble, line and arrow. Choose one, then drag on the image.</li>
+    <li><strong>Draw</strong>: drag to draw freehand.</li>
+    <li><strong>Text</strong> and <strong>Pixelate</strong> add a new object in the middle of the crop straight away, ready to move and edit.</li>
+    <li><strong>Select</strong> (the pointer): tap an object to select it, drag it to move it, drag its handles to resize it. Pinch and hold an object for its own menu: <strong>Edit Text</strong> (for text), <strong>Reveal Selection</strong>, <strong>Duplicate</strong>, <strong>Bring to Front</strong>, <strong>Send to Back</strong> and <strong>Delete Annotation</strong>.</li>
+  </ul>
+  <p>The <strong>inspector</strong> on the right shows the selected object: its words, font, size, bold, italic and underline for text; color, stroke width (1 to 80 pixels) and fill for shapes; block size for Pixelate; and its exact position and size. The sidebar button at the right end of the top tools shows and hides it. <strong>Undo</strong> and <strong>Redo</strong> are at the top. What you change in the inspector before choosing <strong>Done</strong> undoes in one step.</p>
+  <p>Everything stays editable until you close the image, including after you Copy or Save.</p>
+
+  <h2 id="pixelate">Hiding things with Pixelate</h2>
+  <figure class="shot"><img src="shots/pixelate.jpg" width="1200" height="962" loading="lazy" alt="A Pixelate area selected over the name and email fields of a screenshot, which are now blocks of color. The inspector shows its Block Size slider and exact Left, Top, Width and Height."></figure>
+  <p>Add <strong>Pixelate</strong>, then move and resize it over what you want hidden. The inspector’s <strong>Block Size</strong> sets how large the blocks are, from 16 to 320 pixels. In the new image, the area is redrawn from those blocks, so the detail underneath isn’t in it. Each block is still an average of what was there, so larger blocks hide more; for anything that really matters, crop it out instead. Your original is unchanged. More on this in <a href="privacy.html#pixelate-is-not-erasure">Privacy</a>.</p>
+
+  <h2 id="sending">Copy, Share and Save</h2>
+  <figure class="shot"><img src="shots/export.jpg" width="1200" height="1200" loading="lazy" alt="The Export sheet: Format PNG, the output dimensions and file size, and buttons for Share, Save to Files, Save New Image to Photos and Copy Image."></figure>
+  <p>The buttons grouped at the top right do the sending. Each one makes a new image from your crop and annotations; your original never changes.</p>
+  <ul>
+    <li><strong>Copy</strong> puts a PNG on the clipboard, the same as <strong>Share › Copy</strong>. You can keep editing while it works; “Copied” appears when it’s done. Then paste it into a chat, a note or an email.</li>
+    <li><strong>Share</strong> opens Apple’s share sheet with a PNG.</li>
+    <li><strong>Export</strong> lets you choose <strong>PNG</strong> or <strong>JPEG</strong> (with a quality from 10% to 100%; JPEG has no transparency, so transparent areas turn white), shows the size in pixels and bytes, and has <strong>Share…</strong>, <strong>Save to Files…</strong>, <strong>Save New Image to Photos</strong> and <strong>Copy Image</strong>.</li>
+  </ul>
+  <p>New images carry no location or camera details from the original. Wide-color screenshots and colors stay wide-color (Display P3); everything else is standard sRGB.</p>
+
+  <h2 id="images">Several images, and Recents</h2>
+  <figure class="shot"><img src="shots/images.jpg" width="1400" height="840" loading="lazy" alt="The native Images sidebar listing two pasted demonstration images: a fictional garden form and an illustrative Swift code image. The code image is selected on the canvas."></figure>
+  <p>The <strong>Images</strong> sidebar on the left groups <strong>Open Images</strong> and <strong>Recents</strong> with symbols and counts. Tap a category row to expand or collapse it, then tap a compact image icon and filename to switch. Native List controls supply selection and hover feedback; Recents starts collapsed. Each keeps its own crop, annotations, Undo and zoom. The button at the top left of the editor shows and hides the sidebar.</p>
+  <p>The <strong>×</strong> in the window’s top right corner closes the current image. If you’ve changed it, you’re asked whether to <strong>Save a Copy</strong>, <strong>Discard Changes</strong> or <strong>Cancel</strong>. Closed images go to <strong>Recents</strong>, so you can open them again: as the copy you saved, or as the original if you discarded your changes. Recents last until you close the window or choose <strong>Clear Recents</strong>. A window holds up to eight open images.</p>
+
+  <h2 id="description">The description under the image</h2>
+  <p>On visionOS 27 or later with Apple Intelligence turned on, a one-sentence description of the original image appears under it, written by Apple’s on-device model. It’s there to help you find your place; it isn’t saved, and it isn’t part of anything you copy or save. If Apple Intelligence is busy or still getting ready, it appears when it can; on earlier systems, nothing is shown.</p>
+
+  <h2 id="appearance">Settings and About</h2>
+  <figure class="shot"><img src="shots/appearance.jpg" width="1200" height="1200" loading="lazy" alt="The Settings sheet with Opacity and Glass sliders, a reset button, and an About button at the top."></figure>
+  <p>The gear at the right end of the bottom toolbar opens <strong>Settings</strong>. <strong>Opacity</strong> and <strong>Glass</strong> sliders set the window’s background, and a button resets them. They change only the window, never your image. With <strong>Reduce Transparency</strong> on in Accessibility settings, the window stays opaque.</p>
+  <p>The <strong>ⓘ</strong> button at the top of Settings opens <strong>About</strong>: which version you have, who made the app and why, and links to this site’s home, privacy and help pages, which open in Safari.</p>
+
+  <h2 id="keyboard">Keyboard</h2>
+  <p>With a keyboard connected, <kbd>⌘</kbd> <kbd>N</kbd> opens a new window, <kbd>⌘</kbd> <kbd>,</kbd> opens Settings, <kbd>⌘</kbd> <kbd>C</kbd> copies, <kbd>⌘</kbd> <kbd>Z</kbd> and <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> undo and redo, <kbd>⌘</kbd> <kbd>+</kbd> and <kbd>⌘</kbd> <kbd>−</kbd> zoom, and <kbd>⌘</kbd> <kbd>0</kbd> fits the image to the window. <kbd>⌘</kbd> <kbd>V</kbd> pastes an image in an empty workspace. Once an image is open, use <strong>+ › Paste</strong> to open another. Text fields keep their normal Paste behavior.</p>
+
+  <h2 id="troubleshooting">When something doesn’t work</h2>
+
+  <h3>There is no image to paste</h3>
+  <p>Copy an image in the other app, then use the empty window’s drop/Paste well, ⌘V there, or + › Paste. The menu’s native Paste control is greyed out without a supported image; the well reports a recovery message. If visionOS asks for paste consent, allow it to hand over that image.</p>
+
+  <h3>“This image is too large”</h3>
+  <p>The file is over 256 MiB or the image is over 200 megapixels, or a crop you’re exporting is over 100 megapixels. Crop it smaller, or open a smaller copy.</p>
+
+  <h3>“These images exceed this window’s working limit”</h3>
+  <p>The open images and Recents in one window can use up to 512 MiB. Close an image, or choose <strong>Clear Recents</strong>, then try again; or use <strong>New Window</strong>.</p>
+
+  <h3>Save to Photos doesn’t work</h3>
+  <p>The app needs permission to add photos. Allow it in <strong>Settings → Privacy &amp; Security → Photos → Glass Image Tools</strong>. It only ever asks to add, never to read.</p>
+
+  <h3>There’s no description under the image</h3>
+  <p>Descriptions need visionOS 27 or later and Apple Intelligence turned on in Settings. If it’s still getting ready, the description appears once it can be made.</p>
+
+  <h3>The app stopped opening after a week</h3>
+  <p>Builds installed with a free Apple Account expire after seven days. Run it from Xcode again.</p>
+
+  <h2 id="removing">Removing it</h2>
+  <ol>
+    <li>Save anything you want to keep: open images and Recents aren’t kept once the app is gone.</li>
+    <li>On the Home View, pinch and hold the Glass Image Tools icon and delete it, as with any app.</li>
+  </ol>
+  <p>On Mac, move Glass Image Tools from Applications to Trash; macOS may retain its sandbox container and preferences. On Vision Pro, deleting the app removes everything it kept. Images you saved to Photos or Files stay where you saved them. If you allowed adding to Photos, the permission goes with the app.</p>
+
+  <h2 id="accessibility">VoiceOver and larger text</h2>
+  <p>The app uses Apple’s standard controls, which VoiceOver reads. Its own parts have names too: the canvas, the crop corners (“Top left crop corner”), and each annotation (“Arrow annotation”). Every button has a text label, and the pixel fields are spoken as “Width, pixels”. With the largest text sizes, Undo, Redo and Export fold into a <strong>⋯</strong> menu at the top, and the inspector puts each field on its own row.</p>
+  <p>What has been tested: Apple’s automated accessibility audits and the largest text size, in the simulator. What hasn’t: VoiceOver, Voice Control, Switch Control and Pointer Control on a headset. If something is hard to use with any of them, please <a href="https://github.com/msitarzewski/GlassImageTools/issues/new/choose">say so</a>.</p>
+
+  <h2 id="contact">Asking for help</h2>
+  <p>Questions and bug reports go to <a href="https://github.com/msitarzewski/GlassImageTools/issues">GitHub issues</a>. If you’d rather not use GitHub, write to <a href="mailto:msitarzewski@gmail.com">msitarzewski@gmail.com</a>. Please don’t attach screenshots with anything private in them; crop or pixelate first, which this app can help with. Security or privacy problems go privately instead, by email or as described in <a href="https://github.com/msitarzewski/GlassImageTools/blob/main/SECURITY.md">SECURITY.md</a>.</p>
+</article>

@@ -1,0 +1,72 @@
+{
+  "date": "2026-11-05",
+  "mac_build": "42",
+  "visionos_build": "38",
+  "scope": "Mac toolbar organization, native Markup visibility and menu equivalents",
+  "native_api": [
+    "ToolbarItem(.navigation)",
+    "ToolbarItemGroup(.primaryAction)",
+    "ToolbarSpacer(.fixed)",
+    "ToolbarItemGroup(.accessoryBar)",
+    "SettingsLink"
+  ],
+  "release": {
+    "build_exit_code": 0,
+    "strict_signature": true,
+    "four_unchanged_production_sandbox_grants": true,
+    "no_debugger_or_test_exceptions": true,
+    "privacy_manifest_matches_source": true,
+    "test_source_compile_only_exit_code": 0,
+    "warning": "AppIntents metadata extraction skipped; no dependency"
+  },
+  "guest": {
+    "os": "macOS 26.6.2",
+    "method": "Native AX, pointer, keyboard and clipboard; not XCTest",
+    "headless": true,
+    "open_image_between_sidebar_and_title": true,
+    "history_document_view_groups_separated": true,
+    "native_group_gaps_points": [
+      8,
+      18
+    ],
+    "default_window_width": 1256,
+    "native_toolbar_and_menu_visibility_round_trip": true,
+    "command_shift_m_hides_and_restores_when_test_window_focused": true,
+    "hidden_row_revealed_by_text_and_shape_menu_commands": true,
+    "text_editable": true,
+    "menu_rotation_output": [
+      300,
+      400
+    ],
+    "png_clipboard_dimensions": [
+      400,
+      300
+    ],
+    "annotation_pixels_in_png": true,
+    "relocated_open_choices": [
+      "Open\u2026",
+      "Choose from Photos\u2026",
+      "Paste"
+    ],
+    "unsaved_close_confirmation_and_discard": true,
+    "empty_state_has_settings_and_no_editing_row": true,
+    "shutdown": "confirmed"
+  },
+  "no_core_shared_or_visionos_source_changes": true,
+  "no_new_permissions_or_capture": true,
+  "no_host_gui_execution_or_app_closure": true,
+  "core_and_full_suites_rerun": false,
+  "installation": {
+    "version": "1.0",
+    "build": "42",
+    "destination": "/Applications/Glass Image Tools.app",
+    "signature": true,
+    "four_production_sandbox_grants": true,
+    "no_debugger_or_test_exceptions": true,
+    "installed_tree_matches_built_tree": true,
+    "prior_install_preserved": true,
+    "launch_performed": false,
+    "host_app_close_performed": false
+  },
+  "publication_or_upload": false
+}

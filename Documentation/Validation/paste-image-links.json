@@ -1,0 +1,116 @@
+{
+  "date": "2026-11-03",
+  "version": "1.0",
+  "build": "37",
+  "scope": "Owner-authorized explicit HTTPS image acquisition; local editor/render/export unchanged",
+  "core": {
+    "exit_code": 0,
+    "seconds": 20.251,
+    "command": "swift test",
+    "summary": [
+      "\u2714 Test run with 78 tests in 5 suites passed after 2.399 seconds."
+    ]
+  },
+  "native_ui": {
+    "exit_code": 0,
+    "seconds": 276.843,
+    "cases": 8,
+    "failures": 0,
+    "actual_https_download_and_png_copy": true,
+    "largest_text_all_issue_audit": true,
+    "full_suite_rerun": false
+  },
+  "release": {
+    "exit_code": 0,
+    "seconds": 21.646,
+    "signature_exit_code": 0,
+    "privacy_manifest_matches": true,
+    "no_ats_exception": true,
+    "debug_fixtures_excluded": true,
+    "warnings": "Two AppIntents metadata-extraction skips; framework dependency absent."
+  },
+  "native_diagnostics": "Existing Debug-only Boolean interpolation deprecation, metadata skips and transient system backlight XPC log retained privately; UI command completed with zero test failures.",
+  "transport": {
+    "https_only": true,
+    "max_bytes": 268435456,
+    "max_redirects": 5,
+    "request_inactivity_seconds": 20,
+    "resource_timeout_seconds": 60,
+    "cookies_cache_credentials": false,
+    "uploads": false,
+    "partial_file_cleanup_tested": true
+  },
+  "physical": {
+    "timestamp": "2026-11-04T01:00:10.944206+00:00",
+    "build": "37",
+    "version": "1.0",
+    "state": "DEVICE_COMMAND_FAILED",
+    "test_arguments": false,
+    "normal_launch_attempted": false,
+    "identity": {},
+    "processes": {},
+    "signature_exit_code": 0,
+    "lockState": {
+      "exit_code": 1,
+      "seconds": 0.158,
+      "error_domain": "com.apple.dt.CoreDeviceError",
+      "error_code": 4016
+    }
+  },
+  "site_and_packet": {
+    "site_pages": 6,
+    "store_screenshots": 8,
+    "store_utility_tests": 7,
+    "source_and_public_safety_scan": "pass",
+    "publication_or_upload": false,
+    "mobile_pages": [
+      {
+        "page": "index.html",
+        "title": "Glass Image Tools",
+        "width": 390,
+        "documentWidth": 390,
+        "missingAlt": 0,
+        "failedImages": 0
+      },
+      {
+        "page": "help.html",
+        "title": "Help \u2014 Glass Image Tools",
+        "width": 390,
+        "documentWidth": 390,
+        "missingAlt": 0,
+        "failedImages": 0
+      },
+      {
+        "page": "privacy.html",
+        "title": "Privacy \u2014 Glass Image Tools",
+        "width": 390,
+        "documentWidth": 390,
+        "missingAlt": 0,
+        "failedImages": 0
+      },
+      {
+        "page": "reference.html",
+        "title": "Reference \u2014 Glass Image Tools",
+        "width": 390,
+        "documentWidth": 390,
+        "missingAlt": 0,
+        "failedImages": 0
+      }
+    ],
+    "lighthouse_mobile_light": {
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "lighthouse_performance_audited": false,
+    "local_file_anchor_alt_check": "pass",
+    "preview_server_and_tab_closed": true
+  },
+  "simulator_stopped": true,
+  "remaining": [
+    "Physical browser URL/clipboard consent and assistive technology checks",
+    "Unavailable developer tunnel prevents installation until reconnection",
+    "Public URLs/account/distribution/archive/upload/review not completed"
+  ],
+  "physical_context": "Owner confirms remote terminal use; paired developer tunnel remains unavailable. No install or launch occurred."
+}

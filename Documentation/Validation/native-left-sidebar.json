@@ -1,0 +1,252 @@
+{
+  "timestamp": "2026-10-17T19:00:01.960015+00:00",
+  "task": "native-left-sidebar",
+  "state": "reviewed/applied; build 17 installed, launch pending unlock",
+  "implementation": {
+    "presentation": "Native NavigationSplitView leading column; balanced style, system widths/window expansion, existing horizontal primary toolbar. One document-action sidebar toggle.",
+    "lifetime": "Sidebar content remains declared while hidden. Native split owns navigation; explicit visibility controls inspector history/font-edit lifetime.",
+    "readableWindow": "Minimum when sidebar is shown: sidebar minimum 320/400 plus detail 480 plus existing outer insets. Accessibility sizes retain compact primary tools.",
+    "caption": "Natural height and quiet unavailable states retained. Foreground heading/text bounds, scrolling and compositor checked; native scroll-container AX frame can span wider window.",
+    "sourceFilesApplied": 7,
+    "releaseBehaviorOwnersChanged": 3,
+    "newPermissionsOrDependencies": false
+  },
+  "validation": {
+    "initialQueryRun": {
+      "nativeExitCode": 65,
+      "commandSeconds": 119.073,
+      "reportFinalizationInterrupted": false,
+      "caseOutcomes": [
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testAutomaticLeftSidebarAndOriginalImageCaption]' failed (18.241 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testCompactLongTitleAtLargestText]' failed (45.531 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testContextualOptionsAndVisibleCanvas]' failed (24.821 seconds)."
+      ],
+      "suiteSummary": [
+        "\t Executed 3 tests, with 7 failures (0 unexpected) in 88.593 (88.596) seconds",
+        "\t Executed 3 tests, with 7 failures (0 unexpected) in 88.593 (88.597) seconds",
+        "\t Executed 3 tests, with 7 failures (0 unexpected) in 88.593 (88.597) seconds"
+      ]
+    },
+    "interruptedIntegration": {
+      "nativeExitCode": -15,
+      "commandSeconds": 181.288,
+      "reportFinalizationInterrupted": false,
+      "caseOutcomes": [
+        "Test Case '-[GlassImageToolsUITests.AccessibilityAuditTests testNativeAccessibilityAuditForEditorSheetsAndText]' failed (33.695 seconds).",
+        "Test Case '-[GlassImageToolsUITests.AccessibilityAuditTests testNativeAccessibilityAuditForPasteErrorAndColorPalette]' failed (43.530 seconds)."
+      ],
+      "suiteSummary": [
+        "\t Executed 2 tests, with 2 failures (0 unexpected) in 77.225 (77.228) seconds"
+      ],
+      "manuallyCancelledAfterKnownFailures": true,
+      "completeSelectedSuite": false
+    },
+    "navigationUnwrappingAlone": {
+      "nativeExitCode": 65,
+      "commandSeconds": 89.144,
+      "reportFinalizationInterrupted": false,
+      "caseOutcomes": [
+        "Test Case '-[GlassImageToolsUITests.AccessibilityAuditTests testNativeAccessibilityAuditForEditorSheetsAndText]' failed (33.456 seconds).",
+        "Test Case '-[GlassImageToolsUITests.AccessibilityAuditTests testNativeAccessibilityAuditForPasteErrorAndColorPalette]' failed (41.233 seconds)."
+      ],
+      "suiteSummary": [
+        "\t Executed 2 tests, with 2 failures (0 unexpected) in 74.689 (74.692) seconds",
+        "\t Executed 2 tests, with 2 failures (0 unexpected) in 74.689 (74.692) seconds",
+        "\t Executed 2 tests, with 2 failures (0 unexpected) in 74.689 (74.693) seconds"
+      ]
+    },
+    "persistentColumn": {
+      "nativeExitCode": 0,
+      "commandSeconds": 91.988,
+      "reportFinalizationInterrupted": false,
+      "caseOutcomes": [
+        "Test Case '-[GlassImageToolsUITests.AccessibilityAuditTests testNativeAccessibilityAuditForEditorSheetsAndText]' passed (44.552 seconds).",
+        "Test Case '-[GlassImageToolsUITests.AccessibilityAuditTests testNativeAccessibilityAuditForPasteErrorAndColorPalette]' passed (39.932 seconds)."
+      ],
+      "suiteSummary": [
+        "\t Executed 2 tests, with 0 failures (0 unexpected) in 84.485 (84.488) seconds",
+        "\t Executed 2 tests, with 0 failures (0 unexpected) in 84.485 (84.489) seconds",
+        "\t Executed 2 tests, with 0 failures (0 unexpected) in 84.485 (84.490) seconds"
+      ]
+    },
+    "editorRunBeforeFinalSizing": {
+      "nativeExitCode": -15,
+      "commandSeconds": 369.064,
+      "reportFinalizationInterrupted": true,
+      "caseOutcomes": [
+        "Test Case '-[GlassImageToolsUITests.GlassImageToolsUITests testCropRemainsEditableAtZoomWithPanEnabled]' passed (26.650 seconds).",
+        "Test Case '-[GlassImageToolsUITests.GlassImageToolsUITests testTextCanBeEditedWithVisibleCharacterControls]' passed (33.155 seconds).",
+        "Test Case '-[GlassImageToolsUITests.GlassImageToolsUITests testTextContextMenuBelongsToTheTextObject]' passed (28.897 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testAutomaticLeftSidebarAndOriginalImageCaption]' failed (20.598 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testCompactLongTitleAtLargestText]' failed (35.849 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testContextualOptionsAndVisibleCanvas]' passed (23.781 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testDrawingStaysClearAndSelectRestoresEditableVectors]' passed (30.582 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testShortDescriptionUsesOnlyItsContentHeight]' failed (21.066 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testTinyAnnotationRevealDragAndIndependentUndoInOpenPanel]' passed (31.896 seconds)."
+      ],
+      "suiteSummary": [
+        "\t Executed 3 tests, with 0 failures (0 unexpected) in 88.701 (88.704) seconds",
+        "\t Executed 6 tests, with 8 failures (0 unexpected) in 163.773 (163.776) seconds",
+        "\t Executed 9 tests, with 8 failures (0 unexpected) in 252.474 (252.482) seconds",
+        "\t Executed 9 tests, with 8 failures (0 unexpected) in 252.474 (252.483) seconds"
+      ]
+    },
+    "internalMinimumRun": {
+      "nativeExitCode": -15,
+      "commandSeconds": 280.971,
+      "reportFinalizationInterrupted": true,
+      "caseOutcomes": [
+        "Test Case '-[GlassImageToolsUITests.AccessibilityAuditTests testNativeAccessibilityAuditForEditorSheetsAndText]' passed (42.594 seconds).",
+        "Test Case '-[GlassImageToolsUITests.AccessibilityAuditTests testNativeAccessibilityAuditForPasteErrorAndColorPalette]' passed (39.053 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testAutomaticLeftSidebarAndOriginalImageCaption]' passed (22.361 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testCompactLongTitleAtLargestText]' failed (36.582 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testShortDescriptionUsesOnlyItsContentHeight]' passed (19.962 seconds)."
+      ],
+      "suiteSummary": [
+        "\t Executed 2 tests, with 0 failures (0 unexpected) in 81.647 (81.650) seconds",
+        "\t Executed 3 tests, with 1 failure (0 unexpected) in 78.905 (78.907) seconds",
+        "\t Executed 5 tests, with 1 failure (0 unexpected) in 160.552 (160.559) seconds",
+        "\t Executed 5 tests, with 1 failure (0 unexpected) in 160.552 (160.560) seconds"
+      ]
+    },
+    "finalNativeRun": {
+      "nativeExitCode": 0,
+      "commandSeconds": 162.337,
+      "reportFinalizationInterrupted": false,
+      "caseOutcomes": [
+        "Test Case '-[GlassImageToolsUITests.AccessibilityAuditTests testNativeAccessibilityAuditForEditorSheetsAndText]' passed (42.849 seconds).",
+        "Test Case '-[GlassImageToolsUITests.AccessibilityAuditTests testNativeAccessibilityAuditForPasteErrorAndColorPalette]' passed (38.323 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testAutomaticLeftSidebarAndOriginalImageCaption]' passed (20.296 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testCompactLongTitleAtLargestText]' passed (34.580 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testShortDescriptionUsesOnlyItsContentHeight]' passed (18.289 seconds)."
+      ],
+      "suiteSummary": [
+        "\t Executed 2 tests, with 0 failures (0 unexpected) in 81.172 (81.175) seconds",
+        "\t Executed 3 tests, with 0 failures (0 unexpected) in 73.164 (73.166) seconds",
+        "\t Executed 5 tests, with 0 failures (0 unexpected) in 154.336 (154.341) seconds",
+        "\t Executed 5 tests, with 0 failures (0 unexpected) in 154.336 (154.342) seconds"
+      ]
+    },
+    "distinctPassingCasesAcrossStages": 11,
+    "finalPassedCases": 5,
+    "finalFailures": 0,
+    "nativeAccessibility": "All-issue app audits; no app finding ignored. Actual RGB/color change/one-Undo and typing/character controls, text menus, crop, retained vectors and tiny-object history checked.",
+    "compositor": "Inspected native left column, visible caption/image, compact/largest native expansion and controls.",
+    "sourceIdentity": "Final native/signed/applied app sources match; earlier six editor successes predate only the final window-minimum/toolbar layout adjustment.",
+    "retainedBaseline": {
+      "coreTests": 57,
+      "nativeServiceChecks": 30,
+      "rerun": false,
+      "reason": "Core/source/model/render/export/inference unchanged."
+    },
+    "release": {
+      "exit_code": 0,
+      "seconds": 12.603,
+      "errors": 0,
+      "warnings": 1,
+      "build_succeeded": true,
+      "analyze_succeeded": true
+    },
+    "signatureAndBoundaries": {
+      "signature_exit_code": 0,
+      "name": "Glass Image Tools",
+      "version": "1.0",
+      "build": "17",
+      "device_family": [
+        7
+      ],
+      "usage_keys": [
+        "NSPhotoLibraryAddUsageDescription"
+      ],
+      "debug_or_probe_markers": [],
+      "entitlement_keys": [
+        "application-identifier",
+        "com.apple.developer.team-identifier",
+        "get-task-allow"
+      ],
+      "development_get_task_allow": true
+    },
+    "normalSimulatorRestore": {
+      "state": {
+        "exit_code": 0,
+        "seconds": 0.132
+      },
+      "terminate": {
+        "exit_code": 3,
+        "seconds": 0.099
+      },
+      "launch": {
+        "exit_code": 0,
+        "seconds": 0.111
+      },
+      "test_arguments": false
+    },
+    "largestTextGeometryPoints": {
+      "nativeWindowWidth": 924,
+      "toolbarWidth": 715.5,
+      "titleWidth": 892,
+      "canvasWidth": 408,
+      "canvasHeight": 157,
+      "sidebarMinimum": 400
+    },
+    "publicReview": {
+      "timestamp": "2026-10-17T19:00:32.059653+00:00",
+      "filesScanned": 35,
+      "privacyFindings": 0,
+      "relativeLinkFailures": 0,
+      "appliedFileHashMismatches": 0,
+      "finalNativeSignedAppliedSourceMismatches": 0,
+      "sourceFilesApplied": 7,
+      "noGitRepository": true
+    }
+  },
+  "deployment": {
+    "timestamp": "2026-10-17T18:55:23.816363+00:00",
+    "build": "17",
+    "version": "1.0",
+    "signature_exit_code": 0,
+    "installation": {
+      "exit_code": 0,
+      "seconds": 3.098
+    },
+    "identity": {
+      "exit_code": 0,
+      "seconds": 0.364,
+      "name": "Glass Image Tools",
+      "version": "1.0",
+      "build": "17",
+      "matching_count": 1
+    },
+    "hostConnection": {
+      "exit_code": 0,
+      "seconds": 1.635
+    },
+    "initialLaunchTimeout": {
+      "exit_code": 2,
+      "seconds": 45.135
+    },
+    "launch": {
+      "exit_code": 2,
+      "seconds": 30.149
+    },
+    "state": "INSTALLED_LAUNCH_PENDING",
+    "passcodeRequired": true,
+    "runningVerified": false,
+    "followupHostChecks": {
+      "defaultProcessQuery": {
+        "exit_code": 1,
+        "seconds": 16.068
+      },
+      "defaultLockQuery": {
+        "exit_code": 1,
+        "seconds": 16.068
+      },
+      "failure": "CoreDevice service initialization timed out; supported host check succeeded and reported passcode required."
+    }
+  },
+  "limits": [
+    "No new physical gaze/hand/VoiceOver/motion/material preference acceptance or resource profiling.",
+    "No new recipient, semantic-description accuracy or physical capture acceptance.",
+    "Initial failures and incomplete/terminated reporting runs retained; no clean eleven-case single command claimed."
+  ]
+}

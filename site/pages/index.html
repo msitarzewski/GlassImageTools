@@ -1,0 +1,131 @@
+<!--
+title: Glass Image Tools
+description: A free native Mac and Apple Vision Pro image editor. Crop, mark up and share screenshots. No account or tracking. Local editing with optional image-link downloads.
+-->
+<header class="hero">
+  <img class="hero-icon" src="icon-256.png" alt="The Glass Image Tools icon: a white sun and hills on red glass, in a round silver frame." width="144" height="144">
+  <h1>Glass Image Tools</h1>
+  <p class="tagline">Crop. Mark up. Share. On Mac and Apple Vision Pro.</p>
+  <p class="sub">Open from Photos or Files, drop an image into the window, or paste an image or direct HTTPS image link with a tap or ⌘V. Crop to the part that matters, add a note or an arrow, then copy it into a chat or share it. Your original is never changed.</p>
+  <div class="actions">
+    <a class="button primary" href="https://github.com/msitarzewski/GlassImageTools/releases/download/mac-v1.0/GlassImageTools-1.0-mac.dmg">Download for Mac</a>
+    <a class="button" href="help.html#getting-it">Build for Vision Pro</a>
+    <a class="button" href="help.html">How to use it</a>
+    <a class="button" href="https://github.com/msitarzewski/GlassImageTools">Source code</a>
+  </div>
+  <p class="facts">Free · MIT license · macOS 26+ / visionOS 26+ · no account or tracking</p>
+  <p class="status-note">Mac 1.0 (45) · Apple silicon and Intel · Developer ID signed and notarized. <a href="https://github.com/msitarzewski/GlassImageTools/releases/download/mac-v1.0/GlassImageTools-1.0-mac.zip">ZIP download</a> · <a href="https://github.com/msitarzewski/GlassImageTools/releases/download/mac-v1.0/SHA256SUMS.txt">Checksums</a> · <a href="https://github.com/msitarzewski/GlassImageTools/releases/tag/mac-v1.0">Release notes</a>. Vision Pro is available to build from source; there is no TestFlight link yet.</p>
+</header>
+
+<figure class="demo">
+  <img class="view" src="shots/editor.jpg" width="1800" height="1080" alt="Glass Image Tools in the visionOS simulator, with the native Images sidebar and bottom Annotate toolbar. A fictional garden form is cropped; its name and email are pixelated, and an editable red note reads: Same error every time I tap Reserve.">
+  <figcaption>The editor in Apple’s Vision Pro simulator. The screenshot is of a page made up for this site; nobody’s details are in it. <a href="credits.html">Credits</a>.</figcaption>
+</figure>
+
+<section class="section">
+  <h2>How it works</h2>
+  <ol class="steps">
+    <li>
+      <h3>Open a screenshot</h3>
+      <p>Take one the usual way. Choose Photos or Files, drop an image onto the empty window’s well, or tap it to paste (⌘V works there too). Apple’s pickers hand the app the image you choose.</p>
+    </li>
+    <li>
+      <h3>Crop it</h3>
+      <p>Drag the corners, or type the exact size in pixels. Square, 16:9 and 4:3 presets, and Rotate. The crop comes from the full-resolution original.</p>
+    </li>
+    <li>
+      <h3>Mark it up</h3>
+      <p>Boxes, ellipses, triangles, speech bubbles, lines, arrows, drawing, text and Pixelate. Everything stays editable until you close the image.</p>
+    </li>
+    <li>
+      <h3>Copy or share it</h3>
+      <p><strong>Copy</strong> puts a PNG on the clipboard, ready to paste into a chat. Or Share, Save to Photos, or Save to Files. Each one makes a new image.</p>
+    </li>
+  </ol>
+</section>
+
+<section class="section">
+  <h2>What it looks like</h2>
+  <div class="gallery">
+    <figure><img src="shots/open.jpg" width="1400" height="840" loading="lazy" alt="The empty Glass Image Tools window with large native Photos and Files choices and a full-width Drop or Paste an Image well."><figcaption><strong>Open, drop or paste.</strong> Tap the well to paste, or press ⌘V in the empty workspace.</figcaption></figure>
+    <figure><img src="shots/images.jpg" width="1400" height="840" loading="lazy" alt="The native Images sidebar with expandable Open Images and Recents groups, compact icon and filename rows, and system selection."><figcaption><strong>A native sidebar for your open images.</strong> Each keeps its own crop, markup and Undo; Recents stays within the session.</figcaption></figure>
+  </div>
+  <div class="gallery">
+    <figure>
+      <img src="shots/crop.jpg" width="1200" height="962" loading="lazy" alt="Crop mode: the screenshot with a crop rectangle and corner handles, the area outside it dimmed. The Crop inspector on the right shows Left 40, Top 150, Width 2,060 and Height 1,390 pixels.">
+      <figcaption><strong>Crop by hand or by the numbers.</strong> Values are in the original image’s pixels; everything outside the crop is dimmed while you work.</figcaption>
+    </figure>
+    <figure>
+      <img src="shots/text.jpg" width="1200" height="962" loading="lazy" alt="Annotate mode with a text note selected. The Text inspector on the right shows the note's words, its font, size, bold, alignment and color.">
+      <figcaption><strong>One inspector for whatever is selected:</strong> its words, font and size, color, stroke, and exact position.</figcaption>
+    </figure>
+  </div>
+  <div class="pair">
+    <figure>
+      <img src="shots/before.png" width="1070" height="340" loading="lazy" alt="Part of the original screenshot: the Name field reads Sam Rivera and the Email field reads sam.rivera@example.com.">
+      <figcaption>Before: the original screenshot.</figcaption>
+    </figure>
+    <figure>
+      <img src="shots/after.png" width="1070" height="340" loading="lazy" alt="The same part of the image Glass Image Tools copied: the name and email are blocks of color and can't be read.">
+      <figcaption>After: the same area in the PNG the app put on the clipboard.</figcaption>
+    </figure>
+  </div>
+  <p class="caption">Pixelate rebuilds the area from large blocks in the new image, so the letters underneath aren’t in it. Each block is still an average of what was there, so big shapes can stay recognizable; <a href="privacy.html#pixelate-is-not-erasure">larger blocks hide more</a>. Your original keeps everything.</p>
+</section>
+
+<section class="section">
+  <div class="split">
+    <div>
+      <h2>What leaves your device</h2>
+      <p><strong>Editing stays local.</strong> There is no backend, account, analytics or crash reporting. Pasting a direct HTTPS image link requests the image from its host, which sees your IP address and the requested URL. Requests use no cookies, saved credentials or persistent cache.</p>
+      <p>When you do send something, Apple’s features carry it. <strong>Copy</strong> uses the system clipboard, which Universal Clipboard can make pasteable on your other Apple devices. <strong>Share</strong> goes where you point it, and <strong>Save to Photos</strong> syncs if you use iCloud Photos. New images carry no location or camera details from the original.</p>
+      <p>The one-line description under the image comes from Apple Intelligence on your device (visionOS 27 or macOS 27, with a compatible model enabled). It isn’t saved and isn’t part of what you copy.</p>
+      <p><a href="privacy.html">Everything it keeps, and for how long</a></p>
+    </div>
+    <div>
+      <h2>What it can’t do</h2>
+      <p><strong>It doesn’t take screenshots.</strong> Use macOS screenshot shortcuts on Mac. On Vision Pro, you take one the usual way, by pressing the top button and the Digital Crown together or asking Siri, and it goes to Photos. visionOS 27 has screen-capture tools that might one day let the app do this itself; that hasn’t been made to work, and nothing here depends on it.</p>
+      <p><strong>It doesn’t keep your work.</strong> Edits live until you close the image. If you want to keep one, save a new copy; the app has no library of its own.</p>
+      <p><strong>Pixelate isn’t a guarantee.</strong> It removes fine detail from the copy you send. It can’t promise that a large, simple shape is unrecognizable.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="split">
+    <div>
+      <h2>What it asks of you</h2>
+      <ul class="plain">
+        <li><strong>A Mac on macOS 26 or later</strong> for the download, or <strong>an Apple Vision Pro</strong> on visionOS 26 or later. The image description needs visionOS 27 and Apple Intelligence; everything else works without it.</li>
+        <li><strong>For the Vision Pro version, a Mac with Xcode</strong> to build and install it. Apple lets a free Apple Account install your own builds; those expire after seven days and need reinstalling. A paid developer membership lasts a year.</li>
+        <li><strong>One permission, only if you use it:</strong> adding new photos to Photos, asked the first time you save there. It can’t see your library.</li>
+        <li><strong>Nothing to sign up for.</strong></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Leaving is easy</h2>
+      <p>On Mac, move the app from Applications to Trash. On Vision Pro, delete it from Home View like any other app. Vision Pro removes the app’s private data when you delete it. macOS may retain its sandbox container and preferences after you remove the app. Images you saved to Photos or Files stay where you put them.</p>
+      <p>And you may not need it at all. If you already move screenshots to a Mac or an iPhone to edit them, and that suits you, nothing here is better enough to change that.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section read">
+  <h2>Who made this, and what’s in it for them</h2>
+  <p>Glass Image Tools is written by <a href="https://github.com/msitarzewski">Michael Sitarzewski</a>, working with AI coding assistants, which did much of the typing; the author directed, reviewed and tested the work. It started as a tool for the author’s own headset and is published in case it’s useful to you. The code is MIT-licensed: anyone can read it, change it, or build their own copy.</p>
+  <p>The app earns nothing: no price, no ads, no data collected. If you want to support the work, there is a <a href="https://github.com/sponsors/msitarzewski">GitHub Sponsors</a> page; the app works the same whether you use it or not. The author gains something anyway: the name on it.</p>
+</section>
+
+<section class="section">
+  <h2>Check it yourself</h2>
+  <ul class="plain">
+    <li>Read <a href="https://github.com/msitarzewski/GlassImageTools/blob/main/Sources/VisionSnipCore/ImageLinkImportService.swift">the image-link downloader</a>: explicit HTTPS requests, no cookies or credentials, bounded private-file writes and cancellation. No images are uploaded.</li>
+    <li>Copy or export a photo that has a location, and look at the new file’s details in Photos or Files: the location isn’t there.</li>
+    <li>Run the image tests from a copy of the source with <code>swift test</code>, including the ones that check exported files carry no metadata.</li>
+    <li>Read <a href="https://github.com/msitarzewski/GlassImageTools/tree/main/Sources/VisionSnipCore">the image code</a>: importing, source-pixel cropping, annotation rendering and Pixelate.</li>
+  </ul>
+</section>
+
+<section class="section narrow">
+  <p class="handback">If you take screenshots in your Vision Pro and want to crop and send them without another device, this does that, and this page has told you what it costs. If you’d rather keep doing it another way, that’s a fine answer too.</p>
+</section>

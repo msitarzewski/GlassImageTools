@@ -1,0 +1,66 @@
+{
+  "version": "1.0",
+  "build": "38",
+  "platform": "Apple Vision Pro / visionOS 27.2 simulator",
+  "native_dimensions": [
+    3840,
+    2160
+  ],
+  "source": "Real app with normal startup. Unchanged visionOS views retained from builds 36 and 37; each entry keeps its original capture_build. Candidate 38 adds a separate Mac shell. No Mac screenshots, fixture UI or repainted controls.",
+  "processing": "Full native frames converted to opaque 8-bit sRGB PNG with metadata removed; no resizing or cropping for store images",
+  "demo_inputs": "../demo/",
+  "screenshots": [
+    {
+      "file": "01-editor.png",
+      "title": "Crop, pixelate and add an editable note",
+      "sha256": "b79faa254483a134b2abaccf35fcb9b90d56717c69117aa8a38c2f2cb40dd764",
+      "capture_build": "36"
+    },
+    {
+      "file": "02-open.png",
+      "title": "Photos, Files, Drop and Paste",
+      "sha256": "b65ac89e8e4b3e0c20722257548f382bce3a17c8ea96f3a4f2ad4cfbfb9c3ff6",
+      "capture_build": "37",
+      "capture_run_finished_at_utc": "2026-11-04T00:54:23.776689+00:00"
+    },
+    {
+      "file": "03-crop.png",
+      "title": "Exact crop dimensions in original pixels",
+      "sha256": "b9e921008052503dd613183571cab403fe7f1e11fbe33f1d9a59405ea0cb3fc0",
+      "capture_build": "36"
+    },
+    {
+      "file": "04-text.png",
+      "title": "Native inspector and editable text",
+      "sha256": "693ccc5e59aa83175242813b568888497b35b0d61014f1961a8858c8c4d8e312",
+      "capture_build": "36"
+    },
+    {
+      "file": "05-pixelate.png",
+      "title": "Pixelate before sharing",
+      "sha256": "0c3cbdca4d45d6f63c869e2a1c29f529e5060f7863b7630eed00c0b79589e9cd",
+      "capture_build": "36"
+    },
+    {
+      "file": "06-images.png",
+      "title": "Native Open Images and Recents sidebar",
+      "sha256": "ae575e1e4ea8a0924fe58cda49a659b7192f6c120824a5ed5e5f0359637cd274",
+      "capture_run_finished_at_utc": "2026-11-01T00:40:34.877405+00:00",
+      "capture": "Focused sidebar retake after system paste notification expired",
+      "capture_build": "36"
+    },
+    {
+      "file": "07-export.png",
+      "title": "PNG/JPEG export and save-new-image options",
+      "sha256": "e6459c375e9efc1c7400c6cd572f0a3c220545e6eafa5ea1154e40799ef5dfdd",
+      "capture_build": "36"
+    },
+    {
+      "file": "08-appearance.png",
+      "title": "Window opacity and glass settings",
+      "sha256": "5aca55e4102f879974504c95e5d51bf7ceeca84a74c605f96407a75c106442ea",
+      "capture_build": "36"
+    }
+  ],
+  "capture_run_finished_at_utc": "2026-11-01T00:36:17.203766+00:00"
+}

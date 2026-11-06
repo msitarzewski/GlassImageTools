@@ -1,0 +1,112 @@
+{
+  "date": "2026-10-31",
+  "build": "36",
+  "scope": "Remove category-only styling; automatic native List buttons",
+  "ui": {
+    "exit_code": 0,
+    "seconds": 248.45,
+    "finalization_interrupted": false,
+    "captures": [
+      {
+        "view": "document-navigation-and-independent-inspector",
+        "exit_code": 0
+      },
+      {
+        "view": "sidebar-library-empty",
+        "exit_code": 0
+      },
+      {
+        "view": "clear-sidebar",
+        "exit_code": 0
+      },
+      {
+        "view": "clear-both-columns",
+        "exit_code": 0
+      },
+      {
+        "view": "opaque-sidebar",
+        "exit_code": 0
+      },
+      {
+        "view": "default-glass-sidebar",
+        "exit_code": 0
+      },
+      {
+        "view": "titlebar-largest-text",
+        "exit_code": 0
+      },
+      {
+        "view": "compact-largest-title",
+        "exit_code": 0
+      },
+      {
+        "view": "compact-largest-toolbar",
+        "exit_code": 0
+      },
+      {
+        "view": "compact-largest-options",
+        "exit_code": 0
+      },
+      {
+        "view": "compact-largest-caption-scrolled",
+        "exit_code": 0
+      }
+    ],
+    "summary": [
+      "Test Case '-[GlassImageToolsUITests.DocumentWorkspaceTests testDocumentSwitchingUndoCloseAndRecents]' passed (74.564 seconds).",
+      "Test Case '-[GlassImageToolsUITests.DocumentWorkspaceTests testSidebarLibraryRowsAndEmptyStates]' passed (16.364 seconds).",
+      "\t Executed 2 tests, with 0 failures (0 unexpected) in 90.928 (90.944) seconds",
+      "Test Case '-[GlassImageToolsUITests.GlassImageToolsUITests testClearWindowWithBothSidePanels]' passed (40.489 seconds).",
+      "\t Executed 1 test, with 0 failures (0 unexpected) in 40.489 (40.489) seconds",
+      "Test Case '-[GlassImageToolsUITests.HIGPolishTests testCompactLongTitleAtLargestText]' passed (43.115 seconds).",
+      "\t Executed 1 test, with 0 failures (0 unexpected) in 43.115 (43.115) seconds",
+      "\t Executed 4 tests, with 0 failures (0 unexpected) in 174.531 (174.549) seconds",
+      "\t Executed 4 tests, with 0 failures (0 unexpected) in 174.531 (174.550) seconds",
+      "** TEST SUCCEEDED **"
+    ],
+    "failures": []
+  },
+  "release": {
+    "exit_code": 0,
+    "seconds": 18.364,
+    "warnings": [
+      "2026-10-31 18:50:44.330 appintentsmetadataprocessor[36646:16955307] warning: Metadata extraction skipped, no AppIntents.framework dependency found",
+      "2026-10-31 18:50:56.531 appintentsmetadataprocessor[36955:16956126] warning: Metadata extraction skipped, no AppIntents.framework dependency found"
+    ],
+    "errors": []
+  },
+  "boundaries": {
+    "signature_exit_code": 0,
+    "name": "Glass Image Tools",
+    "version": "1.0",
+    "build": "36",
+    "device_family": [
+      7
+    ],
+    "usage_keys": [
+      "NSPhotoLibraryAddUsageDescription"
+    ],
+    "debug_markers": [],
+    "encryption_key": false,
+    "privacy_manifest_present": true,
+    "entitlement_keys": [
+      "application-identifier",
+      "com.apple.developer.team-identifier",
+      "get-task-allow"
+    ]
+  },
+  "core": {
+    "source_tests_unchanged": true,
+    "rerun": false,
+    "previous_tests": 69,
+    "previous_suites": 5
+  },
+  "ui_test_source_unchanged": true,
+  "simulator_stopped": true,
+  "source_identity": "Signed, native-tested and applied source hashes match",
+  "limitations": [
+    "Hardware gaze/hover needs owner observation",
+    "Core/full UI/native services not rerun"
+  ],
+  "reference": "https://developer.apple.com/documentation/swiftui/view/listrowhovereffect(_:)"
+}

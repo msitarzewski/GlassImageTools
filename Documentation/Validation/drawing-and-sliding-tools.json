@@ -1,0 +1,146 @@
+{
+  "timestamp": "2026-10-17T18:14:55.203935+00:00",
+  "task": "drawing-panel-caption",
+  "state": "applied, build 15 installed and running",
+  "implementation": {
+    "selection": "Only Select shows vector bounds/handles; drawing retains editable objects and independent history.",
+    "toolPanel": "Existing native Form uses standard trailing transition/default animation; Reduce Motion disables sliding animation. No unavailable inspector API.",
+    "caption": "Callout text, spacing/padding, full wrapping and bounded native scrolling. No visible loading/unavailable placeholder. Outside edited/exported pixels.",
+    "appDirectoryFilesChanged": 4,
+    "releaseBehaviorOwnersChanged": 3,
+    "reviewedAppliedFiles": 7,
+    "newPermissionsOrDependencies": false
+  },
+  "validation": {
+    "initial": {
+      "cases": 5,
+      "passed": 3,
+      "failedCases": 2,
+      "failedAssertions": 4,
+      "suiteSeconds": 106.302,
+      "nativeExitCode": -15,
+      "commandSeconds": 239.897,
+      "reportFinalizationInterrupted": true,
+      "diagnosis": "Empty Group task lifecycle corrected; initial resize test made no geometry change."
+    },
+    "broad": {
+      "cases": 9,
+      "passed": 7,
+      "failedCases": 2,
+      "failedAssertions": 4,
+      "suiteSeconds": 228.289,
+      "nativeExitCode": -15,
+      "commandSeconds": 347.519,
+      "reportFinalizationInterrupted": true,
+      "diagnosis": "Adaptive caption queried as wrong accessibility type; coordinate-based freehand resize lost selection. Corrected test queries and used existing native handle-to-handle gesture."
+    },
+    "finalFocused": {
+      "passedCases": 4,
+      "failedAssertions": 0,
+      "nativeExitCode": 0,
+      "commandSeconds": 107.823,
+      "summary": [
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testAutomaticRightSidebarAndOriginalImageCaption]' passed (19.537 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testCompactLongTitleAtLargestText]' passed (38.565 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testDrawingStaysClearAndSelectRestoresEditableVectors]' passed (27.718 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testUnavailableDescriptionHasNoPlaceholder]' passed (14.791 seconds).",
+        "\t Executed 4 tests, with 0 failures (0 unexpected) in 100.612 (100.616) seconds",
+        "\t Executed 4 tests, with 0 failures (0 unexpected) in 100.612 (100.617) seconds",
+        "\t Executed 4 tests, with 0 failures (0 unexpected) in 100.612 (100.618) seconds"
+      ],
+      "reportFinalizationInterrupted": false
+    },
+    "distinctPassedCases": 9,
+    "cleanNineCaseCommand": false,
+    "nativeAccessibility": "All-issue app audits; no app issue ignored. Largest text actual caption scrolling and usable canvas, contextual pane, quiet missing-caption state.",
+    "release": {
+      "exit_code": 0,
+      "seconds": 12.468,
+      "errors": 0,
+      "warnings": 1,
+      "build_succeeded": true,
+      "analyze_succeeded": true
+    },
+    "signatureAndBoundaries": {
+      "signature_exit_code": 0,
+      "name": "Glass Image Tools",
+      "version": "1.0",
+      "build": "15",
+      "device_family": [
+        7
+      ],
+      "usage_keys": [
+        "NSPhotoLibraryAddUsageDescription"
+      ],
+      "debug_or_probe_markers": [],
+      "entitlement_keys": [
+        "application-identifier",
+        "com.apple.developer.team-identifier",
+        "get-task-allow"
+      ],
+      "development_get_task_allow": true
+    },
+    "unchangedBaseline": {
+      "coreTests": 57,
+      "nativeServiceChecks": 30,
+      "rerun": false,
+      "reason": "Core/model/render/export/service owners unchanged by hashes."
+    },
+    "application": "Seven reviewed files transferred after baseline conflict checks; UI/Release/app hashes match.",
+    "compositor": "Inspected normal long caption, native largest-text scroll view and clear freehand. Actual default on-device model path also produced text in simulator; synthetic long/unavailable fixtures are Debug-only.",
+    "simulatorNormalRestore": {
+      "state": {
+        "exit_code": 0,
+        "seconds": 0.162
+      },
+      "launch": {
+        "exit_code": 0,
+        "seconds": 0.129
+      },
+      "test_arguments": false
+    },
+    "publicReview": {
+      "filesChecked": 34,
+      "privateFindings": 0,
+      "brokenLocalLinks": 0,
+      "appliedSourceMatches": true,
+      "gitCreated": false
+    }
+  },
+  "deployment": {
+    "timestamp": "2026-10-17T18:14:34.346744+00:00",
+    "build": "15",
+    "version": "1.0",
+    "signature_exit_code": 0,
+    "installation": {
+      "exit_code": 0,
+      "seconds": 5.347
+    },
+    "identity": {
+      "exit_code": 0,
+      "seconds": 1.267,
+      "name": "Glass Image Tools",
+      "version": "1.0",
+      "build": "15",
+      "matching_count": 1
+    },
+    "launch": {
+      "exit_code": 0,
+      "seconds": 0.592,
+      "test_arguments": false
+    },
+    "processes": {
+      "exit_code": 0,
+      "seconds": 0.538,
+      "matching_count": 1,
+      "running_verified": true
+    },
+    "state": "DEPLOYED_RUNNING_VERIFIED"
+  },
+  "limits": [
+    "No new physical gaze/hand/VoiceOver/keyboard/motion acceptance or resource profiling.",
+    "Reduce Motion branch inspected and compiled; no new physical preference test.",
+    "Current caption layout tests include explicit synthetic fixtures; prior physical exact-service inference evidence retained.",
+    "No semantic-accuracy, recipient interoperability or capture claim."
+  ]
+}

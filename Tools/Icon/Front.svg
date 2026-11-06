@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>Glass Image Tools — silver frame</title>
+  <defs>
+    <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e4e6ec"/>
+      <stop offset=".5" stop-color="#c6c9d2"/>
+      <stop offset="1" stop-color="#b6bbc8"/>
+    </linearGradient>
+  </defs>
+  <!-- The frame fills everything outside the glass; visionOS masks it to the icon's circle. -->
+  <path fill="url(#silver)" fill-rule="evenodd" d="M0 0H1024V1024H0ZM512 56.6A455.4 455.4 0 1 0 512 967.4A455.4 455.4 0 1 0 512 56.6Z"/>
+  <!-- A thin dark rim where the frame meets the glass. -->
+  <circle cx="512" cy="512" r="458.4" fill="none" stroke="#7d1010" stroke-width="6"/>
+</svg>

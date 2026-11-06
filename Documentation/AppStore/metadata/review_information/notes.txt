@@ -1,0 +1,17 @@
+Glass Image Tools is a native visionOS image editor. No account, sign-in, subscription, server or demo credentials are required.
+
+Review workflow:
+1. Take a screenshot using the top button and Digital Crown, or use any image you are comfortable editing. The app does not capture screenshots itself.
+2. In the empty window choose Photos or Files, drop an image onto the well, tap the well to paste, or press Command V there. Paste also accepts a direct HTTPS image URL, including plain text. It downloads image bytes into the same editor; it does not render webpages. HTTP/file/data links, HTML, oversized files and authentication failures show a recovery message. Once an image is open, the + menu offers those import choices and New Window.
+3. Crop is selected initially. Drag the corners, choose a preset, or open Crop Dimensions with the ruler for exact pixel fields. The original's name, dimensions and type appear at the top. Rotate Left is available in Crop.
+4. Switch to Annotate in the bottom toolbar. Use the shapes menu and drag to draw; Text and Pixelate insert editable objects at the crop center. The inspector on the right edits the selected object. Undo and Redo are at the top.
+5. Copy puts a PNG on the system clipboard. Share uses the native share sheet. Export offers PNG or JPEG, dimensions/file size, Save to Files and Save New Image to Photos. All outputs are new images; the original is never overwritten.
+6. The left sidebar switches between open images. Open Images starts expanded and Recents collapsed. Each image has independent edits and Undo. The X closes the current image and offers save choices if edited; saved/reopened images are flattened.
+
+Permissions: opening Photos uses PhotosPicker and requires no broad library access. Save New Image to Photos requests add-only permission. An explicit clipboard paste can show visionOS's normal consent prompt for content from another app. No camera, microphone, location, contacts or screen-capture entitlement is requested.
+
+On visionOS 27 or later, Apple Intelligence can describe the original image using Apple's on-device Foundation Models framework when that capability is available. Nothing is shown if it is unavailable. This optional caption is outside Copy/Share/export; all image editing works without it.
+
+Editing is local and the developer collects no data. The only app networking is an explicit image-link Paste download over system HTTPS, with no cookies, credentials or persistent cache, five-redirect/256 MiB/timeout limits and Cancel cleanup. The requested image host sees the request and IP address. No image is uploaded; no custom cryptography is implemented. Appearance controls are in Settings; About links to support and privacy. No in-app purchases or external payment flow.
+
+Marketing images use a fictional garden form and an illustrative code image; no personal image content is included. Source is MIT-licensed: https://github.com/msitarzewski/GlassImageTools

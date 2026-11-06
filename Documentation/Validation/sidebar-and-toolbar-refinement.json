@@ -1,0 +1,505 @@
+{
+  "build": "20",
+  "version": "1.0",
+  "timestamp": "2026-10-19T04:18:18.207762+00:00",
+  "scope": "Native sidebar/titlebar/inspector and new-window acquisition UI; no editor model or renderer changes.",
+  "core": {
+    "rerun": false,
+    "unchanged_source_and_tests": true,
+    "retained_build_19_baseline_tests": 62,
+    "retained_suites": 4
+  },
+  "native_services": {
+    "seconds": 7.514,
+    "checkCount": 42,
+    "passed": 42,
+    "failed": 0,
+    "checks": [
+      {
+        "detail": "New model is clean; switching restores original crop, zoom and pan without replacing the source.",
+        "name": "New document preserves current edits",
+        "passed": true
+      },
+      {
+        "name": "Independent document Undo",
+        "detail": "Undo/Redo belongs to the selected document; another editor's history remains clean.",
+        "passed": true
+      },
+      {
+        "name": "Close selects surviving document",
+        "detail": "Closing releases the old editor source and selects the surviving model.",
+        "passed": true
+      },
+      {
+        "name": "Saved recent reopens flattened",
+        "detail": "Actual PNG encoded/decoded at 800 by 1000; reopening has no vectors, dirty state or Undo history.",
+        "passed": true
+      },
+      {
+        "name": "Discarded recent restores saved pixels",
+        "detail": "Discarding newer edits retains the last saved flattened image.",
+        "passed": true
+      },
+      {
+        "name": "Clear Recents preserves open images",
+        "detail": "Recent ownership is removed while the other open document retains its immutable source.",
+        "passed": true
+      },
+      {
+        "name": "Recent-copy failure cannot trap close",
+        "detail": "A deliberately removed synthetic saved output yields a visible warning and closes without a broken Recent.",
+        "passed": true
+      },
+      {
+        "detail": "A cancelled actual close task leaves the source/model open and creates no Recent.",
+        "name": "Cancelled close preserves document",
+        "passed": true
+      },
+      {
+        "detail": "Wrong identity or changed edit snapshot cannot mark another document saved or retain an unrelated output.",
+        "name": "Stale save cannot affect another document",
+        "passed": true
+      },
+      {
+        "detail": "Actual owned image file exists while recent, then its source and private file release on Clear Recents.",
+        "name": "Clear Recents removes private copies",
+        "passed": true
+      },
+      {
+        "detail": "Injected count and storage limits reject imports without evicting open edits or adding rows.",
+        "name": "Workspace resource limits preserve documents",
+        "passed": true
+      },
+      {
+        "detail": "Three typed digits commit one source-pixel edit; Undo restores the original and Redo restores 800 px.",
+        "name": "Inspector crop undo/redo",
+        "passed": true
+      },
+      {
+        "name": "Crop preset undo/redo",
+        "passed": true,
+        "detail": "Crop bounds and preset restore together."
+      },
+      {
+        "name": "Inspector annotation undo/delete",
+        "passed": true,
+        "detail": "A fractionally positioned rectangle resized by typed digits displays 300 px; Undo restores the entire original object. Dimension editing and deletion each commit one reversible operation."
+      },
+      {
+        "name": "Inspector numeric bounds",
+        "passed": true,
+        "detail": "Int minimum/maximum dimensions remain inside the source; nonfinite and extreme display values convert safely."
+      },
+      {
+        "name": "Nondestructive quarter-turn and one-step Undo Redo",
+        "passed": true,
+        "detail": "Rotation changes value state only; crop/source ownership is stable and the viewport fits."
+      },
+      {
+        "name": "Rotated exact crop dimensions and native Copy",
+        "passed": true,
+        "detail": "Visible width/height map back to bounded source pixels; actual system image decodes at 250 by 400."
+      },
+      {
+        "name": "Rotated preset follows output axes",
+        "passed": true,
+        "detail": "The 16:9 preset follows the visible/exported orientation."
+      },
+      {
+        "name": "Accessible annotation insertion and Undo",
+        "passed": true,
+        "detail": "Every supported non-freehand object is inserted in source pixels at the crop center, remains selected/editable, preserves zoom/pan and commits one Undo/Redo operation."
+      },
+      {
+        "name": "Accessible annotation style and text editing",
+        "passed": true,
+        "detail": "Insertion reuses the current retained style and last shape, requests native text editing for text, and does not invent a freehand path."
+      },
+      {
+        "name": "Contextual annotation kind precedence",
+        "passed": true,
+        "detail": "The selected object owns inspector controls; an active annotation tool takes precedence over the remembered shape when nothing is selected."
+      },
+      {
+        "name": "Prepared text defaults and creation Undo",
+        "passed": true,
+        "detail": "Text content, font, traits, alignment and color prepared before insertion create the retained text object without irrelevant shape fill; insertion remains one reversible edit."
+      },
+      {
+        "name": "Source-pixel pixelation size and inspector Undo",
+        "passed": true,
+        "detail": "Pixelation reports the renderer's 16-pixel minimum and maps a 128-pixel target to its retained rendering parameter. Multiple live changes undo together; non-finite input is rejected."
+      },
+      {
+        "name": "Persistent inspector gesture Undo boundaries",
+        "passed": true,
+        "detail": "Style, canvas movement and later style edits undo separately while the inspector stays visible. Multiple style changes after Undo or Redo still form one operation; mid-gesture callbacks do not absorb geometry, and Pan adds no edit."
+      },
+      {
+        "name": "Selection reveal preserves document and history",
+        "passed": true,
+        "detail": "Show Selection requests canvas-owned recentering without modifying source edits or adding Undo; actual viewport movement is verified by native canvas interaction separately."
+      },
+      {
+        "name": "Direct native share snapshot bytes",
+        "passed": true,
+        "detail": "The real Transferable produces a single decoded 800\u00d7600 PNG with the flattened green annotation; original and private source bytes remain unchanged. No recipient behavior is inferred."
+      },
+      {
+        "name": "Document saved baseline",
+        "passed": true,
+        "detail": "Dirty state follows the initial/last durable snapshot, including Undo away from or back to that snapshot."
+      },
+      {
+        "name": "Stale save and close ownership",
+        "detail": "Newer edits and a closed source reject stale save completions; close clears document state and history.",
+        "passed": true
+      },
+      {
+        "name": "Failed and cancelled replacement",
+        "detail": "Actual failed file decoding and a cancelled import preserve the previous source, edits and dirty state.",
+        "passed": true
+      },
+      {
+        "name": "Live typography undo transaction",
+        "detail": "Text editing is requested on creation; content and typography update as one reversible edit. Font displays are safely bounded independently of image dimensions.",
+        "passed": true
+      },
+      {
+        "name": "Annotation arrangement and mode preservation",
+        "detail": "Duplicates retain typography, front/back ordering changes retained objects, and mode switching preserves objects and viewport.",
+        "passed": true
+      },
+      {
+        "name": "PNG explicit image paste",
+        "detail": "An actual NSItemProvider imports unchanged encoded bytes through the shared protected source pipeline and resets the editing baseline.",
+        "passed": true
+      },
+      {
+        "name": "JPEG explicit image paste",
+        "detail": "An actual NSItemProvider imports unchanged encoded bytes through the shared protected source pipeline and resets the editing baseline.",
+        "passed": true
+      },
+      {
+        "name": "Invalid image paste preserves document",
+        "detail": "Empty, text-only and malformed encoded providers report errors while preserving the current source, crop, dirty state and Undo availability.",
+        "passed": true
+      },
+      {
+        "name": "Cancelled image paste preserves document",
+        "detail": "Cancelling an in-flight provider propagates to its Progress, preserves source/edit/history and ignores a delayed completion.",
+        "passed": true
+      },
+      {
+        "detail": "Closing while a provider loads prevents its eventual successful source from reopening or changing the document.",
+        "passed": true,
+        "name": "Closed document rejects stale image paste"
+      },
+      {
+        "detail": "The native model imports through the shared worker, installs an immutable full-resolution source and resets the saved/history baseline.",
+        "passed": true,
+        "name": "Shared asynchronous file import"
+      },
+      {
+        "detail": "Dropping a real ImportedPhoto before decoding removes its private copy; cancelled shared-worker decoding throws cancellation without accepting a source.",
+        "passed": true,
+        "name": "Photo transfer ownership before decoding"
+      },
+      {
+        "detail": "Decoded 800 \u00d7 600 image; 41344 bytes.",
+        "passed": true,
+        "name": "PNG full-resolution export"
+      },
+      {
+        "detail": "Read and decoded the actual system pasteboard data and standard UIImage representation.",
+        "passed": true,
+        "name": "PNG clipboard round-trip"
+      },
+      {
+        "detail": "Decoded 800 \u00d7 600 image; 57540 bytes.",
+        "name": "JPEG full-resolution export",
+        "passed": true
+      },
+      {
+        "detail": "Read and decoded the actual system pasteboard data and standard UIImage representation.",
+        "name": "JPEG clipboard round-trip",
+        "passed": true
+      }
+    ]
+  },
+  "ui_phases": {
+    "sidebar-first": {
+      "native_exit_code": -15,
+      "command_seconds": 236.25,
+      "cases": [
+        {
+          "class": "DocumentWorkspaceTests",
+          "case": "testDocumentSwitchingUndoCloseAndRecents",
+          "outcome": "failed",
+          "seconds": 16.086
+        },
+        {
+          "class": "GlassImageToolsUITests",
+          "case": "testNewShapeDirectResizeAndCropMode",
+          "outcome": "passed",
+          "seconds": 37.698
+        },
+        {
+          "class": "HIGPolishTests",
+          "case": "testCompactLongTitleAtLargestText",
+          "outcome": "failed",
+          "seconds": 12.34
+        }
+      ],
+      "suite_summary": "Executed 3 tests, with 2 failures (0 unexpected) in 66.124 (66.141) seconds",
+      "finalization_interrupted": true,
+      "finalization_grace_seconds": 90,
+      "assertion_failure_lines": 2
+    },
+    "sidebar-refined": {
+      "native_exit_code": -15,
+      "command_seconds": 346.821,
+      "cases": [
+        {
+          "class": "AccessibilityAuditTests",
+          "case": "testNativeAccessibilityAuditForPasteErrorAndColorPalette",
+          "outcome": "passed",
+          "seconds": 54.368
+        },
+        {
+          "class": "DocumentWorkspaceTests",
+          "case": "testCollapsedPanelsKeepNewImageReachable",
+          "outcome": "passed",
+          "seconds": 25.319
+        },
+        {
+          "class": "DocumentWorkspaceTests",
+          "case": "testDocumentSwitchingUndoCloseAndRecents",
+          "outcome": "failed",
+          "seconds": 24.424
+        },
+        {
+          "class": "GlassImageToolsUITests",
+          "case": "testNewShapeDirectResizeAndCropMode",
+          "outcome": "passed",
+          "seconds": 37.362
+        },
+        {
+          "class": "HIGPolishTests",
+          "case": "testCompactLongTitleAtLargestText",
+          "outcome": "passed",
+          "seconds": 54.065
+        }
+      ],
+      "suite_summary": "Executed 5 tests, with 2 failures (0 unexpected) in 195.539 (195.554) seconds",
+      "finalization_interrupted": true,
+      "finalization_grace_seconds": 90,
+      "assertion_failure_lines": 2
+    },
+    "sidebar-final": {
+      "native_exit_code": 0,
+      "command_seconds": 310.012,
+      "cases": [
+        {
+          "class": "AccessibilityAuditTests",
+          "case": "testNativeAccessibilityAuditForPasteErrorAndColorPalette",
+          "outcome": "passed",
+          "seconds": 56.385
+        },
+        {
+          "class": "DocumentWorkspaceTests",
+          "case": "testCollapsedPanelsKeepNewImageReachable",
+          "outcome": "passed",
+          "seconds": 25.166
+        },
+        {
+          "class": "DocumentWorkspaceTests",
+          "case": "testDocumentSwitchingUndoCloseAndRecents",
+          "outcome": "passed",
+          "seconds": 74.519
+        },
+        {
+          "class": "GlassImageToolsUITests",
+          "case": "testNewShapeDirectResizeAndCropMode",
+          "outcome": "passed",
+          "seconds": 37.365
+        },
+        {
+          "class": "HIGPolishTests",
+          "case": "testCompactLongTitleAtLargestText",
+          "outcome": "passed",
+          "seconds": 56.378
+        },
+        {
+          "class": "HIGPolishTests",
+          "case": "testRotatedTextRemainsSelectableAndEditable",
+          "outcome": "passed",
+          "seconds": 24.059
+        }
+      ],
+      "suite_summary": "Executed 6 tests, with 0 failures (0 unexpected) in 273.871 (273.887) seconds",
+      "finalization_interrupted": false,
+      "finalization_grace_seconds": 30,
+      "assertion_failure_lines": 0
+    },
+    "sidebar-new-window-initial": {
+      "native_exit_code": -15,
+      "command_seconds": 85.254,
+      "cases": [
+        {
+          "class": "DocumentWorkspaceTests",
+          "case": "testNewWindowOffersExplicitAcquisitionChoices",
+          "outcome": "failed",
+          "seconds": 26.195
+        }
+      ],
+      "suite_summary": "Executed 1 test, with 2 failures (0 unexpected) in 26.195 (26.201) seconds",
+      "finalization_interrupted": true,
+      "finalization_grace_seconds": 30,
+      "assertion_failure_lines": 2
+    },
+    "sidebar-new-window": {
+      "native_exit_code": 0,
+      "command_seconds": 29.176,
+      "cases": [
+        {
+          "class": "DocumentWorkspaceTests",
+          "case": "testNewWindowOffersExplicitAcquisitionChoices",
+          "outcome": "passed",
+          "seconds": 22.699
+        }
+      ],
+      "suite_summary": "Executed 1 test, with 0 failures (0 unexpected) in 22.699 (22.703) seconds",
+      "finalization_interrupted": false,
+      "finalization_grace_seconds": 30,
+      "assertion_failure_lines": 0
+    }
+  },
+  "service_environment_recovery": {
+    "initial_setup_exit_code": 1,
+    "initial_checks_executed": 0,
+    "initial_reason": "Task simulator was Shutdown after clean UI run.",
+    "recovery": {
+      "boot": {
+        "exit_code": 0,
+        "seconds": 0.481
+      },
+      "ready": {
+        "exit_code": 0,
+        "seconds": 7.016
+      }
+    }
+  },
+  "initial_native_build": {
+    "exit_code": 0,
+    "seconds": 19.531
+  },
+  "signed_release": {
+    "exit_code": 0,
+    "seconds": 25.389,
+    "errors": 0,
+    "warnings": 2,
+    "build_succeeded": true,
+    "analyze_succeeded": true
+  },
+  "release_boundaries": {
+    "signature_exit_code": 0,
+    "name": "Glass Image Tools",
+    "version": "1.0",
+    "build": "20",
+    "device_family": [
+      7
+    ],
+    "usage_keys": [
+      "NSPhotoLibraryAddUsageDescription"
+    ],
+    "debug_or_probe_markers": [],
+    "entitlement_keys": [
+      "application-identifier",
+      "com.apple.developer.team-identifier",
+      "get-task-allow"
+    ],
+    "development_get_task_allow": true
+  },
+  "separate_probe_compilation": {
+    "exit_code": 0,
+    "seconds": 6.031,
+    "build_succeeded": true,
+    "errors": []
+  },
+  "source_identity": {
+    "final_ui_services_new_window_signed_staged_app_and_core_match": true
+  },
+  "physical_deployment": {
+    "timestamp": "2026-10-19T04:17:19.784873+00:00",
+    "build": "20",
+    "version": "1.0",
+    "signature_exit_code": 0,
+    "installation": {
+      "exit_code": 0,
+      "seconds": 5.168
+    },
+    "identity": {
+      "exit_code": 0,
+      "seconds": 0.617,
+      "name": "Glass Image Tools",
+      "version": "1.0",
+      "build": "20",
+      "matching_count": 1
+    },
+    "state": "DEPLOYED_RUNNING_VERIFIED",
+    "lockState": {
+      "exit_code": 0,
+      "seconds": 0.596
+    },
+    "passcodeRequired": false,
+    "launch": {
+      "exit_code": 0,
+      "seconds": 0.889,
+      "test_arguments": false
+    },
+    "processes": {
+      "exit_code": 0,
+      "seconds": 1.713,
+      "matching_count": 1,
+      "running_verified": true
+    },
+    "normal_launch_attempted": true,
+    "simulator_restored": {
+      "build": "20",
+      "test_arguments": false,
+      "reset_task_only_app": true,
+      "commands": {
+        "uninstall": {
+          "exit_code": 0,
+          "seconds": 0.166
+        },
+        "install": {
+          "exit_code": 0,
+          "seconds": 0.32
+        },
+        "launch": {
+          "exit_code": 0,
+          "seconds": 0.133
+        }
+      }
+    }
+  },
+  "limits": [
+    "Seven final UI cases passed across two commands; their actual exit/finalization statuses are recorded separately. No full UI suite was run.",
+    "Physical eye/hand, assistive technology, focus/keyboard, appearance/motion and resource acceptance remain manual.",
+    "No new recipient interoperability or capture capability is claimed."
+  ],
+  "initial_findings": [
+    "First phase: two failed cases from native ControlGroup identifier promotion and omitted principal title; immediate Shapes case passed.",
+    "Second phase: four passed cases, one case with two failed assertions due to a panel identifier propagating onto Done; Form/header identities were separated.",
+    "Initial two-window test created both windows but failed to reach picker Cancel through a fixed second control. The successful replay targets the first hittable control and exercises both real pickers; no production source change was needed."
+  ],
+  "public_hygiene": {
+    "text_files_scanned": 110,
+    "private_findings": 0,
+    "missing_relative_links": 0,
+    "implementation_files_applied": 12,
+    "documentation_files_applied": 17
+  }
+}

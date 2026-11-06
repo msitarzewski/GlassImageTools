@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>Glass Image Tools — red glass sky</title>
+  <defs>
+    <linearGradient id="sky" gradientUnits="userSpaceOnUse" x1="183.9" y1="113.1" x2="862.8" y2="919.3">
+      <stop offset="0" stop-color="#f83835"/>
+      <stop offset=".45" stop-color="#e20707"/>
+      <stop offset="1" stop-color="#b00100"/>
+    </linearGradient>
+    <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e4e6ec"/>
+      <stop offset=".5" stop-color="#c6c9d2"/>
+      <stop offset="1" stop-color="#b6bbc8"/>
+    </linearGradient>
+  </defs>
+  <!-- Silver past radius 490 only shows if the Front frame slides during parallax; the frame covers it. -->
+  <path fill="url(#silver)" d="M0 0H1024V1024H0Z"/>
+  <circle cx="512" cy="512" r="490" fill="url(#sky)"/>
+</svg>

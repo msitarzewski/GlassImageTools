@@ -1,0 +1,140 @@
+{
+  "timestamp": "2026-10-17T18:22:10.043844+00:00",
+  "task": "intrinsic-caption-sizing",
+  "state": "reviewed/applied; build 16 installed and running",
+  "implementation": {
+    "owner": "ImageDescriptionCaption",
+    "height": "Native content is measured and reserves only its wrapped height, capped solely for overflow scrolling.",
+    "margins": "12-point horizontal / 8-point vertical content margins, 8-point canvas separation, native text leading.",
+    "unchanged": "Drawing/tool panel, source/model/core/render/export and on-device inference service.",
+    "sourceFilesApplied": 5,
+    "releaseBehaviorOwnersChanged": 1,
+    "newPermissionsOrDependencies": false
+  },
+  "nativeValidation": {
+    "captionCases": {
+      "passed": 4,
+      "failed": 0,
+      "suiteSeconds": 92.776,
+      "commandSeconds": 115.16,
+      "nativeExitCode": 0,
+      "reportFinalizationInterrupted": false,
+      "summary": [
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testAutomaticRightSidebarAndOriginalImageCaption]' passed (20.754 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testCompactLongTitleAtLargestText]' passed (38.152 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testShortDescriptionUsesOnlyItsContentHeight]' passed (19.237 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testUnavailableDescriptionHasNoPlaceholder]' passed (14.633 seconds)."
+      ]
+    },
+    "strengthenedCompactWrapCase": {
+      "passed": 1,
+      "failed": 0,
+      "suiteSeconds": 17.876,
+      "commandSeconds": 23.179,
+      "nativeExitCode": 0,
+      "reportFinalizationInterrupted": false,
+      "summary": [
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testShortDescriptionUsesOnlyItsContentHeight]' passed (17.876 seconds)."
+      ]
+    },
+    "syntheticCaptionMeasuredPoints": {
+      "mainColumnWidth": 676,
+      "captionHeight": 52.5,
+      "mainColumnWidthWithTools": 323.5,
+      "wrappedCaptionHeight": 72.5
+    },
+    "audits": "Native all-issue audits passed; no app issue ignored. Actual short/wrapped and largest-text scrolling compositor inspected.",
+    "fixtures": "Explicit synthetic short/long/unavailable descriptions are Debug-only; these checks do not certify inference semantics.",
+    "sourceIdentity": "UI/signed/applied app sources match; final test source matches compact repeat.",
+    "unchangedBaseline": {
+      "coreTests": 57,
+      "nativeServiceChecks": 30,
+      "rerun": false
+    },
+    "simulatorNormalRestore": {
+      "state": {
+        "exit_code": 0,
+        "seconds": 0.133
+      },
+      "terminate": {
+        "exit_code": 3,
+        "seconds": 0.107
+      },
+      "launch": {
+        "exit_code": 0,
+        "seconds": 0.126
+      },
+      "test_arguments": false
+    }
+  },
+  "release": {
+    "exit_code": 0,
+    "seconds": 24.241,
+    "errors": 0,
+    "warnings": 2,
+    "build_succeeded": true,
+    "analyze_succeeded": true
+  },
+  "boundaries": {
+    "signature_exit_code": 0,
+    "name": "Glass Image Tools",
+    "version": "1.0",
+    "build": "16",
+    "device_family": [
+      7
+    ],
+    "usage_keys": [
+      "NSPhotoLibraryAddUsageDescription"
+    ],
+    "debug_or_probe_markers": [],
+    "entitlement_keys": [
+      "application-identifier",
+      "com.apple.developer.team-identifier",
+      "get-task-allow"
+    ],
+    "development_get_task_allow": true
+  },
+  "warningsReviewed": "Two expected AppIntents extraction skips; no AppIntents framework dependency.",
+  "deployment": {
+    "timestamp": "2026-10-17T18:21:01.713106+00:00",
+    "build": "16",
+    "version": "1.0",
+    "signature_exit_code": 0,
+    "installation": {
+      "exit_code": 0,
+      "seconds": 5.105
+    },
+    "identity": {
+      "exit_code": 0,
+      "seconds": 0.51,
+      "name": "Glass Image Tools",
+      "version": "1.0",
+      "build": "16",
+      "matching_count": 1
+    },
+    "launch": {
+      "exit_code": 0,
+      "seconds": 1.015,
+      "test_arguments": false
+    },
+    "processes": {
+      "exit_code": 0,
+      "seconds": 0.687,
+      "matching_count": 1,
+      "running_verified": true
+    },
+    "state": "DEPLOYED_RUNNING_VERIFIED"
+  },
+  "limits": [
+    "Physical caption appearance/motion/gaze/assistive technology remains owner observation.",
+    "No new inference accuracy, peak-memory, recipient or capture acceptance.",
+    "Core/model/render/export/inference owners unchanged; existing baseline retained, not rerun."
+  ],
+  "publicReview": {
+    "filesChecked": 32,
+    "privateFindings": 0,
+    "brokenLocalLinks": 0,
+    "appliedSourceMatches": true,
+    "gitCreated": false
+  }
+}

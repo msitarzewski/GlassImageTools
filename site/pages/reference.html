@@ -1,0 +1,121 @@
+<!--
+title: Reference
+description: Every limit, format and default in Glass Image Tools, what it stores and for how long, its one permission, and how to build and test it.
+-->
+<article class="doc">
+  <h1>Reference</h1>
+  <p class="intro">How Glass Image Tools works, with the numbers. Every figure here is a value in the <a href="https://github.com/msitarzewski/GlassImageTools">source code</a>, checked on October 31, 2026, so you can look it up. <a href="privacy.html">Privacy</a> covers what is kept and sent.</p>
+
+  <nav class="toc" aria-label="On this page">
+    <strong>On this page</strong>
+    <ol>
+      <li><a href="#limits">Sizes and limits</a></li>
+      <li><a href="#crop">Crop</a></li>
+      <li><a href="#annotations">Annotations</a></li>
+      <li><a href="#output">What Copy, Share and Save produce</a></li>
+      <li><a href="#color">Color</a></li>
+      <li><a href="#storage">What’s stored, and where</a></li>
+      <li><a href="#description">The image description</a></li>
+      <li><a href="#permissions">Permissions</a></li>
+      <li><a href="#accessibility">Accessibility</a></li>
+      <li><a href="#capture">Capture</a></li>
+      <li><a href="#developers">For developers</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="limits">Sizes and limits</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Limit</th><th>Value</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td>Largest file you can open</td><td>256 MiB</td><td>Checked before and after the private copy is made, so an oversized file is never decoded.</td></tr>
+      <tr><td>Largest image you can open</td><td>200 megapixels</td><td>Rejects oversized source images before processing.</td></tr>
+      <tr><td>Largest crop you can export</td><td>100 megapixels</td><td>Limits full-resolution rendering allocations.</td></tr>
+      <tr><td>Open images per window</td><td>8</td><td>Use <strong>New Window</strong> for more.</td></tr>
+      <tr><td>Retained image budget per window</td><td>512 MiB</td><td>Estimated source/preview cost for Open Images and Recents. Large exports can use additional memory.</td></tr>
+      <tr><td>Preview size</td><td>2,048 pixels on the long side</td><td>The canvas draws a smaller copy; Copy, Share and Save always use the full-resolution original.</td></tr>
+      <tr><td>Zoom</td><td>100% to 800%</td><td>Each step in the menu is 1.5×.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 id="crop">Crop</h2>
+  <ul>
+    <li><strong>Presets:</strong> Freeform, 1:1, 16:9 and 4:3. A preset makes the largest crop of that shape that fits, centered on the image.</li>
+    <li><strong>Exact fields:</strong> Left, Top, Width and Height, in the original image’s pixels. Typing a value switches to Freeform.</li>
+    <li><strong>Rotate Left</strong> turns the image 90° counterclockwise; the fields then follow the rotated view.</li>
+    <li>The dimmed area outside the crop is only a guide on screen. It isn’t in anything you copy or save.</li>
+  </ul>
+
+  <h2 id="annotations">Annotations</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Setting</th><th>Range</th><th>Starts at</th></tr></thead>
+    <tbody>
+      <tr><td>Stroke width</td><td>1 to 80 pixels</td><td>Scaled to the image: its width ÷ 400, between 2 and 24 pixels</td></tr>
+      <tr><td>Font size</td><td>8 to 1,000 pixels</td><td>48 pixels</td></tr>
+      <tr><td>Pixelate block size</td><td>16 to 320 pixels, in steps of 4</td><td>Four times the stroke width</td></tr>
+      <tr><td>Text</td><td>Font, bold, italic, underline, alignment, color</td><td>“Label”, in red</td></tr>
+      <tr><td>Fill</td><td>On or off, any color and opacity, for closed shapes</td><td>Off</td></tr>
+    </tbody>
+  </table></div>
+  <p>Kinds: rectangle, rounded rectangle, ellipse, triangle, speech bubble, line, arrow, freehand drawing, text and pixelate. Pixel values are in the original image’s pixels, so an annotation is the same size in the output whatever the zoom. Annotations are drawn after the crop, and anything outside the crop is clipped from the output.</p>
+
+  <h2 id="output">What Copy, Share and Save produce</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Action</th><th>Format</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Copy</td><td>PNG</td><td>On the system clipboard, the same as Share › Copy. The app keeps no copy and no history.</td></tr>
+      <tr><td>Share (top of the window)</td><td>PNG</td><td>Through Apple’s share sheet.</td></tr>
+      <tr><td>Export</td><td>PNG, or JPEG at 10% to 100% quality</td><td>JPEG flattens transparency onto white. The sheet shows the size in pixels and the file size before you send it.</td></tr>
+      <tr><td>Save New Image to Photos</td><td>PNG or JPEG, as chosen in Export</td><td>Always a new photo; the original is untouched.</td></tr>
+    </tbody>
+  </table></div>
+  <p>Every new image is rendered fresh from the original’s pixels, so it carries no metadata from the original: no location, camera, or dates. The original file’s orientation is applied first, so a rotated or mirrored photo comes out upright. Pixelated areas are rebuilt from blocks in the new image itself; the detail beneath them isn’t in the file.</p>
+
+  <h2 id="color">Color</h2>
+  <p>If the screenshot or an annotation color is wide-color, the new image is Display P3; otherwise it’s sRGB. Either way it’s 8 bits per channel. HDR brightness above standard white isn’t kept.</p>
+
+  <h2 id="storage">What’s stored, and where</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>What</th><th>Where</th><th>How long</th></tr></thead>
+    <tbody>
+      <tr><td>A private copy of each image you open</td><td>The app’s temporary folder, protected while the headset is locked</td><td>While it’s open or in Recents. Anything left after a force-quit is deleted at the next launch.</td></tr>
+      <tr><td>Crop, annotations and Undo history</td><td>Memory only</td><td>Until you close the image.</td></tr>
+      <tr><td>Recents</td><td>The app’s temporary folder</td><td>Until <strong>Clear Recents</strong> or the window closes.</td></tr>
+      <tr><td>The file being prepared to copy, share or save</td><td>The app’s temporary folder</td><td>Until the action finishes; leftovers are deleted at the next launch.</td></tr>
+      <tr><td>Appearance (Opacity, Glass)</td><td>The app’s preferences</td><td>Until you change them or delete the app.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 id="description">The image description</h2>
+  <p>On visionOS 27 or later, when Apple Intelligence is on and its model can read images, the app sends the preview of the original to Apple’s on-device model through the Foundation Models framework, asking for one factual sentence and treating any text in the image as content, never as instructions. Replies are limited to 100 tokens and shown up to 1,000 characters. One description is made at a time across all windows. If the model is busy it tries again after 2 seconds; if it’s still getting ready, after 30. Nothing about it is saved.</p>
+
+  <h2 id="permissions">Permissions</h2>
+  <ul>
+    <li><strong>Photos, add only:</strong> “Save a new copy of your edited image to Photos. Your original is never changed.” Asked the first time you save to Photos.</li>
+    <li>Photos and Files <em>opening</em> use Apple’s pickers, which need no permission: the app receives only what you pick.</li>
+    <li>No camera, microphone, location, contacts, full Photos access or screen-capture entitlement.</li>
+  </ul>
+
+  <h2 id="accessibility">Accessibility</h2>
+  <ul>
+    <li>Standard visionOS controls throughout: windows, toolbars, menus, forms, sheets and the share sheet.</li>
+    <li>The canvas, crop corners, annotations and their corners have spoken names and hints; pixel fields read as “Width, pixels”.</li>
+    <li>At the largest text sizes, Undo, Redo and Export move into a <strong>⋯</strong> menu and paired fields stack.</li>
+    <li>Reduce Transparency makes the window background opaque.</li>
+    <li>Tested in the simulator with Apple’s automated accessibility audits and the largest text size; not yet tested on a headset with VoiceOver, Voice Control, Switch Control or keyboard-only navigation.</li>
+  </ul>
+
+  <h2 id="capture">Capture</h2>
+  <p>The app doesn’t capture the screen. visionOS 27 offers apps a system picker for sharing screen content (ScreenCaptureKit), but on visionOS an app can’t list other apps’ windows or take a screenshot directly. A separate experiment in the source (<code>GlassImageToolsCaptureProbe</code>) compiles against those tools; no capture path has been confirmed working on a headset, and the editor doesn’t depend on one. The full findings are in <a href="https://github.com/msitarzewski/GlassImageTools/blob/main/Documentation/CAPTURE_CAPABILITIES.md">CAPTURE_CAPABILITIES.md</a>.</p>
+
+  <h2 id="developers">For developers</h2>
+  <ul>
+    <li><strong>Swift 6 and SwiftUI</strong>, Apple frameworks only, no third-party dependencies. The app runs on visionOS 26 or later.</li>
+    <li><strong><code>Sources/VisionSnipCore</code></strong> holds the image model, geometry, import and rendering, with no UI. <code>swift test</code> runs its image-core checks on a Mac.</li>
+    <li><strong>Image-link Paste</strong> uses one direct HTTPS URL, with at most five HTTPS redirects, no cookies/credential storage/cache, a 256 MiB transfer cap, a 20-second inactivity timeout and a 60-second transfer timeout. It reuses the normal protected source and bounded preview loader.</li>
+    <li><strong><code>App/</code></strong> holds the visionOS interface. <code>UITests/</code> holds native interface regression checks; exact run results are recorded in the repository’s <a href="https://github.com/msitarzewski/GlassImageTools/blob/main/Documentation/STATUS.md">verified status</a>.</li>
+    <li>The Xcode project is generated from <code>project.yml</code> with XcodeGen and checked in; regenerate only after changing targets or settings.</li>
+    <li>The icon is three SVG layers in <code>Tools/Icon</code>; <code>swift Tools/GenerateIcon.swift</code> rebuilds the visionOS image stack.</li>
+    <li>This site is <code>site/</code>, built by <code>python3 scripts/build_site.py</code>, with <code>PRIVACY.md</code> rendered from the repository so the two can’t disagree.</li>
+  </ul>
+  <p><a href="https://github.com/msitarzewski/GlassImageTools/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> has the details.</p>
+</article>

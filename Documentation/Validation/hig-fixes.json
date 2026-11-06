@@ -1,0 +1,1078 @@
+{
+  "date_utc": "2026-10-16",
+  "scope": "All eight approved HIG findings; native visionOS editor; synthetic images only",
+  "product": {
+    "name": "Glass Image Tools",
+    "version": "1.0",
+    "prepared_build": "11",
+    "installed_headset_build": "10",
+    "physical_device_calls_this_task": 0,
+    "published": false
+  },
+  "core": {
+    "command": "swift test --scratch-path \"$CORE_BUILD_DIR\"",
+    "command_exit_code": 0,
+    "test_definitions": 57,
+    "suites": 3,
+    "test_seconds": 0.816,
+    "build_seconds": 8.4,
+    "evidence": "Actual worker tool-session summary; no raw log file was saved; core source unchanged afterward"
+  },
+  "native_services": {
+    "checks": 30,
+    "passed": 30,
+    "failures": [],
+    "seconds": 3.155,
+    "launch_exit_code": 0
+  },
+  "initial_native_services": {
+    "checks": 30,
+    "passed": 29,
+    "failures": [
+      {
+        "name": "Selection reveal preserves document and history",
+        "passed": false,
+        "detail": "Show Selection requests canvas-owned recentering without modifying source edits or adding Undo; actual viewport movement is verified by native canvas interaction separately."
+      }
+    ],
+    "seconds": 3.151,
+    "launch_exit_code": 0
+  },
+  "native_services_build": {
+    "build_exit_code": 0,
+    "install_exit_code": 0,
+    "seconds": 10.672
+  },
+  "native_service_checks": [
+    {
+      "detail": "Three typed digits commit one source-pixel edit; Undo restores the original and Redo restores 800 px.",
+      "name": "Inspector crop undo/redo",
+      "passed": true
+    },
+    {
+      "detail": "Crop bounds and preset restore together.",
+      "name": "Crop preset undo/redo",
+      "passed": true
+    },
+    {
+      "detail": "A fractionally positioned rectangle resized by typed digits displays 300 px; Undo restores the entire original object. Dimension editing and deletion each commit one reversible operation.",
+      "name": "Inspector annotation undo/delete",
+      "passed": true
+    },
+    {
+      "detail": "Int minimum/maximum dimensions remain inside the source; nonfinite and extreme display values convert safely.",
+      "name": "Inspector numeric bounds",
+      "passed": true
+    },
+    {
+      "detail": "Every supported non-freehand object is inserted in source pixels at the crop center, remains selected/editable, preserves zoom/pan and commits one Undo/Redo operation.",
+      "name": "Accessible annotation insertion and Undo",
+      "passed": true
+    },
+    {
+      "detail": "Insertion reuses the current retained style and last shape, requests native text editing for text, and does not invent a freehand path.",
+      "name": "Accessible annotation style and text editing",
+      "passed": true
+    },
+    {
+      "detail": "The selected object owns inspector controls; an active annotation tool takes precedence over the remembered shape when nothing is selected.",
+      "name": "Contextual annotation kind precedence",
+      "passed": true
+    },
+    {
+      "detail": "Text content, font, traits, alignment and color prepared before insertion create the retained text object without irrelevant shape fill; insertion remains one reversible edit.",
+      "name": "Prepared text defaults and creation Undo",
+      "passed": true
+    },
+    {
+      "detail": "Pixelation reports the renderer's 16-pixel minimum and maps a 128-pixel target to its retained rendering parameter. Multiple live changes undo together; non-finite input is rejected.",
+      "name": "Source-pixel pixelation size and inspector Undo",
+      "passed": true
+    },
+    {
+      "detail": "Style, canvas movement and later style edits undo separately while the inspector stays visible. Multiple style changes after Undo or Redo still form one operation; mid-gesture callbacks do not absorb geometry, and Pan adds no edit.",
+      "name": "Persistent inspector gesture Undo boundaries",
+      "passed": true
+    },
+    {
+      "detail": "Show Selection requests canvas-owned recentering without modifying source edits or adding Undo; actual viewport movement is verified by native canvas interaction separately.",
+      "name": "Selection reveal preserves document and history",
+      "passed": true
+    },
+    {
+      "detail": "The real Transferable produces a single decoded 800×600 PNG with the flattened green annotation; original and private source bytes remain unchanged. No recipient behavior is inferred.",
+      "name": "Direct native share snapshot bytes",
+      "passed": true
+    },
+    {
+      "passed": true,
+      "name": "Document saved baseline",
+      "detail": "Dirty state follows the initial/last durable snapshot, including Undo away from or back to that snapshot."
+    },
+    {
+      "passed": true,
+      "name": "Stale save and close ownership",
+      "detail": "Newer edits and a closed source reject stale save completions; close clears document state and history."
+    },
+    {
+      "detail": "Actual failed file decoding and a cancelled import preserve the previous source, edits and dirty state.",
+      "passed": true,
+      "name": "Failed and cancelled replacement"
+    },
+    {
+      "detail": "Text editing is requested on creation; content and typography update as one reversible edit. Font displays are safely bounded independently of image dimensions.",
+      "passed": true,
+      "name": "Live typography undo transaction"
+    },
+    {
+      "detail": "Duplicates retain typography, front/back ordering changes retained objects, and mode switching preserves objects and viewport.",
+      "passed": true,
+      "name": "Annotation arrangement and mode preservation"
+    },
+    {
+      "detail": "An actual NSItemProvider imports unchanged encoded bytes through the shared protected source pipeline and resets the editing baseline.",
+      "passed": true,
+      "name": "PNG explicit image paste"
+    },
+    {
+      "detail": "An actual NSItemProvider imports unchanged encoded bytes through the shared protected source pipeline and resets the editing baseline.",
+      "passed": true,
+      "name": "JPEG explicit image paste"
+    },
+    {
+      "detail": "Empty, text-only and malformed encoded providers report errors while preserving the current source, crop, dirty state and Undo availability.",
+      "passed": true,
+      "name": "Invalid image paste preserves document"
+    },
+    {
+      "detail": "Cancelling an in-flight provider propagates to its Progress, preserves source/edit/history and ignores a delayed completion.",
+      "passed": true,
+      "name": "Cancelled image paste preserves document"
+    },
+    {
+      "detail": "Closing while a provider loads prevents its eventual successful source from reopening or changing the document.",
+      "passed": true,
+      "name": "Closed document rejects stale image paste"
+    },
+    {
+      "detail": "The native model imports through the shared worker, installs an immutable full-resolution source and resets the saved/history baseline.",
+      "passed": true,
+      "name": "Shared asynchronous file import"
+    },
+    {
+      "detail": "Dropping a real ImportedPhoto before decoding removes its private copy; cancelled shared-worker decoding throws cancellation without accepting a source.",
+      "passed": true,
+      "name": "Photo transfer ownership before decoding"
+    },
+    {
+      "passed": true,
+      "detail": "Decoded 800 × 600 image; 41344 bytes.",
+      "name": "PNG full-resolution export"
+    },
+    {
+      "passed": true,
+      "detail": "Read and decoded the actual system pasteboard data and standard UIImage representation.",
+      "name": "PNG clipboard round-trip"
+    },
+    {
+      "passed": true,
+      "detail": "PHPhotoLibrary.performChanges completed for a new image asset.",
+      "name": "PNG Photos save"
+    },
+    {
+      "passed": true,
+      "detail": "Decoded 800 × 600 image; 57540 bytes.",
+      "name": "JPEG full-resolution export"
+    },
+    {
+      "passed": true,
+      "detail": "Read and decoded the actual system pasteboard data and standard UIImage representation.",
+      "name": "JPEG clipboard round-trip"
+    },
+    {
+      "passed": true,
+      "detail": "PHPhotoLibrary.performChanges completed for a new image asset.",
+      "name": "JPEG Photos save"
+    }
+  ],
+  "ui": {
+    "unique_passing_cases_across_runs": 25,
+    "functional_cases": 15,
+    "accessibility_cases": 4,
+    "hig_cases": 6,
+    "full_25_case_command_clean_pass": false,
+    "latest_broad_run": "native-ui-final",
+    "final_compact_and_largest_text_command_exit_code": 0,
+    "runs": [
+      {
+        "run": "hig-ui-1",
+        "command_exit_code": 65,
+        "wall_seconds": 120.645,
+        "result_finalization_interrupted": false,
+        "cases": [
+          {
+            "suite": "HIGPolishTests",
+            "case": "testCompactLongTitleAndToolbar",
+            "outcome": "failed",
+            "seconds": 21.419
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testCompactLongTitleAtLargestText",
+            "outcome": "passed",
+            "seconds": 17.541
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testContextualOptionsAndVisibleCanvas",
+            "outcome": "failed",
+            "seconds": 23.078
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testDirectPNGShareOpensWithoutExportForm",
+            "outcome": "passed",
+            "seconds": 12.383
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testPanFeedbackAndReadableAppearanceEndpoints",
+            "outcome": "passed",
+            "seconds": 22.331
+          }
+        ],
+        "compositor_captures": [
+          {
+            "view": "compact-title",
+            "exit_code": 0
+          },
+          {
+            "view": "compact-toolbar",
+            "exit_code": 0
+          },
+          {
+            "view": "compact-largest-title",
+            "exit_code": 0
+          },
+          {
+            "view": "compact-largest-toolbar",
+            "exit_code": 0
+          },
+          {
+            "view": "text-default-options",
+            "exit_code": 0
+          },
+          {
+            "view": "pixelation-beside-canvas",
+            "exit_code": 0
+          },
+          {
+            "view": "direct-share",
+            "exit_code": 0
+          },
+          {
+            "view": "persistent-pan",
+            "exit_code": 0
+          },
+          {
+            "view": "readable-appearance",
+            "exit_code": 0
+          }
+        ]
+      },
+      {
+        "run": "native-ui-2",
+        "command_exit_code": -15,
+        "wall_seconds": 1059.057,
+        "result_finalization_interrupted": true,
+        "cases": [
+          {
+            "suite": "AccessibilityAuditTests",
+            "case": "testNativeAccessibilityAtLargestTextAndIncreasedContrast",
+            "outcome": "failed",
+            "seconds": 34.393
+          },
+          {
+            "suite": "AccessibilityAuditTests",
+            "case": "testNativeAccessibilityAuditForEditorSheetsAndText",
+            "outcome": "passed",
+            "seconds": 41.271
+          },
+          {
+            "suite": "AccessibilityAuditTests",
+            "case": "testNativeAccessibilityAuditForEmptyWindow",
+            "outcome": "passed",
+            "seconds": 7.216
+          },
+          {
+            "suite": "AccessibilityAuditTests",
+            "case": "testNativeAccessibilityAuditForPasteErrorAndColorPalette",
+            "outcome": "failed",
+            "seconds": 42.189
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testAnnotationCanBeAddedAndUndone",
+            "outcome": "passed",
+            "seconds": 29.921
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testAppearanceSettingsPersistAndReset",
+            "outcome": "failed",
+            "seconds": 17.533
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testCancelProcessingPreservesTheCurrentDocument",
+            "outcome": "passed",
+            "seconds": 11.168
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testCloseCancelSaveCancelAndDiscardPreserveOriginal",
+            "outcome": "passed",
+            "seconds": 28.789
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testCropPresetIsRestoredByUndoAndRedo",
+            "outcome": "passed",
+            "seconds": 18.149
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testCropRemainsEditableAtZoomWithPanEnabled",
+            "outcome": "passed",
+            "seconds": 27.305
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testCropUndoCopyAndExport",
+            "outcome": "passed",
+            "seconds": 35.395
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testLabeledDimensionPairsAndAccessibleAnnotationCreation",
+            "outcome": "passed",
+            "seconds": 23.416
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testLineEndpointMovesAndUndoes",
+            "outcome": "failed",
+            "seconds": 22.658
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testNativeImagePasteAndUnsavedReplacementRecovery",
+            "outcome": "passed",
+            "seconds": 36.843
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testNativeLaunchAndPhotosPicker",
+            "outcome": "passed",
+            "seconds": 10.899
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testNewShapeDirectResizeAndCropMode",
+            "outcome": "passed",
+            "seconds": 27.85
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testSaveToPhotosBeforeCloseCompletesDocumentAction",
+            "outcome": "failed",
+            "seconds": 47.566
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testTextCanBeEditedWithVisibleCharacterControls",
+            "outcome": "failed",
+            "seconds": 32.562
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testTextContextMenuBelongsToTheTextObject",
+            "outcome": "failed",
+            "seconds": 24.183
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testCompactLongTitleAndToolbar",
+            "outcome": "passed",
+            "seconds": 16.806
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testCompactLongTitleAtLargestText",
+            "outcome": "passed",
+            "seconds": 16.584
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testContextualOptionsAndVisibleCanvas",
+            "outcome": "passed",
+            "seconds": 22.375
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testDirectPNGShareOpensWithoutExportForm",
+            "outcome": "passed",
+            "seconds": 12.53
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testPanFeedbackAndReadableAppearanceEndpoints",
+            "outcome": "passed",
+            "seconds": 22.299
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testTinyAnnotationRevealDragAndIndependentUndoInOpenPanel",
+            "outcome": "failed",
+            "seconds": 34.557
+          }
+        ],
+        "compositor_captures": [
+          {
+            "view": "compact-title",
+            "exit_code": 0
+          },
+          {
+            "view": "compact-toolbar",
+            "exit_code": 0
+          },
+          {
+            "view": "compact-largest-title",
+            "exit_code": 0
+          },
+          {
+            "view": "compact-largest-toolbar",
+            "exit_code": 0
+          },
+          {
+            "view": "text-default-options",
+            "exit_code": 0
+          },
+          {
+            "view": "pixelation-beside-canvas",
+            "exit_code": 0
+          },
+          {
+            "view": "direct-share",
+            "exit_code": 0
+          },
+          {
+            "view": "persistent-pan",
+            "exit_code": 0
+          },
+          {
+            "view": "readable-appearance",
+            "exit_code": 0
+          },
+          {
+            "view": "tiny-selection-proxies",
+            "exit_code": 0
+          }
+        ]
+      },
+      {
+        "run": "photos-consent-3",
+        "command_exit_code": -15,
+        "wall_seconds": 234.469,
+        "result_finalization_interrupted": false,
+        "cases": [
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testSaveToPhotosBeforeCloseCompletesDocumentAction",
+            "outcome": "failed",
+            "seconds": 41.728
+          }
+        ],
+        "compositor_captures": []
+      },
+      {
+        "run": "native-controls-4",
+        "command_exit_code": 0,
+        "wall_seconds": 68.657,
+        "result_finalization_interrupted": false,
+        "cases": [
+          {
+            "suite": "AccessibilityAuditTests",
+            "case": "testNativeAccessibilityAuditForPasteErrorAndColorPalette",
+            "outcome": "passed",
+            "seconds": 36.906
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testSaveToPhotosBeforeCloseCompletesDocumentAction",
+            "outcome": "passed",
+            "seconds": 17.234
+          }
+        ],
+        "compositor_captures": []
+      },
+      {
+        "run": "native-ui-final",
+        "command_exit_code": -15,
+        "wall_seconds": 805.027,
+        "result_finalization_interrupted": true,
+        "cases": [
+          {
+            "suite": "AccessibilityAuditTests",
+            "case": "testNativeAccessibilityAtLargestTextAndIncreasedContrast",
+            "outcome": "passed",
+            "seconds": 31.219
+          },
+          {
+            "suite": "AccessibilityAuditTests",
+            "case": "testNativeAccessibilityAuditForEditorSheetsAndText",
+            "outcome": "passed",
+            "seconds": 41.229
+          },
+          {
+            "suite": "AccessibilityAuditTests",
+            "case": "testNativeAccessibilityAuditForEmptyWindow",
+            "outcome": "passed",
+            "seconds": 6.987
+          },
+          {
+            "suite": "AccessibilityAuditTests",
+            "case": "testNativeAccessibilityAuditForPasteErrorAndColorPalette",
+            "outcome": "passed",
+            "seconds": 33.324
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testAnnotationCanBeAddedAndUndone",
+            "outcome": "passed",
+            "seconds": 28.558
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testAppearanceSettingsPersistAndReset",
+            "outcome": "passed",
+            "seconds": 109.45
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testCancelProcessingPreservesTheCurrentDocument",
+            "outcome": "passed",
+            "seconds": 10.841
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testCloseCancelSaveCancelAndDiscardPreserveOriginal",
+            "outcome": "passed",
+            "seconds": 27.446
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testCropPresetIsRestoredByUndoAndRedo",
+            "outcome": "passed",
+            "seconds": 17.725
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testCropRemainsEditableAtZoomWithPanEnabled",
+            "outcome": "passed",
+            "seconds": 26.555
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testCropUndoCopyAndExport",
+            "outcome": "passed",
+            "seconds": 35.299
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testLabeledDimensionPairsAndAccessibleAnnotationCreation",
+            "outcome": "passed",
+            "seconds": 22.453
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testLineEndpointMovesAndUndoes",
+            "outcome": "passed",
+            "seconds": 22.027
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testNativeImagePasteAndUnsavedReplacementRecovery",
+            "outcome": "passed",
+            "seconds": 35.576
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testNativeLaunchAndPhotosPicker",
+            "outcome": "passed",
+            "seconds": 11.012
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testNewShapeDirectResizeAndCropMode",
+            "outcome": "passed",
+            "seconds": 27.513
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testSaveToPhotosBeforeCloseCompletesDocumentAction",
+            "outcome": "passed",
+            "seconds": 17.183
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testTextCanBeEditedWithVisibleCharacterControls",
+            "outcome": "passed",
+            "seconds": 27.816
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testTextContextMenuBelongsToTheTextObject",
+            "outcome": "passed",
+            "seconds": 26.99
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testCompactLongTitleAndToolbar",
+            "outcome": "failed",
+            "seconds": 18.933
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testCompactLongTitleAtLargestText",
+            "outcome": "passed",
+            "seconds": 19.47
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testContextualOptionsAndVisibleCanvas",
+            "outcome": "passed",
+            "seconds": 21.776
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testDirectPNGShareOpensWithoutExportForm",
+            "outcome": "passed",
+            "seconds": 15.474
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testPanFeedbackAndReadableAppearanceEndpoints",
+            "outcome": "passed",
+            "seconds": 22.203
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testTinyAnnotationRevealDragAndIndependentUndoInOpenPanel",
+            "outcome": "passed",
+            "seconds": 30.95
+          }
+        ],
+        "compositor_captures": [
+          {
+            "view": "compact-title",
+            "exit_code": 0
+          },
+          {
+            "view": "compact-toolbar",
+            "exit_code": 0
+          },
+          {
+            "view": "compact-largest-title",
+            "exit_code": 0
+          },
+          {
+            "view": "compact-largest-toolbar",
+            "exit_code": 0
+          },
+          {
+            "view": "text-default-options",
+            "exit_code": 0
+          },
+          {
+            "view": "pixelation-beside-canvas",
+            "exit_code": 0
+          },
+          {
+            "view": "direct-share",
+            "exit_code": 0
+          },
+          {
+            "view": "persistent-pan",
+            "exit_code": 0
+          },
+          {
+            "view": "readable-appearance",
+            "exit_code": 0
+          },
+          {
+            "view": "tiny-selection-proxies",
+            "exit_code": 0
+          }
+        ]
+      },
+      {
+        "run": "compact-menu-replay",
+        "command_exit_code": -15,
+        "wall_seconds": 144.104,
+        "result_finalization_interrupted": true,
+        "cases": [
+          {
+            "suite": "HIGPolishTests",
+            "case": "testCompactLongTitleAndToolbar",
+            "outcome": "failed",
+            "seconds": 26.04
+          }
+        ],
+        "compositor_captures": [
+          {
+            "view": "compact-title",
+            "exit_code": 0
+          }
+        ]
+      },
+      {
+        "run": "native-menu-final",
+        "command_exit_code": -15,
+        "wall_seconds": 338.161,
+        "result_finalization_interrupted": true,
+        "cases": [
+          {
+            "suite": "AccessibilityAuditTests",
+            "case": "testNativeAccessibilityAtLargestTextAndIncreasedContrast",
+            "outcome": "passed",
+            "seconds": 31.686
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testCropRemainsEditableAtZoomWithPanEnabled",
+            "outcome": "passed",
+            "seconds": 26.357
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testNewShapeDirectResizeAndCropMode",
+            "outcome": "passed",
+            "seconds": 27.498
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testCompactLongTitleAndToolbar",
+            "outcome": "failed",
+            "seconds": 24.57
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testCompactLongTitleAtLargestText",
+            "outcome": "passed",
+            "seconds": 19.245
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testContextualOptionsAndVisibleCanvas",
+            "outcome": "passed",
+            "seconds": 22.084
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testDirectPNGShareOpensWithoutExportForm",
+            "outcome": "passed",
+            "seconds": 13.258
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testPanFeedbackAndReadableAppearanceEndpoints",
+            "outcome": "passed",
+            "seconds": 22.054
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testTinyAnnotationRevealDragAndIndependentUndoInOpenPanel",
+            "outcome": "passed",
+            "seconds": 30.785
+          }
+        ],
+        "compositor_captures": [
+          {
+            "view": "compact-title",
+            "exit_code": 0
+          },
+          {
+            "view": "compact-largest-title",
+            "exit_code": 0
+          },
+          {
+            "view": "compact-largest-toolbar",
+            "exit_code": 0
+          },
+          {
+            "view": "text-default-options",
+            "exit_code": 0
+          },
+          {
+            "view": "pixelation-beside-canvas",
+            "exit_code": 0
+          },
+          {
+            "view": "direct-share",
+            "exit_code": 0
+          },
+          {
+            "view": "persistent-pan",
+            "exit_code": 0
+          },
+          {
+            "view": "readable-appearance",
+            "exit_code": 0
+          },
+          {
+            "view": "tiny-selection-proxies",
+            "exit_code": 0
+          }
+        ]
+      },
+      {
+        "run": "native-label-scope",
+        "command_exit_code": -15,
+        "wall_seconds": 193.229,
+        "result_finalization_interrupted": true,
+        "cases": [
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testNewShapeDirectResizeAndCropMode",
+            "outcome": "passed",
+            "seconds": 28.939
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testCompactLongTitleAndToolbar",
+            "outcome": "failed",
+            "seconds": 24.727
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testCompactLongTitleAtLargestText",
+            "outcome": "passed",
+            "seconds": 19.544
+          }
+        ],
+        "compositor_captures": [
+          {
+            "view": "compact-title",
+            "exit_code": 0
+          },
+          {
+            "view": "compact-largest-title",
+            "exit_code": 0
+          },
+          {
+            "view": "compact-largest-toolbar",
+            "exit_code": 0
+          }
+        ]
+      },
+      {
+        "run": "native-command-names",
+        "command_exit_code": 0,
+        "wall_seconds": 57.271,
+        "result_finalization_interrupted": false,
+        "cases": [
+          {
+            "suite": "HIGPolishTests",
+            "case": "testCompactLongTitleAndToolbar",
+            "outcome": "passed",
+            "seconds": 27.889
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testCompactLongTitleAtLargestText",
+            "outcome": "passed",
+            "seconds": 19.697
+          }
+        ],
+        "compositor_captures": [
+          {
+            "view": "compact-title",
+            "exit_code": 0
+          },
+          {
+            "view": "compact-drawing-menu",
+            "exit_code": 0
+          },
+          {
+            "view": "compact-toolbar",
+            "exit_code": 0
+          },
+          {
+            "view": "compact-largest-title",
+            "exit_code": 0
+          },
+          {
+            "view": "compact-largest-toolbar",
+            "exit_code": 0
+          }
+        ]
+      }
+    ]
+  },
+  "native_build_for_testing": {
+    "exit_code": 0,
+    "seconds": 15.141,
+    "warning": "Expected AppIntents metadata extraction skipped: no framework dependency"
+  },
+  "release_build_analyze": {
+    "exit_code": 0,
+    "seconds": 11.239,
+    "errors": 0,
+    "warnings": 1,
+    "build_succeeded": true,
+    "analyze_succeeded": true
+  },
+  "release_boundaries": {
+    "signature_exit_code": 0,
+    "name": "Glass Image Tools",
+    "version": "1.0",
+    "build": "11",
+    "device_family": [
+      7
+    ],
+    "usage_keys": [
+      "NSPhotoLibraryAddUsageDescription"
+    ],
+    "debug_or_probe_symbols_or_flags": [],
+    "entitlement_keys": [
+      "application-identifier",
+      "com.apple.developer.team-identifier",
+      "get-task-allow"
+    ],
+    "development_get_task_allow": true,
+    "entitlements_exit_code": 0,
+    "symbol_exit_code": 0,
+    "strings_exit_code": 0
+  },
+  "separate_capture_probe_device_sdk_build": {
+    "exit_code": 0,
+    "seconds": 17.063,
+    "errors": 0,
+    "warnings": 2,
+    "build_succeeded": true
+  },
+  "compositor_review": {
+    "source": "Actual simctl compositor captures; raw room/window images retained privately",
+    "inspected_states": [
+      "normal text defaults beside canvas",
+      "selected pixelation beside canvas",
+      "tiny one-pixel selection proxies at 337 percent",
+      "Pan cue and readable Appearance captions",
+      "compact long-title/actions",
+      "compact chooser with Pixelate text",
+      "compact annotation toolbar",
+      "compact largest-text title and toolbar",
+      "direct native share sheet"
+    ],
+    "personal_source_images_used": false
+  },
+  "environment": {
+    "xcode": "27.2 (27B5019j)",
+    "visionos_sdk": "27.2",
+    "isolated_simulator": "Apple Vision Pro (4K), visionOS 27.2",
+    "photos_add_only_granted_for_save_regressions": true,
+    "broad_photos_read_granted": false,
+    "increase_contrast_tested": true,
+    "restored_to_normal_launch": {
+      "increase_contrast_restored": "disabled",
+      "contrast_restore_exit_code": 0,
+      "normal_launch_exit_code": 0,
+      "testing_arguments": false,
+      "physical_device_touched": false
+    }
+  },
+  "failed_attempts_and_corrections": [
+    {
+      "run": "initial native services",
+      "finding": "29 of 30 passed. Reveal fixture had undone creation and restored content with no selection. The corrected fixture explicitly selects the retained object; all 30 pass, service command exit 0."
+    },
+    {
+      "run": "hig-ui-1",
+      "finding": "Two incorrect harness expectations: Draw identifier and source-pixel units. Corrected assertions without weakening outcomes."
+    },
+    {
+      "run": "native-ui-2",
+      "finding": "Two-row native toolbar clipped in its fixed-height host; replaced with adaptive single row. New tool/object context now resets Form scroll. Persisting Photos consent overlay confounded subsequent interactions; compositor evidence corrected a premature overlay diagnosis."
+    },
+    {
+      "run": "photos-consent-3",
+      "finding": "Native first-consent scene could not be tapped by this runner. Unsupported scene tap attempt removed. Add-only grant configured solely on isolated simulator for save regressions; first-run consent remains manual."
+    },
+    {
+      "run": "native-ui-final",
+      "finding": "24 of 25 cases passed. Compact Pixelate was exposed as Small Grid by native symbol-label bridging."
+    },
+    {
+      "run": "compact-menu-replay / native-menu-final / native-label-scope",
+      "finding": "Timing and label-style/AX overrides did not repair native menu bridging. Final compact chooser uses native text commands; actual Pixelate selection and largest-text audit pass with command exit 0."
+    },
+    {
+      "run": "release signature initial sandbox attempt",
+      "finding": "Default sandbox reported CSSMERR_TP_NOT_TRUSTED; supported approved verification succeeded; final strict signature exit 0."
+    }
+  ],
+  "applied_source": {
+    "files": 16,
+    "baseline_conflicts": [],
+    "sha256": {
+      "App/ExportService.swift": "42d1206533dfc44a45e5034a8f83ae8eb11acec6fdb2a44a083fd36336baade8",
+      "App/EditorModel.swift": "8f3cde2a97610938eecff0f65ef646a8eec6d093ed09c4c6219589e8d22187ca",
+      "App/GlassImageToolsApp.swift": "15020e626233dde6dae0a608b7aab5694d2d299ea1906ae4d529ff42bfa653f0",
+      "App/EditorTestFixture.swift": "6b36973c1b70fc49c4e2fe7b6b23f474470cd5b9aa611f5ba7397631e93b5ad2",
+      "App/EditorView.swift": "b9dc9534eb70d06b89a7ccf8b15ddfd22a713af256da4f41a226caec5f791333",
+      "App/AppearanceSettings.swift": "04b996f0ac815af714e28f3f1a6601c5b6e257eb9a71cc88bfa1c1b4e5ac4534",
+      "App/EditorIntegrationChecks.swift": "0826672b448ce4067e1fff2f5d7a2b2a4227ecfec1297ada49dd60551e8214a0",
+      "App/ImageCanvas.swift": "f5d1153c275c06a54a192521d443b53438a51fedfa10bbcc8d282b0bc4d27512",
+      "Sources/VisionSnipCore/Geometry.swift": "e3c3649d33e3a562a65b64edbb93cbab5dbde8715b22d2c83438a2be4837002b",
+      "Tests/VisionSnipCoreTests/GeometryTests.swift": "65525e7b0addffea0dde0f392f846044df58173d0fb3b74023e691d95d576a2b",
+      "UITests/GlassImageToolsUITests.swift": "bf4321995f95335e48815f47ca21e843c35906c78afe48ff8b1fee61c3a59e4a",
+      "UITests/AccessibilityAuditTests.swift": "a0f7e5e75189bf9907fa0dde00ea5e4c36db4efbb8a3de9b748eb2795ea463cf",
+      "GlassImageTools.xcodeproj/project.pbxproj": "77a97ae07e77a1b95a510830ebecbd30f72a4af0f72093c6987643adb66b6a69",
+      "project.yml": "e137ef3f0cf0dfef73a950e49873028324e1fd896804193d41280a0f1dd42b84",
+      "App/AnnotationInspector.swift": "1cc4710e522ca4bd0dce367945be610e3f6698358f575be3d2fa4f6254df716b",
+      "UITests/HIGPolishTests.swift": "5d53cdd316487e67087f8a70e181b1b9c3b942db1a53de8583139e5ce1884593"
+    },
+    "final_ui_hash_differences": {
+      "files": [
+        "App/EditorIntegrationChecks.swift"
+      ],
+      "reason": "Debug-only service fixture now explicitly selects the restored object; rebuilt and all 30 native checks passed. Production UI source unchanged."
+    }
+  },
+  "limits": [
+    "Build 11 is prepared and applied locally, not installed on the headset. Owner is unavailable; no physical calls were made.",
+    "Passing native audits ignore no app issue; actual VoiceOver, Voice Control, Switch Control, keyboard focus and gaze/hold comfort remain hardware checks.",
+    "System palette audit restriction -902 remains from the prior audit; actual RGB selection, live color and Undo passed this iteration.",
+    "First-run Photos add-only consent tapping remains manual; save regressions used pregranted add-only access on the isolated simulator.",
+    "Native share sheet and actual flattened PNG bytes passed; individual share recipients and new ChatGPT interoperability were not tested. Prior owner-confirmed primary workflow remains valid.",
+    "Large-image resource profiling, physical Reduce Transparency and installed icon parallax remain unobserved. No physical capture path is confirmed.",
+    "A clean full 25-case command is not claimed; passing cases across runs and stopped failed-run finalization are recorded separately."
+  ],
+  "reproduction": {
+    "ui": "xcodebuild test -project GlassImageTools.xcodeproj -scheme GlassImageTools -configuration Debug -destination \"platform=visionOS Simulator,id=$SIMULATOR_ID\" -derivedDataPath \"$UI_BUILD_DIR\" -parallel-testing-enabled NO CODE_SIGNING_ALLOWED=NO",
+    "focused_ui": "Append -only-testing:GlassImageToolsUITests/HIGPolishTests/testCompactLongTitleAndToolbar and -only-testing:GlassImageToolsUITests/HIGPolishTests/testCompactLongTitleAtLargestText",
+    "native_services": "Launch the Debug app with --ui-testing --integration-smoke --verify-photos-save and inspect its fresh Documents/VisionSnipSmokeResults.json report",
+    "photos_setup": "xcrun simctl privacy \"$SIMULATOR_ID\" grant photos-add \"$APP_BUNDLE_ID\" (isolated test simulator only)",
+    "contrast": "xcrun simctl ui \"$SIMULATOR_ID\" increase_contrast enabled; save and restore the original value",
+    "release": "xcodebuild -project GlassImageTools.xcodeproj -scheme GlassImageTools -configuration Release -destination generic/platform=visionOS -derivedDataPath \"$DEVICE_BUILD_DIR\" -allowProvisioningUpdates build analyze"
+  },
+  "public_hygiene": {
+    "files_scanned": 78,
+    "private_pattern_findings": 0,
+    "broken_file_links": 0,
+    "anchor_gaps": 0,
+    "only_monthly_tasks": true,
+    "applied_source_unchanged": true
+  }
+}

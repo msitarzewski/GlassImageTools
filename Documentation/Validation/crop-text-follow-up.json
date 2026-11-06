@@ -1,0 +1,121 @@
+{
+  "timestamp": "2026-10-15T09:43:06.352970+00:00",
+  "app": {
+    "name": "Glass Image Tools",
+    "version": "1.0",
+    "build": "6",
+    "configuration": "Release"
+  },
+  "changes": [
+    "Live source-pixel width/height labels on crop axes",
+    "Leading filename and original-metadata alignment",
+    "Ordinary text tap opens Edit Text",
+    "Object-scoped native context menus and redaction-safe cropped previews"
+  ],
+  "nativeUI": {
+    "latestCaseResults": "10 unique cases passed across the two completed runs",
+    "caseCount": 10,
+    "cases": [
+      {
+        "name": "testAnnotationCanBeAddedAndUndone",
+        "durationSeconds": 30.78,
+        "run": "full run"
+      },
+      {
+        "name": "testCloseCancelSaveCancelAndDiscardPreserveOriginal",
+        "durationSeconds": 25.044,
+        "run": "full run"
+      },
+      {
+        "name": "testCropPresetIsRestoredByUndoAndRedo",
+        "durationSeconds": 16.289,
+        "run": "full run"
+      },
+      {
+        "name": "testCropUndoCopyAndExport",
+        "durationSeconds": 44.527,
+        "run": "full run"
+      },
+      {
+        "name": "testLineEndpointMovesAndUndoes",
+        "durationSeconds": 20.677,
+        "run": "full run"
+      },
+      {
+        "name": "testNativeLaunchAndPhotosPicker",
+        "durationSeconds": 12.011,
+        "run": "full run"
+      },
+      {
+        "name": "testNewShapeDirectResizeAndCropMode",
+        "durationSeconds": 24.907,
+        "run": "full run"
+      },
+      {
+        "name": "testSaveToPhotosBeforeCloseCompletesDocumentAction",
+        "durationSeconds": 17.954,
+        "run": "full run"
+      },
+      {
+        "name": "testTextCanBeEditedWithVisibleCharacterControls",
+        "durationSeconds": 28.493,
+        "run": "full run"
+      },
+      {
+        "name": "testTextContextMenuBelongsToTheTextObject",
+        "durationSeconds": 28.195,
+        "run": "focused retry"
+      }
+    ],
+    "runs": [
+      {
+        "scope": "full suite",
+        "tests": 10,
+        "passed": 9,
+        "failed": 1,
+        "durationSeconds": 243.392,
+        "failure": "Context test queried canvas before native popover dismissal completed; assertions preserved and explicit wait added."
+      },
+      {
+        "scope": "focused context-menu retry",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "durationSeconds": 28.195,
+        "assertions": "Text menu/Edit Text and no object actions on blank canvas; waited for actual canvas return."
+      }
+    ],
+    "productionSourceChangedBetweenRuns": false
+  },
+  "coreAndServices": {
+    "sourceHashesUnchangedFromBuild5": true,
+    "coreTestsPreviouslyPassed": 42,
+    "serviceChecksPreviouslyPassed": 15,
+    "rerunForUIOnlyFollowUp": false,
+    "baselineEvidence": "editor-polish.json"
+  },
+  "releaseBoundaries": {
+    "timestamp": "2026-10-15T09:35:41.328235+00:00",
+    "configuration": "Release",
+    "build": "6",
+    "strictCodeSignature": "passed",
+    "debugFixtureAndServiceSymbols": "absent; debug source-file bookkeeping excluded",
+    "captureProbeSymbols": "absent",
+    "usageDescriptions": [
+      "NSPhotoLibraryAddUsageDescription"
+    ],
+    "compiledIcon": "AppIcon / SolidImageStack"
+  },
+  "signedReleaseBuild": "succeeded",
+  "releaseAnalyze": "succeeded",
+  "sourceTreeSHA256": "4df82daa90ee97594f0a832df782cfe731f36dce591e2f6ccd906fa2e52c969d",
+  "physicalDeployment": {
+    "installedBuild": "6",
+    "installation": "succeeded",
+    "normalLaunch": "succeeded",
+    "runningProcessVerified": true,
+    "identityReadback": "Glass Image Tools 1.0 (6)",
+    "evidence": "physical-deployment.json"
+  },
+  "limits": "Simulator interaction checks and physical normal launch do not establish actual eye/hand behavior."
+}

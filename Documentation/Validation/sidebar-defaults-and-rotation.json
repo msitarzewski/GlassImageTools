@@ -1,0 +1,363 @@
+{
+  "timestamp": "2026-10-17T20:37:43.525085+00:00",
+  "build": "18",
+  "task": "sidebar-defaults-and-rotation",
+  "state": "installed and identity verified; normal launch/process verification awaits headset unlock",
+  "implementation": {
+    "nativeWindow": "Loaded split view reaches window edges; no exposed outer padded backplate. Empty window retains family padding; foreground stays opaque.",
+    "sidebarToggle": "One ordinary Button in the native topBarLeading navigation toolbar. Automatic/default toolbar item did not render in this visionOS runtime; not claimed system-generated.",
+    "pasteAndCopy": "Blue standalone Paste moved into Import with native PasteButton and declared command-V. Copy retains quick access with standard styling.",
+    "rotation": "Undoable exact quarter-turns in EditState. Immutable source pixels/annotations/crop remain in original coordinates. Shared affine viewport/render transforms rotate source, annotation hit regions, handles and output without another full-size bitmap.",
+    "cropControls": "Rotate Left is direct. Reset is in Crop Preset; exact dimensions join that menu at compact/accessibility sizes. Visible dimensions and presets use rotated axes.",
+    "caption": "16-point horizontal margin accommodates native selectable-text insets; natural height, 8-point vertical padding and quiet unavailable states remain.",
+    "windowOwner": "One shared per-window EditorWindow supplies the scene minimum to the main and isolated capture entry points.",
+    "sourceFilesApplied": 20,
+    "newDependenciesPermissionsOrNetwork": false
+  },
+  "validation": {
+    "core": {
+      "exit_code": 0,
+      "seconds": 4.622,
+      "summary": [
+        "Test Suite 'All tests' passed at 2026-10-17 15:20:18.067.",
+        "\u2714 Suite GeometryTests passed after 0.010 seconds.",
+        "\u2714 Suite EditorPolishTests passed after 0.021 seconds.",
+        "\u2714 Suite RotationTests passed after 0.025 seconds.",
+        "\u2714 Suite RendererTests passed after 0.825 seconds.",
+        "\u2714 Test run with 62 tests in 4 suites passed after 0.825 seconds."
+      ],
+      "failures": []
+    },
+    "nativeServices": {
+      "seconds": 3.196,
+      "checkCount": 31,
+      "passed": 31,
+      "failed": 0,
+      "checks": [
+        {
+          "detail": "Three typed digits commit one source-pixel edit; Undo restores the original and Redo restores 800 px.",
+          "name": "Inspector crop undo/redo",
+          "passed": true
+        },
+        {
+          "detail": "Crop bounds and preset restore together.",
+          "name": "Crop preset undo/redo",
+          "passed": true
+        },
+        {
+          "detail": "A fractionally positioned rectangle resized by typed digits displays 300 px; Undo restores the entire original object. Dimension editing and deletion each commit one reversible operation.",
+          "name": "Inspector annotation undo/delete",
+          "passed": true
+        },
+        {
+          "name": "Inspector numeric bounds",
+          "passed": true,
+          "detail": "Int minimum/maximum dimensions remain inside the source; nonfinite and extreme display values convert safely."
+        },
+        {
+          "name": "Nondestructive quarter-turn and one-step Undo Redo",
+          "passed": true,
+          "detail": "Rotation changes value state only; crop/source ownership is stable and the viewport fits."
+        },
+        {
+          "name": "Rotated exact crop dimensions and native Copy",
+          "passed": true,
+          "detail": "Visible width/height map back to bounded source pixels; actual system image decodes at 250 by 400."
+        },
+        {
+          "name": "Rotated preset follows output axes",
+          "passed": true,
+          "detail": "The 16:9 preset follows the visible/exported orientation."
+        },
+        {
+          "name": "Accessible annotation insertion and Undo",
+          "passed": true,
+          "detail": "Every supported non-freehand object is inserted in source pixels at the crop center, remains selected/editable, preserves zoom/pan and commits one Undo/Redo operation."
+        },
+        {
+          "name": "Accessible annotation style and text editing",
+          "passed": true,
+          "detail": "Insertion reuses the current retained style and last shape, requests native text editing for text, and does not invent a freehand path."
+        },
+        {
+          "name": "Contextual annotation kind precedence",
+          "passed": true,
+          "detail": "The selected object owns inspector controls; an active annotation tool takes precedence over the remembered shape when nothing is selected."
+        },
+        {
+          "name": "Prepared text defaults and creation Undo",
+          "passed": true,
+          "detail": "Text content, font, traits, alignment and color prepared before insertion create the retained text object without irrelevant shape fill; insertion remains one reversible edit."
+        },
+        {
+          "name": "Source-pixel pixelation size and inspector Undo",
+          "passed": true,
+          "detail": "Pixelation reports the renderer's 16-pixel minimum and maps a 128-pixel target to its retained rendering parameter. Multiple live changes undo together; non-finite input is rejected."
+        },
+        {
+          "name": "Persistent inspector gesture Undo boundaries",
+          "passed": true,
+          "detail": "Style, canvas movement and later style edits undo separately while the inspector stays visible. Multiple style changes after Undo or Redo still form one operation; mid-gesture callbacks do not absorb geometry, and Pan adds no edit."
+        },
+        {
+          "name": "Selection reveal preserves document and history",
+          "passed": true,
+          "detail": "Show Selection requests canvas-owned recentering without modifying source edits or adding Undo; actual viewport movement is verified by native canvas interaction separately."
+        },
+        {
+          "name": "Direct native share snapshot bytes",
+          "passed": true,
+          "detail": "The real Transferable produces a single decoded 800\u00d7600 PNG with the flattened green annotation; original and private source bytes remain unchanged. No recipient behavior is inferred."
+        },
+        {
+          "name": "Document saved baseline",
+          "passed": true,
+          "detail": "Dirty state follows the initial/last durable snapshot, including Undo away from or back to that snapshot."
+        },
+        {
+          "detail": "Newer edits and a closed source reject stale save completions; close clears document state and history.",
+          "passed": true,
+          "name": "Stale save and close ownership"
+        },
+        {
+          "detail": "Actual failed file decoding and a cancelled import preserve the previous source, edits and dirty state.",
+          "passed": true,
+          "name": "Failed and cancelled replacement"
+        },
+        {
+          "detail": "Text editing is requested on creation; content and typography update as one reversible edit. Font displays are safely bounded independently of image dimensions.",
+          "passed": true,
+          "name": "Live typography undo transaction"
+        },
+        {
+          "detail": "Duplicates retain typography, front/back ordering changes retained objects, and mode switching preserves objects and viewport.",
+          "passed": true,
+          "name": "Annotation arrangement and mode preservation"
+        },
+        {
+          "detail": "An actual NSItemProvider imports unchanged encoded bytes through the shared protected source pipeline and resets the editing baseline.",
+          "passed": true,
+          "name": "PNG explicit image paste"
+        },
+        {
+          "detail": "An actual NSItemProvider imports unchanged encoded bytes through the shared protected source pipeline and resets the editing baseline.",
+          "passed": true,
+          "name": "JPEG explicit image paste"
+        },
+        {
+          "detail": "Empty, text-only and malformed encoded providers report errors while preserving the current source, crop, dirty state and Undo availability.",
+          "passed": true,
+          "name": "Invalid image paste preserves document"
+        },
+        {
+          "detail": "Cancelling an in-flight provider propagates to its Progress, preserves source/edit/history and ignores a delayed completion.",
+          "passed": true,
+          "name": "Cancelled image paste preserves document"
+        },
+        {
+          "detail": "Closing while a provider loads prevents its eventual successful source from reopening or changing the document.",
+          "passed": true,
+          "name": "Closed document rejects stale image paste"
+        },
+        {
+          "detail": "The native model imports through the shared worker, installs an immutable full-resolution source and resets the saved/history baseline.",
+          "passed": true,
+          "name": "Shared asynchronous file import"
+        },
+        {
+          "passed": true,
+          "detail": "Dropping a real ImportedPhoto before decoding removes its private copy; cancelled shared-worker decoding throws cancellation without accepting a source.",
+          "name": "Photo transfer ownership before decoding"
+        },
+        {
+          "passed": true,
+          "detail": "Decoded 800 \u00d7 600 image; 41344 bytes.",
+          "name": "PNG full-resolution export"
+        },
+        {
+          "passed": true,
+          "detail": "Read and decoded the actual system pasteboard data and standard UIImage representation.",
+          "name": "PNG clipboard round-trip"
+        },
+        {
+          "passed": true,
+          "detail": "Decoded 800 \u00d7 600 image; 57540 bytes.",
+          "name": "JPEG full-resolution export"
+        },
+        {
+          "passed": true,
+          "detail": "Read and decoded the actual system pasteboard data and standard UIImage representation.",
+          "name": "JPEG clipboard round-trip"
+        }
+      ]
+    },
+    "firstNativeRun": {
+      "nativeExitCode": 65,
+      "seconds": 228.82,
+      "reportFinalizationInterrupted": false,
+      "caseOutcomes": [
+        "Test Case '-[GlassImageToolsUITests.AccessibilityAuditTests testNativeAccessibilityAuditForEditorSheetsAndText]' passed (45.453 seconds).",
+        "Test Case '-[GlassImageToolsUITests.AccessibilityAuditTests testNativeAccessibilityAuditForPasteErrorAndColorPalette]' failed (44.606 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testAutomaticLeftSidebarAndOriginalImageCaption]' failed (15.676 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testCompactLongTitleAtLargestText]' failed (40.595 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testNativeSidebarDefaultsAndRotatedCrop]' failed (35.701 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testRotatedTextRemainsSelectableAndEditable]' passed (21.220 seconds)."
+      ],
+      "suiteSummary": [
+        "\t Executed 2 tests, with 2 failures (0 unexpected) in 90.058 (90.061) seconds",
+        "\t Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds",
+        "\t Executed 4 tests, with 16 failures (0 unexpected) in 113.192 (113.194) seconds",
+        "\t Executed 6 tests, with 18 failures (0 unexpected) in 203.250 (203.257) seconds",
+        "\t Executed 6 tests, with 18 failures (0 unexpected) in 203.250 (203.258) seconds"
+      ]
+    },
+    "defaultItemAttempt": {
+      "nativeExitCode": 65,
+      "seconds": 188.292,
+      "reportFinalizationInterrupted": false,
+      "caseOutcomes": [
+        "Test Case '-[GlassImageToolsUITests.AccessibilityAuditTests testNativeAccessibilityAuditForPasteErrorAndColorPalette]' failed (44.049 seconds).",
+        "Test Case '-[GlassImageToolsUITests.GlassImageToolsUITests testCropRemainsEditableAtZoomWithPanEnabled]' passed (27.410 seconds).",
+        "Test Case '-[GlassImageToolsUITests.GlassImageToolsUITests testNativeImagePasteAndUnsavedReplacementRecovery]' failed (15.506 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testCompactLongTitleAtLargestText]' failed (41.643 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testNativeSidebarDefaultsAndRotatedCrop]' failed (40.541 seconds)."
+      ],
+      "suiteSummary": [
+        "\t Executed 1 test, with 2 failures (0 unexpected) in 44.049 (44.051) seconds",
+        "\t Executed 2 tests, with 1 failure (0 unexpected) in 42.916 (42.917) seconds",
+        "\t Executed 2 tests, with 4 failures (0 unexpected) in 82.184 (82.185) seconds",
+        "\t Executed 5 tests, with 7 failures (0 unexpected) in 169.149 (169.155) seconds",
+        "\t Executed 5 tests, with 7 failures (0 unexpected) in 169.149 (169.156) seconds"
+      ]
+    },
+    "broadNavigationRun": {
+      "nativeExitCode": 65,
+      "seconds": 321.658,
+      "reportFinalizationInterrupted": false,
+      "caseOutcomes": [
+        "Test Case '-[GlassImageToolsUITests.AccessibilityAuditTests testNativeAccessibilityAuditForEditorSheetsAndText]' passed (44.769 seconds).",
+        "Test Case '-[GlassImageToolsUITests.AccessibilityAuditTests testNativeAccessibilityAuditForPasteErrorAndColorPalette]' passed (42.375 seconds).",
+        "Test Case '-[GlassImageToolsUITests.GlassImageToolsUITests testCropUndoCopyAndExport]' passed (36.675 seconds).",
+        "Test Case '-[GlassImageToolsUITests.GlassImageToolsUITests testNativeImagePasteAndUnsavedReplacementRecovery]' passed (41.734 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testAutomaticLeftSidebarAndOriginalImageCaption]' failed (22.797 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testCompactLongTitleAtLargestText]' passed (36.883 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testNativeSidebarDefaultsAndRotatedCrop]' passed (35.701 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testRotatedTextRemainsSelectableAndEditable]' passed (21.170 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testShortDescriptionUsesOnlyItsContentHeight]' passed (18.937 seconds)."
+      ],
+      "suiteSummary": [
+        "\t Executed 2 tests, with 0 failures (0 unexpected) in 87.144 (87.147) seconds",
+        "\t Executed 2 tests, with 0 failures (0 unexpected) in 78.409 (78.410) seconds",
+        "\t Executed 5 tests, with 1 failure (0 unexpected) in 135.489 (135.492) seconds",
+        "\t Executed 9 tests, with 1 failure (0 unexpected) in 301.042 (301.051) seconds",
+        "\t Executed 9 tests, with 1 failure (0 unexpected) in 301.042 (301.052) seconds"
+      ]
+    },
+    "finalFocusedRun": {
+      "nativeExitCode": 0,
+      "seconds": 160.307,
+      "reportFinalizationInterrupted": false,
+      "caseOutcomes": [
+        "Test Case '-[GlassImageToolsUITests.AccessibilityAuditTests testNativeAccessibilityAuditForPasteErrorAndColorPalette]' passed (41.047 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testAutomaticLeftSidebarAndOriginalImageCaption]' passed (21.566 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testCompactLongTitleAtLargestText]' passed (35.971 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testNativeSidebarDefaultsAndRotatedCrop]' passed (35.666 seconds).",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testShortDescriptionUsesOnlyItsContentHeight]' passed (18.792 seconds)."
+      ],
+      "suiteSummary": [
+        "\t Executed 1 test, with 0 failures (0 unexpected) in 41.047 (41.049) seconds",
+        "\t Executed 4 tests, with 0 failures (0 unexpected) in 111.996 (111.997) seconds",
+        "\t Executed 5 tests, with 0 failures (0 unexpected) in 153.043 (153.047) seconds",
+        "\t Executed 5 tests, with 0 failures (0 unexpected) in 153.043 (153.048) seconds"
+      ]
+    },
+    "nativeScope": "Ten distinct cases pass across runs; final five cases pass on final sources. Earlier modal/copy/Paste/rotated-text/zoom successes precede only final toolbar placement and four-point caption margin. No clean ten-case single command claimed.",
+    "audits": "All-issue app audits; no app finding ignored. Actual native palette RGB/live color/Undo path passes. Hardware assistive/input/material behavior remains separate.",
+    "sourceIdentity": "Core/tests unchanged since passing suite. Final native, services, signed Release and applied App/Core source hashes match.",
+    "release": {
+      "exit_code": 0,
+      "seconds": 13.31,
+      "errors": 0,
+      "warnings": 1,
+      "build_succeeded": true,
+      "analyze_succeeded": true
+    },
+    "boundaries": {
+      "signature_exit_code": 0,
+      "name": "Glass Image Tools",
+      "version": "1.0",
+      "build": "18",
+      "device_family": [
+        7
+      ],
+      "usage_keys": [
+        "NSPhotoLibraryAddUsageDescription"
+      ],
+      "debug_or_probe_markers": [],
+      "entitlement_keys": [
+        "application-identifier",
+        "com.apple.developer.team-identifier",
+        "get-task-allow"
+      ],
+      "development_get_task_allow": true
+    },
+    "captureProbeCompile": {
+      "exit_code": 0,
+      "seconds": 4.224,
+      "build_succeeded": true,
+      "errors": []
+    },
+    "simulatorRestore": {
+      "terminate": {
+        "exit_code": 0,
+        "seconds": 0.127
+      },
+      "launch": {
+        "exit_code": 0,
+        "seconds": 0.131
+      },
+      "test_arguments": false
+    },
+    "compositor": "Actual native window, rotated crop/text, sidebar placement, compact toolbar and captions inspected; raw synthetic compositor images remain private.",
+    "publicReview": {
+      "timestamp": "2026-10-17T20:38:17.133260+00:00",
+      "filesScanned": 49,
+      "privacyFindings": 0,
+      "relativeLinkFailures": 0,
+      "appliedFileHashMismatches": 0,
+      "finalNativeServicesSignedAppliedSourceMismatches": 0,
+      "sourceFilesApplied": 20,
+      "noGitRepository": true
+    }
+  },
+  "deployment": {
+    "timestamp": "2026-10-17T20:36:54.690975+00:00",
+    "build": "18",
+    "version": "1.0",
+    "signature_exit_code": 0,
+    "installation": {
+      "exit_code": 0,
+      "seconds": 2.052
+    },
+    "identity": {
+      "exit_code": 0,
+      "seconds": 0.349,
+      "name": "Glass Image Tools",
+      "version": "1.0",
+      "build": "18",
+      "matching_count": 1
+    },
+    "state": "INSTALLED_LAUNCH_PENDING",
+    "lockState": {
+      "exit_code": 0,
+      "seconds": 0.311
+    },
+    "passcodeRequired": true
+  },
+  "limits": [
+    "Physical input, VoiceOver, material/appearance preferences and resource acceptance remain separate.",
+    "No new actual recipient or physical capture acceptance.",
+    "Native command-V binding retained; real hardware keyboard/focus behavior not newly certified.",
+    "Initial compiler/test/default-item/overhang/margin failures retained; no assertion waived."
+  ]
+}

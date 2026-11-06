@@ -1,0 +1,105 @@
+{
+  "date": "2026-11-06",
+  "mac_build": "44",
+  "visionos_build": "38",
+  "scope": "Compact centered native Mac Markup; model and main toolbar unchanged",
+  "native_layout": {
+    "system_accessory_bar_retained": true,
+    "expanding_swiftui_content_row": "Symmetric spacers around native controls; ToolbarSpacer did not expand in this accessory placement",
+    "symbol_points": 14,
+    "native_menu_height": 28,
+    "icon_menu_width": 40,
+    "zoom_width": 90,
+    "swiftui_symbols": "body/medium",
+    "mode_control_height": 20,
+    "menu_arrow": "arrowAtBottom, edge placement per SDK/docs",
+    "visible_center_measurements_points": [
+      {
+        "state": "Crop, wide inspector",
+        "controls_width": 376,
+        "bar_width": 852,
+        "visible_bounds_center_offset": 3.0
+      },
+      {
+        "state": "Annotate, wide inspector",
+        "controls_width": 448,
+        "bar_width": 852,
+        "visible_bounds_center_offset": 3.0
+      },
+      {
+        "state": "Inspector hidden",
+        "controls_width": 448,
+        "bar_width": 1152,
+        "visible_bounds_center_offset": 3.0
+      },
+      {
+        "state": "Resized window",
+        "controls_width": 448,
+        "bar_width": 852,
+        "visible_bounds_center_offset": 3.0
+      },
+      {
+        "state": "Inspector restored",
+        "controls_width": 448,
+        "bar_width": 852,
+        "visible_bounds_center_offset": 3.0
+      }
+    ],
+    "visual_pixel_identical_preview_claimed": false
+  },
+  "guest": {
+    "os": "macOS 26.6.2",
+    "method": "Actual native AX/pointer/clipboard, not XCTest",
+    "headless": true,
+    "window_widths": [
+      1100,
+      1400
+    ],
+    "crop_annotate_inspector_resize_centering": true,
+    "controls_fit_within_bar": true,
+    "shape_menu_selection_and_ellipse_drawing": true,
+    "text_editable": true,
+    "hide_show_recreates_working_menus": true,
+    "zoom": "150%",
+    "square_preset": [
+      640,
+      640
+    ],
+    "png_clipboard": [
+      400,
+      300
+    ],
+    "annotation_pixels_in_png": true,
+    "empty_recovery": true,
+    "shutdown": "confirmed"
+  },
+  "build": {
+    "release_exit_code": 0,
+    "test_source_compile_only_exit_code": 0,
+    "strict_signature": true,
+    "four_production_grants": true,
+    "no_test_debug_exceptions": true,
+    "privacy_manifest_matches_source": true,
+    "main_actor_warning_resolved": true,
+    "remaining_warning": "AppIntents metadata extraction skips, no dependency"
+  },
+  "initial_vm_capacity_limit": "Both available slots occupied by existing work; one freed externally and isolated QA resumed",
+  "other_vm_stopped_by_this_task": false,
+  "host_gui_or_app_closure": false,
+  "new_capture_or_permission": false,
+  "shared_core_visionos_changes": false,
+  "core_full_suites_rerun": false,
+  "installation": {
+    "version": "1.0",
+    "build": "44",
+    "destination": "/Applications/Glass Image Tools.app",
+    "signature": true,
+    "four_production_sandbox_grants": true,
+    "no_debugger_or_test_exceptions": true,
+    "installed_tree_matches_built_tree": true,
+    "prior_install_preserved": true,
+    "launch_performed": false,
+    "host_app_close_performed": false
+  },
+  "publication_or_upload": false
+}

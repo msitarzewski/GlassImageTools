@@ -1,0 +1,121 @@
+{
+  "date": "2026-10-29",
+  "build": "1.0 (34)",
+  "scope": "Notes/Safari/Files-like sidebar hierarchy after owner rejected the bare expandable Section headers.",
+  "implementation": [
+    "Direct native plain List rows preserve document selection; standard borderless category Buttons compose tinted SF Symbols, counts and disclosure chevrons. No custom row/selection drawing.",
+    "Open Images initially expanded; Recents initially collapsed; child images/empty states indented; targets grow from 60 points; counts and expansion state are spoken.",
+    "Quieter native title2 sidebar heading; standard row separator/background modifiers remove the grouped-form card. One adjustable rear surface remains.",
+    "DocumentWorkspace, imports, source pixels, rendering, in-session edits and empty-well tap/Command V owners unchanged."
+  ],
+  "validation": {
+    "final_ui": {
+      "exit_code": 0,
+      "seconds": 157.353,
+      "finalization_interrupted": false,
+      "cases": [
+        "Test Case '-[GlassImageToolsUITests.DocumentWorkspaceTests testDocumentSwitchingUndoCloseAndRecents]' passed (56.507 seconds).",
+        "Test Case '-[GlassImageToolsUITests.DocumentWorkspaceTests testSidebarLibraryRowsAndEmptyStates]' passed (12.490 seconds).",
+        "Test Case '-[GlassImageToolsUITests.GlassImageToolsUITests testClearWindowWithBothSidePanels]' passed (33.376 seconds).",
+        "Test Case '-[GlassImageToolsUITests.ImageStartTests testEmptyWorkspaceKeyboardPaste]' passed (18.218 seconds).",
+        "Test Case '-[GlassImageToolsUITests.ImageStartTests testStartScreenAtLargestText]' passed (9.985 seconds)."
+      ]
+    },
+    "baseline_comparison": {
+      "app_source": "Unchanged installed build-33 App/Core sources",
+      "command_exit_code": 65,
+      "finding": "Both original category controls also report isHittable=false and enabled=true; bounded predicates fail, while the actual native Recents tap succeeds. Final tests require actual tap/visible-state outcomes, geometry and audit; physical gaze remains unverified."
+    },
+    "earlier_candidates": [
+      "Native DisclosureGroup candidate rendered expanded content inline, overlapping targets and breaking nested selection. First command exit 65; candidate was not applied.",
+      "Direct rows restored lifecycle, transparency, keyboard Paste and largest-text audits, but plain category Buttons reported non-hittable. Second command exit 65. Standard borderless controls and flat List styling correct presentation. Subsequent baseline comparison diagnoses the remaining hit-report flag; real taps/states, dimensions and audit are the final regression contract."
+    ],
+    "signed_release": {
+      "exit_code": 0,
+      "seconds": 13.699,
+      "warnings": "AppIntents metadata extraction skipped; app has no AppIntents dependency."
+    },
+    "release_boundaries": {
+      "signature_exit_code": 0,
+      "name": "Glass Image Tools",
+      "version": "1.0",
+      "build": "34",
+      "device_family": [
+        7
+      ],
+      "usage_keys": [
+        "NSPhotoLibraryAddUsageDescription"
+      ],
+      "debug_markers": [],
+      "encryption_key": false,
+      "privacy_manifest_present": true
+    },
+    "core": "Not rerun: Sources and Tests byte-identical to baseline build 33 (69 tests/5 suites).",
+    "full_ui_and_services": "Not rerun; this is a focused five-case presentation regression run.",
+    "compositor": "Inspected empty and populated sidebar, clear/opaque/default-glass endpoints and largest text on the final native runtime. Synthetic fixtures only; no owner screenshots retained.",
+    "simulator_cleanup": [
+      {
+        "name": "Glass Image Tools Native Start QA",
+        "previous_state": "Shutdown",
+        "shutdown_exit_code": null
+      }
+    ],
+    "physical": {
+      "timestamp": "2026-10-29T20:03:52.494943+00:00",
+      "build": "34",
+      "version": "1.0",
+      "bundle_identifier": "com.glassimagetools",
+      "state": "INSTALLED_AWAITING_UNLOCK",
+      "test_arguments": false,
+      "normal_launch_attempted": false,
+      "signature_exit_code": 0,
+      "lockState": {
+        "exit_code": 0,
+        "seconds": 1.211
+      },
+      "passcodeRequired": true,
+      "installation": {
+        "exit_code": 0,
+        "seconds": 1.744
+      },
+      "identity": {
+        "exit_code": 0,
+        "seconds": 0.406,
+        "name": "Glass Image Tools",
+        "version": "1.0",
+        "build": "34",
+        "matching_count": 1
+      },
+      "scope": "Build 34 installation and installed identity verified. Normal launch was not attempted because the device requires its passcode. Physical appearance, gaze/hand, hardware keyboard and assistive technology remain owner observations."
+    },
+    "limits": "Headset visual/gaze/hand/assistive-technology acceptance is separate from launch. Cross-app Drop and external clipboard consent remain previous manual checks."
+  },
+  "source_sha256": {
+    "App/ExportService.swift": "331c8332f2d37daf169aa4ac8602a044a36310666c91b70b536d7ccf7e94b7c1",
+    "App/EditorModel.swift": "5eca7dde71b5898c8cd100d93f22735f0be1cca62c86eb8dec8aeb8393bfa8c2",
+    "App/AnnotationInspector.swift": "30ad0edcd0d02e6fa782e0f9accd2f153573c35e88beea1683fe5c84fa03ad39",
+    "App/GlassImageToolsApp.swift": "9c853f2bba501a80f60ee715a86a009a25a98db0bb43316ac6bbab4879f927b3",
+    "App/ImageDescriptionCaption.swift": "613dd4cf86f4a535b8eb69803a6cd0cf74ff7d05019518539e7fa79c06f6bc6a",
+    "App/DocumentWorkspace.swift": "a047c74193f6193d3f1cc46e05c312f23c3aa9aac3e0113cb648d611be3440ed",
+    "App/EditorTestFixture.swift": "ff14915b3351e08316a79def9ebf4fb3164fc033936bcdbc2c9116fb356524b5",
+    "App/ExportView.swift": "50b6531b15241eb69fb78c767d9a0cee1e4a49fb3f6bcfc8e106fcf5b970ca04",
+    "App/AboutSettings.swift": "45ba27e7ea18ef14fd2d516f9d626434f67d9f6fd5eaf1aa1a64ba716b190800",
+    "App/PrivacyInfo.xcprivacy": "8db671d8da18aadf866be0d8c398e7dad7c8827f474e087f7307e2aef32d902a",
+    "App/EditorView.swift": "f31c4413b9cebf2a00ff31cbd9dda9dd7e5ebbd3ac76b5d17a02f4e9a9102952",
+    "App/AppearanceSettings.swift": "a73d1472d9089883c84925ae029a0b7a03a773cd550d6f2010ba0bc6bf883d69",
+    "App/EditorIntegrationChecks.swift": "c8cb345fdde0817eb2c64e194cf9d9a1e054464882bc8d5dc7d2611374b04ac6",
+    "App/EditorWindow.swift": "73d34d6f2c0188b55ff6810cd22065bb48b40814b5a508b7cddf8af7f1dfaab6",
+    "App/DocumentSidebar.swift": "3959431c3256b11a07004971ee227646529e858904b6480ac5b29ec805f0a30f",
+    "App/ImageCanvas.swift": "df5560e71fca5aee6d38eb423d4e0d541c610e5c58d669b1ec6b9c6b83e41d0e",
+    "App/ImageStartView.swift": "e2a10da451c2e61018d58fc8f12ef416cb03b673d15299ac4830f40b8da76c52",
+    "App/ImageDescriptionService.swift": "aab1f79f66ef61dee689dedcf54d6340a5897bface79a9395e93626431fcc5fb",
+    "Sources/VisionSnipCore/Geometry.swift": "6d8c35392307d912dfb110b192a9e007fdacf4d1299e04d38404ececd1f7c538",
+    "Sources/VisionSnipCore/ImageImportService.swift": "4c8ee65a9992e86fb7ee207c2c7fe3c934f63da91d247db305a8bdc07a106f14",
+    "Sources/VisionSnipCore/ImageRenderer.swift": "7521dddb5867ba3835fe66e2c16073b159e86dafc8c280bc7e8f93849632e800",
+    "Sources/VisionSnipCore/ImageDocument.swift": "a2c47f389a087860125c6884412a34da53c7689e58806c52b807cc78c7d3ce52"
+  },
+  "references": [
+    "https://developer.apple.com/design/human-interface-guidelines/sidebars",
+    "https://developer.apple.com/design/human-interface-guidelines/lists-and-tables"
+  ]
+}

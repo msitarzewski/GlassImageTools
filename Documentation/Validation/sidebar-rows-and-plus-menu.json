@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-23",
+  "build": "27",
+  "changes": [
+    "Title-bar + is a round Menu button with no chevron (owner: 'Just make the + the drop down for now'); bottom toolbar choosers unchanged",
+    "Images sidebar rows are plain Buttons in a ScrollView, measured like the Glass Power Tools Vision Pro terminal sidebar: 2-point spacing, 8-point column inset, 12 x 8-point padding, 16-point continuous rounded shape tinted primary at 12% while selected, highlight hover effect, isSelected trait; replaces List(selection:) rows",
+    "Open Images and Recents remain native DisclosureGroups through a section style (headline title, turning chevron, Expanded/Collapsed accessibility value); Images heading inset 20 points to match row text",
+    "Website: the home page's testing section is removed at the owner's request ('not sure the people reading this will care'); 'Who made this' stands alone at reading width; Help lists keyboard shortcuts without testing notes",
+    "Website screenshots retaken from build 27 with the same scratch-only tour and crops; text updated for the owner's hardware report",
+    "Core package, UI tests and capture probe sources unchanged from build 26 (hash-identical)"
+  ],
+  "owner_reported_hardware_checks": {
+    "date": "2026-10-23",
+    "source": "Owner message: 'I've tested these: a hardware keyboard, saving to Photos and Files, and pasting into apps other than ChatGPT.'",
+    "checks": [
+      "Hardware keyboard with the app on Vision Pro",
+      "Save to Photos",
+      "Save to Files",
+      "Paste into apps other than ChatGPT"
+    ],
+    "not_specified": "Build, keyboard shortcuts used, recipient apps, PNG or JPEG, permission prompts",
+    "observed_by_tooling": false
+  },
+  "validation": {
+    "simulator_build": "Debug visionOS Simulator build exit 0",
+    "full_ui_suite": {
+      "cases": 37,
+      "failures": 0,
+      "exit_code": 0,
+      "seconds": 1138,
+      "note": "Includes all-issue accessibility audits, document switching/close/Recents through the new rows and section disclosures"
+    },
+    "core": "Not rerun: Sources, Tests and Package.swift hash-identical to build 26 (67 tests / 5 suites, exit 0)",
+    "screenshot_tour": {
+      "exit_code": 0,
+      "screens": 12,
+      "seconds": 224,
+      "site_images_regenerated": 8,
+      "unchanged": [
+        "before.png",
+        "after.png"
+      ]
+    },
+    "site": "python3 scripts/build_site.py: 6 pages; 0 local link, anchor or alt-text problems; no horizontal overflow at desktop width; section headings aligned",
+    "signed_release": {
+      "build_and_analyze_exit_code": 0,
+      "seconds": 17,
+      "codesign_strict": "pass",
+      "identity": "Glass Image Tools 1.0 (27)",
+      "privacy_keys": [
+        "NSPhotoLibraryAddUsageDescription"
+      ],
+      "debug_markers_found": 0
+    },
+    "simulator_capture": "Round + without chevron beside the title; compact tinted selected row; heading aligned with rows"
+  },
+  "physical": {
+    "state": "NOT_INSTALLED_DEVICE_UNREACHABLE",
+    "note": "lockState queries on October 23 failed with CoreDevice error 4016 (device unreachable); build 26 remains the last installed build"
+  },
+  "limits": [
+    "Gaze/hand feel of the new rows and + on a headset is an owner observation",
+    "VoiceOver, Voice Control, Switch Control and keyboard-only navigation on a headset remain unchecked",
+    "Very large images and resource use on hardware remain unchecked"
+  ]
+}

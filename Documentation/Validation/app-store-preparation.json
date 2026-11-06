@@ -1,0 +1,108 @@
+{
+  "date": "2026-10-25",
+  "build": "29 (version 1.0)",
+  "scope": "App Store and TestFlight preparation modeled on Glass Power Tools' App Store work; no upload, App Store Connect change or publication",
+  "changes": [
+    "App/PrivacyInfo.xcprivacy: no tracking, tracking domains or collected data; required reason UserDefaults CA92.1 (window Opacity/Glass settings via AppStorage)",
+    "INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO on the app target; CURRENT_PROJECT_VERSION 28 -> 29; project regenerated (12 changed project lines)",
+    "PRIVACY.md: short-version line and a 'TestFlight and the App Store' section (self-built: nothing; TestFlight: automatic crash logs and usage information, feedback, name/email unless public link; App Store: crash data and usage statistics only with Share With App Developers)",
+    "Documentation/AppStore: fastlane deliver-style metadata, App Review notes, README of App Store Connect answers, screenshot sizes, versions, pre-upload steps and a TestFlight-day checklist",
+    "README privacy and status lines; CONTRIBUTING file map and a rule to keep the manifest true"
+  ],
+  "validation": {
+    "core": "swift test: 67 tests in 5 suites passed, exit 0",
+    "simulator_build": "Debug, generic visionOS Simulator: exit 0; bundle contains PrivacyInfo.xcprivacy",
+    "signed_release": {
+      "build_analyze_exit": 0,
+      "strict_signature": true,
+      "identity": "Glass Image Tools 1.0 (29)",
+      "ITSAppUsesNonExemptEncryption": false,
+      "manifest_at_bundle_root": true,
+      "manifest_matches_source": true,
+      "plutil_lint": "OK",
+      "framework_manifest": "none (not required: no listed API)",
+      "debug_test_markers": 0,
+      "notes": "App Intents metadata extraction skipped (no AppIntents dependency), as in build 28's first full build"
+    },
+    "required_reason_scan": {
+      "method": "xcrun nm -u and the __objc_methname selectors of both Release binaries against Apple's NSPrivacyAccessedAPIType lists (file timestamp, system boot time, disk space, active keyboards, user defaults)",
+      "app_binary": [
+        "NSUserDefaults via SwiftUI AppStorage"
+      ],
+      "VisionSnipCore": [],
+      "not_listed_but_present": [
+        "attributesOfItemAtPath:error: reading NSFileSize/NSFileType",
+        "NSFilePosixPermissions",
+        "NSURLFileSizeKey"
+      ]
+    },
+    "simulator_launch": "install exit 0; launch exit 0; one running process; CFBundleVersion 29",
+    "physical": {
+      "first_attempt": "October 25 before the owner woke the headset: lockState and one install attempt (120 s limit) failed with CoreDevice error 4016 (device unreachable), exit 1",
+      "after_owner_woke_headset": {
+        "lockState": "exit 0; passcodeRequired false",
+        "install_exit_code": 0,
+        "identity": "Glass Image Tools 1.0 (29)",
+        "normal_launch_exit_code": 0,
+        "test_arguments": false,
+        "running_processes": 1
+      },
+      "state": "INSTALLED_LAUNCHED_RUNNING; replaced 1.0 (28)"
+    },
+    "site": "6 pages; 0 local link, anchor or alt problems; only privacy.html changed; new outside link (Apple TestFlight & Privacy) returns 200; no overflow at 375 px light or 1280 px dark",
+    "lighthouse": [
+      {
+        "page": "privacy.html",
+        "device": "mobile",
+        "scheme": "light",
+        "accessibility": 100,
+        "best_practices": 100,
+        "seo": 100,
+        "failed_audits": 0
+      },
+      {
+        "page": "privacy.html",
+        "device": "desktop",
+        "scheme": "dark",
+        "accessibility": 100,
+        "best_practices": 100,
+        "seo": 100,
+        "failed_audits": 0
+      }
+    ],
+    "listing_lengths": {
+      "name": "17/30",
+      "subtitle": "28/30",
+      "promotional_text": "166/170",
+      "description": "2356/4000",
+      "keywords": "97/100",
+      "review_notes": "1474/4000"
+    },
+    "sources": "App, Sources, Tests, UITests, CaptureProbe and Tools Swift files hash-identical to build 28",
+    "released_xcode_build": "Xcode 27.1 (27A9275, not a beta), SDK 27.0: signed Release build exit 0 (51 s); 1.0 (29); strict signature; manifest matches source; encryption key false. Only notes: App Intents metadata extraction skipped",
+    "account_check": "Local only: Xcode signed in to one paid (not free) individual Apple Developer Program team, the same team as Glass Power Tools; build 29 profile from that team (365-day lifetime, wildcard App ID, development). App Store Connect not queried"
+  },
+  "references": [
+    "https://developer.apple.com/documentation/bundleresources/describing-use-of-required-reason-api",
+    "https://www.apple.com/legal/privacy/data/en/test-flight/",
+    "https://developer.apple.com/app-store/app-privacy-details/"
+  ],
+  "limits": [
+    "Physical install proves installation, identity and launch only; nothing on screen changed, and the manifest is not observable on the headset",
+    "No archive, distribution signing, Organizer privacy report or upload yet; App Store Connect has not checked the manifest",
+    "Owner to confirm: EU trader status, TestFlight version numbers and screenshot framing",
+    "Build 29 under com.glasspowertools.visionsnip stays on the headset until the owner agrees to remove it"
+  ],
+  "owner_confirmed": [
+    "PRIVACY.md's sentence on the author's use of Apple's reports (\"keep it\", October 25)",
+    "Categories: Graphics & Design, then Productivity (October 25). Developer Tools was considered, since the app began as a way to send headset screenshots to an AI assistant, but Apple defines it as \"tools for app development, management, and distribution\" (coding, testing, debugging) and says categories that don't fit are against the App Review Guidelines (developer.apple.com/app-store/categories).",
+    "Support email: the owner's Gmail, as in the owner's other apps (October 25), in Help, SECURITY.md, PRIVACY.md and the App Store README",
+    "Bundle identifier: com.glassimagetools (October 25), replacing com.glasspowertools.visionsnip; build 30"
+  ],
+  "build_30": {
+    "change": "Config/Identity.xcconfig VISIONSNIP_BUNDLE_ID com.glasspowertools.visionsnip -> com.glassimagetools; CURRENT_PROJECT_VERSION 29 -> 30; project regenerated (2 changed lines)",
+    "signed_release": "Xcode 27.2 beta: build/analyze exit 0 (77 s); CFBundleIdentifier com.glassimagetools; framework com.glassimagetools.core; 1.0 (30); strict signature; manifest matches source; ITSAppUsesNonExemptEncryption false; add-only Photos only; Debug markers 0",
+    "physical": "lockState exit 0 (passcodeRequired false); install exit 0 (3 s); identity 1.0 (30); normal launch exit 0; build 29 still installed under the old identifier",
+    "not_rerun": "core and UI suites (no source or test change)"
+  }
+}

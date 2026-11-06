@@ -1,0 +1,54 @@
+# macOS / Xcode / SwiftPM local state
+.DS_Store
+.build/
+.swiftpm/
+DerivedData/
+build/
+*.xcuserstate
+xcuserdata/
+*.xcresult
+*.xcactivitylog
+*.app/
+*.dSYM/
+*.ipa
+*.xcarchive/
+
+# Developer identity, local tools and private operational evidence
+Config/Identity.local.xcconfig
+Config/*.private.xcconfig
+.brain/
+.local/
+private/
+LocalValidation/
+Documentation/Validation/raw/
+/Screenshots/
+*.log
+*.crash
+*.ips
+*.trace
+
+# Credential / signing artifacts (never public project inputs)
+.env
+.env.*
+!.env.example
+*.p8
+*.p12
+*.pfx
+*.pem
+*.key
+*.cer
+*.crt
+*.mobileprovision
+*.provisionprofile
+*.keychain
+*.keychain-db
+
+# Keep sanitized Documentation/Validation summaries eligible for source control.
+# Raw reports with device/account identifiers belong in ignored local folders above.
+
+# GitHub Pages build output (scripts/build_site.py)
+_site/
+
+# Python authoring/validation bytecode can embed local source paths
+__pycache__/
+*.py[cod]

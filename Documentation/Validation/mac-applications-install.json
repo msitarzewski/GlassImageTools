@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-05",
+  "version": "1.0",
+  "mac_build": "40",
+  "bundle_identifier": "com.glassimagetools.mac",
+  "destination": "/Applications/Glass Image Tools.app",
+  "fresh_release_build_exit_code": 0,
+  "strict_signature": true,
+  "four_intended_sandbox_grants": true,
+  "no_debugger_or_test_exceptions": true,
+  "installed_tree_matches_built_tree": true,
+  "privacy_manifest_matches_source": true,
+  "older_copy_running": false,
+  "older_builds": [],
+  "app_launch_or_close_performed": false,
+  "host_gui_tests_performed": false,
+  "prior_vm_acceptance_retained": true,
+  "functional_source_changes": false,
+  "publication_or_upload": false,
+  "warnings": "Two AppIntents metadata-extraction skips; no dependency."
+}

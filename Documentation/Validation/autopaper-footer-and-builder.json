@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-24",
+  "build": "28 (website only; no app change)",
+  "changes": [
+    "Footer: Help and Privacy links, and an 'Also by Michael Sitarzewski' row (AudioPaper, AutoPaper, Agency Agents, Brew Browser) following AutoPaper's site; project names don't break across lines",
+    "Builder: links only built pages in nav and sitemap; renders PRIVACY.md only when present (pandoc needed only then); rewrites links only in real anchors, leaving code text as written; skips .DS_Store; reports skipped documents",
+    "Pages workflow: pages/id-token write only on the deploy job; actions pinned to release commits (checkout v7.0.1, upload-pages-artifact v5.0.0, deploy-pages v5.0.1); configure-pages removed, as on AutoPaper",
+    "AutoPaper-only parts not copied: network page, update feeds, example data"
+  ],
+  "validation": {
+    "builder_regression": "new builder with the old layout: 26 of 26 output files byte-identical to the old builder's",
+    "footer_diff": "new layout: each of 6 pages differs only by 3 footer lines; stylesheet only by footer rules",
+    "edge_cases": {
+      "no_privacy_md_no_pandoc": "exit 0; 5 pages; Privacy absent from nav and sitemap; skip reported",
+      "privacy_md_without_pandoc": "exit 1 with a message naming PRIVACY.md",
+      "ds_store": "not copied",
+      "link_rewriting": "titled, folder, anchored, footnote and autolink links correct; inline code untouched (old builder rewrote it)"
+    },
+    "python": "builds with Python 3.15 and 3.9.6; the old builder fails to parse on 3.9 (backslash in an f-string expression)",
+    "workflow": "actionlint 0 problems; pinned commits equal the current v7, v5 and v5 release tags",
+    "site": "6 pages; 0 local link, anchor or alt problems; no external loads; 4 new outside links return 200",
+    "layout": "375 px light and 1280 px dark: no horizontal overflow; project names on one line",
+    "lighthouse": [
+      {"page": "index.html", "device": "mobile", "scheme": "light", "accessibility": 100, "best_practices": 100, "seo": 100, "failed_audits": 0},
+      {"page": "index.html", "device": "desktop", "scheme": "dark", "accessibility": 100, "best_practices": 100, "seo": 100, "failed_audits": 0}
+    ],
+    "privacy_scan": "known false positives plus one new: the three pinned action commit hashes match the 40-hex device-ID pattern; they are public GitHub commits"
+  },
+  "limits": [
+    "The workflow has not run; it first runs on the first push",
+    "The footer's Privacy link is static; a build without PRIVACY.md would link a missing page"
+  ]
+}

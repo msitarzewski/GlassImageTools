@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-06",
+  "platform": "macOS",
+  "version": "1.0",
+  "build": "45",
+  "visionos_source_build_unchanged": "38",
+  "diagnosis": "Read-only sample of owner process waits in AppKit termination approval; source scheduled a SwiftUI question only after terminateLater.",
+  "implementation": "Native AppKit decision before termination; Save cancels termination while sheets save windows sequentially, then reissues normal Quit. Confirmed close waits for sheet detachment.",
+  "native_vm_checks": {
+    "dirty_quit_native_prompt": true,
+    "cancel_preserves_400x300_crop": true,
+    "export_cancel_preserves_work_and_retry": true,
+    "discard_process_exits": true,
+    "save_process_exits": true,
+    "save_png_dimensions": [
+      400,
+      300
+    ],
+    "sequential_two_window_save_dimensions": [
+      [
+        400,
+        300
+      ],
+      [
+        500,
+        250
+      ]
+    ],
+    "sequential_save_process_exits": true,
+    "original_fixture_hashes_unchanged": true
+  },
+  "builds": {
+    "Release": "passed",
+    "Debug_build_for_testing": "passed; compilation only",
+    "Release_build_for_testing": "failed: test target imports require enable-testing; corrected to Debug and passed"
+  },
+  "limits": [
+    "Native guest AX/pointer/native Quit-event checks, not an XCTest execution or a verified Command-Q keystroke test.",
+    "No host app termination, force quit, host GUI testing, headset operation or core rendering change.",
+    "Full core and Mac suites not rerun; prior scoped evidence retained."
+  ],
+  "distribution": {
+    "Developer_ID_export": true,
+    "universal_architectures": [
+      "arm64",
+      "x86_64"
+    ],
+    "sandbox_permissions_unchanged": 4,
+    "hardened_runtime": true,
+    "app_notary_status": "Accepted",
+    "dmg_notary_status": "Accepted",
+    "app_and_dmg_stapled_validated": true,
+    "Gatekeeper_app_and_dmg_assessments": "passed",
+    "publication": "pending"
+  },
+  "installation": {
+    "canonical_build": "45",
+    "strict_signature": true,
+    "ticket_and_Gatekeeper": true,
+    "installed_tree_matches_notarized_export": true,
+    "prior_bundle_preserved": true,
+    "host_process_untouched": true
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "timestamp": "2026-10-15T09:12:35.001945+00:00",
+  "app": {
+    "name": "Glass Image Tools",
+    "version": "1.0",
+    "build": "5",
+    "configuration": "Release"
+  },
+  "core": {
+    "tests": 42,
+    "suites": 3,
+    "failed": 0,
+    "durationSeconds": 0.642
+  },
+  "nativeUI": {
+    "tests": 9,
+    "failed": 0,
+    "durationSeconds": 207.941,
+    "cases": [
+      {
+        "name": "testAnnotationCanBeAddedAndUndone",
+        "durationSeconds": 29.678
+      },
+      {
+        "name": "testCloseCancelSaveCancelAndDiscardPreserveOriginal",
+        "durationSeconds": 25.109
+      },
+      {
+        "name": "testCropPresetIsRestoredByUndoAndRedo",
+        "durationSeconds": 16.306
+      },
+      {
+        "name": "testCropUndoCopyAndExport",
+        "durationSeconds": 27.7
+      },
+      {
+        "name": "testLineEndpointMovesAndUndoes",
+        "durationSeconds": 21.045
+      },
+      {
+        "name": "testNativeLaunchAndPhotosPicker",
+        "durationSeconds": 12.224
+      },
+      {
+        "name": "testNewShapeDirectResizeAndCropMode",
+        "durationSeconds": 24.923
+      },
+      {
+        "name": "testSaveToPhotosBeforeCloseCompletesDocumentAction",
+        "durationSeconds": 18.161
+      },
+      {
+        "name": "testTextCanBeEditedWithVisibleCharacterControls",
+        "durationSeconds": 32.796
+      }
+    ]
+  },
+  "simulatorModelAndServices": {
+    "checks": 15,
+    "failed": 0,
+    "evidence": "simulator-smoke.json"
+  },
+  "deviceSDK": {
+    "signedMainReleaseBuild": "succeeded",
+    "mainReleaseAnalyze": "succeeded",
+    "separateCaptureProbeBuild": "succeeded"
+  },
+  "releaseBoundaries": {
+    "timestamp": "2026-10-15T09:07:55.063330+00:00",
+    "configuration": "Release",
+    "build": "5",
+    "strictCodeSignature": "passed",
+    "debugFixtureAndServiceSymbols": "absent; source-file bookkeeping excluded from symbol check",
+    "captureProbeSymbols": "absent",
+    "usageDescriptions": [
+      "NSPhotoLibraryAddUsageDescription"
+    ],
+    "compiledIcon": "AppIcon / SolidImageStack",
+    "assetsCatalogBytes": 4114056
+  },
+  "icon": {
+    "planes": 3,
+    "sizePixels": [
+      1024,
+      1024
+    ],
+    "shippingPalette": "red/light",
+    "nativeCatalogCompile": "passed without errors or warnings",
+    "physicalLightingAndParallax": "not observed"
+  },
+  "saveBehavior": "Flattened PNG/JPEG copies; retained editable objects throughout open session; originals preserved.",
+  "sourceTreeSHA256": "dc9b65bfc6c100d8ef4ad8c21a9a3bbd7463bdc2eedc71cbc66d3325bf5af909",
+  "physicalDeployment": {
+    "installedBuild": "5",
+    "installation": "succeeded",
+    "normalLaunch": "succeeded",
+    "runningProcessVerified": true,
+    "identityReadback": "Glass Image Tools 1.0 (5)",
+    "evidence": "physical-deployment.json"
+  },
+  "scopeLimits": [
+    "New physical eye/hand gestures, icon lighting/parallax and large-image resource limits are not established by simulator tests.",
+    "Prior owner-reported Photos/crop/Copy/ChatGPT acceptance remains separate from this deployment.",
+    "No physical capture path verified."
+  ],
+  "documentation": {
+    "guideVersion": "2.1 project adaptation",
+    "memoryBankRootNotes": 16,
+    "memoryBankFilesIncludingMonthly": 17,
+    "monthlyTaskFolderOnly": true,
+    "publicTextFilesChecked": 66,
+    "relativeLinksChecked": 131,
+    "brokenLinks": 0,
+    "privateIdentifierMatches": 0,
+    "repositoryPublished": false
+  }
+}

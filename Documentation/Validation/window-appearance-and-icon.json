@@ -1,0 +1,276 @@
+{
+  "timestamp": "2026-10-15T10:24:56.692259+00:00",
+  "app": {
+    "name": "Glass Image Tools",
+    "version": "1.0",
+    "build": "7",
+    "configuration": "Release"
+  },
+  "changes": [
+    "Current zoom and magnifier share bottom toolbar view menu",
+    "Redundant lower-left crop/footer removed; source-pixel axis labels retained",
+    "Glass-family native frame: 46-point continuous corners; sides22/top34/bottom26 insets",
+    "Local native Opacity/Glass settings, persistence/reset and Reduce Transparency policy",
+    "Larger original layered pitched-roof toolbox with broken L-shaped crop rulers",
+    "Canvas gestures on visible drawing surface; bounded nearest-pixel inspector display"
+  ],
+  "nativeUI": {
+    "caseCount": 11,
+    "passed": 11,
+    "failed": 0,
+    "durationSeconds": 277.766,
+    "cases": [
+      {
+        "name": "testAnnotationCanBeAddedAndUndone",
+        "durationSeconds": 30.112
+      },
+      {
+        "name": "testAppearanceSettingsPersistAndReset",
+        "durationSeconds": 31.601
+      },
+      {
+        "name": "testCloseCancelSaveCancelAndDiscardPreserveOriginal",
+        "durationSeconds": 27.057
+      },
+      {
+        "name": "testCropPresetIsRestoredByUndoAndRedo",
+        "durationSeconds": 17.462
+      },
+      {
+        "name": "testCropUndoCopyAndExport",
+        "durationSeconds": 36.721
+      },
+      {
+        "name": "testLineEndpointMovesAndUndoes",
+        "durationSeconds": 22.772
+      },
+      {
+        "name": "testNativeLaunchAndPhotosPicker",
+        "durationSeconds": 12.958
+      },
+      {
+        "name": "testNewShapeDirectResizeAndCropMode",
+        "durationSeconds": 26.566
+      },
+      {
+        "name": "testSaveToPhotosBeforeCloseCompletesDocumentAction",
+        "durationSeconds": 18.333
+      },
+      {
+        "name": "testTextCanBeEditedWithVisibleCharacterControls",
+        "durationSeconds": 27.393
+      },
+      {
+        "name": "testTextContextMenuBelongsToTheTextObject",
+        "durationSeconds": 26.792
+      }
+    ],
+    "finalAppearanceCaptionCheck": {
+      "tests": 1,
+      "passed": 1,
+      "failed": 0,
+      "durationSeconds": 32.615,
+      "changeSinceFullRun": "Caption-only horizontal fixedSize; preferences and behavior unchanged",
+      "captionAccessibilityFrames": "Transparent/Opaque/No Glass/Full Glass each one line, height14.5points"
+    },
+    "earlierRuns": [
+      {
+        "scope": "initial full suite",
+        "tests": 11,
+        "passed": 5,
+        "failed": 6,
+        "assertionFailures": 13,
+        "durationSeconds": 251.579,
+        "findings": "Clear-sibling canvas gesture surface failed in plain window; native slider adjustment API lacked scrubber geometry."
+      },
+      {
+        "scope": "native-element focused checks",
+        "tests": 3,
+        "passed": 0,
+        "failed": 3,
+        "assertionFailures": 7,
+        "durationSeconds": 92.596,
+        "findings": "Canvas still created no objects; sliders actually moved and persisted/reset, but read-only Material AX label query was wrong."
+      },
+      {
+        "scope": "visible canvas gesture surface",
+        "tests": 2,
+        "passed": 1,
+        "failed": 1,
+        "assertionFailures": 1,
+        "durationSeconds": 56.963,
+        "findings": "Rectangle/text creation restored with identical native targets; text passed27.093s, rectangle displayed299 after typing300 due floating arithmetic/truncation. Corrected bounded display rounding; assertions preserved.",
+        "resultFinalization": "Assertions completed; stopped only this invocation during stalled diagnostics collection, command exit-15. Final runs used diagnostics-never and completed normally."
+      }
+    ]
+  },
+  "modelAndServices": {
+    "checks": 15,
+    "passed": 15,
+    "failed": 0,
+    "evidence": "simulator-smoke.json",
+    "includes": "Fractionally positioned annotation typed width/whole-object Undo; actual PNG/JPEG exports, clipboard representation round-trips and Photos saves"
+  },
+  "core": {
+    "sourceAndTestHashesUnchangedFromBuild6": true,
+    "previousTestsPassed": 42,
+    "rerunForPresentationOnlyChanges": false,
+    "baselineEvidence": "editor-polish.json"
+  },
+  "icon": {
+    "foregroundUnion": {
+      "reference": {
+        "bounds": [
+          244,
+          237,
+          780,
+          805
+        ],
+        "canvasOccupancyPercent": 21.961688995361328,
+        "maximumRadiusPixels": 360.8247497054491,
+        "nontransparentPixels": 230285,
+        "radialMarginTo512": 151.1752502945509
+      },
+      "before": {
+        "bounds": [
+          232,
+          278,
+          799,
+          789
+        ],
+        "canvasOccupancyPercent": 20.514297485351562,
+        "maximumRadiusPixels": 340.5150510623576,
+        "nontransparentPixels": 215108,
+        "radialMarginTo512": 171.4849489376424
+      },
+      "after": {
+        "bounds": [
+          156,
+          197,
+          853,
+          825
+        ],
+        "canvasOccupancyPercent": 28.48682403564453,
+        "maximumRadiusPixels": 412.6384616101606,
+        "nontransparentPixels": 298706,
+        "radialMarginTo512": 99.36153838983938
+      }
+    },
+    "foregroundAreaIncreasePercent": 38.86326868363798,
+    "originalSVGArtwork": true,
+    "sourceNoEmbeddedRaster": true,
+    "planesDistinct": true,
+    "layerOrderFrontToBack": [
+      "Front",
+      "Middle",
+      "Back"
+    ],
+    "internalRadiusGuardPixels": 440,
+    "staticCircularMaskProofInspected": true,
+    "physicalLightingMotionObserved": false,
+    "nativeCatalog": {
+      "platform": "xros",
+      "minimumDeployment": "26.0",
+      "actoolErrors": 0,
+      "actoolWarnings": 0,
+      "primaryIcon": "AppIcon",
+      "solidImageStackPresent": true,
+      "vision1024RenditionPresent": true
+    },
+    "planes": {
+      "Back": {
+        "canvasOccupancyPercent": 100,
+        "contentBounds": [
+          0,
+          0,
+          1023,
+          1023
+        ],
+        "contentOutside440PixelRadius": null,
+        "fullyOpaquePixels": 1048576,
+        "fullyTransparentPixels": 0,
+        "height": 1024,
+        "maximumContentRadiusPixels": 723.3702371538382,
+        "partiallyTransparentPixels": 0,
+        "width": 1024
+      },
+      "Front": {
+        "canvasOccupancyPercent": 18.844032287597656,
+        "contentBounds": [
+          156,
+          401,
+          853,
+          825
+        ],
+        "contentOutside440PixelRadius": 0,
+        "fullyOpaquePixels": 194739,
+        "fullyTransparentPixels": 850982,
+        "height": 1024,
+        "maximumContentRadiusPixels": 412.6384616101606,
+        "partiallyTransparentPixels": 2855,
+        "width": 1024
+      },
+      "Middle": {
+        "canvasOccupancyPercent": 13.87796401977539,
+        "contentBounds": [
+          156,
+          197,
+          853,
+          606
+        ],
+        "contentOutside440PixelRadius": 0,
+        "fullyOpaquePixels": 142154,
+        "fullyTransparentPixels": 903055,
+        "height": 1024,
+        "maximumContentRadiusPixels": 359.65330528162815,
+        "partiallyTransparentPixels": 3367,
+        "width": 1024
+      }
+    }
+  },
+  "signedReleaseBuild": "succeeded",
+  "releaseAnalyze": "succeeded",
+  "separateCaptureProbeDeviceSDKCompile": "succeeded; not hardware capture acceptance",
+  "buildWarning": "Skipped AppIntents metadata extraction because neither target depends on AppIntents; no other build/analyze diagnostics.",
+  "releaseBoundaries": {
+    "timestamp": "2026-10-15T10:22:20.539373+00:00",
+    "build": "7",
+    "strictCodeSignature": "passed",
+    "debugFixtureAndServiceSymbols": "absent; debug source-file bookkeeping excluded",
+    "debugCanvasMarkersAndArguments": "absent",
+    "captureProbeSymbols": "absent",
+    "usageDescriptions": [
+      "NSPhotoLibraryAddUsageDescription"
+    ],
+    "compiledIcon": "AppIcon / SolidImageStack"
+  },
+  "sourceTreeSHA256": "4839f2a281dfbefcb90087e3f98ed5c2ab89188a6a70042718f97fb0aaddca85",
+  "physicalDeployment": {
+    "installedBuild": "7",
+    "installation": "succeeded",
+    "normalLaunch": "succeeded",
+    "runningProcessVerified": true,
+    "identityReadback": "Glass Image Tools1.0(7)",
+    "evidence": "physical-deployment.json"
+  },
+  "limits": [
+    "Actual eye/hand appearance/gesture behavior and Home View icon motion remain unobserved.",
+    "Reduce Transparency is source-inspected; the physical accessibility override was not toggled.",
+    "Simulator service checks do not extend owner-reported ChatGPT success to other recipients or large-image resource limits."
+  ],
+  "sourceTransfer": {
+    "baselineConflicts": 0,
+    "testedSourceHashesMatch": true,
+    "originalFilesBackedUpPrivately": true,
+    "stagingFilesApplied": 27,
+    "totalChangedOrNewPublicFiles": 31
+  },
+  "publicRepositoryChecks": {
+    "textFilesScanned": 69,
+    "relativeLinksChecked": 154,
+    "privateValueMatches": 0,
+    "brokenRelativeTargets": 0,
+    "memoryBankFiles": 17,
+    "tasksFolder": "monthly index only"
+  }
+}

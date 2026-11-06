@@ -1,0 +1,211 @@
+{
+  "candidate": {
+    "version": "1.0",
+    "build": "38",
+    "platform": "visionOS"
+  },
+  "scope": "Local files only; not Apple acceptance, live URL verification, distribution signing or account declarations.",
+  "fields": [
+    {
+      "file": "metadata/en-US/name.txt",
+      "characters": 17,
+      "utf8_bytes": 17,
+      "limit": 30,
+      "limit_unit": "characters"
+    },
+    {
+      "file": "metadata/en-US/subtitle.txt",
+      "characters": 28,
+      "utf8_bytes": 28,
+      "limit": 30,
+      "limit_unit": "characters"
+    },
+    {
+      "file": "metadata/en-US/promotional_text.txt",
+      "characters": 156,
+      "utf8_bytes": 156,
+      "limit": 170,
+      "limit_unit": "characters"
+    },
+    {
+      "file": "metadata/en-US/description.txt",
+      "characters": 2877,
+      "utf8_bytes": 2877,
+      "limit": 4000,
+      "limit_unit": "characters"
+    },
+    {
+      "file": "metadata/en-US/keywords.txt",
+      "characters": 97,
+      "utf8_bytes": 97,
+      "limit": 100,
+      "limit_unit": "utf8_bytes"
+    },
+    {
+      "file": "metadata/review_information/notes.txt",
+      "characters": 2964,
+      "utf8_bytes": 2964,
+      "limit": 4000,
+      "limit_unit": "utf8_bytes"
+    },
+    {
+      "file": "metadata/en-US/marketing_url.txt",
+      "characters": 47,
+      "utf8_bytes": 47,
+      "limit": null,
+      "limit_unit": null
+    },
+    {
+      "file": "metadata/en-US/support_url.txt",
+      "characters": 64,
+      "utf8_bytes": 64,
+      "limit": null,
+      "limit_unit": null
+    },
+    {
+      "file": "metadata/en-US/privacy_url.txt",
+      "characters": 59,
+      "utf8_bytes": 59,
+      "limit": null,
+      "limit_unit": null
+    },
+    {
+      "file": "metadata/copyright.txt",
+      "characters": 24,
+      "utf8_bytes": 24,
+      "limit": null,
+      "limit_unit": null
+    },
+    {
+      "file": "metadata/primary_category.txt",
+      "characters": 19,
+      "utf8_bytes": 19,
+      "limit": null,
+      "limit_unit": null
+    },
+    {
+      "file": "metadata/secondary_category.txt",
+      "characters": 12,
+      "utf8_bytes": 12,
+      "limit": null,
+      "limit_unit": null
+    },
+    {
+      "file": "testflight/en-US/description.txt",
+      "characters": 628,
+      "utf8_bytes": 628,
+      "limit": null,
+      "limit_unit": null
+    },
+    {
+      "file": "testflight/en-US/what_to_test.txt",
+      "characters": 1664,
+      "utf8_bytes": 1678,
+      "limit": null,
+      "limit_unit": null
+    },
+    {
+      "file": "testflight/feedback_email.txt",
+      "characters": 22,
+      "utf8_bytes": 22,
+      "limit": null,
+      "limit_unit": null
+    }
+  ],
+  "privacy_manifest": {
+    "tracking": false,
+    "collected_data_types": 0
+  },
+  "screenshots": [
+    {
+      "file": "01-editor.png",
+      "width": 3840,
+      "height": 2160,
+      "bit_depth": 8,
+      "color_type": 2,
+      "has_alpha": false,
+      "metadata_chunks": [],
+      "bytes": 3981257,
+      "sha256": "b79faa254483a134b2abaccf35fcb9b90d56717c69117aa8a38c2f2cb40dd764"
+    },
+    {
+      "file": "02-open.png",
+      "width": 3840,
+      "height": 2160,
+      "bit_depth": 8,
+      "color_type": 2,
+      "has_alpha": false,
+      "metadata_chunks": [],
+      "bytes": 4175598,
+      "sha256": "b65ac89e8e4b3e0c20722257548f382bce3a17c8ea96f3a4f2ad4cfbfb9c3ff6"
+    },
+    {
+      "file": "03-crop.png",
+      "width": 3840,
+      "height": 2160,
+      "bit_depth": 8,
+      "color_type": 2,
+      "has_alpha": false,
+      "metadata_chunks": [],
+      "bytes": 4044176,
+      "sha256": "b9e921008052503dd613183571cab403fe7f1e11fbe33f1d9a59405ea0cb3fc0"
+    },
+    {
+      "file": "04-text.png",
+      "width": 3840,
+      "height": 2160,
+      "bit_depth": 8,
+      "color_type": 2,
+      "has_alpha": false,
+      "metadata_chunks": [],
+      "bytes": 4036970,
+      "sha256": "693ccc5e59aa83175242813b568888497b35b0d61014f1961a8858c8c4d8e312"
+    },
+    {
+      "file": "05-pixelate.png",
+      "width": 3840,
+      "height": 2160,
+      "bit_depth": 8,
+      "color_type": 2,
+      "has_alpha": false,
+      "metadata_chunks": [],
+      "bytes": 4034879,
+      "sha256": "0c3cbdca4d45d6f63c869e2a1c29f529e5060f7863b7630eed00c0b79589e9cd"
+    },
+    {
+      "file": "06-images.png",
+      "width": 3840,
+      "height": 2160,
+      "bit_depth": 8,
+      "color_type": 2,
+      "has_alpha": false,
+      "metadata_chunks": [],
+      "bytes": 3992184,
+      "sha256": "ae575e1e4ea8a0924fe58cda49a659b7192f6c120824a5ed5e5f0359637cd274"
+    },
+    {
+      "file": "07-export.png",
+      "width": 3840,
+      "height": 2160,
+      "bit_depth": 8,
+      "color_type": 2,
+      "has_alpha": false,
+      "metadata_chunks": [],
+      "bytes": 4085529,
+      "sha256": "e6459c375e9efc1c7400c6cd572f0a3c220545e6eafa5ea1154e40799ef5dfdd"
+    },
+    {
+      "file": "08-appearance.png",
+      "width": 3840,
+      "height": 2160,
+      "bit_depth": 8,
+      "color_type": 2,
+      "has_alpha": false,
+      "metadata_chunks": [],
+      "bytes": 4123287,
+      "sha256": "5aca55e4102f879974504c95e5d51bf7ceeca84a74c605f96407a75c106442ea"
+    }
+  ],
+  "findings": [],
+  "valid": true
+}

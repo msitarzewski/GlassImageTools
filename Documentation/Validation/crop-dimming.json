@@ -1,0 +1,189 @@
+{
+  "date": "2026-10-19",
+  "build": "22",
+  "changes": [
+    "Existing outside-crop even-odd mask black alpha 0.5 to 0.65; match the image Canvas viewport clip, leave controls unclipped"
+  ],
+  "ui_phases": [
+    {
+      "scope": "Working prior 50-percent mask",
+      "exit_code": -15,
+      "seconds": 132.44,
+      "finalization_interrupted": true,
+      "summary": [
+        "Test Case '-[GlassImageToolsUITests.GlassImageToolsUITests testCropDimmingPreservesEditingAndCopy]' passed (55.680 seconds).",
+        "\t Executed 1 test, with 0 failures (0 unexpected) in 55.680 (55.682) seconds",
+        "\t Executed 1 test, with 0 failures (0 unexpected) in 55.680 (55.683) seconds",
+        "\t Executed 1 test, with 0 failures (0 unexpected) in 55.680 (55.684) seconds"
+      ],
+      "captures": [
+        {
+          "view": "crop-dimming-fit",
+          "exit_code": 0
+        },
+        {
+          "view": "crop-dimming-zoom",
+          "exit_code": 0
+        },
+        {
+          "view": "crop-dimming-rotation",
+          "exit_code": 0
+        },
+        {
+          "view": "crop-dimming-annotate",
+          "exit_code": 0
+        },
+        {
+          "view": "crop-dimming-reset",
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "scope": "First 65-percent variant; zoomed margin spill observed despite passing assertions",
+      "exit_code": -15,
+      "seconds": 109.24,
+      "finalization_interrupted": true,
+      "summary": [
+        "Test Case '-[GlassImageToolsUITests.GlassImageToolsUITests testCropDimmingPreservesEditingAndCopy]' passed (52.039 seconds).",
+        "\t Executed 1 test, with 0 failures (0 unexpected) in 52.039 (52.042) seconds",
+        "\t Executed 1 test, with 0 failures (0 unexpected) in 52.039 (52.043) seconds",
+        "\t Executed 1 test, with 0 failures (0 unexpected) in 52.039 (52.044) seconds"
+      ],
+      "captures": [
+        {
+          "view": "crop-dimming-fit",
+          "exit_code": 0
+        },
+        {
+          "view": "crop-dimming-zoom",
+          "exit_code": 0
+        },
+        {
+          "view": "crop-dimming-rotation",
+          "exit_code": 0
+        },
+        {
+          "view": "crop-dimming-annotate",
+          "exit_code": 0
+        },
+        {
+          "view": "crop-dimming-reset",
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "scope": "Final 65-percent mask with matching viewport clip",
+      "exit_code": -15,
+      "seconds": 135.929,
+      "finalization_interrupted": true,
+      "summary": [
+        "Test Case '-[GlassImageToolsUITests.GlassImageToolsUITests testCropDimmingPreservesEditingAndCopy]' passed (52.162 seconds).",
+        "Test Case '-[GlassImageToolsUITests.GlassImageToolsUITests testCropRemainsEditableAtZoomWithPanEnabled]' passed (28.429 seconds).",
+        "\t Executed 2 tests, with 0 failures (0 unexpected) in 80.591 (80.595) seconds",
+        "\t Executed 2 tests, with 0 failures (0 unexpected) in 80.591 (80.595) seconds",
+        "\t Executed 2 tests, with 0 failures (0 unexpected) in 80.591 (80.596) seconds"
+      ],
+      "captures": [
+        {
+          "view": "crop-dimming-fit",
+          "exit_code": 0
+        },
+        {
+          "view": "crop-dimming-zoom",
+          "exit_code": 0
+        },
+        {
+          "view": "crop-dimming-rotation",
+          "exit_code": 0
+        },
+        {
+          "view": "crop-dimming-annotate",
+          "exit_code": 0
+        },
+        {
+          "view": "crop-dimming-reset",
+          "exit_code": 0
+        }
+      ]
+    }
+  ],
+  "visual_observations": [
+    "Outside all four crop edges is darker; selected pixels and white handles remain bright",
+    "Mask follows actual image at fit, zoom and quarter-turn; letterbox/window are unaffected",
+    "Annotate crop and reset full image remain undimmed"
+  ],
+  "release": {
+    "exit_code": 0,
+    "seconds": 14.208,
+    "errors": 0,
+    "warnings": 1,
+    "build_succeeded": true,
+    "analyze_succeeded": true
+  },
+  "boundaries": {
+    "signature_exit_code": 0,
+    "name": "Glass Image Tools",
+    "version": "1.0",
+    "build": "22",
+    "device_family": [
+      7
+    ],
+    "usage_keys": [
+      "NSPhotoLibraryAddUsageDescription"
+    ],
+    "debug_or_probe_markers": [],
+    "entitlement_keys": [
+      "application-identifier",
+      "com.apple.developer.team-identifier",
+      "get-task-allow"
+    ],
+    "development_get_task_allow": true
+  },
+  "source_identity": "Final UI/signed/applied App/Core agree",
+  "baseline_not_rerun": {
+    "core_tests": 62,
+    "native_service_checks": 42,
+    "reason": "Only crop-mask display alpha and UI regression changed; core/model/service/render/export source/tests unchanged"
+  },
+  "commands": {
+    "ui": "xcodebuild test -project GlassImageTools.xcodeproj -scheme GlassImageTools -configuration Debug -destination <local-visionOS-simulator> -parallel-testing-enabled NO -only-testing:GlassImageToolsUITests/GlassImageToolsUITests/testCropDimmingPreservesEditingAndCopy -only-testing:GlassImageToolsUITests/GlassImageToolsUITests/testCropRemainsEditableAtZoomWithPanEnabled CODE_SIGNING_ALLOWED=NO",
+    "release": "xcodebuild -project GlassImageTools.xcodeproj -scheme GlassImageTools -configuration Release -destination generic/platform=visionOS -allowProvisioningUpdates build analyze"
+  },
+  "limitations": [
+    "Compositor observation, not automated pixel-equivalence proof",
+    "Physical appearance/gaze/hand/assistive/keyboard/resource/recipient/capture acceptance separate"
+  ],
+  "physical": {
+    "timestamp": "2026-10-19T23:26:20.276199+00:00",
+    "build": "22",
+    "version": "1.0",
+    "signature_exit_code": 0,
+    "installation": {
+      "exit_code": 0,
+      "seconds": 3.379
+    },
+    "identity": {
+      "exit_code": 0,
+      "seconds": 0.992,
+      "name": "Glass Image Tools",
+      "version": "1.0",
+      "build": "22",
+      "matching_count": 1
+    },
+    "state": "INSTALLED_LAUNCH_PENDING",
+    "lockState": {
+      "exit_code": 0,
+      "seconds": 0.845
+    },
+    "passcodeRequired": true
+  },
+  "public_hygiene": {
+    "text_files_scanned": 112,
+    "private_findings": 0,
+    "missing_relative_links": 0,
+    "implementation_files_applied": 4,
+    "documentation_files_applied": 12
+  }
+}

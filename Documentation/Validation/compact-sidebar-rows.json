@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-30",
+  "build": "35",
+  "scope": "Single-line native sidebar image entries without thumbnails",
+  "ui": {
+    "exit_code": 0,
+    "seconds": 183.103,
+    "finalization_interrupted": false,
+    "captures": [
+      {
+        "view": "document-navigation-and-independent-inspector",
+        "exit_code": 0
+      },
+      {
+        "view": "clear-sidebar",
+        "exit_code": 0
+      },
+      {
+        "view": "clear-both-columns",
+        "exit_code": 0
+      },
+      {
+        "view": "opaque-sidebar",
+        "exit_code": 0
+      },
+      {
+        "view": "default-glass-sidebar",
+        "exit_code": 0
+      },
+      {
+        "view": "titlebar-largest-text",
+        "exit_code": 0
+      },
+      {
+        "view": "compact-largest-title",
+        "exit_code": 0
+      },
+      {
+        "view": "compact-largest-toolbar",
+        "exit_code": 0
+      },
+      {
+        "view": "compact-largest-options",
+        "exit_code": 0
+      },
+      {
+        "view": "compact-largest-caption-scrolled",
+        "exit_code": 0
+      }
+    ],
+    "summary": [
+      "Test Case '-[GlassImageToolsUITests.DocumentWorkspaceTests testDocumentSwitchingUndoCloseAndRecents]' passed (63.607 seconds).",
+      "\t Executed 1 test, with 0 failures (0 unexpected) in 63.607 (63.612) seconds",
+      "Test Case '-[GlassImageToolsUITests.GlassImageToolsUITests testClearWindowWithBothSidePanels]' passed (33.106 seconds).",
+      "\t Executed 1 test, with 0 failures (0 unexpected) in 33.106 (33.107) seconds",
+      "Test Case '-[GlassImageToolsUITests.HIGPolishTests testCompactLongTitleAtLargestText]' passed (41.058 seconds).",
+      "\t Executed 1 test, with 0 failures (0 unexpected) in 41.058 (41.059) seconds",
+      "\t Executed 3 tests, with 0 failures (0 unexpected) in 137.772 (137.780) seconds",
+      "\t Executed 3 tests, with 0 failures (0 unexpected) in 137.772 (137.781) seconds",
+      "** TEST SUCCEEDED **"
+    ],
+    "failures": []
+  },
+  "release": {
+    "exit_code": 0,
+    "seconds": 26.384,
+    "warnings": [
+      "2026-10-30 16:47:35.158 appintentsmetadataprocessor[96067:12119883] warning: Metadata extraction skipped, no AppIntents.framework dependency found",
+      "2026-10-30 16:47:48.329 appintentsmetadataprocessor[96550:12122286] warning: Metadata extraction skipped, no AppIntents.framework dependency found"
+    ],
+    "errors": []
+  },
+  "boundaries": {
+    "signature_exit_code": 0,
+    "name": "Glass Image Tools",
+    "version": "1.0",
+    "build": "35",
+    "device_family": [
+      7
+    ],
+    "usage_keys": [
+      "NSPhotoLibraryAddUsageDescription"
+    ],
+    "debug_markers": [],
+    "encryption_key": false,
+    "privacy_manifest_present": true,
+    "entitlement_keys": [
+      "application-identifier",
+      "com.apple.developer.team-identifier",
+      "get-task-allow"
+    ]
+  },
+  "core": {
+    "source_tests_unchanged": true,
+    "rerun": false,
+    "previous_tests": 69,
+    "previous_suites": 5
+  },
+  "limitations": [
+    "Full UI and native service suites not rerun",
+    "Physical gaze/hand and assistive technology remain manual acceptance"
+  ],
+  "simulator_stopped": true,
+  "source_identity": "Signed, native-tested and applied source hashes match; XcodeGen output identical"
+}

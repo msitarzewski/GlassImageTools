@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-05",
+  "mac_build": "43",
+  "visionos_build": "38",
+  "scope": "Preview-reference Markup presentation, existing editing semantics retained",
+  "controls": {
+    "button_targets_points": [
+      32,
+      32
+    ],
+    "shape_and_crop_menu_targets_points": [
+      52,
+      32
+    ],
+    "zoom_menu_target_points": [
+      110,
+      32
+    ],
+    "native_menu_symbol_points": 20,
+    "mode_control_height": 28,
+    "row_separators": "Two native Dividers",
+    "menu_adapter": "Standard NSPopUpButton via NSViewRepresentable, normal control target/action coordinator; no custom drawing or private API"
+  },
+  "guest": {
+    "os": "macOS 26.6.2",
+    "headless": true,
+    "method": "Actual native AX, pointer and clipboard; not XCTest",
+    "shape_menu_seven_choices": true,
+    "selected_ellipse_and_drawn_editable_object": true,
+    "text_edited": true,
+    "hide_show_recreates_functional_popups": true,
+    "zoom_menu_result": "150%",
+    "crop_menu_square_output": [
+      640,
+      640
+    ],
+    "copied_png_dimensions": [
+      400,
+      300
+    ],
+    "copied_png_contains_annotation_pixels": true,
+    "empty_state_has_settings_without_markup": true,
+    "shutdown": "confirmed",
+    "tool_bounds_ordered_inside_window": true
+  },
+  "release": {
+    "build_exit_code": 0,
+    "test_source_compile_only_exit_code": 0,
+    "strict_signature": true,
+    "four_unchanged_production_sandbox_grants": true,
+    "no_debugger_or_test_exceptions": true,
+    "privacy_manifest_matches_source": true,
+    "warning": "AppIntents metadata extraction skips; no dependency"
+  },
+  "no_core_shared_visionos_model_or_render_changes": true,
+  "core_and_full_suites_rerun": false,
+  "no_new_capture_or_permission_requests": true,
+  "host_gui_or_app_closure_performed": false,
+  "visual_pixel_match_to_preview_claimed": false,
+  "installation": {
+    "version": "1.0",
+    "build": "43",
+    "destination": "/Applications/Glass Image Tools.app",
+    "signature": true,
+    "four_production_sandbox_grants": true,
+    "no_debugger_or_test_exceptions": true,
+    "installed_tree_matches_built_tree": true,
+    "prior_install_preserved": true,
+    "launch_performed": false,
+    "host_app_close_performed": false
+  },
+  "publication_or_upload": false
+}

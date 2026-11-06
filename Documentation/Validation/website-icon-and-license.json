@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-22",
+  "build": "26",
+  "changes": [
+    "GitHub Pages site in site/ (Home, Help, Reference, Privacy rendered from PRIVACY.md, Credits, 404), built by scripts/build_site.py and deployed by .github/workflows/pages.yml; adapted from the owner's AudioPaper site",
+    "Repository files: MIT LICENSE, PRIVACY.md, SECURITY.md (GitHub private vulnerability reporting), CONTRIBUTING.md, issue templates, FUNDING.yml, public README",
+    "Icon recolored to AudioPaper's rendered red (#e33d32 to #861910 ramp) and bezel silver; generator cobalt and dark maps updated; build number 26",
+    "App Swift sources, UI tests and the core package are unchanged from build 25"
+  ],
+  "privacy_scan": {
+    "scope": "Every file outside ignored local material (.brain, local identity, build output): 125 files before the change, all staged files after",
+    "checks": [
+      "Literal private tokens gathered locally and never printed: user and home path, computer/local/host names, headset and simulator identifiers, signing team, owner email",
+      "Patterns: home paths, IPv4, IPv6, MAC addresses, email addresses, UUIDs, device ECID/UDID shapes, possessive device names, team ID settings"
+    ],
+    "result": "No private identifiers. Five pattern hits were false positives (an empty DEVELOPMENT_TEAM setting, the word 'unknown', and 'Apple's Mac inspector')"
+  },
+  "screenshots": {
+    "method": "Scratch-only UI test driving a normal (non-test) launch in a dedicated visionOS 27.2 Apple Vision Pro (4K) simulator; host captures with simctl at PROBE_READY markers; six iterations, final run exit 0 with no skipped steps",
+    "content": "A fictional garden sign-up page (example.com address) and this project's own Geometry.swift, both rendered for the site; no personal image content",
+    "output_sample": "The home page 'after' image is cropped from the PNG the app placed on the clipboard in the final run"
+  },
+  "site": {
+    "build": "python3 scripts/build_site.py: 6 pages, exit 0",
+    "local_links_and_anchors": "0 problems",
+    "phone_width_390": "No horizontal overflow on any page; every image has alt text",
+    "lighthouse": [
+      {"page": "index.html", "device": "desktop", "scheme": "light", "accessibility": 100, "best_practices": 100, "seo": 100},
+      {"page": "index.html", "device": "mobile", "scheme": "dark", "accessibility": 100, "best_practices": 100, "seo": 100},
+      {"page": "help.html", "device": "desktop", "scheme": "dark", "accessibility": 100, "best_practices": 100, "seo": 100}
+    ],
+    "published": false
+  },
+  "home_page_review": "Written against the BEDROCK measure: checkable facts, no urgency or selling, cost and exit stated, provenance and AI assistance disclosed, decision handed back",
+  "icon": {
+    "generator": "swift Tools/GenerateIcon.swift: three 1024-pixel planes validated (red light; cobalt and dark comparisons generated)",
+    "actool": "xros catalog compiled, exit 0; CFBundlePrimaryIcon = AppIcon; SolidImageStack with Back, Middle and Front renditions",
+    "back_plane": "Unchanged (background colors already matched)"
+  },
+  "core_tests": {"tests": 67, "suites": 5, "failures": 0, "exit_code": 0},
+  "ui_tests": "Not rerun: App, UITests and Sources are byte-identical to build 25, whose full 37-case suite passed (exit 0)",
+  "signed_release": {
+    "build_analyze_exit_code": 0,
+    "seconds": 21,
+    "signature": "codesign --verify --deep --strict passed",
+    "identity": "Glass Image Tools 1.0 (26)",
+    "privacy_keys": "NSPhotoLibraryAddUsageDescription only",
+    "debug_markers_in_binary": 0
+  },
+  "capture_probe": "Device-SDK compile exit 0 (compilation only)",
+  "physical": "Installed and identity read back as 1.0 (26); headset locked, so launch is pending. See physical-deployment.json",
+  "not_done": [
+    "No Git repository, commit, push, GitHub Pages configuration or publication",
+    "No TestFlight archive or upload",
+    "Icon appearance on the headset's Home View not observed by tooling"
+  ],
+  "correction_2026_10_24": "The owner's request named AutoPaper. This build read it as AudioPaper and adapted AudioPaper's site, which AutoPaper's site is itself adapted from; both apps' icons use the same red and silver."
+}

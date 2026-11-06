@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-24",
+  "build": "28",
+  "changes": [
+    "App icon replaced: a white sun and two hills on red glass inside a silver frame that fills the icon (owner: 'Let's just roll with the regular circle image icon')",
+    "Layers: Front is the silver frame (canvas outside the glass radius 455.4, with a 6-pixel #7d1010 rim); Middle is the sun and hills (hills clipped at radius 485, under the frame); Back is the red glass (#f83835 to #e20707 to #b00100) and silver past radius 490",
+    "No drawn-in highlights: a gloss on the glass was removed at the owner's request ('Take yours out anyway... let's leave those touches to Apple's default team.')",
+    "Generator checks each plane's part in the stack instead of the toolbox's 440-pixel guard; --appearance removed; cobalt comparison maps the new ramp",
+    "Website icons, favicons, Apple touch icon and social card regenerated from the new composite; alt text and Credits updated",
+    "App Swift sources, UI tests, core and capture probe unchanged from build 27 (hash-identical); only the three icon PNGs change in the app"
+  ],
+  "apple_guidance_applied": [
+    "visionOS icon: a background layer and one or two layers on top; the system adds shadows between layers and embosses upper layers from their alpha",
+    "Avoid a hole or concave shape in the background layer: the frame is the Front layer, not a recess painted on Back",
+    "Square, unmasked layers; the system applies the circular mask",
+    "Keep content centered",
+    "The system supplies highlights and shadows; none are drawn into the layers"
+  ],
+  "validation": {
+    "generator": {
+      "planes": 3,
+      "pixels": "1024 x 1024 each",
+      "back_fully_opaque": true,
+      "middle_maximum_content_radius": 485.7,
+      "middle_pixels_beyond_radius_490": 0,
+      "front_minimum_content_radius": 454.7,
+      "front_pixels_inside_radius_450": 0,
+      "front_non_opaque_pixels_from_radius_462_to_edge": 0
+    },
+    "fidelity_to_approved_proof": "Before the gloss was removed: 0.4% of pixels differed by more than 6%, at the glass edge and the old proof's outer light edge; the gloss was then removed at the owner's request",
+    "actool": "xros compile exit 0; 0 warnings or notices; CFBundlePrimaryIcon AppIcon",
+    "simulator_home_view": "Debug build installed in the visionOS simulator; after the install animation the Home View showed the red glass, white sun and hills and silver frame as designed; a capture taken mid-animation showed the icon dimmed; rechecked after the gloss was removed",
+    "cobalt_option": "validated",
+    "ui_suite_and_core": "Not rerun: hash-identical to build 27, where the full UI suite passed 37/37",
+    "site": "python3 scripts/build_site.py: 6 pages; 0 local link, anchor or alt-text problems",
+    "signed_release": {
+      "build_and_analyze_exit_code": 0,
+      "seconds": 49,
+      "codesign_strict": "pass",
+      "identity": "Glass Image Tools 1.0 (28)",
+      "asset_catalog": "SolidImageStack AppIcon with Back, Middle and Front 1024-pixel vision images",
+      "privacy_keys": [
+        "NSPhotoLibraryAddUsageDescription"
+      ],
+      "debug_markers_found": 0,
+      "note": "Rebuilt after the gloss was removed; the app's back-layer renditions match a fresh actool compile of the final catalog"
+    },
+    "privacy_scan": "No new findings; one email-pattern match is random bytes in the compressed Back.png image data (same kind as the existing pixelate.jpg match)"
+  },
+  "physical": {
+    "state": "INSTALLED_LAUNCHED_RUNNING",
+    "note": "lockState first failed with CoreDevice 4016; after the owner woke the headset: install exit 0 (7 s), identity 1.0 (28), normal launch exit 0, one running process. Details in physical-deployment.json"
+  },
+  "limits": [
+    "Icon lighting, emboss and layer movement on a headset are unobserved"
+  ]
+}

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1600" viewBox="0 0 2400 1600">
+<rect width="2400" height="1600" fill="#f4f3ef"/>
+<rect width="2400" height="132" fill="#183e35"/>
+<g font-family="Helvetica,Arial,sans-serif">
+<text x="130" y="85" font-size="49" font-weight="bold" fill="white">Maple Street Community Garden</text>
+<text x="1790" y="82" font-size="30" fill="#dcebe3">Plots   ·   Calendar   ·   About</text>
+<text x="160" y="242" font-size="72" font-weight="bold" fill="#17362e">Reserve a garden plot</text>
+<text x="160" y="313" font-size="35" fill="#59655f">A little space to grow something good.</text>
+<rect x="160" y="367" width="1180" height="1110" rx="28" fill="white"/>
+<text x="210" y="442" font-size="32" font-weight="bold" fill="#243c33">Your name</text>
+<rect x="210" y="471" width="1070" height="110" rx="12" fill="#f9faf8" stroke="#b5c3ba" stroke-width="3"/>
+<text x="242" y="544" font-size="44" fill="#25372d">Sam Rivera</text>
+<text x="210" y="649" font-size="32" font-weight="bold" fill="#243c33">Email</text>
+<rect x="210" y="678" width="1070" height="110" rx="12" fill="#f9faf8" stroke="#b5c3ba" stroke-width="3"/>
+<text x="242" y="751" font-size="44" fill="#25372d">sam.rivera@example.com</text>
+<text x="210" y="857" font-size="32" font-weight="bold" fill="#243c33">Choose your plot</text>
+<rect x="210" y="886" width="1070" height="110" rx="12" fill="#f9faf8" stroke="#b5c3ba" stroke-width="3"/>
+<text x="242" y="959" font-size="42" fill="#25372d">Plot 12 · Raised bed</text>
+<path d="M1200 930 l18 18 18 -18" fill="none" stroke="#53655c" stroke-width="5"/>
+<rect x="210" y="1060" width="490" height="112" rx="18" fill="#285e46"/>
+<text x="455" y="1133" font-size="40" font-weight="bold" text-anchor="middle" fill="white">Reserve my plot</text>
+<rect x="210" y="1224" width="1070" height="166" rx="15" fill="#fff3ee"/>
+<text x="243" y="1287" font-size="35" font-weight="bold" fill="#8c3024">We couldn’t reserve your plot.</text>
+<text x="243" y="1345" font-size="31" fill="#8c3024">Please try again in a moment.</text>
+<text x="1440" y="423" font-size="37" font-weight="bold" fill="#254b3a">A season in the garden</text>
+<text x="1440" y="489" font-size="31" fill="#59655f">One plot. Neighbors to learn from.</text>
+<text x="1440" y="544" font-size="31" fill="#59655f">Everything you need to get growing.</text>
+<rect x="1440" y="615" width="640" height="310" rx="22" fill="#dce5d8"/>
+<path d="M1500 842 Q1580 670 1660 842 M1660 842 Q1740 660 1820 842 M1820 842 Q1900 700 1980 842" fill="none" stroke="#6f8e61" stroke-width="18" stroke-linecap="round"/>
+<path d="M1500 850 H2020" stroke="#9b7e59" stroke-width="23" stroke-linecap="round"/>
+<text x="1440" y="1004" font-size="27" fill="#657269">Fictional page · image-editing demonstration</text>
+</g></svg>

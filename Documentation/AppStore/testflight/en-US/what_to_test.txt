@@ -1,0 +1,13 @@
+Please try the complete workflow on your Vision Pro with an image you are comfortable using for feedback:
+
+• Open from Photos and Files. In an empty window, tap the large well or press Command V to paste, and try a cross-app image drop.
+• Paste direct HTTPS image links as URLs and as text. Check menu Paste and empty-window tap/Command V. Cancel a download; a failure should retain your current image. Webpage, HTTP and login-required links may fail with recovery guidance.
+• Crop while zoomed or panned, use an aspect preset, rotate, and enter exact dimensions. Check the copied image has the expected pixels.
+• Draw shapes and arrows, add and edit text, resize an object and use Pixelate. Undo and Redo should preserve the original.
+• Switch between images in the left sidebar, expand/collapse its groups, and close an edited image through Cancel, Save or Discard. Recents lasts for the window's session.
+• Copy into a compatible app, Share, and save PNG/JPEG to Files and a new image to Photos. Check the original stays unchanged.
+• Check native category hover/selection, largest text, keyboard focus, assistive controls and clear/opaque window appearance. The image and foreground controls should remain opaque.
+
+Known limits: this app does not take screenshots. Edits and Recents are not a persistent project library. Pixelation removes fine detail from the output but does not guarantee large shapes are unrecognizable. The optional on-device caption describes the original, not the crop, and is excluded from exports.
+
+Please report the app version/build, visionOS version, action taken and result. Crop personal information out of any feedback screenshot.

@@ -1,0 +1,529 @@
+{
+  "timestamp_utc": "2026-10-16T03:21:17.432661+00:00",
+  "scope": "All five queued native UX workstreams; build10",
+  "platform": "visionOS Simulator27.2; signed device SDK27.2",
+  "core": {
+    "exit_code": 0,
+    "seconds": 5.367,
+    "summary": [
+      "\u2714 Test run with 53 tests in 3 suites passed after 0.791 seconds."
+    ]
+  },
+  "native_service_checks": {
+    "exit_code": 0,
+    "seconds": 3.145,
+    "passed": 24,
+    "failed": 0,
+    "checks": [
+      {
+        "passed": true,
+        "name": "Inspector crop undo/redo",
+        "detail": "Three typed digits commit one source-pixel edit; Undo restores the original and Redo restores 800 px."
+      },
+      {
+        "passed": true,
+        "name": "Crop preset undo/redo",
+        "detail": "Crop bounds and preset restore together."
+      },
+      {
+        "passed": true,
+        "name": "Inspector annotation undo/delete",
+        "detail": "A fractionally positioned rectangle resized by typed digits displays 300 px; Undo restores the entire original object. Dimension editing and deletion each commit one reversible operation."
+      },
+      {
+        "name": "Inspector numeric bounds",
+        "detail": "Int minimum/maximum dimensions remain inside the source; nonfinite and extreme display values convert safely.",
+        "passed": true
+      },
+      {
+        "name": "Accessible annotation insertion and Undo",
+        "detail": "Every supported non-freehand object is inserted in source pixels at the crop center, remains selected/editable, preserves zoom/pan and commits one Undo/Redo operation.",
+        "passed": true
+      },
+      {
+        "name": "Accessible annotation style and text editing",
+        "detail": "Insertion reuses the current retained style and last shape, requests native text editing for text, and does not invent a freehand path.",
+        "passed": true
+      },
+      {
+        "name": "Document saved baseline",
+        "detail": "Dirty state follows the initial/last durable snapshot, including Undo away from or back to that snapshot.",
+        "passed": true
+      },
+      {
+        "name": "Stale save and close ownership",
+        "detail": "Newer edits and a closed source reject stale save completions; close clears document state and history.",
+        "passed": true
+      },
+      {
+        "name": "Failed and cancelled replacement",
+        "detail": "Actual failed file decoding and a cancelled import preserve the previous source, edits and dirty state.",
+        "passed": true
+      },
+      {
+        "name": "Live typography undo transaction",
+        "detail": "Text editing is requested on creation; content and typography update as one reversible edit. Font displays are safely bounded independently of image dimensions.",
+        "passed": true
+      },
+      {
+        "name": "Annotation arrangement and mode preservation",
+        "detail": "Duplicates retain typography, front/back ordering changes retained objects, and mode switching preserves objects and viewport.",
+        "passed": true
+      },
+      {
+        "name": "PNG explicit image paste",
+        "detail": "An actual NSItemProvider imports unchanged encoded bytes through the shared protected source pipeline and resets the editing baseline.",
+        "passed": true
+      },
+      {
+        "name": "JPEG explicit image paste",
+        "detail": "An actual NSItemProvider imports unchanged encoded bytes through the shared protected source pipeline and resets the editing baseline.",
+        "passed": true
+      },
+      {
+        "name": "Invalid image paste preserves document",
+        "detail": "Empty, text-only and malformed encoded providers report errors while preserving the current source, crop, dirty state and Undo availability.",
+        "passed": true
+      },
+      {
+        "name": "Cancelled image paste preserves document",
+        "detail": "Cancelling an in-flight provider propagates to its Progress, preserves source/edit/history and ignores a delayed completion.",
+        "passed": true
+      },
+      {
+        "name": "Closed document rejects stale image paste",
+        "detail": "Closing while a provider loads prevents its eventual successful source from reopening or changing the document.",
+        "passed": true
+      },
+      {
+        "name": "Shared asynchronous file import",
+        "detail": "The native model imports through the shared worker, installs an immutable full-resolution source and resets the saved/history baseline.",
+        "passed": true
+      },
+      {
+        "name": "Photo transfer ownership before decoding",
+        "passed": true,
+        "detail": "Dropping a real ImportedPhoto before decoding removes its private copy; cancelled shared-worker decoding throws cancellation without accepting a source."
+      },
+      {
+        "name": "PNG full-resolution export",
+        "passed": true,
+        "detail": "Decoded 800 \u00d7 600 image; 41344 bytes."
+      },
+      {
+        "name": "PNG clipboard round-trip",
+        "passed": true,
+        "detail": "Read and decoded the actual system pasteboard data and standard UIImage representation."
+      },
+      {
+        "name": "PNG Photos save",
+        "passed": true,
+        "detail": "PHPhotoLibrary.performChanges completed for a new image asset."
+      },
+      {
+        "name": "JPEG full-resolution export",
+        "passed": true,
+        "detail": "Decoded 800 \u00d7 600 image; 57540 bytes."
+      },
+      {
+        "name": "JPEG clipboard round-trip",
+        "passed": true,
+        "detail": "Read and decoded the actual system pasteboard data and standard UIImage representation."
+      },
+      {
+        "name": "JPEG Photos save",
+        "passed": true,
+        "detail": "PHPhotoLibrary.performChanges completed for a new image asset."
+      }
+    ]
+  },
+  "functional_ui": {
+    "passed": 15,
+    "failures": 0,
+    "suite_seconds": 443.289,
+    "run": {
+      "command_exit": -15,
+      "command_seconds": 604.337,
+      "cases": [
+        {
+          "name": "testNativeAccessibilityAuditForEditorSheetsAndText",
+          "result": "failed",
+          "seconds": 43.845
+        },
+        {
+          "name": "testNativeAccessibilityAuditForEmptyWindow",
+          "result": "passed",
+          "seconds": 6.982
+        },
+        {
+          "name": "testNativeAccessibilityAuditForPasteErrorAndColorPalette",
+          "result": "passed",
+          "seconds": 15.135
+        },
+        {
+          "name": "testAnnotationCanBeAddedAndUndone",
+          "result": "passed",
+          "seconds": 29.922
+        },
+        {
+          "name": "testAppearanceSettingsPersistAndReset",
+          "result": "passed",
+          "seconds": 108.347
+        },
+        {
+          "name": "testCancelProcessingPreservesTheCurrentDocument",
+          "result": "passed",
+          "seconds": 10.896
+        },
+        {
+          "name": "testCloseCancelSaveCancelAndDiscardPreserveOriginal",
+          "result": "passed",
+          "seconds": 27.385
+        },
+        {
+          "name": "testCropPresetIsRestoredByUndoAndRedo",
+          "result": "passed",
+          "seconds": 17.337
+        },
+        {
+          "name": "testCropRemainsEditableAtZoomWithPanEnabled",
+          "result": "passed",
+          "seconds": 26.297
+        },
+        {
+          "name": "testCropUndoCopyAndExport",
+          "result": "passed",
+          "seconds": 34.811
+        },
+        {
+          "name": "testLabeledDimensionPairsAndAccessibleAnnotationCreation",
+          "result": "passed",
+          "seconds": 22.752
+        },
+        {
+          "name": "testLineEndpointMovesAndUndoes",
+          "result": "passed",
+          "seconds": 22.287
+        },
+        {
+          "name": "testNativeImagePasteAndUnsavedReplacementRecovery",
+          "result": "passed",
+          "seconds": 35.026
+        },
+        {
+          "name": "testNativeLaunchAndPhotosPicker",
+          "result": "passed",
+          "seconds": 10.512
+        },
+        {
+          "name": "testNewShapeDirectResizeAndCropMode",
+          "result": "passed",
+          "seconds": 27.382
+        },
+        {
+          "name": "testSaveToPhotosBeforeCloseCompletesDocumentAction",
+          "result": "passed",
+          "seconds": 16.719
+        },
+        {
+          "name": "testTextCanBeEditedWithVisibleCharacterControls",
+          "result": "passed",
+          "seconds": 27.08
+        },
+        {
+          "name": "testTextContextMenuBelongsToTheTextObject",
+          "result": "passed",
+          "seconds": 26.536
+        }
+      ],
+      "passed_cases": 17,
+      "failed_cases": 1
+    },
+    "scope_note": "Functional suite passed within an18-case invocation whose two Debug-marker audit findings failed; finalization stalled and was stopped. Corrected audit cases subsequently passed."
+  },
+  "native_accessibility": {
+    "standard": {
+      "command_exit": 0,
+      "command_seconds": 88.265,
+      "cases": [
+        {
+          "name": "testNativeAccessibilityAuditForEditorSheetsAndText",
+          "result": "passed",
+          "seconds": 40.989
+        },
+        {
+          "name": "testNativeAccessibilityAuditForEmptyWindow",
+          "result": "passed",
+          "seconds": 6.862
+        },
+        {
+          "name": "testNativeAccessibilityAuditForPasteErrorAndColorPalette",
+          "result": "passed",
+          "seconds": 32.496
+        }
+      ],
+      "passed_cases": 3,
+      "failed_cases": 0
+    },
+    "largest_text_and_increase_contrast": {
+      "command_exit": 0,
+      "command_seconds": 37.696,
+      "cases": [
+        {
+          "name": "testNativeAccessibilityAtLargestTextAndIncreasedContrast",
+          "result": "passed",
+          "seconds": 29.208
+        }
+      ],
+      "passed_cases": 1,
+      "failed_cases": 0
+    },
+    "app_audit_issues": 0,
+    "ignored_issues": 0,
+    "system_palette": "Actual service opened by the native well; RGB sliders match current color, Grid selection updates the retained annotation/well, one Undo restores its color.",
+    "system_audit_limit": "Attempting performAccessibilityAudit on Apple ColorPickerUIService fails with accessibilityAudit -902 invalid target. This is not an app audit success; service behavior is verified through native UI interaction/readback.",
+    "settings_restored": true
+  },
+  "release": {
+    "exit_code": 0,
+    "seconds": 9.001,
+    "build_succeeded": true,
+    "analyze_succeeded": true,
+    "strict_signature_exit": 0,
+    "debug_markers_absent": true,
+    "name": "Glass Image Tools",
+    "version": "1.0",
+    "build": "10",
+    "usage_keys": [
+      "NSPhotoLibraryAddUsageDescription"
+    ],
+    "warnings": [
+      "Metadata extraction skipped, no AppIntents.framework dependency found"
+    ]
+  },
+  "capture_probe_device_sdk": {
+    "exit_code": 0,
+    "seconds": 8.492,
+    "build_succeeded": true,
+    "warnings": [
+      "Metadata extraction skipped, no AppIntents.framework dependency found"
+    ]
+  },
+  "application": {
+    "conflicts": [],
+    "signing_override_preserved": true,
+    "source_sha256": {
+      "App/ExportService.swift": "13a5cf9d1c1bc825047e9f222919168efb0a06d92c7fb0b986c2851b1edb0ac8",
+      "App/EditorModel.swift": "08d4032bb9c9bf776576829c61d14f8b4608d82540c916aa7574b5941beb4be5",
+      "App/EditorTestFixture.swift": "acb3135e6db82f43128719538c9e2f59009225f677118f6c57ba47c16b17aca1",
+      "App/ExportView.swift": "b1a22e947c1af1347bf7c7fc4f437bd5ddc22fd64385741ffdd22bc3cb15ff7f",
+      "App/EditorView.swift": "d196e59fbe1cc12639120a368adfc6c73955b35840652e39ae8e02ff03f65b10",
+      "App/AppearanceSettings.swift": "fcd2e8bf15fb5f705f9286356f1971264fe7b6cbe747a775a72448abcf9ffd03",
+      "App/EditorIntegrationChecks.swift": "712cc57c2d4cf812258f6271c8967049c9d8e3de9294ec25558ca4174a87b5a7",
+      "App/ImageCanvas.swift": "6051bb962762f28cd7dad4730da58b56ba9784b6851932db6c017e0b2483fa5d",
+      "Sources/VisionSnipCore/Geometry.swift": "0899cd794a1ce1f9d9b90b99104069b6f121b5954c0d9a5f926800552d5021c6",
+      "Sources/VisionSnipCore/ImageImportService.swift": "f528e83eaf5febbe0684d3fa70c7325d2bb8dd1a3c420a07ea2580d15757d8d9",
+      "Tests/VisionSnipCoreTests/RendererTests.swift": "687fad7769ae24e3a8f19e83ee0e362c5e78a2d8193417a21e833d1413b72094",
+      "Tests/VisionSnipCoreTests/GeometryTests.swift": "b3879f1b2441ba65d96b1b1ccf6386df466610eb1c19ea1fa7faff274f822455",
+      "UITests/GlassImageToolsUITests.swift": "35f9104e59e36a8d55e979089db8b6895fcba1903a3c4f46399c714ffb74640f",
+      "UITests/AccessibilityAuditTests.swift": "8fc33e77ea92de0b0b1508c530283ed600f2f66f03cf0deed2146ce63ca0851e",
+      "GlassImageTools.xcodeproj/project.pbxproj": "f9241d86864340dc994ee2cf7b098a8f6e856739f40d36f22ad13bdd1fc9cb88",
+      "project.yml": "5a81ebb75cec4995a54ce573a992949dd6f150e048d10910f83ebff81212723a"
+    }
+  },
+  "visual_check": {
+    "method": "Private simctl native compositor frames with deterministic fixture",
+    "observed": "Largest-text title initially overlapped width axis; accessibility-size ornament now attaches above the window. Corrected title, width/height labels, crop handles and opaque image remain visible. Normal placement preserved.",
+    "raw_images_published": false
+  },
+  "history": [
+    {
+      "run": {
+        "command_exit": 65,
+        "command_seconds": 172.332,
+        "cases": [
+          {
+            "name": "testNativeAccessibilityAuditForEmptyWindow",
+            "result": "passed",
+            "seconds": 11.376
+          },
+          {
+            "name": "testCropRemainsEditableAtZoomWithPanEnabled",
+            "result": "passed",
+            "seconds": 27.847
+          },
+          {
+            "name": "testLabeledDimensionPairsAndAccessibleAnnotationCreation",
+            "result": "passed",
+            "seconds": 24.196
+          },
+          {
+            "name": "testNativeImagePasteAndUnsavedReplacementRecovery",
+            "result": "failed",
+            "seconds": 55.237
+          }
+        ],
+        "passed_cases": 3,
+        "failed_cases": 1
+      },
+      "finding": "Empty-state Paste did not import after closing; moved native Paste to persistent top ornament."
+    },
+    {
+      "run": {
+        "command_exit": -15,
+        "command_seconds": 620.721,
+        "cases": [
+          {
+            "name": "testNativeAccessibilityAuditForEditorSheetsAndText",
+            "result": "failed",
+            "seconds": 29.273
+          },
+          {
+            "name": "testNativeAccessibilityAuditForEmptyWindow",
+            "result": "passed",
+            "seconds": 7.388
+          },
+          {
+            "name": "testNativeAccessibilityAuditForPasteErrorAndColorPalette",
+            "result": "passed",
+            "seconds": 14.946
+          },
+          {
+            "name": "testAnnotationCanBeAddedAndUndone",
+            "result": "failed",
+            "seconds": 35.675
+          },
+          {
+            "name": "testAppearanceSettingsPersistAndReset",
+            "result": "failed",
+            "seconds": 88.13
+          },
+          {
+            "name": "testCancelProcessingPreservesTheCurrentDocument",
+            "result": "passed",
+            "seconds": 11.525
+          },
+          {
+            "name": "testCloseCancelSaveCancelAndDiscardPreserveOriginal",
+            "result": "passed",
+            "seconds": 28.61
+          },
+          {
+            "name": "testCropPresetIsRestoredByUndoAndRedo",
+            "result": "passed",
+            "seconds": 17.362
+          },
+          {
+            "name": "testCropRemainsEditableAtZoomWithPanEnabled",
+            "result": "passed",
+            "seconds": 26.286
+          },
+          {
+            "name": "testCropUndoCopyAndExport",
+            "result": "passed",
+            "seconds": 34.805
+          },
+          {
+            "name": "testLabeledDimensionPairsAndAccessibleAnnotationCreation",
+            "result": "passed",
+            "seconds": 23.108
+          },
+          {
+            "name": "testLineEndpointMovesAndUndoes",
+            "result": "passed",
+            "seconds": 21.899
+          },
+          {
+            "name": "testNativeImagePasteAndUnsavedReplacementRecovery",
+            "result": "failed",
+            "seconds": 54.282
+          },
+          {
+            "name": "testNativeLaunchAndPhotosPicker",
+            "result": "passed",
+            "seconds": 11.691
+          },
+          {
+            "name": "testNewShapeDirectResizeAndCropMode",
+            "result": "failed",
+            "seconds": 14.267
+          },
+          {
+            "name": "testSaveToPhotosBeforeCloseCompletesDocumentAction",
+            "result": "passed",
+            "seconds": 17.016
+          },
+          {
+            "name": "testTextCanBeEditedWithVisibleCharacterControls",
+            "result": "failed",
+            "seconds": 9.427
+          },
+          {
+            "name": "testTextContextMenuBelongsToTheTextObject",
+            "result": "failed",
+            "seconds": 9.512
+          }
+        ],
+        "passed_cases": 11,
+        "failed_cases": 7
+      },
+      "finding": "Native toggle role queries and stale help-text assertion corrected; Debug gesture markers identified; all failed assertions retained."
+    },
+    {
+      "run": {
+        "command_exit": -15,
+        "command_seconds": 134.489,
+        "cases": [
+          {
+            "name": "testNativeAccessibilityAuditForEditorSheetsAndText",
+            "result": "passed",
+            "seconds": 41.055
+          },
+          {
+            "name": "testNativeAccessibilityAuditForEmptyWindow",
+            "result": "passed",
+            "seconds": 7.047
+          },
+          {
+            "name": "testNativeAccessibilityAuditForPasteErrorAndColorPalette",
+            "result": "failed",
+            "seconds": 16.518
+          }
+        ],
+        "passed_cases": 2,
+        "failed_cases": 1
+      },
+      "finding": "App audit cases passed; attempted system-host audit returned -902 and finalization stalled. Final test verifies native palette controls instead."
+    }
+  ],
+  "limits": [
+    "No physical VoiceOver, Voice Control, Switch Control or hardware keyboard-focus acceptance",
+    "Tiny/zoomed annotation handles can overlap or be offscreen; native exact geometry inspector and named actions remain alternatives",
+    "Tiny crop movement surface can be small; resize proxies remain separated60point controls",
+    "New Paste Image ingestion/gestures and display accessibility on physical headset require owner observation; prior owner-confirmed Photos-to-ChatGPT use remains valid",
+    "Synchronous file copy/ImageIO thumbnail cannot abort halfway; serial preview worker checks cancellation before/after",
+    "Provider may materialize bytes before the256MiB cap is checked; source200MP/export100MP guards are not physical memory profiling",
+    "No physical capture path confirmed"
+  ],
+  "reproduce": {
+    "core": "swift test",
+    "ui": "xcodebuild test -project GlassImageTools.xcodeproj -scheme GlassImageTools -destination \"id=$SIMULATOR_ID\" -parallel-testing-enabled NO CODE_SIGNING_ALLOWED=NO",
+    "services": "Debug app --ui-testing --integration-smoke --verify-photos-save; inspect generated VisionSnipSmokeResults.json",
+    "largest_text": "Run AccessibilityAuditTests/testNativeAccessibilityAtLargestTextAndIncreasedContrast with simulator content_size accessibility-extra-extra-extra-large and increase_contrast enabled; save/restore previous settings"
+  },
+  "physical_deployment": {
+    "installed_build": "10",
+    "identity_verified": true,
+    "normal_launch_verified": false,
+    "running_process_verified": false,
+    "see": "physical-deployment.json",
+    "observed_passcode_required": true
+  },
+  "public_review": {
+    "proposed_public_files_scanned": 81,
+    "private_material_hits": 0,
+    "broken_relative_links": 0,
+    "monthly_task_layout_errors": 0,
+    "applied_source_hash_mismatches": 0
+  }
+}

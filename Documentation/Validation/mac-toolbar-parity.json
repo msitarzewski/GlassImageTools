@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-05",
+  "mac_build": "40",
+  "visionos_build": "38",
+  "scope": "Correct prior interpretation: mirror the existing Vision Pro editing-toolbar controls and order using native Mac placement",
+  "annotation_order": [
+    "Editing mode",
+    "Select",
+    "Shapes",
+    "Draw",
+    "Text",
+    "Pixelate",
+    "Zoom and View",
+    "Settings"
+  ],
+  "crop_order": [
+    "Editing mode",
+    "Crop Preset",
+    "Crop Dimensions",
+    "Rotate Left",
+    "Zoom and View",
+    "Settings"
+  ],
+  "shape_menu": [
+    "Rectangle",
+    "Rounded Rectangle",
+    "Ellipse",
+    "Triangle",
+    "Speech Bubble",
+    "Line",
+    "Arrow"
+  ],
+  "vm": {
+    "os": "macOS 26.6.2",
+    "headless": true,
+    "host_gui_activity": false,
+    "new_permission_or_capture_request": false,
+    "method": "Guest AX/pointer/clipboard checks; not XCTest",
+    "annotation_and_crop_order_confirmed": true,
+    "ellipse_menu_choice_and_drawing": true,
+    "text_edit": true,
+    "pixelate_insertion": true,
+    "rotation_output_before_crop": [
+      640,
+      960
+    ],
+    "clipboard_png": [
+      400,
+      300
+    ],
+    "zoom_percentage": "150%",
+    "settings_gear_opened_native_window": true,
+    "shutdown": "Task-owned VM stopped"
+  },
+  "release": {
+    "build_exit_code": 0,
+    "analyze_exit_code": 0,
+    "signature": true,
+    "four_unchanged_sandbox_grants": true,
+    "debugger_and_test_exceptions": false,
+    "test_source_compile_only_exit_code": 0,
+    "warnings": "AppIntents metadata extraction skipped; no dependency"
+  },
+  "unchanged": [
+    "Core/model/render/import/export",
+    "VisionOS source and source build 38",
+    "Privacy grants",
+    "Previously recorded manual Photos/Share/accessibility/resource acceptance limits"
+  ],
+  "core_and_full_suites_rerun": false,
+  "publication_or_upload": false,
+  "delivery": {
+    "files_applied": 19,
+    "exact_hashes": true,
+    "no_baseline_conflicts_or_private_findings": true,
+    "local_app": "build/Glass Image Tools Vision Toolbar.app",
+    "host_launch": false
+  }
+}

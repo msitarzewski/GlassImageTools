@@ -1,0 +1,1385 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0318B71437425DEEE7F099E1 /* ImageImportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B702D8B7ECF15AEC2747CF30 /* ImageImportService.swift */; };
+		0353F13403C015453E11AB82 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A5878EC43929E560B6EBBC94 /* PrivacyInfo.xcprivacy */; };
+		04A12550786A831BB0276521 /* ImageCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FE015DF888F98A40D7C85D /* ImageCanvas.swift */; };
+		0591D7B5B736201B09F11473 /* ExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFC071F9977D907FF5F443D /* ExportView.swift */; };
+		0D8A69911C387AD076EFC1E0 /* ImageDescriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A1CF2E2231C29FA29754F6 /* ImageDescriptionService.swift */; };
+		0FCC8F275E968991DBA3DAAE /* MacPasteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A676CF1B3759A25BE550C7 /* MacPasteboard.swift */; };
+		1129D98121D87992AEDF64D7 /* MacSandboxProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F1651261F68274D034E403 /* MacSandboxProbe.swift */; };
+		146CDE41637DD52F1BA59381 /* ImageCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FE015DF888F98A40D7C85D /* ImageCanvas.swift */; };
+		1885CC6B76C3C8FAD109D022 /* GlassImageToolsMacUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E91BB3F20B2A108F5FD41A /* GlassImageToolsMacUITests.swift */; };
+		1A2A593FF05CE9E9A674F8D3 /* ImageDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAAA91900803D3B93055E61 /* ImageDocument.swift */; };
+		1C736A67258F8F7732520E7F /* GlassImageToolsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D80D76736ED030AC91B10F5 /* GlassImageToolsUITests.swift */; };
+		1F037D9CDFC1876101E110BF /* EditorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A4DE43772549F5008D83C5 /* EditorModel.swift */; };
+		1F44A6241D017CDA8981DAB5 /* AboutSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE37665157E4E8A7074F4CF3 /* AboutSettings.swift */; };
+		202CDD69086CE4DBBA23A926 /* VisionSnipCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7511CD7E76ED624EE22354C2 /* VisionSnipCore.framework */; };
+		2040175F28176D299305C093 /* EditorFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454FC147CC8C10FBDE3DB77C /* EditorFields.swift */; };
+		22862BE092B60BD5B7E387C7 /* AnnotationInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C92F46EB71880FF7C6580C /* AnnotationInspector.swift */; };
+		2401823716F629DA03F536C9 /* DocumentSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7194AE40F85CF82C095FA97 /* DocumentSidebar.swift */; };
+		28A3CC16CC87C31D5136332E /* VisionSnipCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 769BED540447311384566093 /* VisionSnipCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2A555C654415B73A7D344DCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCFBFE99CCDA6AF7EF313AEA /* Assets.xcassets */; };
+		2B8D0F93BA3CC7E32BF588FC /* ImageLinkImportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7FB0C1C23C2DFAF07AF25C /* ImageLinkImportService.swift */; };
+		2BCE87B3628DD87C385DCCB1 /* ExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFC071F9977D907FF5F443D /* ExportView.swift */; };
+		2C15E9D4981FBB2D5F6D8696 /* EditorPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E5541341E8AF736A6F0F2 /* EditorPlatform.swift */; };
+		2C439F4F35A299D8DC642E45 /* ImageImportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B702D8B7ECF15AEC2747CF30 /* ImageImportService.swift */; };
+		2D11A602467E043C78FB1B69 /* ImageCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FE015DF888F98A40D7C85D /* ImageCanvas.swift */; };
+		30815050A8F733C64517C96D /* AnnotationInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C92F46EB71880FF7C6580C /* AnnotationInspector.swift */; };
+		30969044F9D3EC58C2CD6075 /* AppearanceSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04D7EBEE409CCCE566237F8 /* AppearanceSettings.swift */; };
+		36050CE05FE0C60BC2922B67 /* ImageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03AF0B5964AED7D4FC15E3B /* ImageRenderer.swift */; };
+		380AA620C548D878F51F4E8B /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A5878EC43929E560B6EBBC94 /* PrivacyInfo.xcprivacy */; };
+		3AC4094028A9C0518823261D /* ImageStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB60B131FCA6793DDB42C925 /* ImageStartView.swift */; };
+		3BE6E94B11686C63E409198E /* MacMarkupMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA067510E1460F2EDB5AEF0E /* MacMarkupMenu.swift */; };
+		3CD9117BA979AC42303EC898 /* AccessibilityAuditTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F3DD4E321D610C38502E7D /* AccessibilityAuditTests.swift */; };
+		3CEDEA803532F721D0BD5EAA /* ImageDescriptionCaption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C87974B6D8492D1CDA94B8F /* ImageDescriptionCaption.swift */; };
+		4254CEE6F0D900FDF37D73D7 /* VisionSnipCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7511CD7E76ED624EE22354C2 /* VisionSnipCore.framework */; };
+		4748B3F49DFB0DD1DE76D14A /* EditorIntegrationChecks.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9563832E4E947E0A4704133 /* EditorIntegrationChecks.swift */; };
+		4B52B9714FD11FF89D36F6E4 /* EditorWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93DF514652CD266A2705DD4 /* EditorWindow.swift */; };
+		56803927D1B4388C0B54EF73 /* ExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D207EF7A9E5F1E6A1ED2EEEF /* ExportService.swift */; };
+		57B220F969C5197C5679DF5B /* ImageStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB60B131FCA6793DDB42C925 /* ImageStartView.swift */; };
+		5EB6C54A618A9042D1097774 /* AboutSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE37665157E4E8A7074F4CF3 /* AboutSettings.swift */; };
+		60CBE7358CD12512F1F7E79F /* EditorPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E5541341E8AF736A6F0F2 /* EditorPlatform.swift */; };
+		6150AD4B378A83EF4654A5F6 /* ImageStartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7229271674B044BC853518C /* ImageStartTests.swift */; };
+		65A597ADB3169882DA8B1170 /* DocumentWorkspaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19910651AC9F08AF98A55E36 /* DocumentWorkspaceTests.swift */; };
+		673A02531E49428C656D7ABC /* EditorTestFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0EF617E4D534B1EAC1CCEA /* EditorTestFixture.swift */; };
+		673B297264C5499371C091F1 /* MacEditorCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966EB3AFAA537CA58F3A89C /* MacEditorCommands.swift */; };
+		694EA37872E1928C58B8E337 /* EditorTestActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F573ADEAC86B1EFD2BE222B1 /* EditorTestActions.swift */; };
+		6D8DAD2AE75FDF6A2A54AEAA /* AboutSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE37665157E4E8A7074F4CF3 /* AboutSettings.swift */; };
+		70D498C7A12912D0FE7F685C /* EditorFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454FC147CC8C10FBDE3DB77C /* EditorFields.swift */; };
+		725C8D9F18FA4F39B5F08F76 /* AppearanceSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04D7EBEE409CCCE566237F8 /* AppearanceSettings.swift */; };
+		77FC49D0445DDF0F37398E8E /* EditorIntegrationChecks.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9563832E4E947E0A4704133 /* EditorIntegrationChecks.swift */; };
+		79D432152D8F0D0135143F33 /* CaptureCapabilityProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E0B44D2155CEE10B9E2142 /* CaptureCapabilityProbe.swift */; };
+		7A2A9AEFA36EE499A502502C /* ExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D207EF7A9E5F1E6A1ED2EEEF /* ExportService.swift */; };
+		7D5061A6F17C7D632106E284 /* ImageDescriptionCaption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C87974B6D8492D1CDA94B8F /* ImageDescriptionCaption.swift */; };
+		7DFB74A941CA03471D001F28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCFBFE99CCDA6AF7EF313AEA /* Assets.xcassets */; };
+		8001C976FF32D9E6AAFBF395 /* ImageDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAAA91900803D3B93055E61 /* ImageDocument.swift */; };
+		82E83692DB8E935161DF5060 /* EditorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A4DE43772549F5008D83C5 /* EditorModel.swift */; };
+		85395D236117E70E0F2D6916 /* VisionSnipCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7511CD7E76ED624EE22354C2 /* VisionSnipCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		924B534702750F2805BB85D8 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB89709A75EC4507E551F704 /* Geometry.swift */; };
+		93296F9AA55F7D1061C36C43 /* ImageDescriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A1CF2E2231C29FA29754F6 /* ImageDescriptionService.swift */; };
+		9C51891A3BFB344092CE997A /* DocumentWorkspace.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB44B8B11CF00A28DEDB4E7 /* DocumentWorkspace.swift */; };
+		9F99F892AB31A17A68A95FA6 /* DocumentSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7194AE40F85CF82C095FA97 /* DocumentSidebar.swift */; };
+		A20166A47FCFFA3B388B30D2 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB89709A75EC4507E551F704 /* Geometry.swift */; };
+		A7A6631ABC80EEE787CCCF50 /* GlassImageToolsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1328F063744CB848670BFA48 /* GlassImageToolsApp.swift */; };
+		ABE6CA2D276B0986BEC263E4 /* ExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D207EF7A9E5F1E6A1ED2EEEF /* ExportService.swift */; };
+		B1B796A5A61667A8E058A4BB /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A5878EC43929E560B6EBBC94 /* PrivacyInfo.xcprivacy */; };
+		B204C304BF5DCC6423C05BC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D6BC9600D84BFB4A4350E1B /* Assets.xcassets */; };
+		B72DE9E02C9B49D40075F404 /* GlassImageToolsMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAC1542744060330DF6AC74 /* GlassImageToolsMacApp.swift */; };
+		B84BF951DDADDAF3E1490357 /* EditorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A4DE43772549F5008D83C5 /* EditorModel.swift */; };
+		B879C1BA90B2586C9772EB23 /* EditorFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454FC147CC8C10FBDE3DB77C /* EditorFields.swift */; };
+		B8B9425F810BBB327E12ED03 /* ExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFC071F9977D907FF5F443D /* ExportView.swift */; };
+		B92E4C35DE69576E071B2880 /* MacEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D1757734F1FECF51CB6097 /* MacEditorView.swift */; };
+		BB0FA53BBF846F4DF52753C0 /* EditorWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93DF514652CD266A2705DD4 /* EditorWindow.swift */; };
+		BD6DF0ECC48972130257A08F /* DocumentWorkspace.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB44B8B11CF00A28DEDB4E7 /* DocumentWorkspace.swift */; };
+		BDB6F5A7212F140D84CE7CA3 /* HIGPolishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC856B2C272FFB55FB65C1BB /* HIGPolishTests.swift */; };
+		C72A1274A57FE39D161AAB57 /* CaptureProbeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8108F81BA5F1F08BC63471 /* CaptureProbeApp.swift */; };
+		C8DE040EDE8D1D4F2CD310EF /* AnnotationInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C92F46EB71880FF7C6580C /* AnnotationInspector.swift */; };
+		CB866513AAF012D6E0D7B14F /* EditorPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E5541341E8AF736A6F0F2 /* EditorPlatform.swift */; };
+		CEA55192E1B84C443AE32391 /* ImageDescriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A1CF2E2231C29FA29754F6 /* ImageDescriptionService.swift */; };
+		CEB6B6B0047A02F7821BA215 /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7047F9E4593E68BBCB32EBAD /* EditorView.swift */; };
+		D1931A93CD8F7B871C09062B /* ImageLinkPasteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E8BE88D67CCBE6430EB5CC /* ImageLinkPasteTests.swift */; };
+		D19B34C74440FAD3E6783CF5 /* MacWindowCloseGuard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D71B8A4B1716E0BE206014 /* MacWindowCloseGuard.swift */; };
+		D4D09F2899F37FCFE3956CDB /* ImageLinkImportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7FB0C1C23C2DFAF07AF25C /* ImageLinkImportService.swift */; };
+		D891C2E095EB8FE585CBC464 /* MacEditorServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113B19792CC6152CB2B8E335 /* MacEditorServiceTests.swift */; };
+		E2ED5B1FDB0AE123B6E57D8F /* ImageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03AF0B5964AED7D4FC15E3B /* ImageRenderer.swift */; };
+		E35DC800055ED7DC7D31B069 /* ImageDescriptionCaption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C87974B6D8492D1CDA94B8F /* ImageDescriptionCaption.swift */; };
+		E6BEE6B0A7928483D009DF98 /* MacApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602C3D0A33A1F8D996853264 /* MacApplicationDelegate.swift */; };
+		E9AFCE94BD528E0D5724E497 /* DocumentWorkspace.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB44B8B11CF00A28DEDB4E7 /* DocumentWorkspace.swift */; };
+		EE9C5C2BD90484B495EAC8F3 /* VisionSnipCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 769BED540447311384566093 /* VisionSnipCore.framework */; };
+		F620A3E77209922CB91DA154 /* EditorTestFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0EF617E4D534B1EAC1CCEA /* EditorTestFixture.swift */; };
+		F7B18719086856B881D1EA9C /* VisionSnipCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7511CD7E76ED624EE22354C2 /* VisionSnipCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F8D879A7E666FBB821A86D7B /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7047F9E4593E68BBCB32EBAD /* EditorView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		146037B89D946CD60B610B34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAE6599726BFDBE41CC89F0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1903D3BFF2FD490C08279FBA;
+			remoteInfo = GlassImageToolsMac;
+		};
+		359FB071326C478ACB53D7BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAE6599726BFDBE41CC89F0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1903D3BFF2FD490C08279FBA;
+			remoteInfo = GlassImageToolsMac;
+		};
+		4124E7F8995A08C1A669E63C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAE6599726BFDBE41CC89F0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 829F13C1B4FA42DEC549DA21;
+			remoteInfo = VisionSnipCore;
+		};
+		5B308ADA8FF08571287D8E7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAE6599726BFDBE41CC89F0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D840B5D1E7AA96A3A69D5C8;
+			remoteInfo = GlassImageTools;
+		};
+		8F51CFB368177B3C83818351 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAE6599726BFDBE41CC89F0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 829F13C1B4FA42DEC549DA21;
+			remoteInfo = VisionSnipCore;
+		};
+		BC84CEAD160F58F076980550 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAE6599726BFDBE41CC89F0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECDC7D79954D8E47A04C1D2E;
+			remoteInfo = VisionSnipCoreMac;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		671E8195A4C44A05CE956352 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				28A3CC16CC87C31D5136332E /* VisionSnipCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4FBC0D34D62654023EB88EB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				85395D236117E70E0F2D6916 /* VisionSnipCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE58315A9AB626AD46A414F4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F7B18719086856B881D1EA9C /* VisionSnipCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		06E0B44D2155CEE10B9E2142 /* CaptureCapabilityProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureCapabilityProbe.swift; sourceTree = "<group>"; };
+		0CC2952AEBA17680C5F32A7B /* GlassImageToolsMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlassImageToolsMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		113B19792CC6152CB2B8E335 /* MacEditorServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacEditorServiceTests.swift; sourceTree = "<group>"; };
+		1328F063744CB848670BFA48 /* GlassImageToolsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassImageToolsApp.swift; sourceTree = "<group>"; };
+		19910651AC9F08AF98A55E36 /* DocumentWorkspaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentWorkspaceTests.swift; sourceTree = "<group>"; };
+		19F1651261F68274D034E403 /* MacSandboxProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacSandboxProbe.swift; sourceTree = "<group>"; };
+		21E91BB3F20B2A108F5FD41A /* GlassImageToolsMacUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassImageToolsMacUITests.swift; sourceTree = "<group>"; };
+		22A4DE43772549F5008D83C5 /* EditorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorModel.swift; sourceTree = "<group>"; };
+		26E8BE88D67CCBE6430EB5CC /* ImageLinkPasteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLinkPasteTests.swift; sourceTree = "<group>"; };
+		29FE015DF888F98A40D7C85D /* ImageCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCanvas.swift; sourceTree = "<group>"; };
+		2C05DBA39926483EA8C2C13D /* GlassImageToolsUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = GlassImageToolsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B3E3CD26F95D28C76335A3C /* Identity.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Identity.xcconfig; sourceTree = "<group>"; };
+		3C87974B6D8492D1CDA94B8F /* ImageDescriptionCaption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDescriptionCaption.swift; sourceTree = "<group>"; };
+		3DE10E0C0BE4F8030122FD19 /* GlassImageToolsCaptureProbe.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = GlassImageToolsCaptureProbe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F7FB0C1C23C2DFAF07AF25C /* ImageLinkImportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLinkImportService.swift; sourceTree = "<group>"; };
+		454FC147CC8C10FBDE3DB77C /* EditorFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorFields.swift; sourceTree = "<group>"; };
+		46A676CF1B3759A25BE550C7 /* MacPasteboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacPasteboard.swift; sourceTree = "<group>"; };
+		4D6BC9600D84BFB4A4350E1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		602C3D0A33A1F8D996853264 /* MacApplicationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacApplicationDelegate.swift; sourceTree = "<group>"; };
+		68D1757734F1FECF51CB6097 /* MacEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacEditorView.swift; sourceTree = "<group>"; };
+		6C531539BC7A875FB34E621A /* GlassImageToolsMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlassImageToolsMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EAC1542744060330DF6AC74 /* GlassImageToolsMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassImageToolsMacApp.swift; sourceTree = "<group>"; };
+		7047F9E4593E68BBCB32EBAD /* EditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
+		7511CD7E76ED624EE22354C2 /* VisionSnipCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VisionSnipCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		769BED540447311384566093 /* VisionSnipCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VisionSnipCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EAAA91900803D3B93055E61 /* ImageDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDocument.swift; sourceTree = "<group>"; };
+		8D80D76736ED030AC91B10F5 /* GlassImageToolsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassImageToolsUITests.swift; sourceTree = "<group>"; };
+		9B0EF617E4D534B1EAC1CCEA /* EditorTestFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorTestFixture.swift; sourceTree = "<group>"; };
+		A5878EC43929E560B6EBBC94 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		A5D71B8A4B1716E0BE206014 /* MacWindowCloseGuard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacWindowCloseGuard.swift; sourceTree = "<group>"; };
+		A9563832E4E947E0A4704133 /* EditorIntegrationChecks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorIntegrationChecks.swift; sourceTree = "<group>"; };
+		AE0E5541341E8AF736A6F0F2 /* EditorPlatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorPlatform.swift; sourceTree = "<group>"; };
+		B03AF0B5964AED7D4FC15E3B /* ImageRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRenderer.swift; sourceTree = "<group>"; };
+		B4582D26A12F3A5591F549F7 /* GlassImageTools.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = GlassImageTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B702D8B7ECF15AEC2747CF30 /* ImageImportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageImportService.swift; sourceTree = "<group>"; };
+		B7194AE40F85CF82C095FA97 /* DocumentSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentSidebar.swift; sourceTree = "<group>"; };
+		B7229271674B044BC853518C /* ImageStartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStartTests.swift; sourceTree = "<group>"; };
+		B93DF514652CD266A2705DD4 /* EditorWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorWindow.swift; sourceTree = "<group>"; };
+		BA067510E1460F2EDB5AEF0E /* MacMarkupMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacMarkupMenu.swift; sourceTree = "<group>"; };
+		BFFC071F9977D907FF5F443D /* ExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportView.swift; sourceTree = "<group>"; };
+		C966EB3AFAA537CA58F3A89C /* MacEditorCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacEditorCommands.swift; sourceTree = "<group>"; };
+		CC856B2C272FFB55FB65C1BB /* HIGPolishTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIGPolishTests.swift; sourceTree = "<group>"; };
+		CCFBFE99CCDA6AF7EF313AEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D1C86A41AE994CA4A98E38A1 /* GlassImageToolsMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GlassImageToolsMac.entitlements; sourceTree = "<group>"; };
+		D207EF7A9E5F1E6A1ED2EEEF /* ExportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportService.swift; sourceTree = "<group>"; };
+		D2F3DD4E321D610C38502E7D /* AccessibilityAuditTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityAuditTests.swift; sourceTree = "<group>"; };
+		DB60B131FCA6793DDB42C925 /* ImageStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStartView.swift; sourceTree = "<group>"; };
+		E9A1CF2E2231C29FA29754F6 /* ImageDescriptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDescriptionService.swift; sourceTree = "<group>"; };
+		EA8108F81BA5F1F08BC63471 /* CaptureProbeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureProbeApp.swift; sourceTree = "<group>"; };
+		F04D7EBEE409CCCE566237F8 /* AppearanceSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSettings.swift; sourceTree = "<group>"; };
+		F1077B3E52801F21CBF08E08 /* GlassImageToolsMacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlassImageToolsMacUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3C92F46EB71880FF7C6580C /* AnnotationInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationInspector.swift; sourceTree = "<group>"; };
+		F573ADEAC86B1EFD2BE222B1 /* EditorTestActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorTestActions.swift; sourceTree = "<group>"; };
+		FB89709A75EC4507E551F704 /* Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
+		FE37665157E4E8A7074F4CF3 /* AboutSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSettings.swift; sourceTree = "<group>"; };
+		FFB44B8B11CF00A28DEDB4E7 /* DocumentWorkspace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentWorkspace.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		45A245C898D74BF15020FB09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9C5C2BD90484B495EAC8F3 /* VisionSnipCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74D2716B7CF3DFA38DBFA118 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				202CDD69086CE4DBBA23A926 /* VisionSnipCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9FB8E90CF755288AA38C449 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4254CEE6F0D900FDF37D73D7 /* VisionSnipCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0860B97437AFC2004E2F63D4 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				4D6BC9600D84BFB4A4350E1B /* Assets.xcassets */,
+				D1C86A41AE994CA4A98E38A1 /* GlassImageToolsMac.entitlements */,
+				6EAC1542744060330DF6AC74 /* GlassImageToolsMacApp.swift */,
+				602C3D0A33A1F8D996853264 /* MacApplicationDelegate.swift */,
+				C966EB3AFAA537CA58F3A89C /* MacEditorCommands.swift */,
+				68D1757734F1FECF51CB6097 /* MacEditorView.swift */,
+				BA067510E1460F2EDB5AEF0E /* MacMarkupMenu.swift */,
+				46A676CF1B3759A25BE550C7 /* MacPasteboard.swift */,
+				19F1651261F68274D034E403 /* MacSandboxProbe.swift */,
+				A5D71B8A4B1716E0BE206014 /* MacWindowCloseGuard.swift */,
+			);
+			path = Mac;
+			sourceTree = "<group>";
+		};
+		12F335420E91D955FDFF630D /* CaptureProbe */ = {
+			isa = PBXGroup;
+			children = (
+				06E0B44D2155CEE10B9E2142 /* CaptureCapabilityProbe.swift */,
+				EA8108F81BA5F1F08BC63471 /* CaptureProbeApp.swift */,
+			);
+			path = CaptureProbe;
+			sourceTree = "<group>";
+		};
+		28185F811093BA5315FF636A /* MacUITests */ = {
+			isa = PBXGroup;
+			children = (
+				21E91BB3F20B2A108F5FD41A /* GlassImageToolsMacUITests.swift */,
+			);
+			path = MacUITests;
+			sourceTree = "<group>";
+		};
+		391E14885CEA8F9EC57F82D4 /* VisionSnipCore */ = {
+			isa = PBXGroup;
+			children = (
+				FB89709A75EC4507E551F704 /* Geometry.swift */,
+				7EAAA91900803D3B93055E61 /* ImageDocument.swift */,
+				B702D8B7ECF15AEC2747CF30 /* ImageImportService.swift */,
+				3F7FB0C1C23C2DFAF07AF25C /* ImageLinkImportService.swift */,
+				B03AF0B5964AED7D4FC15E3B /* ImageRenderer.swift */,
+			);
+			path = VisionSnipCore;
+			sourceTree = "<group>";
+		};
+		3E32D5A4A3149EE7A30A4281 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				3B3E3CD26F95D28C76335A3C /* Identity.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		5B534687B2910D3D710B267B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FE37665157E4E8A7074F4CF3 /* AboutSettings.swift */,
+				F3C92F46EB71880FF7C6580C /* AnnotationInspector.swift */,
+				F04D7EBEE409CCCE566237F8 /* AppearanceSettings.swift */,
+				CCFBFE99CCDA6AF7EF313AEA /* Assets.xcassets */,
+				B7194AE40F85CF82C095FA97 /* DocumentSidebar.swift */,
+				FFB44B8B11CF00A28DEDB4E7 /* DocumentWorkspace.swift */,
+				454FC147CC8C10FBDE3DB77C /* EditorFields.swift */,
+				A9563832E4E947E0A4704133 /* EditorIntegrationChecks.swift */,
+				22A4DE43772549F5008D83C5 /* EditorModel.swift */,
+				AE0E5541341E8AF736A6F0F2 /* EditorPlatform.swift */,
+				9B0EF617E4D534B1EAC1CCEA /* EditorTestFixture.swift */,
+				7047F9E4593E68BBCB32EBAD /* EditorView.swift */,
+				B93DF514652CD266A2705DD4 /* EditorWindow.swift */,
+				D207EF7A9E5F1E6A1ED2EEEF /* ExportService.swift */,
+				BFFC071F9977D907FF5F443D /* ExportView.swift */,
+				1328F063744CB848670BFA48 /* GlassImageToolsApp.swift */,
+				29FE015DF888F98A40D7C85D /* ImageCanvas.swift */,
+				3C87974B6D8492D1CDA94B8F /* ImageDescriptionCaption.swift */,
+				E9A1CF2E2231C29FA29754F6 /* ImageDescriptionService.swift */,
+				DB60B131FCA6793DDB42C925 /* ImageStartView.swift */,
+				A5878EC43929E560B6EBBC94 /* PrivacyInfo.xcprivacy */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		92AD495CF34E4070AAE314CC /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				D2F3DD4E321D610C38502E7D /* AccessibilityAuditTests.swift */,
+				19910651AC9F08AF98A55E36 /* DocumentWorkspaceTests.swift */,
+				F573ADEAC86B1EFD2BE222B1 /* EditorTestActions.swift */,
+				8D80D76736ED030AC91B10F5 /* GlassImageToolsUITests.swift */,
+				CC856B2C272FFB55FB65C1BB /* HIGPolishTests.swift */,
+				26E8BE88D67CCBE6430EB5CC /* ImageLinkPasteTests.swift */,
+				B7229271674B044BC853518C /* ImageStartTests.swift */,
+			);
+			path = UITests;
+			sourceTree = "<group>";
+		};
+		AC78B354884801CF1394710B = {
+			isa = PBXGroup;
+			children = (
+				5B534687B2910D3D710B267B /* App */,
+				12F335420E91D955FDFF630D /* CaptureProbe */,
+				3E32D5A4A3149EE7A30A4281 /* Config */,
+				0860B97437AFC2004E2F63D4 /* Mac */,
+				CEE7048E80FE7C089AADCBEE /* MacTests */,
+				28185F811093BA5315FF636A /* MacUITests */,
+				DABF4E7C509386D696C33AB9 /* Sources */,
+				92AD495CF34E4070AAE314CC /* UITests */,
+				E1D3E82F21E2B72AC2C9CD6A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEE7048E80FE7C089AADCBEE /* MacTests */ = {
+			isa = PBXGroup;
+			children = (
+				113B19792CC6152CB2B8E335 /* MacEditorServiceTests.swift */,
+			);
+			path = MacTests;
+			sourceTree = "<group>";
+		};
+		DABF4E7C509386D696C33AB9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				391E14885CEA8F9EC57F82D4 /* VisionSnipCore */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		E1D3E82F21E2B72AC2C9CD6A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B4582D26A12F3A5591F549F7 /* GlassImageTools.app */,
+				3DE10E0C0BE4F8030122FD19 /* GlassImageToolsCaptureProbe.app */,
+				0CC2952AEBA17680C5F32A7B /* GlassImageToolsMac.app */,
+				6C531539BC7A875FB34E621A /* GlassImageToolsMacTests.xctest */,
+				F1077B3E52801F21CBF08E08 /* GlassImageToolsMacUITests.xctest */,
+				2C05DBA39926483EA8C2C13D /* GlassImageToolsUITests.xctest */,
+				7511CD7E76ED624EE22354C2 /* VisionSnipCore.framework */,
+				769BED540447311384566093 /* VisionSnipCore.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		11D4822D06A341E6C0F115FA /* GlassImageToolsMacUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12A1976A8EFD2D98DCA6CF1D /* Build configuration list for PBXNativeTarget "GlassImageToolsMacUITests" */;
+			buildPhases = (
+				8AEA49A1F477418CFEAB9EFF /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C8911A2922CE6ED05803FAC /* PBXTargetDependency */,
+			);
+			name = GlassImageToolsMacUITests;
+			packageProductDependencies = (
+			);
+			productName = GlassImageToolsMacUITests;
+			productReference = F1077B3E52801F21CBF08E08 /* GlassImageToolsMacUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		1903D3BFF2FD490C08279FBA /* GlassImageToolsMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4717921DA8B046DA0137D1A1 /* Build configuration list for PBXNativeTarget "GlassImageToolsMac" */;
+			buildPhases = (
+				EDB5EF0C03BC41BCDBFFB697 /* Sources */,
+				4041B0F9163F3E9A4C604FCB /* Resources */,
+				45A245C898D74BF15020FB09 /* Frameworks */,
+				671E8195A4C44A05CE956352 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE900B005D17C1A9FABDE47B /* PBXTargetDependency */,
+			);
+			name = GlassImageToolsMac;
+			packageProductDependencies = (
+			);
+			productName = GlassImageToolsMac;
+			productReference = 0CC2952AEBA17680C5F32A7B /* GlassImageToolsMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3D14CDFB10FCDDE4A6B007FC /* GlassImageToolsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4027C9048CA3EF097AE1BE99 /* Build configuration list for PBXNativeTarget "GlassImageToolsUITests" */;
+			buildPhases = (
+				FF5A87F46FCB44496839AB67 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5620AC14134DCC29826A227 /* PBXTargetDependency */,
+			);
+			name = GlassImageToolsUITests;
+			packageProductDependencies = (
+			);
+			productName = GlassImageToolsUITests;
+			productReference = 2C05DBA39926483EA8C2C13D /* GlassImageToolsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		3D840B5D1E7AA96A3A69D5C8 /* GlassImageTools */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74B55763B6872EADA3912129 /* Build configuration list for PBXNativeTarget "GlassImageTools" */;
+			buildPhases = (
+				113E78D850708E152F86D175 /* Sources */,
+				0D8EDC1D849E0658BBBFBD1A /* Resources */,
+				74D2716B7CF3DFA38DBFA118 /* Frameworks */,
+				F4FBC0D34D62654023EB88EB /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				830C6AEB859D6E8935AEDC70 /* PBXTargetDependency */,
+			);
+			name = GlassImageTools;
+			packageProductDependencies = (
+			);
+			productName = GlassImageTools;
+			productReference = B4582D26A12F3A5591F549F7 /* GlassImageTools.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5958E6C268B804453B07A571 /* GlassImageToolsCaptureProbe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E743369E817115C85160FF68 /* Build configuration list for PBXNativeTarget "GlassImageToolsCaptureProbe" */;
+			buildPhases = (
+				A731D2C0275D85D0373697E6 /* Sources */,
+				F568A1E6E7F41620E642E94F /* Resources */,
+				F9FB8E90CF755288AA38C449 /* Frameworks */,
+				FE58315A9AB626AD46A414F4 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				642BA12933D8E0863675887D /* PBXTargetDependency */,
+			);
+			name = GlassImageToolsCaptureProbe;
+			packageProductDependencies = (
+			);
+			productName = GlassImageToolsCaptureProbe;
+			productReference = 3DE10E0C0BE4F8030122FD19 /* GlassImageToolsCaptureProbe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		829F13C1B4FA42DEC549DA21 /* VisionSnipCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F60EAEB195D6122C548A52B6 /* Build configuration list for PBXNativeTarget "VisionSnipCore" */;
+			buildPhases = (
+				EB8611B4857CDA9A281389EC /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VisionSnipCore;
+			packageProductDependencies = (
+			);
+			productName = VisionSnipCore;
+			productReference = 7511CD7E76ED624EE22354C2 /* VisionSnipCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		ECDC7D79954D8E47A04C1D2E /* VisionSnipCoreMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4454FF3CBED14A499627A53E /* Build configuration list for PBXNativeTarget "VisionSnipCoreMac" */;
+			buildPhases = (
+				D0D381186BD39E29C0E21423 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VisionSnipCoreMac;
+			packageProductDependencies = (
+			);
+			productName = VisionSnipCoreMac;
+			productReference = 769BED540447311384566093 /* VisionSnipCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FC7867D720478F0832C13E10 /* GlassImageToolsMacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83651761569921406AA1A59C /* Build configuration list for PBXNativeTarget "GlassImageToolsMacTests" */;
+			buildPhases = (
+				F476900BC2E9DB0AC616D25C /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1B6A34DE54A1F14A3D426618 /* PBXTargetDependency */,
+			);
+			name = GlassImageToolsMacTests;
+			packageProductDependencies = (
+			);
+			productName = GlassImageToolsMacTests;
+			productReference = 6C531539BC7A875FB34E621A /* GlassImageToolsMacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAE6599726BFDBE41CC89F0C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					11D4822D06A341E6C0F115FA = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1903D3BFF2FD490C08279FBA;
+					};
+					1903D3BFF2FD490C08279FBA = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					3D14CDFB10FCDDE4A6B007FC = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3D840B5D1E7AA96A3A69D5C8;
+					};
+					3D840B5D1E7AA96A3A69D5C8 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					5958E6C268B804453B07A571 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					829F13C1B4FA42DEC549DA21 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					ECDC7D79954D8E47A04C1D2E = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					FC7867D720478F0832C13E10 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 654787F50A47FBF276E5C74D /* Build configuration list for PBXProject "GlassImageTools" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = AC78B354884801CF1394710B;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = E1D3E82F21E2B72AC2C9CD6A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				829F13C1B4FA42DEC549DA21 /* VisionSnipCore */,
+				3D840B5D1E7AA96A3A69D5C8 /* GlassImageTools */,
+				5958E6C268B804453B07A571 /* GlassImageToolsCaptureProbe */,
+				ECDC7D79954D8E47A04C1D2E /* VisionSnipCoreMac */,
+				1903D3BFF2FD490C08279FBA /* GlassImageToolsMac */,
+				FC7867D720478F0832C13E10 /* GlassImageToolsMacTests */,
+				11D4822D06A341E6C0F115FA /* GlassImageToolsMacUITests */,
+				3D14CDFB10FCDDE4A6B007FC /* GlassImageToolsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0D8EDC1D849E0658BBBFBD1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A555C654415B73A7D344DCE /* Assets.xcassets in Resources */,
+				B1B796A5A61667A8E058A4BB /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4041B0F9163F3E9A4C604FCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B204C304BF5DCC6423C05BC4 /* Assets.xcassets in Resources */,
+				0353F13403C015453E11AB82 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F568A1E6E7F41620E642E94F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DFB74A941CA03471D001F28 /* Assets.xcassets in Resources */,
+				380AA620C548D878F51F4E8B /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		113E78D850708E152F86D175 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EB6C54A618A9042D1097774 /* AboutSettings.swift in Sources */,
+				30815050A8F733C64517C96D /* AnnotationInspector.swift in Sources */,
+				725C8D9F18FA4F39B5F08F76 /* AppearanceSettings.swift in Sources */,
+				2401823716F629DA03F536C9 /* DocumentSidebar.swift in Sources */,
+				E9AFCE94BD528E0D5724E497 /* DocumentWorkspace.swift in Sources */,
+				2040175F28176D299305C093 /* EditorFields.swift in Sources */,
+				4748B3F49DFB0DD1DE76D14A /* EditorIntegrationChecks.swift in Sources */,
+				1F037D9CDFC1876101E110BF /* EditorModel.swift in Sources */,
+				60CBE7358CD12512F1F7E79F /* EditorPlatform.swift in Sources */,
+				F620A3E77209922CB91DA154 /* EditorTestFixture.swift in Sources */,
+				F8D879A7E666FBB821A86D7B /* EditorView.swift in Sources */,
+				4B52B9714FD11FF89D36F6E4 /* EditorWindow.swift in Sources */,
+				ABE6CA2D276B0986BEC263E4 /* ExportService.swift in Sources */,
+				2BCE87B3628DD87C385DCCB1 /* ExportView.swift in Sources */,
+				A7A6631ABC80EEE787CCCF50 /* GlassImageToolsApp.swift in Sources */,
+				2D11A602467E043C78FB1B69 /* ImageCanvas.swift in Sources */,
+				E35DC800055ED7DC7D31B069 /* ImageDescriptionCaption.swift in Sources */,
+				0D8A69911C387AD076EFC1E0 /* ImageDescriptionService.swift in Sources */,
+				57B220F969C5197C5679DF5B /* ImageStartView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AEA49A1F477418CFEAB9EFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1885CC6B76C3C8FAD109D022 /* GlassImageToolsMacUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A731D2C0275D85D0373697E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D8DAD2AE75FDF6A2A54AEAA /* AboutSettings.swift in Sources */,
+				C8DE040EDE8D1D4F2CD310EF /* AnnotationInspector.swift in Sources */,
+				30969044F9D3EC58C2CD6075 /* AppearanceSettings.swift in Sources */,
+				79D432152D8F0D0135143F33 /* CaptureCapabilityProbe.swift in Sources */,
+				C72A1274A57FE39D161AAB57 /* CaptureProbeApp.swift in Sources */,
+				9F99F892AB31A17A68A95FA6 /* DocumentSidebar.swift in Sources */,
+				BD6DF0ECC48972130257A08F /* DocumentWorkspace.swift in Sources */,
+				B879C1BA90B2586C9772EB23 /* EditorFields.swift in Sources */,
+				77FC49D0445DDF0F37398E8E /* EditorIntegrationChecks.swift in Sources */,
+				B84BF951DDADDAF3E1490357 /* EditorModel.swift in Sources */,
+				CB866513AAF012D6E0D7B14F /* EditorPlatform.swift in Sources */,
+				673A02531E49428C656D7ABC /* EditorTestFixture.swift in Sources */,
+				CEB6B6B0047A02F7821BA215 /* EditorView.swift in Sources */,
+				BB0FA53BBF846F4DF52753C0 /* EditorWindow.swift in Sources */,
+				56803927D1B4388C0B54EF73 /* ExportService.swift in Sources */,
+				0591D7B5B736201B09F11473 /* ExportView.swift in Sources */,
+				04A12550786A831BB0276521 /* ImageCanvas.swift in Sources */,
+				3CEDEA803532F721D0BD5EAA /* ImageDescriptionCaption.swift in Sources */,
+				93296F9AA55F7D1061C36C43 /* ImageDescriptionService.swift in Sources */,
+				3AC4094028A9C0518823261D /* ImageStartView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D381186BD39E29C0E21423 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A20166A47FCFFA3B388B30D2 /* Geometry.swift in Sources */,
+				1A2A593FF05CE9E9A674F8D3 /* ImageDocument.swift in Sources */,
+				2C439F4F35A299D8DC642E45 /* ImageImportService.swift in Sources */,
+				D4D09F2899F37FCFE3956CDB /* ImageLinkImportService.swift in Sources */,
+				36050CE05FE0C60BC2922B67 /* ImageRenderer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB8611B4857CDA9A281389EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				924B534702750F2805BB85D8 /* Geometry.swift in Sources */,
+				8001C976FF32D9E6AAFBF395 /* ImageDocument.swift in Sources */,
+				0318B71437425DEEE7F099E1 /* ImageImportService.swift in Sources */,
+				2B8D0F93BA3CC7E32BF588FC /* ImageLinkImportService.swift in Sources */,
+				E2ED5B1FDB0AE123B6E57D8F /* ImageRenderer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDB5EF0C03BC41BCDBFFB697 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F44A6241D017CDA8981DAB5 /* AboutSettings.swift in Sources */,
+				22862BE092B60BD5B7E387C7 /* AnnotationInspector.swift in Sources */,
+				9C51891A3BFB344092CE997A /* DocumentWorkspace.swift in Sources */,
+				70D498C7A12912D0FE7F685C /* EditorFields.swift in Sources */,
+				82E83692DB8E935161DF5060 /* EditorModel.swift in Sources */,
+				2C15E9D4981FBB2D5F6D8696 /* EditorPlatform.swift in Sources */,
+				7A2A9AEFA36EE499A502502C /* ExportService.swift in Sources */,
+				B8B9425F810BBB327E12ED03 /* ExportView.swift in Sources */,
+				B72DE9E02C9B49D40075F404 /* GlassImageToolsMacApp.swift in Sources */,
+				146CDE41637DD52F1BA59381 /* ImageCanvas.swift in Sources */,
+				7D5061A6F17C7D632106E284 /* ImageDescriptionCaption.swift in Sources */,
+				CEA55192E1B84C443AE32391 /* ImageDescriptionService.swift in Sources */,
+				E6BEE6B0A7928483D009DF98 /* MacApplicationDelegate.swift in Sources */,
+				673B297264C5499371C091F1 /* MacEditorCommands.swift in Sources */,
+				B92E4C35DE69576E071B2880 /* MacEditorView.swift in Sources */,
+				3BE6E94B11686C63E409198E /* MacMarkupMenu.swift in Sources */,
+				0FCC8F275E968991DBA3DAAE /* MacPasteboard.swift in Sources */,
+				1129D98121D87992AEDF64D7 /* MacSandboxProbe.swift in Sources */,
+				D19B34C74440FAD3E6783CF5 /* MacWindowCloseGuard.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F476900BC2E9DB0AC616D25C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D891C2E095EB8FE585CBC464 /* MacEditorServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF5A87F46FCB44496839AB67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CD9117BA979AC42303EC898 /* AccessibilityAuditTests.swift in Sources */,
+				65A597ADB3169882DA8B1170 /* DocumentWorkspaceTests.swift in Sources */,
+				694EA37872E1928C58B8E337 /* EditorTestActions.swift in Sources */,
+				1C736A67258F8F7732520E7F /* GlassImageToolsUITests.swift in Sources */,
+				BDB6F5A7212F140D84CE7CA3 /* HIGPolishTests.swift in Sources */,
+				D1931A93CD8F7B871C09062B /* ImageLinkPasteTests.swift in Sources */,
+				6150AD4B378A83EF4654A5F6 /* ImageStartTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1B6A34DE54A1F14A3D426618 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1903D3BFF2FD490C08279FBA /* GlassImageToolsMac */;
+			targetProxy = 146037B89D946CD60B610B34 /* PBXContainerItemProxy */;
+		};
+		642BA12933D8E0863675887D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 829F13C1B4FA42DEC549DA21 /* VisionSnipCore */;
+			targetProxy = 8F51CFB368177B3C83818351 /* PBXContainerItemProxy */;
+		};
+		830C6AEB859D6E8935AEDC70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 829F13C1B4FA42DEC549DA21 /* VisionSnipCore */;
+			targetProxy = 4124E7F8995A08C1A669E63C /* PBXContainerItemProxy */;
+		};
+		9C8911A2922CE6ED05803FAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1903D3BFF2FD490C08279FBA /* GlassImageToolsMac */;
+			targetProxy = 359FB071326C478ACB53D7BE /* PBXContainerItemProxy */;
+		};
+		B5620AC14134DCC29826A227 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D840B5D1E7AA96A3A69D5C8 /* GlassImageTools */;
+			targetProxy = 5B308ADA8FF08571287D8E7C /* PBXContainerItemProxy */;
+		};
+		CE900B005D17C1A9FABDE47B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECDC7D79954D8E47A04C1D2E /* VisionSnipCoreMac */;
+			targetProxy = BC84CEAD160F58F076980550 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		05FA554D7A150913B384D96B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(VISIONSNIP_BUNDLE_ID).mac.core";
+				PRODUCT_MODULE_NAME = VisionSnipCore;
+				PRODUCT_NAME = VisionSnipCore;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		1F8A343763A19D78C16D6718 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_KEY_CFBundleDisplayName = "Glass Image Tools Capture Probe";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(VISIONSNIP_BUNDLE_ID).captureprobe";
+				SDKROOT = xros;
+				TARGETED_DEVICE_FAMILY = 7;
+				XROS_DEPLOYMENT_TARGET = 27.0;
+			};
+			name = Debug;
+		};
+		245FAD35BE786A11E6ACD387 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B3E3CD26F95D28C76335A3C /* Identity.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 38;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 7;
+				XROS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Debug;
+		};
+		419991C513D25BE8B7DBC28F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(VISIONSNIP_BUNDLE_ID).uitests";
+				SDKROOT = xros;
+				TARGETED_DEVICE_FAMILY = 7;
+				TEST_TARGET_NAME = GlassImageTools;
+			};
+			name = Debug;
+		};
+		4BA01A1A8EF8EC0F52DF3D2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B3E3CD26F95D28C76335A3C /* Identity.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 38;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 7;
+				XROS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Release;
+		};
+		5A34AC314AF2CFB6FBA26133 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(VISIONSNIP_BUNDLE_ID).uitests";
+				SDKROOT = xros;
+				TARGETED_DEVICE_FAMILY = 7;
+				TEST_TARGET_NAME = GlassImageTools;
+			};
+			name = Release;
+		};
+		5EC4FA7B6A7E9DEC8F1E916A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_KEY_CFBundleDisplayName = "Glass Image Tools";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save a new copy of your edited image to Photos. Your original is never changed.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(VISIONSNIP_BUNDLE_ID)";
+				SDKROOT = xros;
+				TARGETED_DEVICE_FAMILY = 7;
+			};
+			name = Debug;
+		};
+		6098E8FF6F0AC60B47A3966B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(VISIONSNIP_BUNDLE_ID).mac.tests";
+				SDKROOT = macosx;
+				TARGETED_DEVICE_FAMILY = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GlassImageToolsMac.app/Contents/MacOS/GlassImageToolsMac";
+			};
+			name = Debug;
+		};
+		828669AE41945CC677E09199 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(VISIONSNIP_BUNDLE_ID).core";
+				SDKROOT = xros;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 7;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		82C0A2CD73CB44ABACE8D99A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Mac/GlassImageToolsMac.entitlements;
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 45;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Glass Image Tools";
+				INFOPLIST_KEY_CFBundleName = "Glass Image Tools";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save a new copy of your edited image to Photos. Your original is never changed.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Choose images you want to edit or save a new edited copy to Photos.";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(VISIONSNIP_BUNDLE_ID).mac";
+				SDKROOT = macosx;
+				TARGETED_DEVICE_FAMILY = "";
+			};
+			name = Release;
+		};
+		84BA4D979AD5FEBD89D8DA17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(VISIONSNIP_BUNDLE_ID).mac.tests";
+				SDKROOT = macosx;
+				TARGETED_DEVICE_FAMILY = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GlassImageToolsMac.app/Contents/MacOS/GlassImageToolsMac";
+			};
+			name = Release;
+		};
+		939DD0FE0B35ADB4B1C85F66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_KEY_CFBundleDisplayName = "Glass Image Tools Capture Probe";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(VISIONSNIP_BUNDLE_ID).captureprobe";
+				SDKROOT = xros;
+				TARGETED_DEVICE_FAMILY = 7;
+				XROS_DEPLOYMENT_TARGET = 27.0;
+			};
+			name = Release;
+		};
+		9ADA7A8E59883CEB6614F86C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(VISIONSNIP_BUNDLE_ID).core";
+				SDKROOT = xros;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 7;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		AE72CF862113AD95FE88465E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_KEY_CFBundleDisplayName = "Glass Image Tools";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save a new copy of your edited image to Photos. Your original is never changed.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(VISIONSNIP_BUNDLE_ID)";
+				SDKROOT = xros;
+				TARGETED_DEVICE_FAMILY = 7;
+			};
+			name = Release;
+		};
+		BB61691C1DFCCA16070F1924 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Mac/GlassImageToolsMac.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 45;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Glass Image Tools";
+				INFOPLIST_KEY_CFBundleName = "Glass Image Tools";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save a new copy of your edited image to Photos. Your original is never changed.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Choose images you want to edit or save a new edited copy to Photos.";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(VISIONSNIP_BUNDLE_ID).mac";
+				SDKROOT = macosx;
+				TARGETED_DEVICE_FAMILY = "";
+			};
+			name = Debug;
+		};
+		BB6E34443BABB50DE1CF7192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(VISIONSNIP_BUNDLE_ID).mac.uitests";
+				SDKROOT = macosx;
+				TARGETED_DEVICE_FAMILY = "";
+				TEST_TARGET_NAME = GlassImageToolsMac;
+			};
+			name = Debug;
+		};
+		D33EBED9DCD240B89314AF4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(VISIONSNIP_BUNDLE_ID).mac.uitests";
+				SDKROOT = macosx;
+				TARGETED_DEVICE_FAMILY = "";
+				TEST_TARGET_NAME = GlassImageToolsMac;
+			};
+			name = Release;
+		};
+		EAF39BE52EF4CB84DDB45D08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(VISIONSNIP_BUNDLE_ID).mac.core";
+				PRODUCT_MODULE_NAME = VisionSnipCore;
+				PRODUCT_NAME = VisionSnipCore;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		12A1976A8EFD2D98DCA6CF1D /* Build configuration list for PBXNativeTarget "GlassImageToolsMacUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB6E34443BABB50DE1CF7192 /* Debug */,
+				D33EBED9DCD240B89314AF4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4027C9048CA3EF097AE1BE99 /* Build configuration list for PBXNativeTarget "GlassImageToolsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				419991C513D25BE8B7DBC28F /* Debug */,
+				5A34AC314AF2CFB6FBA26133 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4454FF3CBED14A499627A53E /* Build configuration list for PBXNativeTarget "VisionSnipCoreMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05FA554D7A150913B384D96B /* Debug */,
+				EAF39BE52EF4CB84DDB45D08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4717921DA8B046DA0137D1A1 /* Build configuration list for PBXNativeTarget "GlassImageToolsMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB61691C1DFCCA16070F1924 /* Debug */,
+				82C0A2CD73CB44ABACE8D99A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		654787F50A47FBF276E5C74D /* Build configuration list for PBXProject "GlassImageTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				245FAD35BE786A11E6ACD387 /* Debug */,
+				4BA01A1A8EF8EC0F52DF3D2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		74B55763B6872EADA3912129 /* Build configuration list for PBXNativeTarget "GlassImageTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EC4FA7B6A7E9DEC8F1E916A /* Debug */,
+				AE72CF862113AD95FE88465E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		83651761569921406AA1A59C /* Build configuration list for PBXNativeTarget "GlassImageToolsMacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6098E8FF6F0AC60B47A3966B /* Debug */,
+				84BA4D979AD5FEBD89D8DA17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E743369E817115C85160FF68 /* Build configuration list for PBXNativeTarget "GlassImageToolsCaptureProbe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F8A343763A19D78C16D6718 /* Debug */,
+				939DD0FE0B35ADB4B1C85F66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F60EAEB195D6122C548A52B6 /* Build configuration list for PBXNativeTarget "VisionSnipCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				828669AE41945CC677E09199 /* Debug */,
+				9ADA7A8E59883CEB6614F86C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AAE6599726BFDBE41CC89F0C /* Project object */;
+}

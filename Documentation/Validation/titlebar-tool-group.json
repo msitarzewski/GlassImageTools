@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-22",
+  "build": "25",
+  "changes": [
+    "Undo, Redo, Copy, Share, Export and the inspector toggle share one title-bar capsule (glassBackgroundEffect around borderless standard buttons; editor-tool-group, accessibility container 'Image actions'); compact layouts keep Copy, Share, the overflow menu (Undo, Redo, Export) and the toggle",
+    "Close Image moves from its own row above the canvas to the header's trailing corner, after the group",
+    "UI tests: assertDocumentToolsGrouped replaces assertions that Close was outside the title bar"
+  ],
+  "style_comparison": {
+    "navigation_control_group": "Separate circles (build 24 appearance)",
+    "automatic_control_group": "One recessed capsule with near-invisible icons; frames normal",
+    "palette_control_group": "One empty circle; buttons absent from the accessibility tree",
+    "glass_capsule": "One raised capsule with legible icons; chosen"
+  },
+  "core_tests": {
+    "tests": 67,
+    "suites": 5,
+    "failures": 0,
+    "exit_code": 0,
+    "note": "Core unchanged"
+  },
+  "native_service_checks": {
+    "checks": 50,
+    "passed": 50
+  },
+  "ui_phases": [
+    {
+      "scope": "Focused: document switching/close, compact long title at normal and largest text",
+      "tests": 3,
+      "failed_cases": 0,
+      "exit_code": 0,
+      "seconds": 197
+    },
+    {
+      "scope": "Full suite, final applied source",
+      "tests": 37,
+      "failed_cases": 0,
+      "exit_code": 0,
+      "seconds": 1223
+    }
+  ],
+  "compositor": [
+    "Normal width: one capsule and the close button in the upper-right corner; canvas gains the former close row",
+    "Minimum window and largest text: capsule with Copy, Share, overflow and toggle; close button in the corner"
+  ],
+  "signed_release": {
+    "build_analyze_exit_code": 0,
+    "seconds": 28,
+    "strict_signature": true,
+    "identity": "Glass Image Tools 1.0 (25)",
+    "privacy_keys": [
+      "NSPhotoLibraryAddUsageDescription"
+    ],
+    "debug_markers_in_release": 0
+  },
+  "capture_probe": {
+    "device_sdk_compile_exit_code": 0,
+    "scope": "Compilation only"
+  },
+  "application": {
+    "files_applied": 12,
+    "baseline_conflicts": 0,
+    "workspace_matches_stage_files": 123
+  },
+  "limits": "Simulator automation and compositor captures plus installation, identity, normal launch and running-process readback. Gaze/hand use of the capsule and corner close button and assistive technology remain owner observations."
+}

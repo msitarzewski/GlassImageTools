@@ -1,0 +1,159 @@
+name: GlassImageTools
+options:
+  minimumXcodeGenVersion: 2.42.0
+  deploymentTarget:
+    visionOS: "26.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    SWIFT_STRICT_CONCURRENCY: complete
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "38"
+    GENERATE_INFOPLIST_FILE: YES
+    CODE_SIGN_STYLE: Automatic
+    TARGETED_DEVICE_FAMILY: "7"
+configFiles:
+  Debug: Config/Identity.xcconfig
+  Release: Config/Identity.xcconfig
+targets:
+  VisionSnipCore:
+    type: framework
+    platform: visionOS
+    sources: [Sources/VisionSnipCore]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: $(VISIONSNIP_BUNDLE_ID).core
+        SKIP_INSTALL: YES
+  GlassImageTools:
+    type: application
+    platform: visionOS
+    sources: [App]
+    dependencies:
+      - target: VisionSnipCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: $(VISIONSNIP_BUNDLE_ID)
+        INFOPLIST_KEY_CFBundleDisplayName: "Glass Image Tools"
+        INFOPLIST_KEY_ITSAppUsesNonExemptEncryption: NO
+        INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription: "Save a new copy of your edited image to Photos. Your original is never changed."
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+  GlassImageToolsCaptureProbe:
+    type: application
+    platform: visionOS
+    deploymentTarget: "27.0"
+    sources:
+      - path: CaptureProbe
+      - path: App
+        excludes: [GlassImageToolsApp.swift]
+    dependencies:
+      - target: VisionSnipCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: $(VISIONSNIP_BUNDLE_ID).captureprobe
+        INFOPLIST_KEY_CFBundleDisplayName: "Glass Image Tools Capture Probe"
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+  VisionSnipCoreMac:
+    type: framework
+    platform: macOS
+    deploymentTarget: "26.0"
+    productName: VisionSnipCore
+    sources: [Sources/VisionSnipCore]
+    settings:
+      base:
+        PRODUCT_MODULE_NAME: VisionSnipCore
+        PRODUCT_NAME: VisionSnipCore
+        TARGETED_DEVICE_FAMILY: ""
+        PRODUCT_BUNDLE_IDENTIFIER: $(VISIONSNIP_BUNDLE_ID).mac.core
+        SKIP_INSTALL: YES
+  GlassImageToolsMac:
+    type: application
+    platform: macOS
+    deploymentTarget: "26.0"
+    sources:
+      - Mac
+      - App/EditorModel.swift
+      - App/DocumentWorkspace.swift
+      - App/ImageCanvas.swift
+      - App/AnnotationInspector.swift
+      - App/EditorFields.swift
+      - App/EditorPlatform.swift
+      - App/ExportView.swift
+      - App/ExportService.swift
+      - App/AboutSettings.swift
+      - App/ImageDescriptionCaption.swift
+      - App/ImageDescriptionService.swift
+      - App/PrivacyInfo.xcprivacy
+    dependencies:
+      - target: VisionSnipCoreMac
+    settings:
+      base:
+        CURRENT_PROJECT_VERSION: "45"
+        PRODUCT_BUNDLE_IDENTIFIER: $(VISIONSNIP_BUNDLE_ID).mac
+        INFOPLIST_KEY_CFBundleDisplayName: "Glass Image Tools"
+        INFOPLIST_KEY_CFBundleName: "Glass Image Tools"
+        INFOPLIST_KEY_NSPrincipalClass: NSApplication
+        INFOPLIST_KEY_ITSAppUsesNonExemptEncryption: NO
+        INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription: "Save a new copy of your edited image to Photos. Your original is never changed."
+        INFOPLIST_KEY_NSPhotoLibraryUsageDescription: "Choose images you want to edit or save a new edited copy to Photos."
+        CODE_SIGN_ENTITLEMENTS: Mac/GlassImageToolsMac.entitlements
+        ENABLE_APP_SANDBOX: YES
+        ENABLE_HARDENED_RUNTIME: YES
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        TARGETED_DEVICE_FAMILY: ""
+      configs:
+        Release:
+          CODE_SIGN_INJECT_BASE_ENTITLEMENTS: NO
+  GlassImageToolsMacTests:
+    type: bundle.unit-test
+    platform: macOS
+    deploymentTarget: "26.0"
+    sources: [MacTests]
+    dependencies:
+      - target: GlassImageToolsMac
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: $(VISIONSNIP_BUNDLE_ID).mac.tests
+        TARGETED_DEVICE_FAMILY: ""
+  GlassImageToolsMacUITests:
+    type: bundle.ui-testing
+    platform: macOS
+    deploymentTarget: "26.0"
+    sources: [MacUITests]
+    dependencies:
+      - target: GlassImageToolsMac
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: $(VISIONSNIP_BUNDLE_ID).mac.uitests
+        TARGETED_DEVICE_FAMILY: ""
+  GlassImageToolsUITests:
+    type: bundle.ui-testing
+    platform: visionOS
+    sources: [UITests]
+    dependencies:
+      - target: GlassImageTools
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: $(VISIONSNIP_BUNDLE_ID).uitests
+schemes:
+  GlassImageTools:
+    build:
+      targets:
+        GlassImageTools: all
+    test:
+      targets: [GlassImageToolsUITests]
+  GlassImageToolsCaptureProbe:
+    build:
+      targets:
+        GlassImageToolsCaptureProbe: all
+  GlassImageToolsMac:
+    build:
+      targets:
+        GlassImageToolsMac: all
+    test:
+      targets: [GlassImageToolsMacTests, GlassImageToolsMacUITests]

@@ -1,0 +1,94 @@
+{
+  "date": "2026-11-05",
+  "version": "1.0",
+  "build": "38",
+  "platform": "macOS 26+ native app",
+  "toolchain": "Xcode 27.2 (27B52), Swift 6 mode, macOS 27.2 host",
+  "core": {
+    "exit_code": 0,
+    "tests": 78,
+    "suites": 5
+  },
+  "native_services": {
+    "exit_code": 0,
+    "tests": 6,
+    "failures": 0
+  },
+  "native_ui": {
+    "distinct_cases_passed": 7,
+    "broad_run_exit_code": 65,
+    "broad_passed": 6,
+    "broad_failed": 1,
+    "final_focused_mouse_exit_code": 0,
+    "final_focused_mouse_tests": 1,
+    "failure_resolved": "The test needed a unique visible Zoom item, the bottom-right handle and the SDK mouse-drag API rather than a touch press. No product crop assertion was waived.",
+    "coverage": [
+      "native Open and exact crop fields",
+      "actual PNG clipboard dimensions and Undo",
+      "image-byte and real HTTPS link Paste",
+      "dirty image close Cancel/Discard",
+      "editable text and font size",
+      "Quit Cancel",
+      "native Save As with cropped PNG pixel readback",
+      "welcome control layout and empty inspector hidden",
+      "actual mouse crop at 150 percent zoom"
+    ]
+  },
+  "sandbox": {
+    "normal_debug_probe": "unselected controlled file denied with Cocoa 257; own-container read/write succeeds",
+    "xcode_test_boundary": "Injected test product adds root read and test Mach exceptions; not used for enforcement proof",
+    "release_entitlements": [
+      "com.apple.security.app-sandbox",
+      "com.apple.security.files.user-selected.read-write",
+      "com.apple.security.network.client",
+      "com.apple.security.personal-information.photos-library"
+    ],
+    "release_debugger_or_temporary_exceptions": false
+  },
+  "release": {
+    "build_exit_code": 0,
+    "analyze_exit_code": 0,
+    "strict_signature_exit_code": 0,
+    "debug_probe_and_test_flags_excluded": true,
+    "privacy_manifest_matches": true,
+    "warning": "AppIntents metadata extraction skipped; no AppIntents dependency."
+  },
+  "visionos_regression": {
+    "simulator_build_exit_code": 0,
+    "runtime_or_physical_tests_rerun": false,
+    "diagnostics": "Retained Debug-only Boolean interpolation deprecations and AppIntents metadata skip."
+  },
+  "docs": {
+    "store_validator": true,
+    "utility_tests": 7,
+    "site_pages": 6,
+    "screenshots": "Retained visionOS capture provenance 36/37; no Mac store media"
+  },
+  "limits": [
+    "Actual Photos authorization/save on Mac",
+    "Share recipient interoperability",
+    "VoiceOver and other assistive technology acceptance",
+    "Large-image performance profiling",
+    "Distribution signing, notarization, Mac store platform records and screenshots",
+    "New visionOS runtime/hardware acceptance"
+  ],
+  "publication_or_upload": false,
+  "application": {
+    "reviewed_files": 67,
+    "exact_hashes": true,
+    "baseline_conflicts": 0,
+    "private_data_findings": 0,
+    "changed_relative_file_links": "pass"
+  },
+  "local_delivery": {
+    "version": "1.0",
+    "build": "38",
+    "normal_launch_exit_code": 0,
+    "running_instances": 1,
+    "expected_bundle_path_verified": true,
+    "separate_app_and_container_identity": true,
+    "earlier_app_quit": "Auto-review rejected potential unsaved-work closure; operation not executed",
+    "forced_termination": false,
+    "final_compositor_capture": false
+  }
+}

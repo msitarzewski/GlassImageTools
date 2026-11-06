@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-26",
+  "build": "1.0 (31)",
+  "scope": "Settings \u2192 About after AutoPaper's About pane; an \u24d8 in the Settings sheet's title bar opens it. Owner request: \"Use the AutoPaper version so users know the who/where/why behind it.\"",
+  "changes": [
+    "App/AboutSettings.swift (new): icon, name, version from the bundle, what the app is for and who made it, Website \u00b7 Privacy \u00b7 Help, MIT line",
+    "App/AppearanceSettings.swift: sheet titled Settings; \u24d8 About in the title bar",
+    "Tools/GenerateIcon.swift: also writes AboutIcon.imageset (flat 256-pixel composite); the three icon layers regenerate byte-identical",
+    "CURRENT_PROJECT_VERSION 31; project differs only by the new file and the version",
+    "UITests/AccessibilityAuditTests.swift: both editor audits open About, check its version against the bundle's and its three links, and audit it",
+    "site/pages/help.html: Settings and About; \u2318, opens Settings; Settings picture retaken from the app",
+    "PRIVACY.md: a row for the About links (Safari opens the GitHub Pages site)"
+  ],
+  "validation": {
+    "ui_tests_focused": {
+      "tests": [
+        "AccessibilityAuditTests/testNativeAccessibilityAuditForEditorSheetsAndText",
+        "AccessibilityAuditTests/testNativeAccessibilityAtLargestTextAndIncreasedContrast",
+        "GlassImageToolsUITests/testAppearanceSettingsPersistAndReset",
+        "HIGPolishTests/testPanFeedbackAndReadableAppearanceEndpoints"
+      ],
+      "first_layout_run": "4/4 passed, exit 0 (About as the form's last row)",
+      "title_bar_run_under_load": "2/4: both audits passed; the appearance test's Glass drag stopped at 4% instead of 0% and the accessibility server was then lost (kAXErrorServerNotFound); the endpoint test could not terminate the app. The run shared the machine with the screenshot tour, the Release build and the headset install",
+      "title_bar_run_alone": "4/4 passed, exit 0, 419 s, on a restarted simulator; no accessibility audit issues",
+      "full_suite": "not rerun; the other 33 tests don't open Settings"
+    },
+    "simulator_look": "Settings shows \u24d8, the centered title and Done, with the sliders where they were; About shows the icon, name, Version 1.0 (31), both lines, the three links and the MIT line. Help's Settings picture retaken (1200 \u00d7 962 JPEG, no metadata)",
+    "signed_release": {
+      "exit_code": 0,
+      "seconds": 73,
+      "bundle_identifier": "com.glassimagetools",
+      "version": "1.0 (31)",
+      "strict_signature": true,
+      "encryption_key": false,
+      "manifest_matches_source": true,
+      "add_only_photos": true,
+      "debug_markers": 0,
+      "about_image": "AboutIcon, 256 px, vision 2x, in Assets.car"
+    },
+    "networking_search": "grep -rn -E \"URLSession|import Network|NWConnection\" App Sources: 0 matches",
+    "site": "6 pages, 0 problems; links 0 bad",
+    "privacy_scan": "findings unchanged; new files add none",
+    "physical": "Installed 1.0 (31) October 26; normal launch and one running process verified October 29 after unlock, without rebuild/reinstall or test arguments. See physical-deployment.json",
+    "physical_launch_follow_up": {
+      "timestamp": "2026-10-29T07:54:23.030816+00:00",
+      "build": "31",
+      "version": "1.0",
+      "state": "DEPLOYED_RUNNING_VERIFIED",
+      "rebuild": false,
+      "reinstall": false,
+      "test_arguments": false,
+      "lockState": {
+        "exit_code": 0,
+        "seconds": 5.137
+      },
+      "passcodeRequired": false,
+      "identity": {
+        "exit_code": 0,
+        "seconds": 0.513,
+        "name": "Glass Image Tools",
+        "version": "1.0",
+        "build": "31",
+        "matching_count": 1
+      },
+      "launch": {
+        "exit_code": 0,
+        "seconds": 1.375
+      },
+      "processes": {
+        "exit_code": 0,
+        "seconds": 1.756,
+        "matching_count": 1,
+        "running_verified": true
+      }
+    }
+  },
+  "limits": [
+    "Settings/About physical appearance and input remain unobserved by the successful launch/process check",
+    "The links point to the GitHub Pages site, which isn't published yet; until it is, they find no page",
+    "VoiceOver, gaze and hands on the \u24d8 button and the links haven't been tried on a headset"
+  ]
+}

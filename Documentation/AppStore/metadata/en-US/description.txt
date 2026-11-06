@@ -1,0 +1,27 @@
+Crop a screenshot, mark it up and paste it into a chat, without taking your Apple Vision Pro off.
+
+Open an image from Photos or Files, drop one into the window, or paste it with a tap or Command V. Paste also accepts one direct HTTPS image link and downloads the image; webpage links may not work. Crop to the part that matters, add a note or an arrow, then copy, share or save a new image. Your original stays unchanged.
+
+CROP PRECISELY
+Drag the crop corners or enter exact Left, Top, Width and Height values in the original image's pixels. Choose Freeform, 1:1, 16:9 or 4:3, rotate left, zoom and pan. The area outside the crop dims while you work; output comes from the full-resolution original.
+
+EDIT YOUR MARKUP
+Add rectangles, rounded rectangles, ellipses, triangles, speech bubbles, lines, arrows, freehand drawing and text. Select an object to move or resize it. The inspector edits its color, stroke, fill and exact position; text has font, size, bold, italic, underline and alignment controls. Undo and Redo keep changes reversible until the image is closed.
+
+PIXELATE A REGION
+Pixelate rebuilds an area from large blocks in the exported image. Fine detail underneath is removed from that copy, but large shapes can still be recognizable. Use larger blocks or crop sensitive content out when it matters. The original still contains everything.
+
+COPY, SHARE OR SAVE
+Copy puts a PNG on the system clipboard for pasting into a compatible app. Use the system share sheet, save a new image to Photos, or export PNG or JPEG to Files. See output dimensions and file size before saving. New images omit location and camera metadata from the original.
+
+KEEP SEVERAL IMAGES OPEN
+The Images sidebar has expandable Open Images and Recents groups. Each open image keeps its own crop, annotations, zoom and Undo. Recents lasts only for the window's session; New Window opens another editor. Save a copy before closing if you want to keep your edits.
+
+LOCAL IMAGE PROCESSING
+No account, analytics, tracking or backend. Explicitly pasting an image link contacts its host, which sees your IP address and requested URL. Downloads use no cookies, saved credentials or persistent cache; existing images are never uploaded. Photos and Files use Apple's pickers, which give the app only what you choose. Saving to Photos asks for add-only access. Explicit pasting uses Apple's clipboard privacy controls and may ask for consent for another app's content.
+
+On visionOS 27 or later, when Apple Intelligence and the on-device image model are available, a short description of the original appears below the canvas. It is not saved or included in your output. Editing works without it.
+
+Glass Image Tools edits existing images; it does not capture the screen. Take a screenshot with the top button and Digital Crown together, or ask Siri, then open it here.
+
+Open source under the MIT license.

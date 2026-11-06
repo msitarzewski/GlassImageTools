@@ -1,0 +1,3 @@
+Glass Image Tools is a native Apple Vision Pro image editor. Open from Photos or Files, drop or paste an image, crop in original pixels, add editable markup, then Copy, Share or save a new PNG or JPEG. Your original stays unchanged. Paste also accepts a direct HTTPS image link. There is no account, backend or tracking. An explicit link download contacts its image host; editing remains local and no image is uploaded.
+
+The optional original-image caption needs visionOS 27, Apple Intelligence and an available on-device image model. Editing works without it. The app edits existing screenshots; it does not capture the screen.

@@ -1,0 +1,47 @@
+Sanitized final host Swift Testing output for editor/icon iteration (build 5).
+✔ Test croppedZoomAndPanRoundTrip(zoom:) with 4 test cases passed after 0.001 seconds.
+✔ Test cornerResizeHonorsAnchorBoundsAndRatio(corner:) with 4 test cases passed after 0.001 seconds.
+✔ Test hitTestingUsesVisibleShapePathsRatherThanEmptyBoundingBoxSpace() passed after 0.001 seconds.
+✔ Test aspectFitAccountsForLetterboxing() passed after 0.001 seconds.
+✔ Test annotationMoveResizeAndRecropKeepSourceCoordinates() passed after 0.001 seconds.
+✔ Test annotationResizeBoundsExtremeInspectorValuesAndRejectsNonFiniteGeometry() passed after 0.001 seconds.
+✔ Test moveClampsWithoutChangingSize() passed after 0.001 seconds.
+✔ Test presetFitsAndIsCentered(preset:) with 4 test cases passed after 0.001 seconds.
+✔ Test undoAndRedoRestoreTheCropAspectConstraint() passed after 0.001 seconds.
+✔ Test cropIsClippedAndSnappedOnlyToSourcePixels() passed after 0.001 seconds.
+✔ Test historyCoalescesNoOpsAndInvalidatesRedo() passed after 0.001 seconds.
+✔ Suite GeometryTests passed after 0.001 seconds.
+✔ Test invalidFillAndFontInputCannotEnterRasterRendering() passed after 0.009 seconds.
+✔ Test cropModeShowsRetainedAnnotationsOutsideTheCropAndAnnotateClipsThem() passed after 0.009 seconds.
+✔ Test newAndExistingShapesUseIdenticalLiveAndExportGeometry(kind:) with 7 test cases passed after 0.009 seconds.
+✔ Test livePixelationReplacesAlphaAndInvalidatesTilesWhenRegionOrSourceChanges() passed after 0.010 seconds.
+✔ Test textStyleEditsRemainVectorsAndMatchTheLiveComposition() passed after 0.014 seconds.
+✔ Test textWrapsAcrossLinesAndAlignmentUsesTheRetainedLayoutBox() passed after 0.021 seconds.
+✔ Test allExifOrientationsHaveCorrectUprightPixels(orientation:) with 8 test cases passed after 0.050 seconds.
+✔ Test decodedSourceTypeDoesNotTrustTheFilenameAndCaptureHasNoInventedFileType() passed after 0.094 seconds.
+✔ Suite EditorPolishTests passed after 0.094 seconds.
+✔ Test cropUsesFullResolutionAndDoesNotMutateOriginal() passed after 0.294 seconds.
+✔ Test annotationIsTranslatedAfterCropAndClipped() passed after 0.004 seconds.
+✔ Test pixelationChangesOnlySelectedRegion() passed after 0.008 seconds.
+✔ Test encodedExportHasExpectedTypeSizeAndNoOriginalMetadata(format:) with 2 test cases passed after 0.011 seconds.
+✔ Test directCaptureEntersEditorWithoutAFile() passed after 0.001 seconds.
+✔ Test textIsPositionedAfterCropAndClippedToItsEditableBounds() passed after 0.003 seconds.
+✔ Test pngPreservesAlphaAndJPEGFlattensOntoWhite() passed after 0.001 seconds.
+✔ Test failedImportPreservesOriginalAndOwnedSourceCleansUp() passed after 0.006 seconds.
+✔ Test transparentPixelationRemovesFineDetailInEncodedOutput(format:) with 2 test cases passed after 0.002 seconds.
+✔ Test partialPixelationCropPreservesTheFullAnnotationGridAndPreview() passed after 0.001 seconds.
+✔ Test previewAndExportComposeShapesAndPixelationInInsertionOrder() passed after 0.001 seconds.
+✔ Test boundedPreviewDoesNotDecodeTheOriginalFileAgain() passed after 0.074 seconds.
+✔ Test nonFiniteOrExtremeAnnotationStylesAreRejectedBeforeRendering() passed after 0.001 seconds.
+✔ Test cancelledQueuedExportDoesNotRenderOrEncode() passed after 0.001 seconds.
+✔ Test malformedAndForgedImageHeadersAreRejectedWithoutChangingTheOriginal() passed after 0.143 seconds.
+✔ Test temporaryStoragePrunesOnlyItsDedicatedPreviousSessionRoots() passed after 0.003 seconds.
+✔ Test repeatedPreparationPreservesActiveFilesUntilTheNextProcessSession() passed after 0.001 seconds.
+✔ Test publicPreparationKeepsLiveSourceAndExportOwnersIntact(format:) with 2 test cases passed after 0.014 seconds.
+✔ Test temporaryStoragePreparationFailuresRemainVisibleAndPreserveUnownedFiles() passed after 0.003 seconds.
+✔ Test importingASymbolicLinkCannotChangeItsTargetBytesOrPermissions() passed after 0.002 seconds.
+✔ Test loadOwnedCopyRejectsUnownedOriginalsWithoutDeletingTheirDirectory() passed after 0.002 seconds.
+✔ Test copiedSymbolicLinksAreRejectedBeforeProtectionOrOwnerTransfer() passed after 0.004 seconds.
+✔ Test fractionalPixelationReplacesEveryOutwardAlignedBoundaryPixelInEncodedPNG(fraction:) with 2 test cases passed after 0.004 seconds.
+✔ Suite RendererTests passed after 0.642 seconds.
+✔ Test run with 42 tests in 3 suites passed after 0.642 seconds.

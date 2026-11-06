@@ -1,0 +1,132 @@
+{
+  "timestamp": "2026-10-17T17:48:46.235352+00:00",
+  "task": "tool-sidebar-and-image-caption",
+  "state": "applied; Release 1.0 (14) installed, normally launched and verified running",
+  "implementation": {
+    "shapes": "Removed only redundant custom control checkmark; current-shape symbol, selected traits/tint and tap/hold retained",
+    "sidebar": "Existing native Form opens with Annotate; top document sidebar-right control hides/shows it; no bottom or Drawing Tools Options duplicate",
+    "caption": "Original bounded upright preview described by Apple SystemLanguageModel only. Native caption is below the image, three visible lines with full text in native accessibility/help/selection. Runtime visionOS 27/model availability/vision checks and explicit retry/unavailability. No cloud fallback.",
+    "lifetime": "Caption view keyed to source identity; task cancellation guards stale publication; only a bounded CGImage and caption are retained; no source file/transcript/cache/history/export ownership",
+    "inferenceBound": "Actor permits at most one inference across windows and visibly rejects overlapping requests; no queued image buffers",
+    "sourceOnlyAssertions": "Lifecycle cancellation/overlap guards inspected; no controlled mid-inference replacement or memory-pressure experiment claimed"
+  },
+  "validation": {
+    "initialUI": {
+      "cases": 4,
+      "passed": 4,
+      "failures": 0,
+      "suiteSeconds": 202.866,
+      "commandSeconds": 370.987,
+      "exitCode": 0
+    },
+    "finalBroadUI": {
+      "cases": 10,
+      "passed": 9,
+      "failedCases": 1,
+      "assertionFailures": 3,
+      "suiteSeconds": 539.899,
+      "commandSeconds": 630.013,
+      "exitCode": 65,
+      "failure": "Native color-picker service did not present usable controls; no source cause established"
+    },
+    "focusedColorRetry": {
+      "cases": 1,
+      "passed": 1,
+      "failures": 0,
+      "suiteSeconds": 43.863,
+      "commandSeconds": 87.209,
+      "exitCode": 0,
+      "assertions": "Actual native palette foreground, selected RGB values, Grid/black selection, live well update and one-step Undo restoration retained",
+      "change": "Only a compositor diagnostic checkpoint was added; presentation success computed before its delay. No production change or weakened assertion."
+    },
+    "uniqueFinalUICasesPassedAcrossCommands": 10,
+    "cleanFullTenCaseRunClaimed": false,
+    "accessibility": "Native app/editor/form/caption/sidebar/largest all-issue audits passed; no ignored app findings. Separate palette-host audit -902 remains historical, not newly attempted. Hardware speech/focus is unobserved.",
+    "compositor": "Final normal/compact/largest sidebar and caption views inspected. Initial reduced-scale horizontal-overflow concern disproven by pixel-crop inspection; no such defect claimed. Three-line bounding keeps the caption footprint limited. Palette checkpoint capture shows editor panel, not proof of palette composition; actual palette controls/data were tested.",
+    "release": {
+      "exitCode": 0,
+      "seconds": 90.256,
+      "strictSignatureExitCode": 0,
+      "deviceFamily": [
+        7
+      ],
+      "usageKeys": [
+        "NSPhotoLibraryAddUsageDescription"
+      ],
+      "debugOrProbeMarkers": [],
+      "entitlementKeys": [
+        "application-identifier",
+        "com.apple.developer.team-identifier",
+        "get-task-allow"
+      ],
+      "warnings": "Expected AppIntents metadata-extraction skips; no framework dependency. Examined, not suppressed."
+    },
+    "separateCaptureProbeSDKBuild": {
+      "exitCode": 0,
+      "seconds": 110.011,
+      "captureClaimed": false
+    },
+    "application": {
+      "reviewedFiles": 9,
+      "baselineConflicts": 0,
+      "finalUIAndSignedAppHashesMatch": true,
+      "physicalCaptionServiceHashMatches": true,
+      "appliedHashesMatch": true
+    },
+    "unchangedBaseline": "ImageSource/EditorModel/core/render/export/appearance/signing owners and core tests unchanged. Existing 57 core/30 native-service baseline retained, not rerun.",
+    "simulatorRestore": {
+      "initialAttemptExitCode": 149,
+      "initialReason": "Owned simulator was Shutdown; application launch not attempted by runtime",
+      "bootExitCode": 0,
+      "bootStatusExitCode": 0,
+      "normalLaunchExitCode": 0,
+      "testingArguments": false
+    }
+  },
+  "physicalImageDescription": {
+    "harness": "Temporary native signed test app; exact production caption service; synthetic pixels only",
+    "buildExitCode": 0,
+    "buildSeconds": 20.097,
+    "modelAvailability": "available",
+    "supportsVision": true,
+    "generated": true,
+    "captionCharacterCount": 93,
+    "inferenceSeconds": 2.56392825,
+    "resultReadbackExitCode": 0,
+    "temporaryAppUninstallExitCode": 0,
+    "semanticAccuracyGuaranteed": false,
+    "editorPhysicalAppearanceClaimed": false
+  },
+  "deployment": {
+    "installation": {
+      "exit_code": 0,
+      "seconds": 4.164
+    },
+    "identity": {
+      "exit_code": 0,
+      "seconds": 0.452,
+      "name": "Glass Image Tools",
+      "version": "1.0",
+      "build": "14",
+      "matching_count": 1
+    },
+    "normalLaunch": {
+      "exit_code": 0,
+      "seconds": 0.966,
+      "test_arguments": false
+    },
+    "process": {
+      "exit_code": 0,
+      "seconds": 0.7,
+      "matching_count": 1,
+      "running_verified": true
+    },
+    "evidence": "physical-deployment.json"
+  },
+  "limits": [
+    "No new personal-image/hardware gaze/hold/VoiceOver/focus verification",
+    "No new recipient or large-image/memory profiling acceptance",
+    "No physical capture path confirmed",
+    "Raw screenshots/model text/identifiers/signing details and logs remain ignored"
+  ]
+}

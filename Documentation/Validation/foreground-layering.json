@@ -1,0 +1,153 @@
+{
+  "timestamp": "2026-10-15T10:56:10.983133+00:00",
+  "app": {
+    "name": "Glass Image Tools",
+    "version": "1.0",
+    "build": "8",
+    "configuration": "Release"
+  },
+  "changes": [
+    "Explicit rear native glass/tint plane at z=-1, stacking index-1",
+    "Full-opacity foreground at native interaction plane z=0, stacking index1",
+    "Source alpha, editable overlays, native ornament controls and exports preserved"
+  ],
+  "nativeUI": {
+    "uniqueCasesPassed": 4,
+    "cases": [
+      {
+        "name": "testCropUndoCopyAndExport",
+        "durationSeconds": 36.307,
+        "run": "rear-only four-case run"
+      },
+      {
+        "name": "testLineEndpointMovesAndUndoes",
+        "durationSeconds": 21.899,
+        "run": "rear-only four-case run"
+      },
+      {
+        "name": "testTextContextMenuBelongsToTheTextObject",
+        "durationSeconds": 27.292,
+        "run": "rear-only four-case run"
+      },
+      {
+        "name": "testAppearanceSettingsPersistAndReset",
+        "durationSeconds": 113.651,
+        "run": "focused appearance retry"
+      }
+    ],
+    "firstRun": {
+      "cases": 4,
+      "passed": 1,
+      "failed": 3,
+      "assertionFailures": 5,
+      "durationSeconds": 116.763,
+      "findings": "Moving the foreground forward caused missed native control/endpoint input. Only the background is now displaced; foreground stays on the normal interaction plane."
+    },
+    "rearOnlyRun": {
+      "cases": 4,
+      "passed": 3,
+      "failed": 1,
+      "assertionFailures": 3,
+      "findings": "Production input regressions corrected; new appearance setup typed1200 before native numeric selection menu was ready. Test now waits for actual selection menu; exact1200/crop/history assertions retained."
+    },
+    "finalAppearanceRetry": {
+      "cases": 1,
+      "passed": 1,
+      "failed": 0,
+      "durationSeconds": 113.651,
+      "exitStatus": 0,
+      "includes": "Actual native slider extremes/persistence/reset, retained1200 crop/Undo, opaque-background rectangle creation and clear-background text creation/re-edit/Undo"
+    },
+    "productionChangedBetweenRearOnlyRunAndFinalRetry": false,
+    "fullElevenCaseSuiteRerun": false
+  },
+  "compositor": {
+    "capture": "Native simctl compositor with settled synthetic fixture",
+    "states": [
+      {
+        "name": "glass",
+        "opacity": 0,
+        "glass": 1
+      },
+      {
+        "name": "opaque",
+        "opacity": 1,
+        "glass": 1
+      },
+      {
+        "name": "clear",
+        "opacity": 0,
+        "glass": 0
+      }
+    ],
+    "configuration": "Temporary Foundation argument-domain preference overrides; actual native slider endpoints, persistence and input independently verified by UI tests",
+    "compositorResolution": [
+      3840,
+      2160
+    ],
+    "imageInteriorPixelsCompared": 1031318,
+    "comparisons": [
+      {
+        "background": "opaque",
+        "imageInteriorMaximumChannelDifference": 0,
+        "imageInteriorMeanChannelDifference": 0.0,
+        "imageInteriorChangedPixelPercent": 0.0,
+        "opaqueColorPatchMaximumChannelDifference": 0
+      },
+      {
+        "background": "clear",
+        "imageInteriorMaximumChannelDifference": 18,
+        "imageInteriorMeanChannelDifference": 0.09868666437833272,
+        "imageInteriorChangedPixelPercent": 2.6298387112413435,
+        "opaqueColorPatchMaximumChannelDifference": 0
+      }
+    ],
+    "XCTestScreenCapture": "Manual XCUIScreen screenshots unsupported; those attachments are not visual proof",
+    "physicalAppearanceObserved": false,
+    "foregroundVisualReview": "Image/color patches stay opaque above changing background. Text/button glyphs remain visible with native ornament styling. Raw workspace captures stay private."
+  },
+  "coreAndServices": {
+    "sourcesAndTestsUnchangedFromBuild7": true,
+    "priorCoreTestsPassed": 42,
+    "priorNativeModelServiceChecksPassed": 15,
+    "rerun": false,
+    "baselineEvidence": "window-appearance-and-icon.json"
+  },
+  "signedReleaseBuild": "succeeded",
+  "releaseAnalyze": "succeeded",
+  "separateProbeSDKCompile": "succeeded; not hardware capture acceptance",
+  "ReleaseBoundary": {
+    "strictSignature": "passed",
+    "testFixtureMarkerArgumentsAndProbeSymbols": "absent",
+    "PhotosPermission": "add-only"
+  },
+  "sourceTreeSHA256": "c22d025b8e2bbf2c35daf6615a8c6cf60b6b1715393c418758f2bb6cf35d62dc",
+  "physicalDeployment": {
+    "installedBuild": "8",
+    "installation": "succeeded",
+    "identityReadback": "Glass Image Tools1.0(8)",
+    "normalLaunch": "two requests timed out40/30seconds",
+    "runningProcessVerified": false,
+    "evidence": "physical-deployment.json"
+  },
+  "limits": [
+    "Headset foreground appearance is not observed by install tooling.",
+    "Whole-scene compositor images are not claimed bit-identical: clear-state region has small rendered-edge differences while sampled opaque color interiors are identical.",
+    "XCTest manual screen snapshots were unsupported; native simctl compositor images provide the separate visual evidence and remain private."
+  ],
+  "sourceTransfer": {
+    "stagingFilesApplied": 10,
+    "baselineConflicts": 0,
+    "testedSourceHashesMatch": true,
+    "originalsBackedUpPrivately": true,
+    "totalChangedOrNewPublicFiles": 18
+  },
+  "publicRepositoryChecks": {
+    "textFilesScanned": 70,
+    "relativeLinksChecked": 168,
+    "privateMatches": 0,
+    "brokenRelativeTargets": 0,
+    "memoryFiles": 17,
+    "tasks": "monthly index only"
+  }
+}

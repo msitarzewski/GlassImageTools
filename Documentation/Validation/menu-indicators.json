@@ -1,0 +1,107 @@
+{
+  "timestamp": "2026-10-16T15:44:53.200494+00:00",
+  "task": "native-menu-indicator",
+  "state": "applied; Release 1.0 (13) installed, normally launched and verified running",
+  "implementation": {
+    "source": "App/EditorView.swift",
+    "menus": [
+      "Import",
+      "Crop Preset",
+      "Drawing Tools",
+      "Zoom and View",
+      "Shapes"
+    ],
+    "indicator": "Apple chevron.down SF Symbol in one shared label helper; existing native Menu/button/material retained",
+    "nativeAPIFinding": "menuIndicator(.visible) compiles with SDK 27.2 but drew no indicator in actual visionOS simulator captures for these controls",
+    "duplicatePrevention": "menuIndicator(.hidden) prevents a second system indicator",
+    "accessibility": "Decorative symbol hidden from accessibility; omitted at compact window/accessibility text sizes to retain full-size controls and all commands",
+    "preserved": "Single Shapes primary-action tap/hold; all command contents, source pixels, appearance and opaque foreground"
+  },
+  "validation": {
+    "visibilityOnlyExperiment": {
+      "tests": 5,
+      "failures": 0,
+      "exitCode": 0,
+      "seconds": 133.311,
+      "visualResult": "No caret; not accepted as complete"
+    },
+    "visibleNonadaptiveExperiment": {
+      "tests": 3,
+      "failures": 1,
+      "exitCode": 65,
+      "seconds": 104.351,
+      "failure": "Largest compact toolbar widened to 805.5 points against 720; corrected before application",
+      "shapeInteraction": "Draw/resize/Undo passed on visible-caret variant"
+    },
+    "finalAdaptiveUI": {
+      "tests": 2,
+      "failures": 0,
+      "exitCode": 0,
+      "commandSeconds": 66.044,
+      "suiteSeconds": 56.687,
+      "cases": [
+        "HIGPolishTests/testCompactLongTitleAndToolbar",
+        "HIGPolishTests/testCompactLongTitleAtLargestText"
+      ],
+      "accessibility": "Toolbar and annotation panel all-issue audits passed; no ignored app findings",
+      "compositor": "Final real compact Crop/Annotate and largest-text views inspected; carets visible normally and full-size controls fit at largest text"
+    },
+    "release": {
+      "buildAnalyzeExitCode": 0,
+      "seconds": 11.972,
+      "strictSignatureExitCode": 0,
+      "deviceFamily": [
+        7
+      ],
+      "usageKeys": [
+        "NSPhotoLibraryAddUsageDescription"
+      ],
+      "debugOrProbeMarkers": [],
+      "warning": "Expected AppIntents extraction skip; no AppIntents framework dependency"
+    },
+    "application": {
+      "files": [
+        "App/EditorView.swift",
+        "project.yml",
+        "GlassImageTools.xcodeproj/project.pbxproj"
+      ],
+      "baselineConflicts": 0,
+      "finalUIReleaseSourceHashesMatch": true,
+      "appliedHashesMatch": true
+    },
+    "unchangedBaseline": "57 core/30 service checks retained by unchanged owners; not rerun. Probe target not separately recompiled for this label-only change.",
+    "simulatorRestore": "Normal launch without testing arguments passed; termination reported no running process before launch"
+  },
+  "deployment": {
+    "build": "13",
+    "installation": {
+      "exit_code": 0,
+      "seconds": 2.819
+    },
+    "identity": {
+      "exit_code": 0,
+      "seconds": 0.437,
+      "name": "Glass Image Tools",
+      "version": "1.0",
+      "build": "13",
+      "matching_count": 1
+    },
+    "normalLaunch": {
+      "exit_code": 0,
+      "seconds": 0.521,
+      "test_arguments": false
+    },
+    "processObservation": {
+      "exit_code": 0,
+      "seconds": 0.658,
+      "matching_count": 1,
+      "running_verified": true
+    },
+    "evidence": "physical-deployment.json"
+  },
+  "limits": [
+    "No new physical caret/gaze/hold/assistive-technology observation",
+    "No new recipient/resource/capture acceptance",
+    "Raw screenshots, paths, device/signing details and command output remain ignored"
+  ]
+}

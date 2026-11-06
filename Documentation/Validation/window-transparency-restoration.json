@@ -1,0 +1,533 @@
+{
+  "date": "2026-10-19",
+  "build": "21",
+  "deployment": "Release 1.0 (21) is installed and identity verified; normal launch/process verification awaits headset unlock.",
+  "changes": [
+    "Single rear native glass/paint owner across plain SwiftUI workspace columns",
+    "Native List disclosures/selection, Form properties, system Buttons/Menus/ControlGroups and bottom toolbar",
+    "Existing preferences and full-opacity foreground preserved"
+  ],
+  "ui_phases": [
+    {
+      "scope": "Unchanged build-20 reproduction",
+      "exit_code": 65,
+      "seconds": 87.81,
+      "finalization_interrupted": false,
+      "summary": [
+        "Test Case '-[GlassImageToolsUITests.GlassImageToolsUITests testClearWindowWithBothSidePanels]' failed (42.769 seconds).",
+        "\t Executed 1 test, with 2 failures (0 unexpected) in 42.769 (42.773) seconds",
+        "\t Executed 1 test, with 2 failures (0 unexpected) in 42.769 (42.773) seconds",
+        "\t Executed 1 test, with 2 failures (0 unexpected) in 42.769 (42.774) seconds",
+        "** TEST FAILED **"
+      ],
+      "captures": [
+        {
+          "view": "clear-sidebar",
+          "exit_code": 0
+        },
+        {
+          "view": "clear-both-columns",
+          "exit_code": 0
+        },
+        {
+          "view": "opaque-sidebar",
+          "exit_code": 0
+        },
+        {
+          "view": "default-glass-sidebar",
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "scope": "First layout correction",
+      "exit_code": -15,
+      "seconds": 178.506,
+      "finalization_interrupted": true,
+      "summary": [
+        "Test Case '-[GlassImageToolsUITests.DocumentWorkspaceTests testDocumentSwitchingUndoCloseAndRecents]' passed (53.378 seconds).",
+        "\t Executed 1 test, with 0 failures (0 unexpected) in 53.378 (53.380) seconds",
+        "Test Case '-[GlassImageToolsUITests.GlassImageToolsUITests testClearWindowWithBothSidePanels]' failed (32.519 seconds).",
+        "\t Executed 1 test, with 1 failure (0 unexpected) in 32.519 (32.519) seconds",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testCompactLongTitleAtLargestText]' passed (42.814 seconds).",
+        "\t Executed 1 test, with 0 failures (0 unexpected) in 42.814 (42.815) seconds",
+        "\t Executed 3 tests, with 1 failure (0 unexpected) in 128.711 (128.715) seconds",
+        "\t Executed 3 tests, with 1 failure (0 unexpected) in 128.711 (128.716) seconds"
+      ],
+      "captures": [
+        {
+          "view": "document-navigation-and-independent-inspector",
+          "exit_code": 0
+        },
+        {
+          "view": "clear-sidebar",
+          "exit_code": 0
+        },
+        {
+          "view": "clear-both-columns",
+          "exit_code": 0
+        },
+        {
+          "view": "opaque-sidebar",
+          "exit_code": 0
+        },
+        {
+          "view": "default-glass-sidebar",
+          "exit_code": 0
+        },
+        {
+          "view": "titlebar-largest-text",
+          "exit_code": 0
+        },
+        {
+          "view": "compact-largest-title",
+          "exit_code": 0
+        },
+        {
+          "view": "compact-largest-toolbar",
+          "exit_code": 0
+        },
+        {
+          "view": "compact-largest-options",
+          "exit_code": 0
+        },
+        {
+          "view": "compact-largest-caption-scrolled",
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "scope": "Final app source, before test-query corrections",
+      "exit_code": -15,
+      "seconds": 436.05,
+      "finalization_interrupted": true,
+      "summary": [
+        "Test Case '-[GlassImageToolsUITests.AccessibilityAuditTests testNativeAccessibilityAuditForPasteErrorAndColorPalette]' failed (60.235 seconds).",
+        "\t Executed 1 test, with 1 failure (0 unexpected) in 60.235 (60.239) seconds",
+        "Test Case '-[GlassImageToolsUITests.DocumentWorkspaceTests testDocumentSwitchingUndoCloseAndRecents]' failed (73.575 seconds).",
+        "\t Executed 1 test, with 1 failure (0 unexpected) in 73.575 (73.575) seconds",
+        "Test Case '-[GlassImageToolsUITests.GlassImageToolsUITests testAppearanceSettingsPersistAndReset]' failed (139.133 seconds).",
+        "Test Case '-[GlassImageToolsUITests.GlassImageToolsUITests testClearWindowWithBothSidePanels]' passed (43.206 seconds).",
+        "\t Executed 2 tests, with 8 failures (0 unexpected) in 182.339 (182.340) seconds",
+        "Test Case '-[GlassImageToolsUITests.HIGPolishTests testCompactLongTitleAtLargestText]' passed (68.150 seconds).",
+        "\t Executed 1 test, with 0 failures (0 unexpected) in 68.150 (68.151) seconds",
+        "\t Executed 5 tests, with 10 failures (0 unexpected) in 384.299 (384.307) seconds",
+        "\t Executed 5 tests, with 10 failures (0 unexpected) in 384.299 (384.308) seconds"
+      ],
+      "captures": [
+        {
+          "view": "color-palette-presented",
+          "exit_code": 0
+        },
+        {
+          "view": "document-navigation-and-independent-inspector",
+          "exit_code": 0
+        },
+        {
+          "view": "clear-sidebar",
+          "exit_code": 0
+        },
+        {
+          "view": "clear-both-columns",
+          "exit_code": 0
+        },
+        {
+          "view": "opaque-sidebar",
+          "exit_code": 0
+        },
+        {
+          "view": "default-glass-sidebar",
+          "exit_code": 0
+        },
+        {
+          "view": "titlebar-largest-text",
+          "exit_code": 0
+        },
+        {
+          "view": "compact-largest-title",
+          "exit_code": 0
+        },
+        {
+          "view": "compact-largest-toolbar",
+          "exit_code": 0
+        },
+        {
+          "view": "compact-largest-options",
+          "exit_code": 0
+        },
+        {
+          "view": "compact-largest-caption-scrolled",
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "scope": "Sandbox could not reach CoreSimulator; no assertions ran",
+      "exit_code": 70,
+      "seconds": 62.398,
+      "finalization_interrupted": false,
+      "summary": [],
+      "captures": []
+    },
+    {
+      "scope": "Supported execution with corrected test queries",
+      "exit_code": 0,
+      "seconds": 392.085,
+      "finalization_interrupted": false,
+      "summary": [
+        "Test Case '-[GlassImageToolsUITests.AccessibilityAuditTests testNativeAccessibilityAuditForPasteErrorAndColorPalette]' passed (70.707 seconds).",
+        "\t Executed 1 test, with 0 failures (0 unexpected) in 70.707 (70.725) seconds",
+        "Test Case '-[GlassImageToolsUITests.DocumentWorkspaceTests testDocumentSwitchingUndoCloseAndRecents]' passed (84.992 seconds).",
+        "Test Case '-[GlassImageToolsUITests.DocumentWorkspaceTests testNewWindowOffersExplicitAcquisitionChoices]' passed (43.651 seconds).",
+        "\t Executed 2 tests, with 0 failures (0 unexpected) in 128.643 (128.644) seconds",
+        "Test Case '-[GlassImageToolsUITests.GlassImageToolsUITests testAppearanceSettingsPersistAndReset]' passed (162.975 seconds).",
+        "\t Executed 1 test, with 0 failures (0 unexpected) in 162.975 (162.976) seconds",
+        "\t Executed 4 tests, with 0 failures (0 unexpected) in 362.325 (362.355) seconds",
+        "\t Executed 4 tests, with 0 failures (0 unexpected) in 362.325 (362.357) seconds",
+        "** TEST SUCCEEDED **"
+      ],
+      "captures": [
+        {
+          "view": "color-palette-presented",
+          "exit_code": 0
+        },
+        {
+          "view": "document-navigation-and-independent-inspector",
+          "exit_code": 0
+        },
+        {
+          "view": "two-window-acquisition",
+          "exit_code": 0
+        },
+        {
+          "view": "two-window-files-picker",
+          "exit_code": 0
+        },
+        {
+          "view": "two-window-photos-picker",
+          "exit_code": 0
+        },
+        {
+          "view": "new-window-acquisition",
+          "exit_code": 0
+        },
+        {
+          "view": "clear-text-editor",
+          "exit_code": 0
+        }
+      ]
+    }
+  ],
+  "test_query_diagnostics": [
+    "Skip endpoint dragging if already selected; a redundant drag moved 0 to 5 percent",
+    "Stop Form reveal at fully visible viewport row, retain real tap/edit/palette assertions",
+    "Allow ten seconds for real system picker Cancel, retain actual return checks",
+    "Use native tap/word selection, scope Done to its pane/sheet, retain exact numeric/output/Undo assertions"
+  ],
+  "visual_observations": [
+    "Room visible through clear sidebar/canvas/inspector at real zero settings",
+    "Opaque paint produces black background; default glass uses native material",
+    "Source image and controls retain full opacity; no automated pixel equivalence claimed"
+  ],
+  "services": {
+    "seconds": 3.603,
+    "checkCount": 42,
+    "passed": 42,
+    "failed": 0,
+    "checks": [
+      {
+        "name": "New document preserves current edits",
+        "passed": true,
+        "detail": "New model is clean; switching restores original crop, zoom and pan without replacing the source."
+      },
+      {
+        "name": "Independent document Undo",
+        "passed": true,
+        "detail": "Undo/Redo belongs to the selected document; another editor's history remains clean."
+      },
+      {
+        "name": "Close selects surviving document",
+        "passed": true,
+        "detail": "Closing releases the old editor source and selects the surviving model."
+      },
+      {
+        "name": "Saved recent reopens flattened",
+        "passed": true,
+        "detail": "Actual PNG encoded/decoded at 800 by 1000; reopening has no vectors, dirty state or Undo history."
+      },
+      {
+        "name": "Discarded recent restores saved pixels",
+        "passed": true,
+        "detail": "Discarding newer edits retains the last saved flattened image."
+      },
+      {
+        "name": "Clear Recents preserves open images",
+        "passed": true,
+        "detail": "Recent ownership is removed while the other open document retains its immutable source."
+      },
+      {
+        "name": "Recent-copy failure cannot trap close",
+        "passed": true,
+        "detail": "A deliberately removed synthetic saved output yields a visible warning and closes without a broken Recent."
+      },
+      {
+        "name": "Cancelled close preserves document",
+        "passed": true,
+        "detail": "A cancelled actual close task leaves the source/model open and creates no Recent."
+      },
+      {
+        "name": "Stale save cannot affect another document",
+        "passed": true,
+        "detail": "Wrong identity or changed edit snapshot cannot mark another document saved or retain an unrelated output."
+      },
+      {
+        "name": "Clear Recents removes private copies",
+        "passed": true,
+        "detail": "Actual owned image file exists while recent, then its source and private file release on Clear Recents."
+      },
+      {
+        "name": "Workspace resource limits preserve documents",
+        "passed": true,
+        "detail": "Injected count and storage limits reject imports without evicting open edits or adding rows."
+      },
+      {
+        "name": "Inspector crop undo/redo",
+        "passed": true,
+        "detail": "Three typed digits commit one source-pixel edit; Undo restores the original and Redo restores 800 px."
+      },
+      {
+        "name": "Crop preset undo/redo",
+        "passed": true,
+        "detail": "Crop bounds and preset restore together."
+      },
+      {
+        "name": "Inspector annotation undo/delete",
+        "passed": true,
+        "detail": "A fractionally positioned rectangle resized by typed digits displays 300 px; Undo restores the entire original object. Dimension editing and deletion each commit one reversible operation."
+      },
+      {
+        "name": "Inspector numeric bounds",
+        "passed": true,
+        "detail": "Int minimum/maximum dimensions remain inside the source; nonfinite and extreme display values convert safely."
+      },
+      {
+        "passed": true,
+        "detail": "Rotation changes value state only; crop/source ownership is stable and the viewport fits.",
+        "name": "Nondestructive quarter-turn and one-step Undo Redo"
+      },
+      {
+        "passed": true,
+        "detail": "Visible width/height map back to bounded source pixels; actual system image decodes at 250 by 400.",
+        "name": "Rotated exact crop dimensions and native Copy"
+      },
+      {
+        "passed": true,
+        "detail": "The 16:9 preset follows the visible/exported orientation.",
+        "name": "Rotated preset follows output axes"
+      },
+      {
+        "passed": true,
+        "detail": "Every supported non-freehand object is inserted in source pixels at the crop center, remains selected/editable, preserves zoom/pan and commits one Undo/Redo operation.",
+        "name": "Accessible annotation insertion and Undo"
+      },
+      {
+        "passed": true,
+        "detail": "Insertion reuses the current retained style and last shape, requests native text editing for text, and does not invent a freehand path.",
+        "name": "Accessible annotation style and text editing"
+      },
+      {
+        "passed": true,
+        "detail": "The selected object owns inspector controls; an active annotation tool takes precedence over the remembered shape when nothing is selected.",
+        "name": "Contextual annotation kind precedence"
+      },
+      {
+        "passed": true,
+        "detail": "Text content, font, traits, alignment and color prepared before insertion create the retained text object without irrelevant shape fill; insertion remains one reversible edit.",
+        "name": "Prepared text defaults and creation Undo"
+      },
+      {
+        "passed": true,
+        "detail": "Pixelation reports the renderer's 16-pixel minimum and maps a 128-pixel target to its retained rendering parameter. Multiple live changes undo together; non-finite input is rejected.",
+        "name": "Source-pixel pixelation size and inspector Undo"
+      },
+      {
+        "passed": true,
+        "detail": "Style, canvas movement and later style edits undo separately while the inspector stays visible. Multiple style changes after Undo or Redo still form one operation; mid-gesture callbacks do not absorb geometry, and Pan adds no edit.",
+        "name": "Persistent inspector gesture Undo boundaries"
+      },
+      {
+        "passed": true,
+        "detail": "Show Selection requests canvas-owned recentering without modifying source edits or adding Undo; actual viewport movement is verified by native canvas interaction separately.",
+        "name": "Selection reveal preserves document and history"
+      },
+      {
+        "passed": true,
+        "detail": "The real Transferable produces a single decoded 800\u00d7600 PNG with the flattened green annotation; original and private source bytes remain unchanged. No recipient behavior is inferred.",
+        "name": "Direct native share snapshot bytes"
+      },
+      {
+        "passed": true,
+        "detail": "Dirty state follows the initial/last durable snapshot, including Undo away from or back to that snapshot.",
+        "name": "Document saved baseline"
+      },
+      {
+        "passed": true,
+        "detail": "Newer edits and a closed source reject stale save completions; close clears document state and history.",
+        "name": "Stale save and close ownership"
+      },
+      {
+        "passed": true,
+        "detail": "Actual failed file decoding and a cancelled import preserve the previous source, edits and dirty state.",
+        "name": "Failed and cancelled replacement"
+      },
+      {
+        "passed": true,
+        "detail": "Text editing is requested on creation; content and typography update as one reversible edit. Font displays are safely bounded independently of image dimensions.",
+        "name": "Live typography undo transaction"
+      },
+      {
+        "passed": true,
+        "detail": "Duplicates retain typography, front/back ordering changes retained objects, and mode switching preserves objects and viewport.",
+        "name": "Annotation arrangement and mode preservation"
+      },
+      {
+        "passed": true,
+        "detail": "An actual NSItemProvider imports unchanged encoded bytes through the shared protected source pipeline and resets the editing baseline.",
+        "name": "PNG explicit image paste"
+      },
+      {
+        "passed": true,
+        "name": "JPEG explicit image paste",
+        "detail": "An actual NSItemProvider imports unchanged encoded bytes through the shared protected source pipeline and resets the editing baseline."
+      },
+      {
+        "passed": true,
+        "name": "Invalid image paste preserves document",
+        "detail": "Empty, text-only and malformed encoded providers report errors while preserving the current source, crop, dirty state and Undo availability."
+      },
+      {
+        "passed": true,
+        "name": "Cancelled image paste preserves document",
+        "detail": "Cancelling an in-flight provider propagates to its Progress, preserves source/edit/history and ignores a delayed completion."
+      },
+      {
+        "passed": true,
+        "name": "Closed document rejects stale image paste",
+        "detail": "Closing while a provider loads prevents its eventual successful source from reopening or changing the document."
+      },
+      {
+        "passed": true,
+        "name": "Shared asynchronous file import",
+        "detail": "The native model imports through the shared worker, installs an immutable full-resolution source and resets the saved/history baseline."
+      },
+      {
+        "passed": true,
+        "name": "Photo transfer ownership before decoding",
+        "detail": "Dropping a real ImportedPhoto before decoding removes its private copy; cancelled shared-worker decoding throws cancellation without accepting a source."
+      },
+      {
+        "passed": true,
+        "name": "PNG full-resolution export",
+        "detail": "Decoded 800 \u00d7 600 image; 41344 bytes."
+      },
+      {
+        "passed": true,
+        "name": "PNG clipboard round-trip",
+        "detail": "Read and decoded the actual system pasteboard data and standard UIImage representation."
+      },
+      {
+        "passed": true,
+        "name": "JPEG full-resolution export",
+        "detail": "Decoded 800 \u00d7 600 image; 57540 bytes."
+      },
+      {
+        "passed": true,
+        "name": "JPEG clipboard round-trip",
+        "detail": "Read and decoded the actual system pasteboard data and standard UIImage representation."
+      }
+    ]
+  },
+  "release": {
+    "exit_code": 0,
+    "seconds": 35.428,
+    "errors": 0,
+    "warnings": 2,
+    "build_succeeded": true,
+    "analyze_succeeded": true
+  },
+  "boundaries": {
+    "signature_exit_code": 0,
+    "name": "Glass Image Tools",
+    "version": "1.0",
+    "build": "21",
+    "device_family": [
+      7
+    ],
+    "usage_keys": [
+      "NSPhotoLibraryAddUsageDescription"
+    ],
+    "debug_or_probe_markers": [],
+    "entitlement_keys": [
+      "application-identifier",
+      "com.apple.developer.team-identifier",
+      "get-task-allow"
+    ],
+    "development_get_task_allow": true
+  },
+  "probe_compile": {
+    "exit_code": 0,
+    "seconds": 28.18,
+    "build_succeeded": true,
+    "errors": []
+  },
+  "core": {
+    "rerun": false,
+    "unchanged_source_and_tests": true,
+    "retained_baseline_tests": 62,
+    "retained_baseline_suites": 4
+  },
+  "source_identity": "Final UI/services/signed/applied App/Core agree",
+  "commands": {
+    "ui": "xcodebuild test -project GlassImageTools.xcodeproj -scheme GlassImageTools -configuration Debug -destination <local-visionOS-simulator> -parallel-testing-enabled NO CODE_SIGNING_ALLOWED=NO; only-testing cases named in phase summaries",
+    "release": "xcodebuild -project GlassImageTools.xcodeproj -scheme GlassImageTools -configuration Release -destination generic/platform=visionOS -allowProvisioningUpdates build analyze",
+    "probe": "xcodebuild -project GlassImageTools.xcodeproj -scheme GlassImageToolsCaptureProbe -configuration Debug -destination generic/platform=visionOS CODE_SIGNING_ALLOWED=NO build",
+    "services": "Launch Debug editor on isolated simulator with --ui-testing --integration-smoke; require fresh 42-check report"
+  },
+  "limitations": [
+    "No full UI-suite run or clean six-case command claimed",
+    "Hardware appearance/input/assistive/focus/keyboard/Reduce Motion/Reduce Transparency/resource/recipient acceptance separate",
+    "Capture target compilation is not capture capability verification"
+  ],
+  "physical": {
+    "timestamp": "2026-10-19T20:48:58.004140+00:00",
+    "build": "21",
+    "version": "1.0",
+    "signature_exit_code": 0,
+    "installation": {
+      "exit_code": 0,
+      "seconds": 4.004
+    },
+    "identity": {
+      "exit_code": 0,
+      "seconds": 1.067,
+      "name": "Glass Image Tools",
+      "version": "1.0",
+      "build": "21",
+      "matching_count": 1
+    },
+    "state": "INSTALLED_LAUNCH_PENDING",
+    "lockState": {
+      "exit_code": 0,
+      "seconds": 1.608
+    },
+    "passcodeRequired": true
+  },
+  "public_hygiene": {
+    "text_files_scanned": 112,
+    "private_findings": 0,
+    "missing_relative_links": 0,
+    "implementation_files_applied": 10,
+    "documentation_files_applied": 18
+  }
+}

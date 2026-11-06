@@ -1,0 +1,1194 @@
+{
+  "timestamp": "2026-10-31T23:55:24.004240+00:00",
+  "build": "36",
+  "version": "1.0",
+  "bundle_identifier": "com.glassimagetools",
+  "state": "DEPLOYED_RUNNING_VERIFIED",
+  "test_arguments": false,
+  "normal_launch_attempted": true,
+  "signature_exit_code": 0,
+  "lockState": {
+    "exit_code": 0,
+    "seconds": 1.505
+  },
+  "passcodeRequired": false,
+  "installation": {
+    "exit_code": 0,
+    "seconds": 3.907
+  },
+  "identity": {
+    "exit_code": 0,
+    "seconds": 0.663,
+    "name": "Glass Image Tools",
+    "version": "1.0",
+    "build": "36",
+    "matching_count": 1
+  },
+  "launch": {
+    "exit_code": 0,
+    "seconds": 0.728
+  },
+  "processes": {
+    "exit_code": 0,
+    "seconds": 2.867,
+    "matching_count": 1,
+    "running_verified": true
+  },
+  "previous_deployment": {
+    "timestamp": "2026-10-31T23:38:09.466396+00:00",
+    "build": "35",
+    "version": "1.0",
+    "bundle_identifier": "com.glassimagetools",
+    "state": "DEPLOYED_RUNNING_VERIFIED",
+    "test_arguments": false,
+    "normal_launch_attempted": true,
+    "signature_exit_code": 0,
+    "lockState": {
+      "exit_code": 0,
+      "seconds": 3.0
+    },
+    "passcodeRequired": false,
+    "installation": {
+      "exit_code": 0,
+      "seconds": 3.8
+    },
+    "identity": {
+      "exit_code": 0,
+      "seconds": 0.974,
+      "name": "Glass Image Tools",
+      "version": "1.0",
+      "build": "35",
+      "matching_count": 1
+    },
+    "launch": {
+      "exit_code": 0,
+      "seconds": 0.673
+    },
+    "processes": {
+      "exit_code": 0,
+      "seconds": 0.828,
+      "matching_count": 1,
+      "running_verified": true
+    },
+    "previous_deployment": {
+      "timestamp": "2026-10-30T21:51:12.996611+00:00",
+      "build": "35",
+      "version": "1.0",
+      "bundle_identifier": "com.glassimagetools",
+      "state": "NOT_INSTALLED_DEVICE_UNAVAILABLE",
+      "test_arguments": false,
+      "normal_launch_attempted": false,
+      "signature_exit_code": 0,
+      "lockState": {
+        "exit_code": 1,
+        "seconds": 0.294
+      },
+      "error_domain": "com.apple.dt.CoreDeviceError",
+      "error_code": 4016,
+      "previous_deployment": {
+        "timestamp": "2026-10-29T20:03:52.494943+00:00",
+        "build": "34",
+        "version": "1.0",
+        "bundle_identifier": "com.glassimagetools",
+        "state": "INSTALLED_AWAITING_UNLOCK",
+        "test_arguments": false,
+        "normal_launch_attempted": false,
+        "signature_exit_code": 0,
+        "lockState": {
+          "exit_code": 0,
+          "seconds": 1.211
+        },
+        "passcodeRequired": true,
+        "installation": {
+          "exit_code": 0,
+          "seconds": 1.744
+        },
+        "identity": {
+          "exit_code": 0,
+          "seconds": 0.406,
+          "name": "Glass Image Tools",
+          "version": "1.0",
+          "build": "34",
+          "matching_count": 1
+        },
+        "previous_deployment": {
+          "timestamp": "2026-10-29T09:15:00.313642+00:00",
+          "build": "33",
+          "version": "1.0",
+          "bundle_identifier": "com.glassimagetools",
+          "state": "DEPLOYED_RUNNING_VERIFIED",
+          "test_arguments": false,
+          "normal_launch_attempted": true,
+          "signature_exit_code": 0,
+          "lockState": {
+            "exit_code": 0,
+            "seconds": 1.483
+          },
+          "passcodeRequired": false,
+          "installation": {
+            "exit_code": 0,
+            "seconds": 3.045
+          },
+          "identity": {
+            "exit_code": 0,
+            "seconds": 1.253,
+            "name": "Glass Image Tools",
+            "version": "1.0",
+            "build": "33",
+            "matching_count": 1
+          },
+          "launch": {
+            "exit_code": 0,
+            "seconds": 1.02
+          },
+          "processes": {
+            "exit_code": 0,
+            "seconds": 0.403,
+            "matching_count": 1,
+            "running_verified": true
+          },
+          "previous_deployment": {
+            "timestamp": "2026-10-29T08:52:26.957567+00:00",
+            "build": "32",
+            "version": "1.0",
+            "bundle_identifier": "com.glassimagetools",
+            "state": "DEPLOYED_RUNNING_VERIFIED",
+            "test_arguments": false,
+            "normal_launch_attempted": true,
+            "signature_exit_code": 0,
+            "lockState": {
+              "exit_code": 0,
+              "seconds": 1.27
+            },
+            "passcodeRequired": false,
+            "installation": {
+              "exit_code": 0,
+              "seconds": 2.839
+            },
+            "identity": {
+              "exit_code": 0,
+              "seconds": 0.392,
+              "name": "Glass Image Tools",
+              "version": "1.0",
+              "build": "32",
+              "matching_count": 1
+            },
+            "launch": {
+              "exit_code": 0,
+              "seconds": 0.456
+            },
+            "processes": {
+              "exit_code": 0,
+              "seconds": 0.998,
+              "matching_count": 1,
+              "running_verified": true
+            },
+            "previous_deployment": {
+              "timestamp": "2026-10-29T07:54:23.030816+00:00",
+              "build": "31",
+              "version": "1.0",
+              "bundle_identifier": "com.glassimagetools",
+              "signature_exit_code": 0,
+              "installation": {
+                "exit_code": 0,
+                "seconds": 1,
+                "outcome": "success"
+              },
+              "identity": {
+                "name": "Glass Image Tools",
+                "version": "1.0",
+                "build": "31",
+                "exit_code": 0,
+                "matching_count": 1
+              },
+              "state": "DEPLOYED_RUNNING_VERIFIED",
+              "lockState": {
+                "exit_code": 0,
+                "seconds": 5.137
+              },
+              "passcodeRequired": false,
+              "normal_launch_attempted": true,
+              "launch": {
+                "exit_code": 0,
+                "seconds": 1.375,
+                "test_arguments": false,
+                "outcome": "Normal launch succeeded on October 29 after unlock"
+              },
+              "launch_retry": {
+                "timestamp": "2026-10-28T13:44:29+00:00",
+                "lockState_passcodeRequired": true,
+                "launch_exit_code": 124,
+                "seconds": 120,
+                "matching_process_count": 0,
+                "unlock_wait": "lockState polled every 10 seconds until 2026-10-28T14:07:10+00:00; passcode still required, so no further launch",
+                "outcome": "Not launched; the headset stayed locked"
+              },
+              "processes": {
+                "exit_code": 0,
+                "seconds": 1.756,
+                "matching_count": 1,
+                "running_verified": true
+              },
+              "old_identifier_check": {
+                "bundle_identifier": "com.glasspowertools.visionsnip",
+                "matching_count": 0,
+                "note": "Removed by the owner"
+              },
+              "scope": "Build 31 installed October 26; installed identity, normal launch and exactly one running app process verified October 29. No rebuild, reinstall or test arguments. Settings/About appearance and input remain separate acceptance.",
+              "previous_deployment": {
+                "timestamp": "2026-10-26T04:49:27+00:00",
+                "build": "30",
+                "version": "1.0",
+                "bundle_identifier": "com.glassimagetools",
+                "signature_exit_code": 0,
+                "installation": {
+                  "exit_code": 0,
+                  "seconds": 3,
+                  "outcome": "success"
+                },
+                "identity": {
+                  "name": "Glass Image Tools",
+                  "version": "1.0",
+                  "build": "30",
+                  "exit_code": 0,
+                  "matching_count": 1
+                },
+                "state": "INSTALLED_LAUNCHED_RUNNING",
+                "lockState": {
+                  "exit_code": 0
+                },
+                "passcodeRequired": false,
+                "normal_launch_attempted": true,
+                "launch": {
+                  "exit_code": 0,
+                  "seconds": 1,
+                  "test_arguments": false
+                },
+                "processes": {
+                  "exit_code": 0,
+                  "matching_count": 2,
+                  "note": "Build 30 and the build 29 copy under the old identifier, which was already open"
+                },
+                "previous_identifier_still_installed": {
+                  "bundle_identifier": "com.glasspowertools.visionsnip",
+                  "version": "1.0",
+                  "build": "29",
+                  "removed": "By the owner before October 26; devicectl at 2026-10-26T12:28:39Z found no app under com.glasspowertools.visionsnip"
+                },
+                "scope": "Installation, installed identity, normal launch and running processes only. Build 30 changes only the bundle identifier (owner's choice), so visionOS installed it as a new app beside build 29.",
+                "previous_deployment": {
+                  "timestamp": "2026-10-25T08:53:33+00:00",
+                  "build": "29",
+                  "version": "1.0",
+                  "signature_exit_code": 0,
+                  "installation": {
+                    "exit_code": 0,
+                    "outcome": "success",
+                    "note": "Not timed"
+                  },
+                  "identity": {
+                    "name": "Glass Image Tools",
+                    "version": "1.0",
+                    "build": "29",
+                    "exit_code": 0,
+                    "matching_count": 1
+                  },
+                  "state": "INSTALLED_LAUNCHED_RUNNING",
+                  "lockState": {
+                    "exit_code": 0
+                  },
+                  "passcodeRequired": false,
+                  "normal_launch_attempted": true,
+                  "launch": {
+                    "exit_code": 0,
+                    "test_arguments": false
+                  },
+                  "processes": {
+                    "exit_code": 0,
+                    "matching_count": 1
+                  },
+                  "scope": "Installation, installed identity, normal launch and running process only. Build 29 adds the privacy manifest and the encryption key; nothing on screen changed. Earlier on October 25 lockState and one install attempt failed with CoreDevice 4016 (headset unreachable); this install followed the owner waking the headset.",
+                  "previous_deployment": {
+                    "timestamp": "2026-10-24T20:18:51.866201+00:00",
+                    "build": "28",
+                    "version": "1.0",
+                    "signature_exit_code": 0,
+                    "installation": {
+                      "exit_code": 0,
+                      "seconds": 7,
+                      "outcome": "success"
+                    },
+                    "identity": {
+                      "name": "Glass Image Tools",
+                      "version": "1.0",
+                      "build": "28",
+                      "exit_code": 0,
+                      "matching_count": 1
+                    },
+                    "state": "INSTALLED_LAUNCHED_RUNNING",
+                    "lockState": {
+                      "exit_code": 0
+                    },
+                    "passcodeRequired": false,
+                    "normal_launch_attempted": true,
+                    "launch": {
+                      "exit_code": 0,
+                      "seconds": 1,
+                      "test_arguments": false
+                    },
+                    "processes": {
+                      "exit_code": 0,
+                      "matching_count": 1
+                    },
+                    "scope": "Installation, installed identity, normal launch and running process only; the new icon's Home View appearance, input and accessibility were not observed by tooling. Build 27 was never installed (headset unreachable October 23); build 28 contains its changes.",
+                    "previous_deployment": {
+                      "timestamp": "2026-10-22T10:55:20.728988+00:00",
+                      "build": "26",
+                      "version": "1.0",
+                      "signature_exit_code": 0,
+                      "installation": {
+                        "attempts": [
+                          {
+                            "exit_code": 1,
+                            "seconds": 32,
+                            "note": "The device connection was interrupted after transfer; the installed app list already read 1.0 (26)"
+                          },
+                          {
+                            "exit_code": 0,
+                            "seconds": 1
+                          }
+                        ]
+                      },
+                      "identity": {
+                        "name": "Glass Image Tools",
+                        "version": "1.0",
+                        "build": "26",
+                        "exit_code": 0,
+                        "matching_count": 1
+                      },
+                      "state": "INSTALLED_LAUNCH_PENDING_UNLOCK",
+                      "lockState": {
+                        "exit_code": 0
+                      },
+                      "passcodeRequired": true,
+                      "normal_launch_attempted": false,
+                      "scope": "Installation and installed identity only. The headset was locked, so normal launch and the running process were not verified by tooling; physical appearance of the recolored icon was not observed by tooling.",
+                      "previous_deployment": {
+                        "timestamp": "2026-10-22T05:40:38.462643+00:00",
+                        "build": "25",
+                        "version": "1.0",
+                        "signature_exit_code": 0,
+                        "installation": {
+                          "exit_code": 0,
+                          "seconds": 7.807
+                        },
+                        "identity": {
+                          "name": "Glass Image Tools",
+                          "version": "1.0",
+                          "build": "25",
+                          "exit_code": 0,
+                          "matching_count": 1
+                        },
+                        "state": "INSTALLED_LAUNCHED_RUNNING",
+                        "lockState": {
+                          "exit_code": 0
+                        },
+                        "passcodeRequired": false,
+                        "normal_launch_attempted": true,
+                        "launch": {
+                          "exit_code": 0,
+                          "seconds": 1.562,
+                          "test_arguments": false
+                        },
+                        "processes": {
+                          "exit_code": 0,
+                          "matching_count": 1
+                        },
+                        "scope": "Installation, installed identity, normal launch and running process only; physical appearance, input and accessibility were not observed by tooling.",
+                        "previous_deployment": {
+                          "timestamp": "2026-10-22T04:04:56.859953+00:00",
+                          "build": "24",
+                          "version": "1.0",
+                          "signature_exit_code": 0,
+                          "installation": {
+                            "exit_code": 0,
+                            "seconds": 2.049
+                          },
+                          "identity": {
+                            "name": "Glass Image Tools",
+                            "version": "1.0",
+                            "build": "24",
+                            "exit_code": 0,
+                            "matching_count": 1
+                          },
+                          "state": "INSTALLED_LAUNCH_PENDING",
+                          "lockState": {
+                            "exit_code": 0
+                          },
+                          "passcodeRequired": true,
+                          "normal_launch_attempted": false,
+                          "scope": "Installation and installed identity only; the headset required unlock, so normal launch and the running process were not observed.",
+                          "previous_deployment": {
+                            "timestamp": "2026-10-22T01:34:48.091965+00:00",
+                            "build": "23",
+                            "version": "1.0",
+                            "signature_exit_code": 0,
+                            "installation": {
+                              "exit_code": 0,
+                              "seconds": 7.619
+                            },
+                            "identity": {
+                              "name": "Glass Image Tools",
+                              "version": "1.0",
+                              "build": "23",
+                              "exit_code": 0,
+                              "matching_count": 1
+                            },
+                            "state": "INSTALLED_LAUNCHED_RUNNING",
+                            "lockState": {
+                              "exit_code": 0
+                            },
+                            "passcodeRequired": false,
+                            "normal_launch_attempted": true,
+                            "launch": {
+                              "exit_code": 0,
+                              "seconds": 0.671,
+                              "test_arguments": false
+                            },
+                            "processes": {
+                              "exit_code": 0,
+                              "matching_count": 1
+                            },
+                            "scope": "Installation, installed identity, normal launch and running process only; physical appearance, input and accessibility were not observed by tooling.",
+                            "previous_deployment": {
+                              "timestamp": "2026-10-19T23:26:20.276199+00:00",
+                              "build": "22",
+                              "version": "1.0",
+                              "signature_exit_code": 0,
+                              "installation": {
+                                "exit_code": 0,
+                                "seconds": 3.379
+                              },
+                              "identity": {
+                                "exit_code": 0,
+                                "seconds": 0.992,
+                                "name": "Glass Image Tools",
+                                "version": "1.0",
+                                "build": "22",
+                                "matching_count": 1
+                              },
+                              "state": "INSTALLED_LAUNCH_PENDING",
+                              "lockState": {
+                                "exit_code": 0,
+                                "seconds": 0.845
+                              },
+                              "passcodeRequired": true,
+                              "normal_launch_attempted": false,
+                              "previous_deployment": {
+                                "timestamp": "2026-10-19T20:48:58.004140+00:00",
+                                "build": "21",
+                                "version": "1.0",
+                                "signature_exit_code": 0,
+                                "installation": {
+                                  "exit_code": 0,
+                                  "seconds": 4.004
+                                },
+                                "identity": {
+                                  "exit_code": 0,
+                                  "seconds": 1.067,
+                                  "name": "Glass Image Tools",
+                                  "version": "1.0",
+                                  "build": "21",
+                                  "matching_count": 1
+                                },
+                                "state": "INSTALLED_LAUNCH_PENDING",
+                                "lockState": {
+                                  "exit_code": 0,
+                                  "seconds": 1.608
+                                },
+                                "passcodeRequired": true,
+                                "normal_launch_attempted": false,
+                                "previous_deployment": {
+                                  "timestamp": "2026-10-19T04:17:19.784873+00:00",
+                                  "build": "20",
+                                  "version": "1.0",
+                                  "signature_exit_code": 0,
+                                  "installation": {
+                                    "exit_code": 0,
+                                    "seconds": 5.168
+                                  },
+                                  "identity": {
+                                    "exit_code": 0,
+                                    "seconds": 0.617,
+                                    "name": "Glass Image Tools",
+                                    "version": "1.0",
+                                    "build": "20",
+                                    "matching_count": 1
+                                  },
+                                  "state": "DEPLOYED_RUNNING_VERIFIED",
+                                  "lockState": {
+                                    "exit_code": 0,
+                                    "seconds": 0.596
+                                  },
+                                  "passcodeRequired": false,
+                                  "launch": {
+                                    "exit_code": 0,
+                                    "seconds": 0.889,
+                                    "test_arguments": false
+                                  },
+                                  "processes": {
+                                    "exit_code": 0,
+                                    "seconds": 1.713,
+                                    "matching_count": 1,
+                                    "running_verified": true
+                                  },
+                                  "normal_launch_attempted": true,
+                                  "previous_deployment": {
+                                    "timestamp": "2026-10-18T06:44:03.875084+00:00",
+                                    "build": "19",
+                                    "version": "1.0",
+                                    "signature_exit_code": 0,
+                                    "state": "INSTALLED_LAUNCH_PENDING",
+                                    "passcodeRequired": true,
+                                    "installation": {
+                                      "exit_code": 0,
+                                      "seconds": 2.585
+                                    },
+                                    "identity": {
+                                      "exit_code": 0,
+                                      "seconds": 0.445,
+                                      "name": "Glass Image Tools",
+                                      "version": "1.0",
+                                      "build": "19",
+                                      "matching_count": 1
+                                    },
+                                    "lockState": {
+                                      "exit_code": 0,
+                                      "seconds": 0.457
+                                    },
+                                    "normal_launch_attempted": false,
+                                    "limitation": "Device reports passcode required; normal launch and process verification were not attempted through the passcode gate.",
+                                    "simulator_restored": {
+                                      "terminate": {
+                                        "exit_code": 0,
+                                        "seconds": 0.128
+                                      },
+                                      "launch": {
+                                        "exit_code": 0,
+                                        "seconds": 0.142
+                                      },
+                                      "test_arguments": false
+                                    },
+                                    "previous_verified_deployment": {
+                                      "timestamp": "2026-10-17T20:36:54.690975+00:00",
+                                      "app": {
+                                        "name": "Glass Image Tools",
+                                        "version": "1.0",
+                                        "bundleVersion": "18"
+                                      },
+                                      "platform": "visionOS",
+                                      "hardware": "physical Apple Vision Pro",
+                                      "configuration": "Release",
+                                      "state": "installed and identity verified; normal launch/process verification awaits headset unlock",
+                                      "signedBuild": {
+                                        "exit_code": 0,
+                                        "seconds": 13.31,
+                                        "errors": 0,
+                                        "warnings": 1,
+                                        "build_succeeded": true,
+                                        "analyze_succeeded": true
+                                      },
+                                      "strictSignatureExitCode": 0,
+                                      "installation": {
+                                        "exit_code": 0,
+                                        "seconds": 2.052
+                                      },
+                                      "installedIdentity": {
+                                        "exit_code": 0,
+                                        "seconds": 0.349,
+                                        "name": "Glass Image Tools",
+                                        "version": "1.0",
+                                        "build": "18",
+                                        "matching_count": 1
+                                      },
+                                      "launch": {
+                                        "verified": false
+                                      },
+                                      "processObservation": {
+                                        "running_verified": false
+                                      },
+                                      "passcodeRequired": true,
+                                      "interactionAndRecipientAcceptance": "Independent from installation/normal launch. Owner primary crop/copy/ChatGPT baseline retained.",
+                                      "previousDeployment": {
+                                        "timestamp": "2026-10-17T18:55:23.816363+00:00",
+                                        "platform": "visionOS",
+                                        "hardware": "physical Apple Vision Pro",
+                                        "app": {
+                                          "name": "Glass Image Tools",
+                                          "version": "1.0",
+                                          "bundleVersion": "17"
+                                        },
+                                        "configuration": "Release",
+                                        "signedBuild": {
+                                          "result": "build and analyze passed",
+                                          "exitCode": 0,
+                                          "seconds": 12.603
+                                        },
+                                        "codeSignatureVerification": {
+                                          "result": "strict verification passed again before installation",
+                                          "exitCode": 0
+                                        },
+                                        "installation": {
+                                          "exit_code": 0,
+                                          "seconds": 3.098
+                                        },
+                                        "installedIdentity": {
+                                          "exit_code": 0,
+                                          "seconds": 0.364,
+                                          "name": "Glass Image Tools",
+                                          "version": "1.0",
+                                          "build": "17",
+                                          "matching_count": 1
+                                        },
+                                        "launch": {
+                                          "exit_code": 2,
+                                          "seconds": 30.149
+                                        },
+                                        "runningProcessVerified": false,
+                                        "processObservation": {
+                                          "verified": false,
+                                          "reason": "Normal launch timed out; supported host lock check reports passcode required."
+                                        },
+                                        "sourceRevision": "Seven reviewed native-left-sidebar files applied after baseline conflict checks; native/signed/applied sources match. No Git repository.",
+                                        "editingAndRecipientInteroperability": "Physical interaction/material/recipient acceptance remains separate; owner crop/copy/ChatGPT baseline retained. Normal launch verification for build 17 awaits unlock.",
+                                        "previousDeployment": {
+                                          "timestamp": "2026-10-17T18:21:01.713106+00:00",
+                                          "platform": "visionOS",
+                                          "hardware": "physical Apple Vision Pro",
+                                          "app": {
+                                            "name": "Glass Image Tools",
+                                            "version": "1.0",
+                                            "bundleVersion": "16"
+                                          },
+                                          "configuration": "Release",
+                                          "signedBuild": {
+                                            "result": "build and analyze passed",
+                                            "exitCode": 0,
+                                            "seconds": 24.241
+                                          },
+                                          "codeSignatureVerification": {
+                                            "result": "strict verification passed again before installation",
+                                            "exitCode": 0
+                                          },
+                                          "installation": {
+                                            "exit_code": 0,
+                                            "seconds": 5.105
+                                          },
+                                          "installedIdentity": {
+                                            "exit_code": 0,
+                                            "seconds": 0.51,
+                                            "name": "Glass Image Tools",
+                                            "version": "1.0",
+                                            "build": "16",
+                                            "matching_count": 1
+                                          },
+                                          "launch": {
+                                            "exit_code": 0,
+                                            "seconds": 1.015,
+                                            "test_arguments": false
+                                          },
+                                          "runningProcessVerified": true,
+                                          "processObservation": {
+                                            "exit_code": 0,
+                                            "seconds": 0.687,
+                                            "matching_count": 1,
+                                            "running_verified": true
+                                          },
+                                          "sourceRevision": "Five reviewed caption-sizing files applied after baseline conflict checks; native/signed/applied source hashes match. No Git repository.",
+                                          "editingAndRecipientInteroperability": "No new hardware interaction/recipient acceptance; owner-confirmed crop/copy/ChatGPT baseline retained.",
+                                          "previousDeployment": {
+                                            "timestamp": "2026-10-17T18:14:34.346744+00:00",
+                                            "platform": "visionOS",
+                                            "hardware": "physical Apple Vision Pro",
+                                            "app": {
+                                              "name": "Glass Image Tools",
+                                              "version": "1.0",
+                                              "bundleVersion": "15"
+                                            },
+                                            "configuration": "Release",
+                                            "signedBuild": {
+                                              "result": "build and analyze passed",
+                                              "exitCode": 0,
+                                              "seconds": 12.468
+                                            },
+                                            "codeSignatureVerification": {
+                                              "result": "strict verification passed again before installation",
+                                              "exitCode": 0
+                                            },
+                                            "installation": {
+                                              "exit_code": 0,
+                                              "seconds": 5.347
+                                            },
+                                            "installedIdentity": {
+                                              "exit_code": 0,
+                                              "seconds": 1.267,
+                                              "name": "Glass Image Tools",
+                                              "version": "1.0",
+                                              "build": "15",
+                                              "matching_count": 1
+                                            },
+                                            "launch": {
+                                              "exit_code": 0,
+                                              "seconds": 0.592,
+                                              "test_arguments": false
+                                            },
+                                            "runningProcessVerified": true,
+                                            "processObservation": {
+                                              "exit_code": 0,
+                                              "seconds": 0.538,
+                                              "matching_count": 1,
+                                              "running_verified": true
+                                            },
+                                            "sourceRevision": "Reviewed and hash-verified drawing, trailing tools and caption update; no Git repository initialized.",
+                                            "editingAndRecipientInteroperability": "No new physical feature/recipient acceptance; prior owner-confirmed crop/copy/ChatGPT baseline retained.",
+                                            "previousDeployment": {
+                                              "timestamp": "2026-10-17T17:46:18.273096+00:00",
+                                              "platform": "visionOS",
+                                              "hardware": "physical Apple Vision Pro",
+                                              "app": {
+                                                "name": "Glass Image Tools",
+                                                "version": "1.0",
+                                                "bundleVersion": "14"
+                                              },
+                                              "configuration": "Release",
+                                              "signedBuild": {
+                                                "result": "build and analyze passed",
+                                                "exitCode": 0,
+                                                "seconds": 90.256
+                                              },
+                                              "codeSignatureVerification": {
+                                                "result": "strict verification passed again immediately before installation",
+                                                "exitCode": 0
+                                              },
+                                              "installation": {
+                                                "exit_code": 0,
+                                                "seconds": 4.164
+                                              },
+                                              "installedIdentity": {
+                                                "exit_code": 0,
+                                                "seconds": 0.452,
+                                                "name": "Glass Image Tools",
+                                                "version": "1.0",
+                                                "build": "14",
+                                                "matching_count": 1
+                                              },
+                                              "launch": {
+                                                "exit_code": 0,
+                                                "seconds": 0.966,
+                                                "test_arguments": false
+                                              },
+                                              "runningProcessVerified": true,
+                                              "processObservation": {
+                                                "exit_code": 0,
+                                                "seconds": 0.7,
+                                                "matching_count": 1,
+                                                "running_verified": true
+                                              },
+                                              "sourceRevision": "Nine reviewed files applied without conflicts; current UI/Release app and physical caption service hashes match. sidebar-and-caption.json owns scoped validation.",
+                                              "editingAndRecipientInteroperability": "Editor installed/running only. The exact caption service separately generated real text from a synthetic image on physical Vision Pro. New editor sidebar/caption gaze/hold/assistive-technology and recipient/resource acceptance remain separate. Prior owner Photos/crop/Copy/ChatGPT use retained.",
+                                              "previousDeployment": {
+                                                "timestamp": "2026-10-16T15:43:41.242862+00:00",
+                                                "platform": "visionOS",
+                                                "hardware": "physical Apple Vision Pro",
+                                                "app": {
+                                                  "name": "Glass Image Tools",
+                                                  "version": "1.0",
+                                                  "bundleVersion": "13"
+                                                },
+                                                "configuration": "Release",
+                                                "signedBuild": {
+                                                  "result": "build and analyze passed",
+                                                  "exitCode": 0,
+                                                  "seconds": 11.972
+                                                },
+                                                "codeSignatureVerification": {
+                                                  "result": "strict verification passed immediately before installation",
+                                                  "exitCode": 0
+                                                },
+                                                "installation": {
+                                                  "exit_code": 0,
+                                                  "seconds": 2.819
+                                                },
+                                                "installedIdentity": {
+                                                  "exit_code": 0,
+                                                  "seconds": 0.437,
+                                                  "name": "Glass Image Tools",
+                                                  "version": "1.0",
+                                                  "build": "13",
+                                                  "matching_count": 1
+                                                },
+                                                "launch": {
+                                                  "exit_code": 0,
+                                                  "seconds": 0.521,
+                                                  "test_arguments": false
+                                                },
+                                                "runningProcessVerified": true,
+                                                "processObservation": {
+                                                  "exit_code": 0,
+                                                  "seconds": 0.658,
+                                                  "matching_count": 1,
+                                                  "running_verified": true
+                                                },
+                                                "sourceRevision": "Reviewed three-file proposal applied without conflicts; final UI and signed Release source hashes match. menu-indicators.json owns scoped validation.",
+                                                "editingAndRecipientInteroperability": "Installation/normal launch/process verified only. Caret appearance, hardware gaze/hold and assistive technology remain separate. Prior owner Photos/crop/Copy/ChatGPT use retained.",
+                                                "previousDeployment": {
+                                                  "timestamp": "2026-10-16T15:29:56.300724+00:00",
+                                                  "platform": "visionOS",
+                                                  "hardware": "physical Apple Vision Pro",
+                                                  "app": {
+                                                    "name": "Glass Image Tools",
+                                                    "version": "1.0",
+                                                    "bundleVersion": "12"
+                                                  },
+                                                  "configuration": "Release",
+                                                  "signedBuild": "Previously prepared development-signed build/analyze passed; existing product reused, no rebuild",
+                                                  "codeSignatureVerification": {
+                                                    "result": "strict verification passed immediately before installation",
+                                                    "exitCode": 0
+                                                  },
+                                                  "installation": "succeeded; actual installed name/version/build read back",
+                                                  "installationAttempts": [
+                                                    {
+                                                      "result": "verified prepared build 12 installed",
+                                                      "exitCode": 0,
+                                                      "seconds": 2.851
+                                                    }
+                                                  ],
+                                                  "installedIdentity": {
+                                                    "exit_code": 0,
+                                                    "seconds": 0.986,
+                                                    "name": "Glass Image Tools",
+                                                    "version": "1.0",
+                                                    "build": "12",
+                                                    "matching_count": 1
+                                                  },
+                                                  "launch": "normal bundle-identifier launch succeeded; no testing arguments",
+                                                  "launchAttempts": [
+                                                    {
+                                                      "result": "normal launch succeeded",
+                                                      "exitCode": 0,
+                                                      "seconds": 1.238,
+                                                      "testArguments": false
+                                                    }
+                                                  ],
+                                                  "runningProcessVerified": true,
+                                                  "processObservation": {
+                                                    "exit_code": 0,
+                                                    "seconds": 0.373,
+                                                    "matching_count": 1,
+                                                    "running_verified": true
+                                                  },
+                                                  "sourceRevision": "Prepared signed product matches current applied release/source hashes; native-glass-chrome.json owns implementation/QA evidence",
+                                                  "editingAndRecipientInteroperability": "Launch/process observed only; owner-reported prior repeated Photos/crop/Copy/ChatGPT workflow retained. Build 12 gaze/material/accessibility/recipient behavior remains separate.",
+                                                  "previousDeployment": {
+                                                    "timestamp": "2026-10-16T03:25:32.098618+00:00",
+                                                    "platform": "visionOS",
+                                                    "hardware": "physical Apple Vision Pro",
+                                                    "osVersion": "27.2",
+                                                    "app": {
+                                                      "name": "Glass Image Tools",
+                                                      "bundleIdentifier": "com.glasspowertools.visionsnip",
+                                                      "version": "1.0",
+                                                      "bundleVersion": "10"
+                                                    },
+                                                    "configuration": "Release",
+                                                    "signedBuild": "succeeded; SDK27.2; final source/title correction built/analyzed",
+                                                    "codeSignatureVerification": "strict verification passed",
+                                                    "installation": "succeeded; actual installed name/version/build read back",
+                                                    "launch": "normal launch timed out after35seconds; no matching process in completed subsequent query",
+                                                    "runningProcessVerified": false,
+                                                    "editingAndRecipientInteroperability": "New native UX/paste/assistive-technology hardware behavior unobserved; prior owner workflow report retained",
+                                                    "installationAttempts": [
+                                                      {
+                                                        "result": "first candidate installed before final visual title correction",
+                                                        "exitCode": 0,
+                                                        "seconds": 2.732
+                                                      },
+                                                      {
+                                                        "result": "final corrected signed product installed",
+                                                        "exitCode": 0,
+                                                        "seconds": 13.754
+                                                      }
+                                                    ],
+                                                    "launchAttempts": [
+                                                      {
+                                                        "result": "client option-order validation failed before remote launch",
+                                                        "exitCode": 64
+                                                      },
+                                                      {
+                                                        "result": "normal launch timed out",
+                                                        "exitCode": 2,
+                                                        "seconds": 35.147
+                                                      }
+                                                    ],
+                                                    "processObservation": {
+                                                      "exit_code": 0,
+                                                      "seconds": 2.484,
+                                                      "matching_count": 0
+                                                    },
+                                                    "sourceRevision": "Reviewed applied source hashes in native-ux-and-accessibility.json; final title-only large-text correction validated",
+                                                    "previousDeployment": {
+                                                      "timestamp": "2026-10-16T02:13:58.557302+00:00",
+                                                      "platform": "visionOS",
+                                                      "hardware": "physical Apple Vision Pro",
+                                                      "osVersion": "27.2",
+                                                      "app": {
+                                                        "name": "Glass Image Tools",
+                                                        "bundleIdentifier": "com.glasspowertools.visionsnip",
+                                                        "version": "1.0",
+                                                        "bundleVersion": "9"
+                                                      },
+                                                      "configuration": "Release",
+                                                      "signedBuild": "succeeded; SDK 27.2; command exit 0",
+                                                      "codeSignatureVerification": "strict verification passed",
+                                                      "installation": "succeeded; actual installed name/version/build read back",
+                                                      "launch": "normal bundle-identifier launch succeeded; no testing arguments",
+                                                      "runningProcessVerified": true,
+                                                      "processObservation": "Exactly one matching application executable in completed subsequent process readback",
+                                                      "editingAndRecipientInteroperability": "Build 9 physical shape-menu eye/hand behavior not separately observed; owner continues validation",
+                                                      "developerServices": "available for successful installation, identity readback, launch and process query",
+                                                      "sourceRevision": "Matches the two passing shape-menu simulator UI cases; only build number changed afterward",
+                                                      "installationAttempts": [
+                                                        {
+                                                          "result": "failed before transfer",
+                                                          "errorDomain": "com.apple.dt.CoreDeviceError",
+                                                          "errorCode": 4016,
+                                                          "reason": "Device services/trusted connectivity/power assertions unavailable"
+                                                        },
+                                                        {
+                                                          "result": "succeeded after owner reported headset available",
+                                                          "exitCode": 0,
+                                                          "seconds": 5.21
+                                                        }
+                                                      ],
+                                                      "launchAttempts": [
+                                                        {
+                                                          "result": "client validation rejected optional install-supplied persistent identifier as invalid base64",
+                                                          "exitCode": 64,
+                                                          "remoteLaunchRequested": false
+                                                        },
+                                                        {
+                                                          "result": "normal bundle-identifier launch succeeded",
+                                                          "exitCode": 0,
+                                                          "seconds": 1.749,
+                                                          "testArguments": false
+                                                        }
+                                                      ],
+                                                      "subsequentOwnerWorkflowAcceptance": {
+                                                        "recordedAt": "2026-10-15T07:52:29.594539+00:00",
+                                                        "evidence": "owner report in conversation",
+                                                        "platform": "physical Vision Pro",
+                                                        "workflow": [
+                                                          "Photos import",
+                                                          "crop",
+                                                          "Copy",
+                                                          "paste into ChatGPT"
+                                                        ],
+                                                        "approximateSuccessfulUses": 10,
+                                                        "primarySuccessCriterion": "confirmed in real use",
+                                                        "reportedBuild": null,
+                                                        "optionalAnnotationCoverage": "not separately specified",
+                                                        "scope": "Primary clipboard workflow only; other recipients/export paths and resource limits remain separate."
+                                                      },
+                                                      "previousDeployment": {
+                                                        "timestamp": "2026-10-15T11:02:44.757613+00:00",
+                                                        "platform": "visionOS",
+                                                        "hardware": "physical Apple Vision Pro",
+                                                        "osVersion": "27.2",
+                                                        "app": {
+                                                          "name": "Glass Image Tools",
+                                                          "bundleIdentifier": "com.glasspowertools.visionsnip",
+                                                          "version": "1.0",
+                                                          "bundleVersion": "8"
+                                                        },
+                                                        "configuration": "Release",
+                                                        "signedBuild": "succeeded",
+                                                        "codeSignatureVerification": "valid on disk; satisfies designated requirement",
+                                                        "installation": "succeeded; actual installed identity read back",
+                                                        "launch": "normal-argument requests timed out after40 and30seconds",
+                                                        "runningProcessVerified": false,
+                                                        "processObservation": "No matching process in the completed readback after the initial launch timeout",
+                                                        "editingAndRecipientInteroperability": "Build8 headset foreground/eye-hand behavior unobserved",
+                                                        "developerServices": "available; developer mode enabled"
+                                                      },
+                                                      "remainingLimits": [
+                                                        "Physical menu/foreground/icon appearance still requires owner observation",
+                                                        "Broader native modal UX, accessibility, Paste Image, palette and zoomed-crop work remains queued"
+                                                      ]
+                                                    },
+                                                    "remainingLimits": [
+                                                      "Normal launch verification pending headset unlock; observed passcode required and no matching app after timeout",
+                                                      "Hardware VoiceOver/VoiceControl/SwitchControl/focus, new Paste/gesture/display behavior and resource profiling remain unobserved",
+                                                      "No physical capture path confirmed"
+                                                    ],
+                                                    "lockStateObserved": {
+                                                      "passcodeRequired": true,
+                                                      "unlockedSinceBoot": true
+                                                    }
+                                                  },
+                                                  "remainingLimits": [
+                                                    "Build 12 physical appearance, eye/hand/keyboard and assistive-technology speech/focus still require owner observation",
+                                                    "First-run Photos consent, broader recipient/export paths and large-image resource profiling remain separate",
+                                                    "No physical capture path confirmed"
+                                                  ]
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "initialLaunchTimeout": {
+                                          "exit_code": 2,
+                                          "seconds": 45.135
+                                        },
+                                        "hostConnection": {
+                                          "exit_code": 0,
+                                          "seconds": 1.635
+                                        },
+                                        "passcodeRequired": true,
+                                        "followupHostChecks": {
+                                          "defaultProcessQuery": {
+                                            "exit_code": 1,
+                                            "seconds": 16.068
+                                          },
+                                          "defaultLockQuery": {
+                                            "exit_code": 1,
+                                            "seconds": 16.068
+                                          },
+                                          "failure": "CoreDevice service initialization timed out; supported host check succeeded and reported passcode required."
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "simulator_restored": {
+                                    "build": "20",
+                                    "test_arguments": false,
+                                    "reset_task_only_app": true,
+                                    "commands": {
+                                      "uninstall": {
+                                        "exit_code": 0,
+                                        "seconds": 0.166
+                                      },
+                                      "install": {
+                                        "exit_code": 0,
+                                        "seconds": 0.32
+                                      },
+                                      "launch": {
+                                        "exit_code": 0,
+                                        "seconds": 0.133
+                                      }
+                                    }
+                                  }
+                                },
+                                "simulator_restored": {
+                                  "build": "21",
+                                  "test_arguments": false,
+                                  "scope": "Task-owned simulator SUT only; synthetic sessions removed.",
+                                  "terminate": {
+                                    "exit_code": 0,
+                                    "seconds": 0.155
+                                  },
+                                  "uninstall": {
+                                    "exit_code": 0,
+                                    "seconds": 0.192
+                                  },
+                                  "install": {
+                                    "exit_code": 0,
+                                    "seconds": 0.327
+                                  },
+                                  "launch": {
+                                    "exit_code": 0,
+                                    "seconds": 0.133
+                                  }
+                                }
+                              },
+                              "simulator_restored": {
+                                "build": "22",
+                                "test_arguments": false,
+                                "scope": "Task-owned simulator SUT only; synthetic sessions removed.",
+                                "terminate": {
+                                  "exit_code": 3,
+                                  "seconds": 0.219
+                                },
+                                "uninstall": {
+                                  "exit_code": 0,
+                                  "seconds": 0.159
+                                },
+                                "install": {
+                                  "exit_code": 0,
+                                  "seconds": 0.319
+                                },
+                                "launch": {
+                                  "exit_code": 0,
+                                  "seconds": 0.135
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "installation_timestamp": "2026-10-26T13:16:47+00:00",
+              "initial_launch": {
+                "exit_code": 124,
+                "seconds": 120,
+                "test_arguments": false,
+                "outcome": "Timed out after 120 seconds while the headset was locked"
+              },
+              "initial_processes": {
+                "exit_code": 0,
+                "matching_count": 0
+              },
+              "launch_verification": {
+                "timestamp": "2026-10-29T07:54:23.030816+00:00",
+                "build": "31",
+                "version": "1.0",
+                "state": "DEPLOYED_RUNNING_VERIFIED",
+                "rebuild": false,
+                "reinstall": false,
+                "test_arguments": false,
+                "lockState": {
+                  "exit_code": 0,
+                  "seconds": 5.137
+                },
+                "passcodeRequired": false,
+                "identity": {
+                  "exit_code": 0,
+                  "seconds": 0.513,
+                  "name": "Glass Image Tools",
+                  "version": "1.0",
+                  "build": "31",
+                  "matching_count": 1
+                },
+                "launch": {
+                  "exit_code": 0,
+                  "seconds": 1.375
+                },
+                "processes": {
+                  "exit_code": 0,
+                  "seconds": 1.756,
+                  "matching_count": 1,
+                  "running_verified": true
+                }
+              }
+            }
+          },
+          "scope": "Build 33 installed, identity read back and normal launch/process queried. This does not certify physical keyboard, gaze/hand drop, external clipboard consent or assistive technology."
+        },
+        "scope": "Build 34 installation and installed identity verified. Normal launch was not attempted because the device requires its passcode. Physical appearance, gaze/hand, hardware keyboard and assistive technology remain owner observations."
+      }
+    }
+  }
+}

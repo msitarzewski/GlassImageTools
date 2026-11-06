@@ -1,0 +1,88 @@
+{
+  "timestamp": "2026-10-15T07:25:09.163823+00:00",
+  "app": {
+    "name": "Glass Image Tools",
+    "version": "1.0",
+    "build": "4",
+    "configuration": "Release"
+  },
+  "findingsAddressed": 7,
+  "core": {
+    "tests": 34,
+    "suites": 2,
+    "failed": 0,
+    "malformedAndForgedInputsRejected": 67
+  },
+  "simulatorModelAndServices": {
+    "checks": 10,
+    "failed": 0
+  },
+  "nativeUI": {
+    "tests": 4,
+    "failed": 0,
+    "durationSeconds": 85.23
+  },
+  "captureLifecycleHost": {
+    "checks": 3,
+    "failed": 0,
+    "hardwareCaptureVerified": false
+  },
+  "deviceSDK": {
+    "mainReleaseAnalyze": "succeeded",
+    "signedMainReleaseBuild": "succeeded",
+    "captureProbeBuild": "succeeded"
+  },
+  "releaseBoundaries": {
+    "debugAndCaptureSymbolsExcluded": true,
+    "permissions": [
+      "add-only Photos"
+    ]
+  },
+  "physicalDeployment": {
+    "installedBuild": "4",
+    "launch": "succeeded",
+    "runningProcessVerified": true,
+    "editingAndRecipientInteroperabilityObservedByDeploymentTools": false,
+    "primaryWorkflowAcceptance": {
+      "evidence": "owner report",
+      "approximateSuccessfulUses": 10,
+      "result": "Photos/crop/Copy/ChatGPT confirmed",
+      "details": "physical-deployment.json; subsequentOwnerWorkflowAcceptance"
+    }
+  },
+  "documentation": {
+    "guideVersion": "2.1 project adaptation",
+    "memoryBankFiles": 16,
+    "relativeLinksValid": true,
+    "publicContentScan": "passed"
+  },
+  "repository": {
+    "gitInitialized": false,
+    "committed": false,
+    "published": false,
+    "license": "undecided"
+  },
+  "privacyFollowUp": {
+    "encodedPNGAndJPEGAlphaRedaction": "passed",
+    "encodedPNGFractionalBoundaryReplacement": "passed; both quarter- and three-quarter-pixel cases",
+    "sourceGPSFixtureVerified": true,
+    "outputGPSAndPrivateExifTiffRemoved": true,
+    "singleEncodedOutputImageVerified": true,
+    "bothFormatsReimportedWithoutModifyingExports": true,
+    "temporaryOwnershipAndSymlinkRegressions": "passed",
+    "privateDirectoryAndFilePermissions": "0700/0600",
+    "visionOSCompleteFileProtection": "requested; locked physical device not verified",
+    "backupExclusion": "requested; persisted host marker verified, physical backup not verified",
+    "forceQuitCleanupEvidence": "force-quit-cleanup.json",
+    "nextLaunchCleanupAfterActualSimulatorSIGKILL": "passed; unrelated file preserved",
+    "immediatePostKillDeletionGuaranteed": false,
+    "clipboard": "explicit Copy; local-only; Apple normal lifetime; no app history or automatic expiry"
+  },
+  "classification": {
+    "redactionLeaks": "privacy/security defects; corrected",
+    "numericTrapsAndResourcePressure": "robustness defects; corrected within tested bounds",
+    "arbitraryCodeExecutionExploitFound": false,
+    "comprehensivePlatformPenetrationTestPerformed": false
+  },
+  "testScope": "Final core suite and signed Release build/analyze include fractional renderer fix; passing UI/services cover final UI/storage changes and preceded that renderer-only fix."
+}

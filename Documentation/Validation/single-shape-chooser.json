@@ -1,0 +1,36 @@
+{
+  "timestamp_utc": "2026-10-15T20:42:58.100273+00:00",
+  "scope": "Remove separate shape dropdown; preserve native tap/hold shape button",
+  "platform": "visionOS Simulator 27.2",
+  "native_app_build": "passed as part of xcodebuild test",
+  "ui_tests": {
+    "passed": 2,
+    "failures": 0,
+    "suite_seconds": 57.576,
+    "command_exit": 0,
+    "command_wall_seconds": 70.453,
+    "cases": [
+      "testAnnotationCanBeAddedAndUndone",
+      "testNewShapeDirectResizeAndCropMode"
+    ]
+  },
+  "verified_behaviors": [
+    "Duplicate shape control absent",
+    "Holding primary shape button opens choices",
+    "Normal tap activates last selected shape for drawing",
+    "Rectangle editing and Undo",
+    "Triangle direct resize and selection retention across Crop/Annotate"
+  ],
+  "source_sha256": {
+    "App/EditorView.swift": "40c06f5e30341bcf5a548cadd3d4c15a27382f908bb909999c826225baf2a6b2",
+    "UITests/GlassImageToolsUITests.swift": "1a99ce204a15dfa2f90eb1769e8053588939131de2aab56c0eba88d39fb6f5be"
+  },
+  "limits": [
+    "Two focused cases, not a full UI-suite run",
+    "Core and model/service sources unchanged; suites not rerun",
+    "No Release build, physical install, launch or gesture observation performed",
+    "Installed physical build remains 8; previous launch limits unchanged",
+    "Broader UX/accessibility work remains queued"
+  ],
+  "reproduce": "xcodebuild test -project GlassImageTools.xcodeproj -scheme GlassImageTools -destination \"id=$SIMULATOR_ID\" -parallel-testing-enabled NO -only-testing:GlassImageToolsUITests/GlassImageToolsUITests/testAnnotationCanBeAddedAndUndone -only-testing:GlassImageToolsUITests/GlassImageToolsUITests/testNewShapeDirectResizeAndCropMode CODE_SIGNING_ALLOWED=NO"
+}

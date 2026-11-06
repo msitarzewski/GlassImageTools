@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>Glass Image Tools — sun and hills</title>
+  <defs>
+    <!-- The hills run under the frame (radius 455.4) to 485, so parallax never opens a gap. -->
+    <clipPath id="underFrame"><circle cx="512" cy="512" r="485"/></clipPath>
+  </defs>
+  <g fill="#ffffff">
+    <circle cx="693" cy="353.6" r="79.2"/>
+    <path clip-path="url(#underFrame)" d="M-70.7 1060.8L-70.7 926.4L333.2 566.6Q381.9 523.3 430.5 566.6L573.7 694Q601.1 718.5 628.5 694L702.4 628.4Q742.5 592.6 782.7 628.4L1094.7 906.6L1094.7 1060.8Z"/>
+  </g>
+</svg>

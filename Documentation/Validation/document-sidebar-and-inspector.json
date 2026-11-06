@@ -1,0 +1,641 @@
+{
+  "timestamp": "2026-10-18T06:45:14.275335+00:00",
+  "build": "19",
+  "task": "document-sidebar-and-inspector",
+  "core": {
+    "exit_code": 0,
+    "seconds": 17.225,
+    "summary": [
+      "Test Suite 'All tests' passed at 2026-10-18 01:13:51.580.",
+      "\u2714 Suite GeometryTests passed after 0.013 seconds.",
+      "\u2714 Suite EditorPolishTests passed after 0.030 seconds.",
+      "\u2714 Suite RotationTests passed after 0.032 seconds.",
+      "\u2714 Suite RendererTests passed after 1.063 seconds.",
+      "\u2714 Test run with 62 tests in 4 suites passed after 1.063 seconds."
+    ],
+    "failures": []
+  },
+  "native_services": {
+    "seconds": 3.213,
+    "checkCount": 42,
+    "passed": 42,
+    "failed": 0,
+    "checks": [
+      {
+        "name": "New document preserves current edits",
+        "passed": true,
+        "detail": "New model is clean; switching restores original crop, zoom and pan without replacing the source."
+      },
+      {
+        "name": "Independent document Undo",
+        "passed": true,
+        "detail": "Undo/Redo belongs to the selected document; another editor's history remains clean."
+      },
+      {
+        "name": "Close selects surviving document",
+        "passed": true,
+        "detail": "Closing releases the old editor source and selects the surviving model."
+      },
+      {
+        "name": "Saved recent reopens flattened",
+        "passed": true,
+        "detail": "Actual PNG encoded/decoded at 800 by 1000; reopening has no vectors, dirty state or Undo history."
+      },
+      {
+        "name": "Discarded recent restores saved pixels",
+        "passed": true,
+        "detail": "Discarding newer edits retains the last saved flattened image."
+      },
+      {
+        "name": "Clear Recents preserves open images",
+        "passed": true,
+        "detail": "Recent ownership is removed while the other open document retains its immutable source."
+      },
+      {
+        "name": "Recent-copy failure cannot trap close",
+        "passed": true,
+        "detail": "A deliberately removed synthetic saved output yields a visible warning and closes without a broken Recent."
+      },
+      {
+        "name": "Cancelled close preserves document",
+        "passed": true,
+        "detail": "A cancelled actual close task leaves the source/model open and creates no Recent."
+      },
+      {
+        "passed": true,
+        "name": "Stale save cannot affect another document",
+        "detail": "Wrong identity or changed edit snapshot cannot mark another document saved or retain an unrelated output."
+      },
+      {
+        "passed": true,
+        "name": "Clear Recents removes private copies",
+        "detail": "Actual owned image file exists while recent, then its source and private file release on Clear Recents."
+      },
+      {
+        "passed": true,
+        "name": "Workspace resource limits preserve documents",
+        "detail": "Injected count and storage limits reject imports without evicting open edits or adding rows."
+      },
+      {
+        "passed": true,
+        "name": "Inspector crop undo/redo",
+        "detail": "Three typed digits commit one source-pixel edit; Undo restores the original and Redo restores 800 px."
+      },
+      {
+        "passed": true,
+        "name": "Crop preset undo/redo",
+        "detail": "Crop bounds and preset restore together."
+      },
+      {
+        "passed": true,
+        "name": "Inspector annotation undo/delete",
+        "detail": "A fractionally positioned rectangle resized by typed digits displays 300 px; Undo restores the entire original object. Dimension editing and deletion each commit one reversible operation."
+      },
+      {
+        "name": "Inspector numeric bounds",
+        "passed": true,
+        "detail": "Int minimum/maximum dimensions remain inside the source; nonfinite and extreme display values convert safely."
+      },
+      {
+        "name": "Nondestructive quarter-turn and one-step Undo Redo",
+        "passed": true,
+        "detail": "Rotation changes value state only; crop/source ownership is stable and the viewport fits."
+      },
+      {
+        "name": "Rotated exact crop dimensions and native Copy",
+        "detail": "Visible width/height map back to bounded source pixels; actual system image decodes at 250 by 400.",
+        "passed": true
+      },
+      {
+        "name": "Rotated preset follows output axes",
+        "detail": "The 16:9 preset follows the visible/exported orientation.",
+        "passed": true
+      },
+      {
+        "name": "Accessible annotation insertion and Undo",
+        "detail": "Every supported non-freehand object is inserted in source pixels at the crop center, remains selected/editable, preserves zoom/pan and commits one Undo/Redo operation.",
+        "passed": true
+      },
+      {
+        "name": "Accessible annotation style and text editing",
+        "passed": true,
+        "detail": "Insertion reuses the current retained style and last shape, requests native text editing for text, and does not invent a freehand path."
+      },
+      {
+        "name": "Contextual annotation kind precedence",
+        "passed": true,
+        "detail": "The selected object owns inspector controls; an active annotation tool takes precedence over the remembered shape when nothing is selected."
+      },
+      {
+        "name": "Prepared text defaults and creation Undo",
+        "passed": true,
+        "detail": "Text content, font, traits, alignment and color prepared before insertion create the retained text object without irrelevant shape fill; insertion remains one reversible edit."
+      },
+      {
+        "name": "Source-pixel pixelation size and inspector Undo",
+        "passed": true,
+        "detail": "Pixelation reports the renderer's 16-pixel minimum and maps a 128-pixel target to its retained rendering parameter. Multiple live changes undo together; non-finite input is rejected."
+      },
+      {
+        "name": "Persistent inspector gesture Undo boundaries",
+        "passed": true,
+        "detail": "Style, canvas movement and later style edits undo separately while the inspector stays visible. Multiple style changes after Undo or Redo still form one operation; mid-gesture callbacks do not absorb geometry, and Pan adds no edit."
+      },
+      {
+        "name": "Selection reveal preserves document and history",
+        "passed": true,
+        "detail": "Show Selection requests canvas-owned recentering without modifying source edits or adding Undo; actual viewport movement is verified by native canvas interaction separately."
+      },
+      {
+        "name": "Direct native share snapshot bytes",
+        "passed": true,
+        "detail": "The real Transferable produces a single decoded 800\u00d7600 PNG with the flattened green annotation; original and private source bytes remain unchanged. No recipient behavior is inferred."
+      },
+      {
+        "name": "Document saved baseline",
+        "passed": true,
+        "detail": "Dirty state follows the initial/last durable snapshot, including Undo away from or back to that snapshot."
+      },
+      {
+        "passed": true,
+        "name": "Stale save and close ownership",
+        "detail": "Newer edits and a closed source reject stale save completions; close clears document state and history."
+      },
+      {
+        "passed": true,
+        "name": "Failed and cancelled replacement",
+        "detail": "Actual failed file decoding and a cancelled import preserve the previous source, edits and dirty state."
+      },
+      {
+        "passed": true,
+        "name": "Live typography undo transaction",
+        "detail": "Text editing is requested on creation; content and typography update as one reversible edit. Font displays are safely bounded independently of image dimensions."
+      },
+      {
+        "passed": true,
+        "name": "Annotation arrangement and mode preservation",
+        "detail": "Duplicates retain typography, front/back ordering changes retained objects, and mode switching preserves objects and viewport."
+      },
+      {
+        "passed": true,
+        "name": "PNG explicit image paste",
+        "detail": "An actual NSItemProvider imports unchanged encoded bytes through the shared protected source pipeline and resets the editing baseline."
+      },
+      {
+        "passed": true,
+        "name": "JPEG explicit image paste",
+        "detail": "An actual NSItemProvider imports unchanged encoded bytes through the shared protected source pipeline and resets the editing baseline."
+      },
+      {
+        "passed": true,
+        "name": "Invalid image paste preserves document",
+        "detail": "Empty, text-only and malformed encoded providers report errors while preserving the current source, crop, dirty state and Undo availability."
+      },
+      {
+        "passed": true,
+        "name": "Cancelled image paste preserves document",
+        "detail": "Cancelling an in-flight provider propagates to its Progress, preserves source/edit/history and ignores a delayed completion."
+      },
+      {
+        "passed": true,
+        "name": "Closed document rejects stale image paste",
+        "detail": "Closing while a provider loads prevents its eventual successful source from reopening or changing the document."
+      },
+      {
+        "passed": true,
+        "name": "Shared asynchronous file import",
+        "detail": "The native model imports through the shared worker, installs an immutable full-resolution source and resets the saved/history baseline."
+      },
+      {
+        "passed": true,
+        "name": "Photo transfer ownership before decoding",
+        "detail": "Dropping a real ImportedPhoto before decoding removes its private copy; cancelled shared-worker decoding throws cancellation without accepting a source."
+      },
+      {
+        "passed": true,
+        "name": "PNG full-resolution export",
+        "detail": "Decoded 800 \u00d7 600 image; 41344 bytes."
+      },
+      {
+        "passed": true,
+        "name": "PNG clipboard round-trip",
+        "detail": "Read and decoded the actual system pasteboard data and standard UIImage representation."
+      },
+      {
+        "passed": true,
+        "name": "JPEG full-resolution export",
+        "detail": "Decoded 800 \u00d7 600 image; 57540 bytes."
+      },
+      {
+        "passed": true,
+        "name": "JPEG clipboard round-trip",
+        "detail": "Read and decoded the actual system pasteboard data and standard UIImage representation."
+      }
+    ]
+  },
+  "native_ui": {
+    "acceptance": {
+      "exit_code": -15,
+      "seconds": 458.791,
+      "finalization_interrupted": true,
+      "cases": [
+        {
+          "case": "GlassImageToolsUITests.AccessibilityAuditTests testNativeAccessibilityAuditForPasteErrorAndColorPalette",
+          "result": "passed",
+          "seconds": 48.092
+        },
+        {
+          "case": "GlassImageToolsUITests.DocumentWorkspaceTests testCollapsedPanelsKeepNewImageReachable",
+          "result": "passed",
+          "seconds": 22.11
+        },
+        {
+          "case": "GlassImageToolsUITests.DocumentWorkspaceTests testDocumentSwitchingUndoCloseAndRecents",
+          "result": "passed",
+          "seconds": 63.558
+        },
+        {
+          "case": "GlassImageToolsUITests.GlassImageToolsUITests testCropUndoCopyAndExport",
+          "result": "passed",
+          "seconds": 49.917
+        },
+        {
+          "case": "GlassImageToolsUITests.GlassImageToolsUITests testNativeImagePasteAddsDocumentAndRecoversAfterClose",
+          "result": "passed",
+          "seconds": 48.553
+        },
+        {
+          "case": "GlassImageToolsUITests.GlassImageToolsUITests testSaveToPhotosBeforeCloseCompletesDocumentAction",
+          "result": "passed",
+          "seconds": 20.267
+        },
+        {
+          "case": "GlassImageToolsUITests.HIGPolishTests testCompactLongTitleAtLargestText",
+          "result": "passed",
+          "seconds": 44.608
+        },
+        {
+          "case": "GlassImageToolsUITests.HIGPolishTests testRotatedTextRemainsSelectableAndEditable",
+          "result": "passed",
+          "seconds": 21.606
+        },
+        {
+          "case": "GlassImageToolsUITests.HIGPolishTests testShortDescriptionUsesOnlyItsContentHeight",
+          "result": "passed",
+          "seconds": 21.017
+        }
+      ],
+      "passed": 9,
+      "failed": 0,
+      "captures": [
+        {
+          "view": "color-palette-presented",
+          "exit_code": 0
+        },
+        {
+          "view": "collapsed-workspace",
+          "exit_code": 0
+        },
+        {
+          "view": "document-navigation-and-independent-inspector",
+          "exit_code": 0
+        },
+        {
+          "view": "compact-largest-title",
+          "exit_code": 0
+        },
+        {
+          "view": "compact-largest-toolbar",
+          "exit_code": 0
+        },
+        {
+          "view": "compact-largest-options",
+          "exit_code": 0
+        },
+        {
+          "view": "compact-largest-caption-scrolled",
+          "exit_code": 0
+        },
+        {
+          "view": "rotated-editable-text",
+          "exit_code": 0
+        },
+        {
+          "view": "short-caption-natural-height",
+          "exit_code": 0
+        },
+        {
+          "view": "short-caption-wrapped-height",
+          "exit_code": 0
+        }
+      ]
+    },
+    "final_close_path": {
+      "exit_code": -15,
+      "seconds": 222.04,
+      "finalization_interrupted": true,
+      "cases": [
+        {
+          "case": "GlassImageToolsUITests.DocumentWorkspaceTests testCollapsedPanelsKeepNewImageReachable",
+          "result": "passed",
+          "seconds": 20.881
+        },
+        {
+          "case": "GlassImageToolsUITests.DocumentWorkspaceTests testDocumentSwitchingUndoCloseAndRecents",
+          "result": "passed",
+          "seconds": 63.781
+        },
+        {
+          "case": "GlassImageToolsUITests.GlassImageToolsUITests testSaveToPhotosBeforeCloseCompletesDocumentAction",
+          "result": "passed",
+          "seconds": 19.983
+        }
+      ],
+      "passed": 3,
+      "failed": 0,
+      "captures": [
+        {
+          "view": "collapsed-workspace",
+          "exit_code": 0
+        },
+        {
+          "view": "document-navigation-and-independent-inspector",
+          "exit_code": 0
+        }
+      ]
+    }
+  },
+  "earlier_native_stages": {
+    "workspace-layout": {
+      "exit_code": -15,
+      "seconds": 215.066,
+      "finalization_interrupted": true,
+      "cases": [
+        {
+          "case": "GlassImageToolsUITests.AccessibilityAuditTests testNativeAccessibilityAuditForEmptyWindow",
+          "result": "passed",
+          "seconds": 12.735
+        },
+        {
+          "case": "GlassImageToolsUITests.HIGPolishTests testNativeSidebarDefaultsAndRotatedCrop",
+          "result": "failed",
+          "seconds": 54.926
+        }
+      ],
+      "passed": 1,
+      "failed": 1,
+      "captures": [
+        {
+          "view": "rotated-crop",
+          "exit_code": 0
+        },
+        {
+          "view": "native-default-sidebar",
+          "exit_code": 0
+        }
+      ]
+    },
+    "workspace-behavior": {
+      "exit_code": -15,
+      "seconds": 254.007,
+      "finalization_interrupted": true,
+      "cases": [
+        {
+          "case": "GlassImageToolsUITests.AccessibilityAuditTests testNativeAccessibilityAuditForPasteErrorAndColorPalette",
+          "result": "passed",
+          "seconds": 46.545
+        },
+        {
+          "case": "GlassImageToolsUITests.DocumentWorkspaceTests testDocumentSwitchingUndoCloseAndRecents",
+          "result": "failed",
+          "seconds": 34.871
+        },
+        {
+          "case": "GlassImageToolsUITests.HIGPolishTests testCompactLongTitleAtLargestText",
+          "result": "failed",
+          "seconds": 11.149
+        },
+        {
+          "case": "GlassImageToolsUITests.HIGPolishTests testNativeSidebarDefaultsAndRotatedCrop",
+          "result": "passed",
+          "seconds": 44.211
+        }
+      ],
+      "passed": 2,
+      "failed": 2,
+      "captures": [
+        {
+          "view": "color-palette-presented",
+          "exit_code": 0
+        },
+        {
+          "view": "rotated-crop",
+          "exit_code": 0
+        },
+        {
+          "view": "native-default-sidebar",
+          "exit_code": 0
+        }
+      ]
+    },
+    "workspace-final-ui": {
+      "exit_code": -15,
+      "seconds": 317.248,
+      "finalization_interrupted": true,
+      "cases": [
+        {
+          "case": "GlassImageToolsUITests.AccessibilityAuditTests testNativeAccessibilityAuditForEditorSheetsAndText",
+          "result": "passed",
+          "seconds": 52.077
+        },
+        {
+          "case": "GlassImageToolsUITests.DocumentWorkspaceTests testDocumentSwitchingUndoCloseAndRecents",
+          "result": "failed",
+          "seconds": 48.719
+        },
+        {
+          "case": "GlassImageToolsUITests.GlassImageToolsUITests testNativeImagePasteAddsDocumentAndRecoversAfterClose",
+          "result": "failed",
+          "seconds": 44.691
+        },
+        {
+          "case": "GlassImageToolsUITests.HIGPolishTests testCompactLongTitleAtLargestText",
+          "result": "failed",
+          "seconds": 10.285
+        },
+        {
+          "case": "GlassImageToolsUITests.HIGPolishTests testRotatedTextRemainsSelectableAndEditable",
+          "result": "passed",
+          "seconds": 21.998
+        },
+        {
+          "case": "GlassImageToolsUITests.HIGPolishTests testShortDescriptionUsesOnlyItsContentHeight",
+          "result": "passed",
+          "seconds": 21.767
+        }
+      ],
+      "passed": 3,
+      "failed": 3,
+      "captures": [
+        {
+          "view": "document-navigation-and-independent-inspector",
+          "exit_code": 0
+        },
+        {
+          "view": "rotated-editable-text",
+          "exit_code": 0
+        },
+        {
+          "view": "short-caption-natural-height",
+          "exit_code": 0
+        },
+        {
+          "view": "short-caption-wrapped-height",
+          "exit_code": 0
+        }
+      ]
+    },
+    "workspace-responsive-ui": {
+      "exit_code": 65,
+      "seconds": 146.804,
+      "finalization_interrupted": false,
+      "cases": [
+        {
+          "case": "GlassImageToolsUITests.DocumentWorkspaceTests testCollapsedPanelsKeepNewImageReachable",
+          "result": "failed",
+          "seconds": 22.02
+        },
+        {
+          "case": "GlassImageToolsUITests.DocumentWorkspaceTests testDocumentSwitchingUndoCloseAndRecents",
+          "result": "failed",
+          "seconds": 56.084
+        },
+        {
+          "case": "GlassImageToolsUITests.HIGPolishTests testCompactLongTitleAtLargestText",
+          "result": "failed",
+          "seconds": 48.292
+        }
+      ],
+      "passed": 0,
+      "failed": 3,
+      "captures": [
+        {
+          "view": "collapsed-workspace",
+          "exit_code": 0
+        },
+        {
+          "view": "document-navigation-and-independent-inspector",
+          "exit_code": 0
+        },
+        {
+          "view": "compact-largest-title",
+          "exit_code": 0
+        },
+        {
+          "view": "compact-largest-toolbar",
+          "exit_code": 0
+        },
+        {
+          "view": "compact-largest-options",
+          "exit_code": 0
+        },
+        {
+          "view": "compact-largest-caption-scrolled",
+          "exit_code": 0
+        }
+      ]
+    }
+  },
+  "initial_compile": {
+    "exit_code": 65,
+    "reason": "Throwing boolean condition syntax corrected before native execution."
+  },
+  "signed_release": {
+    "exit_code": 0,
+    "seconds": 12.044,
+    "errors": 0,
+    "warnings": 1,
+    "build_succeeded": true,
+    "analyze_succeeded": true
+  },
+  "release_boundaries": {
+    "signature_exit_code": 0,
+    "name": "Glass Image Tools",
+    "version": "1.0",
+    "build": "19",
+    "device_family": [
+      7
+    ],
+    "usage_keys": [
+      "NSPhotoLibraryAddUsageDescription"
+    ],
+    "debug_or_probe_markers": [],
+    "entitlement_keys": [
+      "application-identifier",
+      "com.apple.developer.team-identifier",
+      "get-task-allow"
+    ],
+    "development_get_task_allow": true
+  },
+  "probe_compile": {
+    "exit_code": 0,
+    "seconds": 3.946,
+    "build_succeeded": true,
+    "errors": []
+  },
+  "physical": {
+    "timestamp": "2026-10-18T06:44:03.875084+00:00",
+    "build": "19",
+    "version": "1.0",
+    "signature_exit_code": 0,
+    "state": "INSTALLED_LAUNCH_PENDING",
+    "passcodeRequired": true,
+    "installation": {
+      "exit_code": 0,
+      "seconds": 2.585
+    },
+    "identity": {
+      "exit_code": 0,
+      "seconds": 0.445,
+      "name": "Glass Image Tools",
+      "version": "1.0",
+      "build": "19",
+      "matching_count": 1
+    },
+    "lockState": {
+      "exit_code": 0,
+      "seconds": 0.457
+    },
+    "normal_launch_attempted": false,
+    "limitation": "Device reports passcode required; normal launch and process verification were not attempted through the passcode gate.",
+    "simulator_restored": {
+      "terminate": {
+        "exit_code": 0,
+        "seconds": 0.128
+      },
+      "launch": {
+        "exit_code": 0,
+        "seconds": 0.142
+      },
+      "test_arguments": false
+    }
+  },
+  "source_identity": "Final close-path native, services, signed and applied App/Core hashes agree. The nine-case run preceded only close recovery and announcement ownership changes.",
+  "runtime_observation": "UIKit emitted a portal-view hosting warning during native numeric selection; actual edit/Undo/export passed. No app-owned hosting/view-controller representable found. Hardware acceptance remains separate.",
+  "limits": [
+    "Recents are session/window-only, not durable document history.",
+    "Source/preview retention bounds do not certify peak export memory or hardware file protection.",
+    "Passing native accessibility audits do not certify physical assistive technology or gaze/hand/focus.",
+    "Probe compilation does not verify capture on hardware."
+  ],
+  "public_hygiene": {
+    "timestamp": "2026-10-18T06:46:51.843872+00:00",
+    "implementation_files": 14,
+    "documentation_files": 20,
+    "public_text_files_scanned": 98,
+    "private_content_issues": 0,
+    "changed_document_link_issues": 0,
+    "application_hash_issues": 0,
+    "git_initialized": false
+  }
+}

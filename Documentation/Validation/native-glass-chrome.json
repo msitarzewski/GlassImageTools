@@ -1,0 +1,341 @@
+{
+  "date_utc": "2026-10-16",
+  "scope": "Owner-approved native Glass chrome refinement; Glass Power Tools visionOS reference; synthetic images; original implementation checkpoint preceded separately recorded physical deployment",
+  "product": {
+    "name": "Glass Image Tools",
+    "version": "1.0",
+    "prepared_build": "12",
+    "last_verified_headset_installation": "10",
+    "physical_device_calls": 0,
+    "published": false
+  },
+  "changes": [
+    "Separate native controls in ToolbarItemGroup(.bottomOrnament), without enclosing stacks, manual spacing, fixed label frames or forced icon-only toolbar label styles.",
+    "Native capsule title surface with retained responsive filename, original metadata and document actions.",
+    "Removed redundant outer glass around the native annotation Form/NavigationStack.",
+    "Native Options moves into Drawing Tools only at compact/accessibility text sizes; explicit names and every command retained.",
+    "Existing plain-window single rear glass, corner/insets, Opacity/Glass controls, opaque foreground and image/source behavior retained."
+  ],
+  "reference": {
+    "project": "Glass Power Tools, read-only visionOS source comparison",
+    "symbols": [
+      "GlassNativeWindowFrame: separate ToolbarItemGroup controls and capsule title",
+      "GlassSpatialWindowGlass: one native rear glass in a plain window",
+      "GlassWindowShape: 46-point corner; 22/34/26-point side/top/bottom insets",
+      "GlassLayeredPanel: embedded panels do not paint extra material",
+      "DesktopSessionView: let visionOS toolbar choose native label presentation"
+    ],
+    "platform_boundary": "GlassWindowChrome and relevant glassEffect implementations are gated to other platforms; no macOS Liquid Glass implementation or external dependency was imported."
+  },
+  "ui": {
+    "unique_cases_passed": 13,
+    "full_25_case_suite_rerun": false,
+    "runs": [
+      {
+        "run": "native-chrome-first",
+        "command_exit_code": 0,
+        "wall_seconds": 122.958,
+        "result_finalization_interrupted": false,
+        "cases": [
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testNewShapeDirectResizeAndCropMode",
+            "outcome": "passed",
+            "seconds": 32.216
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testCompactLongTitleAndToolbar",
+            "outcome": "passed",
+            "seconds": 26.04
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testCompactLongTitleAtLargestText",
+            "outcome": "passed",
+            "seconds": 19.804
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testContextualOptionsAndVisibleCanvas",
+            "outcome": "passed",
+            "seconds": 21.872
+          }
+        ],
+        "compositor_captures": [
+          {
+            "view": "compact-title",
+            "exit_code": 0
+          },
+          {
+            "view": "compact-drawing-menu",
+            "exit_code": 0
+          },
+          {
+            "view": "compact-toolbar",
+            "exit_code": 0
+          },
+          {
+            "view": "compact-largest-title",
+            "exit_code": 0
+          },
+          {
+            "view": "compact-largest-toolbar",
+            "exit_code": 0
+          },
+          {
+            "view": "text-default-options",
+            "exit_code": 0
+          },
+          {
+            "view": "pixelation-beside-canvas",
+            "exit_code": 0
+          }
+        ]
+      },
+      {
+        "run": "native-chrome-regressions",
+        "command_exit_code": 0,
+        "wall_seconds": 308.623,
+        "result_finalization_interrupted": false,
+        "cases": [
+          {
+            "suite": "AccessibilityAuditTests",
+            "case": "testNativeAccessibilityAuditForEditorSheetsAndText",
+            "outcome": "passed",
+            "seconds": 45.867
+          },
+          {
+            "suite": "AccessibilityAuditTests",
+            "case": "testNativeAccessibilityAuditForEmptyWindow",
+            "outcome": "passed",
+            "seconds": 7.631
+          },
+          {
+            "suite": "AccessibilityAuditTests",
+            "case": "testNativeAccessibilityAuditForPasteErrorAndColorPalette",
+            "outcome": "passed",
+            "seconds": 33.376
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testAppearanceSettingsPersistAndReset",
+            "outcome": "passed",
+            "seconds": 109.835
+          },
+          {
+            "suite": "GlassImageToolsUITests",
+            "case": "testCropRemainsEditableAtZoomWithPanEnabled",
+            "outcome": "passed",
+            "seconds": 26.322
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testDirectPNGShareOpensWithoutExportForm",
+            "outcome": "passed",
+            "seconds": 13.462
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testPanFeedbackAndReadableAppearanceEndpoints",
+            "outcome": "passed",
+            "seconds": 22.595
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testTinyAnnotationRevealDragAndIndependentUndoInOpenPanel",
+            "outcome": "passed",
+            "seconds": 30.579
+          }
+        ],
+        "compositor_captures": [
+          {
+            "view": "direct-share",
+            "exit_code": 0
+          },
+          {
+            "view": "persistent-pan",
+            "exit_code": 0
+          },
+          {
+            "view": "readable-appearance",
+            "exit_code": 0
+          },
+          {
+            "view": "tiny-selection-proxies",
+            "exit_code": 0
+          }
+        ]
+      },
+      {
+        "run": "native-chrome-final",
+        "command_exit_code": 0,
+        "wall_seconds": 97.485,
+        "result_finalization_interrupted": false,
+        "cases": [
+          {
+            "suite": "AccessibilityAuditTests",
+            "case": "testNativeAccessibilityAtLargestTextAndIncreasedContrast",
+            "outcome": "passed",
+            "seconds": 31.948
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testCompactLongTitleAndToolbar",
+            "outcome": "passed",
+            "seconds": 25.921
+          },
+          {
+            "suite": "HIGPolishTests",
+            "case": "testCompactLongTitleAtLargestText",
+            "outcome": "passed",
+            "seconds": 29.198
+          }
+        ],
+        "compositor_captures": [
+          {
+            "view": "compact-title",
+            "exit_code": 0
+          },
+          {
+            "view": "compact-drawing-menu",
+            "exit_code": 0
+          },
+          {
+            "view": "compact-toolbar",
+            "exit_code": 0
+          },
+          {
+            "view": "compact-largest-title",
+            "exit_code": 0
+          },
+          {
+            "view": "compact-largest-toolbar",
+            "exit_code": 0
+          },
+          {
+            "view": "compact-largest-options",
+            "exit_code": 0
+          }
+        ]
+      }
+    ],
+    "app_accessibility_issues_ignored": 0,
+    "system_palette": "Actual RGB/live-color/one-Undo check passed; prior system-host audit -902 limit remains."
+  },
+  "visual_findings_and_corrections": [
+    {
+      "stage": "First compiled variant",
+      "finding": "All four initial UI cases passed, but actual compositor/hierarchy review exposed an 802-point largest-text toolbar in a 720-point window. Existing largest-text audit did not check width.",
+      "correction": "Retain native sizes; move Options into Drawing Tools at compact/accessibility sizes. Strengthened existing test to assert actual toolbar bounds, open text options from that menu and audit the panel.",
+      "final_toolbar_width_points": 715.5,
+      "content_window_width_points": 720
+    }
+  ],
+  "contrast_scope": {
+    "normal_preview": "First/default/compact/panel previews used normal contrast. Earlier build-11 audit screenshots used Increase Contrast and are not a controlled material comparison.",
+    "final_checks": {
+      "original": "disabled",
+      "test_value": "enabled",
+      "set_exit_code": 0
+    },
+    "restoration": {
+      "contrast_restored": "disabled",
+      "contrast_restore_exit_code": 0,
+      "synthetic_preview_capture_exit_code": 0,
+      "normal_launch_exit_code": 0,
+      "testing_arguments_after_restore": false,
+      "physical_device_touched": false
+    }
+  },
+  "retained_baselines": {
+    "source_boundaries": {
+      "Sources/": true,
+      "Tests/": true,
+      "App/EditorModel.swift": true,
+      "App/AnnotationInspector.swift": true,
+      "App/AppearanceSettings.swift": true,
+      "App/ExportService.swift": true,
+      "App/ExportView.swift": true,
+      "App/ImageCanvas.swift": true,
+      "Config/": true,
+      "CaptureProbe/": true
+    },
+    "core": "57 test definitions/three suites retained by unchanged core/test hashes; not rerun this presentation-only task.",
+    "native_services": "30 model/service checks retained by unchanged owners/fixtures; not rerun.",
+    "authority": "hig-fixes.json"
+  },
+  "release": {
+    "exit_code": 0,
+    "seconds": 14.854,
+    "errors": 0,
+    "warnings": 1,
+    "build_succeeded": true,
+    "analyze_succeeded": true
+  },
+  "release_boundaries": {
+    "signature_exit_code": 0,
+    "name": "Glass Image Tools",
+    "version": "1.0",
+    "build": "12",
+    "device_family": [
+      7
+    ],
+    "usage_keys": [
+      "NSPhotoLibraryAddUsageDescription"
+    ],
+    "debug_or_probe_markers": [],
+    "entitlement_keys": [
+      "application-identifier",
+      "com.apple.developer.team-identifier",
+      "get-task-allow"
+    ],
+    "development_get_task_allow": true
+  },
+  "separate_probe_compile": {
+    "exit_code": 0,
+    "seconds": 17.255,
+    "errors": 0,
+    "warnings": 2,
+    "build_succeeded": true
+  },
+  "applied_source": {
+    "files": 4,
+    "baseline_conflicts": [],
+    "sha256": {
+      "App/EditorView.swift": "b42a9c7ae76ca605e3c2ca4281897976f535c1339b1d74122ac87c005797434e",
+      "UITests/HIGPolishTests.swift": "01fcb8e4a6d4703549d789bed1434ef0c02d3daf006536241b139a054862dbba",
+      "GlassImageTools.xcodeproj/project.pbxproj": "9a661fa6deb1cabc60ddc651394aafecbeb0985f2b09cd3ca8f8a9fcecec20fb",
+      "project.yml": "8d81a176b9842ebfca4acafa2330661edacb8eb2fea30434ccb065a5bdeeeb51"
+    }
+  },
+  "limits": [
+    "At implementation checkpoint build 12 was prepared locally; subsequent owner-requested installation/normal launch/process verification passed. See deploymentFollowUp/physical-deployment.json.",
+    "Native audit passes do not establish headset VoiceOver/Voice Control/Switch Control speech/focus, keyboard/gaze/hold comfort or installed icon behavior.",
+    "No new recipient interoperability, large-image resource profile, first-run Photos consent tap or physical capture is claimed.",
+    "Responsive metadata/document actions remain composed inside a native title ornament; canvas geometry/handles remain intentionally app-specific."
+  ],
+  "reproduction": {
+    "ui": "xcodebuild test -project GlassImageTools.xcodeproj -scheme GlassImageTools -configuration Debug -destination \"platform=visionOS Simulator,id=$SIMULATOR_ID\" -derivedDataPath \"$UI_BUILD_DIR\" -parallel-testing-enabled NO CODE_SIGNING_ALLOWED=NO",
+    "focused": "Select HIGPolishTests compact/default/visible-panel/Share/Pan/tiny cases; native Shapes, zoomed-crop and appearance cases; all four AccessibilityAuditTests.",
+    "contrast": "Save simctl ui \"$SIMULATOR_ID\" increase_contrast; run largest-text with enabled, then restore the original value.",
+    "release": "xcodebuild -project GlassImageTools.xcodeproj -scheme GlassImageTools -configuration Release -destination generic/platform=visionOS -derivedDataPath \"$DEVICE_BUILD_DIR\" -allowProvisioningUpdates build analyze"
+  },
+  "public_hygiene": {
+    "files_scanned": 80,
+    "private_pattern_findings": 0,
+    "broken_file_links": 0,
+    "anchor_gaps": 0,
+    "only_monthly_tasks": true,
+    "final_applied_source_hashes_match": true
+  },
+  "deploymentFollowUp": {
+    "timestamp": "2026-10-16T15:29:56.300724+00:00",
+    "installedBuild": "12",
+    "installedVersion": "1.0",
+    "installationExitCode": 0,
+    "normalLaunchExitCode": 0,
+    "runningProcessVerified": true,
+    "evidence": "physical-deployment.json"
+  }
+}

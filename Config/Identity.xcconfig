@@ -1,0 +1,4 @@
+// Public defaults. Select your signing team in the ignored local override.
+DEVELOPMENT_TEAM =
+VISIONSNIP_BUNDLE_ID = com.glassimagetools
+#include? "Identity.local.xcconfig"

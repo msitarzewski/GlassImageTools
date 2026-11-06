@@ -1,0 +1,184 @@
+{
+  "recorded_at_utc": "2026-10-16T12:17:21+00:00",
+  "scope": "Apple HIG source review and native simulator observation; proposed fixes only",
+  "product_baseline": {
+    "name": "Glass Image Tools",
+    "version": "1.0",
+    "build": "10",
+    "production_changed": false,
+    "baseline_files_checked": 32,
+    "baseline_mismatches": 0
+  },
+  "reference_report": "../HIG_REVIEW.md",
+  "source_sha256": {
+    "App/EditorView.swift": "d196e59fbe1cc12639120a368adfc6c73955b35840652e39ae8e02ff03f65b10",
+    "App/AppearanceSettings.swift": "fcd2e8bf15fb5f705f9286356f1971264fe7b6cbe747a775a72448abcf9ffd03",
+    "App/ImageCanvas.swift": "6051bb962762f28cd7dad4730da58b56ba9784b6851932db6c017e0b2483fa5d",
+    "App/GlassImageToolsApp.swift": "13d060e8e67f7c446df7868ffeba687f9809084fdff286360c7233009e94bf00",
+    "Sources/VisionSnipCore/ImageRenderer.swift": "4320e27ec82364e41e1aa4768878c2f5ba9b88c93274160840017ac0c87c50d5"
+  },
+  "simulation": {
+    "platform": "visionOS Simulator 27.2",
+    "harness": "Private staged Debug observation harness; not applied to production source or repository UI tests",
+    "command_template": "xcodebuild test -project GlassImageTools.xcodeproj -scheme GlassImageTools -destination \"platform=visionOS Simulator,id=<local-simulator>\" -parallel-testing-enabled NO -only-testing:GlassImageToolsUITests/HIGReviewObservationTests CODE_SIGNING_ALLOWED=NO",
+    "command_reproducibility_limit": "The observation class and initial-size/long-name fixture adaptations were private to the staging copy. Reproduce visible findings with the manual steps in HIG_REVIEW.md; this class is not a checked-in test target.",
+    "tests": [
+      {
+        "name": "testObserveDefaultWorkflow",
+        "passed": true,
+        "seconds": 111.152
+      },
+      {
+        "name": "testObserveMinimumWindowAndLongTitle",
+        "passed": true,
+        "seconds": 26.622
+      }
+    ],
+    "suite": {
+      "tests": 2,
+      "failures": 0,
+      "seconds": 137.774
+    },
+    "command_exit_code": 0,
+    "command_wall_seconds": 156.932,
+    "finalization_stall": false,
+    "compositor_views_captured_and_inspected": [
+      "01-empty",
+      "02-crop-default",
+      "03-zoom-pan-closed",
+      "04-pan-menu",
+      "05-exact-dimensions",
+      "06-annotation-toolbar",
+      "07-shapes-hold",
+      "08-text-before-insertion",
+      "09-pixelate-controls",
+      "10-export-png",
+      "11-export-jpeg",
+      "12-save-recovery",
+      "13-appearance",
+      "14-minimum-long-title",
+      "15-minimum-annotation-toolbar",
+      "16-minimum-long-title-largest-text"
+    ],
+    "variants": {
+      "default_window_points": [
+        1100,
+        760
+      ],
+      "minimum_window_points": [
+        720,
+        540
+      ],
+      "source_pixels": [
+        1600,
+        1000
+      ],
+      "long_name": "Neutral synthetic filename of approximately 190 ASCII characters, including extension",
+      "largest_text": "UICTContentSizeCategoryAccessibilityXXXL; app launch preference only"
+    },
+    "measurements": {
+      "minimum_content_window_points": [
+        720,
+        540
+      ],
+      "minimum_annotation_toolbar_points": [
+        910.5,
+        68
+      ],
+      "frame_selection": "Matched content and toolbar windows from AX hierarchy; firstMatch XR host dimensions excluded"
+    },
+    "observed": {
+      "compact_long_title": "Vertical clipping in compositor",
+      "compact_long_title_largest_text": "Document action row and source metadata visually absent/clipped despite AX presence",
+      "compact_annotation_toolbar": "Wider than content window; commands still visually available",
+      "text_tool_before_insertion": {
+        "stroke_width": true,
+        "fill": true,
+        "typography": false
+      },
+      "selected_pixelate": {
+        "stroke_color": true,
+        "stroke_width": true,
+        "renderer_uses_color": false,
+        "stroke_width_px": 4,
+        "block_size_parameter_source_px": 16
+      },
+      "pan_enabled_at_225_percent": "Closed menu shows magnifier/225% without persistent Pan cue; open menu shows checked Pan",
+      "selected_pixelation_options": "Popover obscures a substantial portion of selected region",
+      "appearance_endpoints": "Transparent/Opaque wrap into narrow word fragments at default size/text"
+    },
+    "restore": {
+      "previously_tested_simulator_product_installed": true,
+      "install_exit_code": 0,
+      "normal_launch_without_review_arguments": true,
+      "launch_exit_code": 0,
+      "terminate_attempt_exit_code": 3,
+      "terminate_required": false
+    }
+  },
+  "findings": [
+    {
+      "id": "HIG-01",
+      "priority": "P1",
+      "topic": "Adaptive title and action visibility",
+      "evidence": "Source + actual compact/large-text compositor"
+    },
+    {
+      "id": "HIG-02",
+      "priority": "P2",
+      "topic": "Toolbar width adaptation",
+      "evidence": "Source + matched AX frames + compositor"
+    },
+    {
+      "id": "HIG-03",
+      "priority": "P2",
+      "topic": "Contextual Text and Pixelate options",
+      "evidence": "Source + native controls"
+    },
+    {
+      "id": "HIG-04",
+      "priority": "P2",
+      "topic": "Persistent Pan feedback",
+      "evidence": "Source + open/closed menu compositor"
+    },
+    {
+      "id": "HIG-05",
+      "priority": "P2",
+      "topic": "Selected-content visibility during editing",
+      "evidence": "Source + selected pixelation compositor"
+    },
+    {
+      "id": "HIG-06",
+      "priority": "P2",
+      "topic": "Tiny/offscreen annotation targets",
+      "evidence": "Source concern; direct hardware outcome unobserved"
+    },
+    {
+      "id": "HIG-07",
+      "priority": "P3",
+      "topic": "Appearance endpoint legibility",
+      "evidence": "Source + default appearance compositor"
+    },
+    {
+      "id": "HIG-08",
+      "priority": "P3",
+      "topic": "Copy prominence and faster Share",
+      "evidence": "Source + walkthrough judgment; optimization"
+    }
+  ],
+  "limits": [
+    "No physical-device calls or new deployment in this task",
+    "No new accessibility .all audit executed; earlier recorded results retain their scope",
+    "No HIG compliance certification",
+    "No new encoded-pixel, clipboard-recipient, capture or hardware-resource acceptance",
+    "Gaze/hover, assistive-technology speech/focus, keyboard and icon lighting/motion remain hardware checks",
+    "Raw logs, compositor images and private configuration remain local"
+  ],
+  "documentation_checks": {
+    "records_checked": 9,
+    "missing_relative_targets": 0,
+    "private_pattern_hits": 0,
+    "invalid_monthly_task_paths": 0,
+    "scope": "Changed review/navigation records; pattern check is not a guarantee against all sensitive content"
+  }
+}

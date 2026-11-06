@@ -1,0 +1,125 @@
+{
+  "date": "2026-10-21",
+  "build": "23",
+  "changes": [
+    "StrokeColor stores extended-range sRGB (-2...2, alpha 0...1); Display P3 palette colors render, export and round-trip; conversion rounding within half an 8-bit step snaps to sRGB",
+    "Display P3 output for wide-gamut sources or annotation colors, sRGB otherwise; pixelation tiles and capture previews keep source gamut",
+    "Annotation fields, handle and object accessibility values use visible rotated axes, matching crop fields",
+    "Caption retries quietly while busy (2 s) or not ready (30 s); cancelled with the view",
+    "Undo/Redo availability includes a pending inspector edit",
+    "Pinch zoom anchored at the pinch point; menu/accessibility zoom anchored at the visible center",
+    "One Paste per window registers Cmd-V; removed unused insets, pixelatedPreview and inspector presentation path; cleanup no longer replaces original errors",
+    "32-point bottom-ornament clearance below the image column and as sidebar/inspector scroll margins; caption aligned with the 36-point canvas inset",
+    "Paired dimension fields show labels above values so Width/Height share a row in the 380-point inspector",
+    "Color well binding returns value-equal Color(.sRGB) values; a CGColor-backed getter intermittently dropped palette selections",
+    "UI tests: shared revealInInspector/editMenuAction helpers, native toggle queries, collapsed Recents expansion, picker-dismissal wait, compact Drawing Tools menu, rotated-field, pending-Undo, busy-caption and caption-clearance assertions"
+  ],
+  "baseline_reproduction": {
+    "p3_annotation_color": "Build 22 renderer rejects an extended P3 color with invalidDimensions",
+    "p3_source_export": "Build 22 exports Display P3 green as approximately [117, 251, 76] in P3 (sRGB clip)",
+    "caption": "Simulator compositor shows the last caption line clipped at the window edge under the bottom toolbar ornament (about 11 points overlap head-on)"
+  },
+  "core_tests": {
+    "tests": 67,
+    "suites": 5,
+    "failures": 0,
+    "seconds": 0.823,
+    "exit_code": 0
+  },
+  "native_service_checks": {
+    "checks": 48,
+    "passed": 48,
+    "includes": "4 new review-fix checks and 2 add-only Photos saves (permission pregranted on the dedicated simulator)"
+  },
+  "ui_phases": [
+    {
+      "scope": "First full suite, early stage source",
+      "exit_code": 65,
+      "seconds": 1268,
+      "tests": 37,
+      "failed_cases": 9,
+      "assertion_failures": 16
+    },
+    {
+      "scope": "Same nine failing cases on unchanged build 22",
+      "exit_code": 65,
+      "seconds": 323,
+      "tests": 9,
+      "failed_cases": 7,
+      "assertion_failures": 16,
+      "finding": "Seven failures pre-exist on build 22 with identical assertions; two were stage regressions (palette binding, clearance threshold)"
+    },
+    {
+      "scope": "Nine cases after fixes",
+      "exit_code": 65,
+      "seconds": 320,
+      "tests": 9,
+      "failed_cases": 2
+    },
+    {
+      "scope": "Two remaining accessibility cases",
+      "exit_code": 0,
+      "tests": 2,
+      "failed_cases": 0
+    },
+    {
+      "scope": "Palette case repeated: CGColor-backed getter",
+      "iterations": 3,
+      "passed": 2
+    },
+    {
+      "scope": "Palette case repeated: unchanged build 22",
+      "iterations": 3,
+      "passed": 3
+    },
+    {
+      "scope": "Palette case repeated: value-equal getter",
+      "iterations": 5,
+      "passed": 5,
+      "exit_code": 0
+    },
+    {
+      "scope": "Full suite, prior source",
+      "exit_code": 0,
+      "seconds": 1164,
+      "tests": 37,
+      "failures": 0
+    },
+    {
+      "scope": "Full suite, final applied source",
+      "exit_code": 0,
+      "seconds": 1254,
+      "tests": 37,
+      "failures": 0,
+      "finalization_interrupted": false
+    }
+  ],
+  "compositor": [
+    "Caption fully above the bottom toolbar ornament with long fixture",
+    "Crop and annotation inspectors pair Left/Top and Width/Height with labels above values"
+  ],
+  "release": {
+    "build_analyze_exit_code": 0,
+    "seconds": 35,
+    "signature_strict": 0,
+    "identity": "Glass Image Tools 1.0 (23)",
+    "device_family": 7,
+    "privacy_keys": [
+      "NSPhotoLibraryAddUsageDescription"
+    ],
+    "entitlements": "standard development signing including get-task-allow",
+    "debug_markers_in_release": 0,
+    "warnings": "two expected AppIntents metadata skips"
+  },
+  "capture_probe_device_compile": {
+    "exit_code": 0,
+    "seconds": 19,
+    "scope": "compilation only"
+  },
+  "application": {
+    "files_applied": 33,
+    "baseline_conflicts": 0,
+    "workspace_matches_stage": true
+  },
+  "limits": "Simulator compositor and automation evidence; physical appearance, gaze/hand, keyboard shortcuts, assistive technology and real P3 palette output on hardware remain owner observations. Output is 8-bit SDR; HDR headroom is not preserved."
+}

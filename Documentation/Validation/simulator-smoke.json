@@ -1,0 +1,80 @@
+{
+  "checks": [
+    {
+      "detail": "Three typed digits commit one source-pixel edit; Undo restores the original and Redo restores 800 px.",
+      "name": "Inspector crop undo/redo",
+      "passed": true
+    },
+    {
+      "detail": "Crop bounds and preset restore together.",
+      "name": "Crop preset undo/redo",
+      "passed": true
+    },
+    {
+      "detail": "A fractionally positioned rectangle resized by typed digits displays 300 px; Undo restores the entire original object. Dimension editing and deletion each commit one reversible operation.",
+      "name": "Inspector annotation undo/delete",
+      "passed": true
+    },
+    {
+      "detail": "Int minimum/maximum dimensions remain inside the source; nonfinite and extreme display values convert safely.",
+      "name": "Inspector numeric bounds",
+      "passed": true
+    },
+    {
+      "detail": "Dirty state follows the initial/last durable snapshot, including Undo away from or back to that snapshot.",
+      "name": "Document saved baseline",
+      "passed": true
+    },
+    {
+      "detail": "Newer edits and a closed source reject stale save completions; close clears document state and history.",
+      "name": "Stale save and close ownership",
+      "passed": true
+    },
+    {
+      "detail": "Actual failed file decoding and a cancelled import preserve the previous source, edits and dirty state.",
+      "name": "Failed and cancelled replacement",
+      "passed": true
+    },
+    {
+      "detail": "Text editing is requested on creation; content and typography update as one reversible edit. Font displays are safely bounded independently of image dimensions.",
+      "name": "Live typography undo transaction",
+      "passed": true
+    },
+    {
+      "detail": "Duplicates retain typography, front/back ordering changes retained objects, and mode switching preserves objects and viewport.",
+      "name": "Annotation arrangement and mode preservation",
+      "passed": true
+    },
+    {
+      "detail": "Decoded 800 \u00d7 600 image; 41344 bytes.",
+      "name": "PNG full-resolution export",
+      "passed": true
+    },
+    {
+      "detail": "Read and decoded the actual system pasteboard data and standard UIImage representation.",
+      "name": "PNG clipboard round-trip",
+      "passed": true
+    },
+    {
+      "detail": "PHPhotoLibrary.performChanges completed for a new image asset.",
+      "name": "PNG Photos save",
+      "passed": true
+    },
+    {
+      "detail": "Decoded 800 \u00d7 600 image; 57540 bytes.",
+      "name": "JPEG full-resolution export",
+      "passed": true
+    },
+    {
+      "detail": "Read and decoded the actual system pasteboard data and standard UIImage representation.",
+      "name": "JPEG clipboard round-trip",
+      "passed": true
+    },
+    {
+      "passed": true,
+      "detail": "PHPhotoLibrary.performChanges completed for a new image asset.",
+      "name": "JPEG Photos save"
+    }
+  ],
+  "timestamp": 813752495.622461
+}
