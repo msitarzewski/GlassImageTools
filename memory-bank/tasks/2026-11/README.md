@@ -4,7 +4,7 @@
 
 Mac 45 Quit fix passes native guest Save/Discard exit, cancellation/retry and sequential saves with
 unchanged originals. Developer ID universal app/DMG notarization, staples and Gatekeeper pass.
-Reviewed source/install and public release/Pages remain. Owner shipping instruction authorizes that
+Reviewed source applied, notarized Mac 45 installed and public source/release live; download hashes verified. Pages deployment and final live URL checks remain. Owner shipping instruction authorizes that
 publication; preserve the existing frozen host process. VisionOS stays 38.
 [Quit](../../261106_mac-quit-hang.md), [release](../../261106_mac-release.md).
 

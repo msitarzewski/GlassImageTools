@@ -22,10 +22,20 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
-      - name: Install pandoc
-        run: sudo apt-get update && sudo apt-get install --yes pandoc
+      - name: Install pinned pandoc
+        timeout-minutes: 4
+        run: |
+          archive="$RUNNER_TEMP/pandoc.tar.gz"
+          curl --fail --location --retry 2 --max-time 120 \
+            https://github.com/jgm/pandoc/releases/download/3.13/pandoc-3.13-linux-amd64.tar.gz \
+            --output "$archive"
+          printf '%s  %s\n' '38aa33b325a2bc96a4c39409631212db55702f564250bcdbead180b3bf646389' "$archive" | sha256sum --check
+          mkdir "$RUNNER_TEMP/pandoc"
+          tar -xzf "$archive" -C "$RUNNER_TEMP/pandoc" --strip-components=1
+          echo "$RUNNER_TEMP/pandoc/bin" >> "$GITHUB_PATH"
       - name: Build
         run: python3 scripts/build_site.py
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5

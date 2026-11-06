@@ -1,13 +1,13 @@
 # Technology context
 
-Updated November 5, 2026 for the native Mac extension; see the current task for exact new verification.
+Updated November 6, 2026 for native Mac distribution; see the current task for exact new verification.
 
 ## Platform and targets
 
 | Component | Configuration |
 |---|---|
 | Headset app | GlassImageTools, native visionOS 26.0 minimum, Swift 6, complete strict concurrency |
-| Current app versions | Mac 1.0 (44), visionOS 1.0 (38); Mac-only toolbar override. Last confirmed headset identity remains 1.0 (36), October 31; build 37 delivery was blocked before install. |
+| Current app versions | Mac 1.0 (45), visionOS 1.0 (38); Mac-only Quit/distribution override. Last confirmed headset identity remains 1.0 (36), October 31; build 37 delivery was blocked before install. |
 | Mac app | GlassImageToolsMac, native macOS 26 minimum, App Sandbox/hardened runtime, shared VisionSnipCore module via VisionSnipCoreMac framework target |
 | Mac tests | GlassImageToolsMacTests and GlassImageToolsMacUITests, native My Mac destination |
 | License | MIT (`LICENSE`), chosen by the owner October 22, 2026 |
@@ -110,3 +110,7 @@ copied. A separate clean-template clone isolates this task from the existing sha
 audio and clipboard sharing are disabled. Private driver/VM selectors and raw captures stay in `.brain`.
 No full Xcode is installed in this guest; AX/pointer/clipboard checks are not XCTest runs. Native minimum
 window width differed from the macOS 27 host, so layout assertions honor actual native constraints.
+
+Mac 45 Developer ID export is universal, notarized, stapled and Gatekeeper-assessed. `scripts/release_mac.py`
+uses only local signing configuration and an existing Keychain profile; see [release guide](../Documentation/MAC_RELEASE.md).
+Native test sources compile in Debug (`@testable` imports); Release remains the distribution configuration.

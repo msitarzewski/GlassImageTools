@@ -18,7 +18,7 @@ PNG Save/exit and two-window sequential save/exit pass; originals unchanged. Rel
 builds pass, not an XCTest run. Four sandbox permissions/core editor unchanged. Developer ID universal
 archive/export, app/DMG accepted notarization, validated staples and Gatekeeper pass. Existing Keychain
 profile reused. GitHub owner lookup confirms proposed repo absent; prepare sanitized first publication.
-Current state: reviewed source application/install, public assets/Pages and documentation remain.
+Current state: reviewed source applied and notarized canonical 45 installed; public source/release live and all three download hashes verified. Existing Pages workflow is deploying; live URL checks and final docs remain.
 Existing running owner build 44 is frozen waiting for termination; leave it untouched. New installation
 cannot replace its loaded code. Last physical Vision Pro identity remains 36; source remains 38.
 

@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-06",
+  "version": "1.0",
+  "mac_build": "45",
+  "visionos_source_build": "38",
+  "release": "https://github.com/msitarzewski/GlassImageTools/releases/tag/mac-v1.0",
+  "source": "https://github.com/msitarzewski/GlassImageTools",
+  "pipeline": "scripts/release_mac.py",
+  "universal": true,
+  "Developer_ID": true,
+  "sandbox_permissions": 4,
+  "hardened_runtime": true,
+  "app_and_dmg_notarization": "Accepted",
+  "stapled_and_validated": true,
+  "Gatekeeper_app_and_dmg": "passed",
+  "public_downloads": {
+    "DMG": "HTTP 200; downloaded SHA-256 matches",
+    "ZIP": "HTTP 200; downloaded SHA-256 matches",
+    "SHA256SUMS.txt": "HTTP 200; bytes match"
+  },
+  "source_snapshot": {
+    "private_file_value_scan": "passed",
+    "relative_markdown_links": "passed",
+    "site_builder": "6 pages, exit 0",
+    "store_validator": "valid, exit 0",
+    "utility_tests": "7 pass",
+    "author_metadata": "GitHub noreply"
+  },
+  "site": {
+    "url": "https://msitarzewski.github.io/GlassImageTools/",
+    "deployment": "in progress"
+  },
+  "local_install": "Canonical notarized build 45 installed; signature/ticket/Gatekeeper/exact tree pass; prior bundle and running owner process untouched",
+  "limitations": [
+    "No host GUI testing or owner-process termination.",
+    "No new screenshot: automatic approval review rejected optional site capture under retained restriction; accessibility/layout/image-loading checks used instead.",
+    "No new full-suite, headset, Photos, Share, VoiceOver or performance acceptance."
+  ]
+}

@@ -6,7 +6,7 @@ Mac 45 fixes the pending-termination save question and post-sheet close timing. 
 export cancellation/retry, Discard process exit, PNG Save/exit and sequential two-window saves pass;
 original fixture bytes unchanged. Release and Debug test-source compilation pass. Developer ID universal
 archive/export, unchanged four grants, hardened runtime, accepted/stapled app/DMG and Gatekeeper pass.
-Application/install and first public source/release/site completion are still pending at this checkpoint.
+Reviewed source applied; notarized canonical 45 installed without touching the owner process. Public repository and Mac release are live; three artifact downloads pass HTTP/hash checks. Pages deployment is still in progress at this checkpoint.
 No host window closure, core/full-suite rerun or headset action. [Quit](261106_mac-quit-hang.md), [release](261106_mac-release.md).
 
 ## Smaller centered Mac Markup — 1.0 (44), November 6, 2026
